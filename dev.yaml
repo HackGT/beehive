@@ -1,5 +1,16 @@
 apps:
-  - name: hackgt/helpq
+  - name: helpq
+    git: https://github.com/hackgt/helpq.git
     branch: dev
     run: {}
-  - name: hackgt/helm-resource
+
+  - name: helm-resource
+    git: https://github.com/hackgt/helm-resource.git
+
+  - name: mongo
+    helm: mongodb
+    version: 0.4.3
+
+  - name: juiced-peacock
+    helm: redis
+    version: 0.4.2
