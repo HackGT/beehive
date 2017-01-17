@@ -2,3 +2,4 @@ apps:
   - name: hackgt/helpq
     branch: dev
     run: {}
+  - name: hackgt/helm-resource
