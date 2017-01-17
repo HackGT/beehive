@@ -4,6 +4,9 @@ apps:
     branch: dev
     run: {}
 
+  - name: checkin
+    git: https://github.com/HackGT/Ultimate-Checkin.git
+
   - name: helm-resource
     git: https://github.com/hackgt/helm-resource.git
 
