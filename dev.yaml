@@ -1,3 +1,4 @@
+domain: hack.gt
 apps:
   - name: helpq
     git: https://github.com/hackgt/helpq.git
