@@ -3,20 +3,7 @@ apps:
   - name: helpq
     git: https://github.com/hackgt/helpq.git
     branch: dev
-    run:
-      port: 80
 
   - name: check-in
     git: https://github.com/HackGT/Ultimate-Checkin.git
-    run:
-      port: 80
 
-  - name: mongo
-    helm: mongodb
-    version: 0.4.3
-    provides:
-      MONGO_URL: mongodb://mongo-mongodb/
-
-  - name: juiced-peacock
-    helm: redis
-    version: 0.4.2
