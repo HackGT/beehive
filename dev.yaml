@@ -6,8 +6,12 @@ apps:
 
   - name: check-in
     git: https://github.com/HackGT/Ultimate-Checkin.git
-  
+
   - name: hackgt-hubot
     git: https://github.com/HackGT/hackgt-hubot.git
     run:
       port: 8080
+
+  - name: main-redis
+    helm: redis
+    version: 0.4.2
