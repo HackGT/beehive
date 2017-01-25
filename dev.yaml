@@ -12,6 +12,11 @@ apps:
     run:
       port: 8080
 
+  - name: redisred
+    git: https://github.com/HackGT/redisred.git
+    run:
+        port: 80
+
   - name: main-redis
     helm: redis
     version: 0.4.2
