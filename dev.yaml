@@ -2,6 +2,7 @@ domain: hack.gt
 apps:
   - name: helpq
     git: https://github.com/HackGT/helpq.git
+    branch: dev
     run:
         port: 3000
     env:
