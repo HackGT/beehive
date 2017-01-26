@@ -6,7 +6,7 @@ apps:
         port: 3000
     env:
         - name: MONGO_URL
-          value: mongodb://main-mongo
+          value: mongodb://main-mongo-mongodb
   - name: main-mongo
     helm: mongodb
     version: 0.4.4
