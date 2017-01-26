@@ -1,16 +1,12 @@
 domain: hack.gt
 apps:
-  - name: redisred
-    git: https://github.com/HackGT/redisred.git
-    run:
-        port: 80
   - name: helpq
     git: https://github.com/HackGT/helpq.git
     run:
-        port: 80
-  - name: main-redis
-    helm: redis
-    version: 0.4.2
+        port: 3000
+    env:
+        - name: MONGO_URL
+          value: mongodb://main-mongo
   - name: main-mongo
     helm: mongodb
     version: 0.4.4
