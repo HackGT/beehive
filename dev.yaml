@@ -7,7 +7,14 @@ apps:
         port: 3000
     env:
         - name: MONGO_URL
-          value: mongodb://main-mongo-mongodb
+          value: mongodb://main-mongo-mongodb/helpq
+        - name: PORT
+          value: "3000"
+        - name: RELEASE
+          value: 1.2.1
+        - name: ROOT_URL
+          value: http://127.0.0.1
+
   - name: main-mongo
     helm: mongodb
     version: 0.4.4
