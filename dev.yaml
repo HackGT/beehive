@@ -1,22 +1,16 @@
 domain: hack.gt
 apps:
-  - name: helpq
-    git: https://github.com/hackgt/helpq.git
-    branch: dev
-
-  - name: check-in
-    git: https://github.com/HackGT/Ultimate-Checkin.git
-
-  - name: hackgt-hubot
-    git: https://github.com/HackGT/hackgt-hubot.git
-    run:
-      port: 8080
-
   - name: redisred
     git: https://github.com/HackGT/redisred.git
     run:
         port: 80
-
+  - name: helpq
+    git: https://github.com/HackGT/helpq.git
+    run:
+        port: 80
   - name: main-redis
     helm: redis
     version: 0.4.2
+  - name: main-mongo
+    helm: mongodb
+    version: 0.4.4
