@@ -1,7 +1,8 @@
 sudo: false
+language: ruby
 dist: trusty
 
 
 script:
-  - echo "Hello World!!"
+  - ruby .travis.d/gen.rb
 
