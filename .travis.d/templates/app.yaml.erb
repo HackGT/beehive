@@ -2,47 +2,47 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: <%= app[:name] %>
-  name: <%= app[:name] %>
+    name: <%= app['shortname'] %>
+  name: <%= app['shortname'] %>
 spec:
   ports:
     -
       name: http
-      port: <%= app[:port] or 80 %>
+      port: <%= app['port'] or 80 %>
       protocol: TCP
-      targetPort: <%= app[:target_port] or 3000 %>
+      targetPort: <%= app['target_port'] or 3000 %>
   selector:
-    name: <%= app[:name] %>
+    name: <%= app['shortname'] %>
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-    name: <%= app[:name] %>
+    name: <%= app['shortname'] %>
 spec:
   replicas: 1
   template:
     metadata:
-      name: <%= app[:name] %>
+      name: <%= app['shortname'] %>
       labels:
-        name: <%= app[:name] %>
+        name: <%= app['shortname'] %>
     spec:
         containers:
-          - image: <%= app[:image] %>:<%= app[:tag] %>
-            name: <%= app[:name] %>
+          - image: <%= app['git']['user'] %>/<%= app['git']['shortname'] %>:<%= app['git']['rev'] %>
+            name: <%= app['shortname'] %>
             env:
               - name: PORT
-                value: <%= app[:target_port] or 3000 %>
+                value: <%= app['target_port'] or 3000 %>
               - name: SOURCE_REV
-                value: <%= app[:git_rev] %>
-              <% if app[:special][:mongo] %>
+                value: <%= app['git']['rev'] %>
+              <% if app['wants'] && app['wants']['mongo'] %>
               - name: MONGO_URL
-                value: mongodb://<%= dome[:mongo] %>/<%= app[:name] %>
+                value: mongodb://<%= dome['mongo'] %>/<%= app['shortname'] %>
               <% end %>
-              <% for e in (app[:env] or []) %>
-              - name: <%= e[:name] %>
-                value: <%= e[:value].to_s.inspect %>
+              <% for e in (app['env'] or []) %>
+              - name: <%= e['shortname'] %>
+                value: <%= e['value'].to_s.inspect %>
               <% end %>
             ports:
-              - containerPort: <%= app[:target_port] or 3000 %>
-                name: <%= app[:name] %>
+              - containerPort: <%= app['target_port'] or 3000 %>
+                name: <%= app['shortname'] %>
 
