@@ -1,1 +1,6 @@
-git: https://github.com/HackGT/registration.git
+git:
+    remote: https://github.com/HackGT/registration.git
+    branch: master
+
+wants:
+    mongo: true
