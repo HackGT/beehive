@@ -42,6 +42,10 @@ spec:
               - name: <%= name %>
                 value: <%= value.to_s.inspect %>
               <% end %>
+              <% app['secrets']&.each do |name| %>
+              - name: <%= name %>
+                value: <%= ENV[name].to_s.inspect %>
+              <% end %>
             ports:
               - containerPort: <%= app['target_port'] or 3000 %>
                 name: <%= app['uid'] %>
