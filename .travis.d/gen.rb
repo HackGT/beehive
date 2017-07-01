@@ -26,10 +26,14 @@ def load_config
 
     next if dome_name == 'output'
 
-    if app_name.nil? || !overflow.nil?
+    if file =~ /main\.ya*ml/
+      dome_name = 'default'
+      app_name = :main
+    elsif app_name.nil? || !overflow.nil?
       raise "Cannot handle more than one folder deep: #{file}"
+    else
+      app_name = basename_no_ext app_name
     end
-    app_name = basename_no_ext app_name
 
     app_config = YAML.safe_load(File.read(file))
     next if app_config['ignore']

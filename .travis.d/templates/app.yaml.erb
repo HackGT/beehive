@@ -19,7 +19,7 @@ kind: Deployment
 metadata:
     name: <%= app['uid'] %>
 spec:
-  replicas: 1
+  replicas: <%= (app['deployment'] and app['deployment']['replicas']) or 1 %>
   template:
     metadata:
       name: <%= app['uid'] %>
@@ -38,9 +38,9 @@ spec:
               - name: MONGO_URL
                 value: mongodb://<%= biodome['mongo'] %>/<%= app['uid'] %>
               <% end %>
-              <% for e in (app['env'] or []) %>
-              - name: <%= e['name'] %>
-                value: <%= e['value'].to_s.inspect %>
+              <% app['env']&.each do |name, value| %>
+              - name: <%= name %>
+                value: <%= value.to_s.inspect %>
               <% end %>
             ports:
               - containerPort: <%= app['target_port'] or 3000 %>
