@@ -76,7 +76,7 @@ biodomes = load_config
 
 biodomes.each do |dome_name, biodome|
   # TODO: get the real value from
-  biodome['mongo'] = 'mongo'
+  biodome['mongo'] = 'altered-pug-mongodb'
 
   biodome['apps'].each do |app_name, app|
     path = "output/#{app_name}-#{dome_name}-deployment.yaml"
