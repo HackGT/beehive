@@ -4,17 +4,17 @@ metadata:
   name: app-ingress
 spec:
   rules:
-  <% biodomes.each do |biodome_name, biodome| %>
-  <% biodome.each do |app_name, app| %>
-  <% if biodome_name == "default" %>
-  - host: <%= app_name %>.hack.gt
+  <% biodomes.each do |_, biodome| %>
+  <% biodome['apps'].each do |_, app| %>
+  <% if biodome['name'] == "default" %>
+  - host: <%= app['shortname'] %>.hack.gt
   <% else %>
-  - host: <%= app_name %>.<%= biodome_name %>.hack.gt
+  - host: <%= app['shortname'] %>.<%= biodome['name'] %>.hack.gt
   <% end %>
     http:
       paths:
       - backend:
-          serviceName: <%= app_name %>
-          servicePort: 80
+          serviceName: <%= app['uid'] %>
+          servicePort: <%= app['port'] or 80 %>
   <% end %>
   <% end %>

@@ -54,26 +54,27 @@ def load_config
     end
 
     data[dome_name] = {} unless data.key? dome_name
-    data[dome_name][app_name] = app_config
-    data[dome_name][app_name]['shortname'] = app_name
-    data[dome_name][app_name]['git']['user'] = org_name
-    data[dome_name][app_name]['git']['shortname'] = repo_name
-    data[dome_name][app_name]['git']['rev'] = git_rev
+    data[dome_name]['name'] = dome_name
+    data[dome_name]['apps'] = {} unless data[dome_name].key? 'apps'
+    data[dome_name]['apps'][app_name] = app_config
+    data[dome_name]['apps'][app_name]['shortname'] = app_name
+    data[dome_name]['apps'][app_name]['uid'] = "#{app_name}-#{dome_name}"
+    data[dome_name]['apps'][app_name]['git']['user'] = org_name
+    data[dome_name]['apps'][app_name]['git']['shortname'] = repo_name
+    data[dome_name]['apps'][app_name]['git']['rev'] = git_rev
     data
   end
 end
 
-puts `rm -rf output/*.yaml`
+`rm -rf output/*.yaml`
 
 biodomes = load_config
 
-biodomes.each do |dome_name, apps|
-  dome = {}
-  dome['name'] = dome_name
+biodomes.each do |dome_name, biodome|
   # TODO: get the real value from
-  dome['mongo'] = 'mongo'
+  biodome['mongo'] = 'mongo'
 
-  apps.each do |app_name, app|
+  biodome['apps'].each do |app_name, app|
     path = "output/#{app_name}-#{dome_name}-deployment.yaml"
     puts "Writing #{path}."
 
