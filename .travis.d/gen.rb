@@ -31,15 +31,20 @@ def load_app_data(data, app_config, dome_name, app_name)
     git_rev = git_rev.strip.split[0]
   end
 
+  shortname = if app_config['name'] && app_name == :main
+                app_config['name']
+              else
+                app_name
+              end
   data[dome_name] = {} unless data.key? dome_name
   data[dome_name]['name'] = dome_name
   data[dome_name]['apps'] = {} unless data[dome_name].key? 'apps'
   data[dome_name]['apps'][app_name] = app_config
-  data[dome_name]['apps'][app_name]['shortname'] = app_name
-  data[dome_name]['apps'][app_name]['uid'] = "#{app_name}-#{dome_name}"
   data[dome_name]['apps'][app_name]['git']['user'] = org_name
   data[dome_name]['apps'][app_name]['git']['shortname'] = repo_name
   data[dome_name]['apps'][app_name]['git']['rev'] = git_rev
+  data[dome_name]['apps'][app_name]['shortname'] = shortname
+  data[dome_name]['apps'][app_name]['uid'] = "#{shortname}-#{dome_name}"
   data
 end
 

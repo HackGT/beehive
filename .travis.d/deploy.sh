@@ -13,12 +13,14 @@ install_kubectl() {
 
 install_helm() {
     curl -LO 'https://kubernetes-helm.storage.googleapis.com/helm-v2.5.0-linux-amd64.tar.gz'
+
     tar -zxvf 'helm-v2.5.0-linux-amd64.tar.gz'
     chmod +x linux-amd64/helm
     mv linux-amd64/helm .
     hash -r
-    helm init --client-only
-    helm repo update
+
+    ./helm init --client-only
+    ./helm repo update
 }
 
 install_kubectl
