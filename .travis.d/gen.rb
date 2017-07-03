@@ -1,4 +1,5 @@
 require 'yaml'
+require 'json'
 require 'erb'
 
 SOURCE_DIR = File.expand_path(File.dirname(__FILE__))

@@ -40,7 +40,11 @@ spec:
               <% end %>
               <% app['env']&.each do |name, value| %>
               - name: <%= name %>
+              <% if value.is_a? Hash %>
+                value: <%= JSON.generate(value).to_s.inspect %>
+              <% else %>
                 value: <%= value.to_s.inspect %>
+              <% end %>
               <% end %>
               <% app['secrets']&.each do |name| %>
               - name: <%= name %>
