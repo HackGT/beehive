@@ -8,6 +8,7 @@ TEMPLATES_DIR = File.join SOURCE_DIR, '/templates/'
 KUBE_OUT_DIR = File.join SOURCE_DIR, '../.output/kubernetes/'
 CF_OUT_DIR = File.join SOURCE_DIR, '../.output/cloudflare/'
 CONFIG_ROOT = File.join SOURCE_DIR, '..'
+CONFIG_YAML = File.join SOURCE_DIR, 'config.yaml'
 CONFIG_ROOT_LEN = CONFIG_ROOT.split(File::SEPARATOR).length
 YAML_GLOB = ['*.yaml', '*.yml'].map { |f| File.join CONFIG_ROOT, '**', f }
 
@@ -15,10 +16,7 @@ SERVICE_TEMPLATE = File.join TEMPLATES_DIR, 'service.yaml.erb'
 DEPLOYMENT_TEMPLATE = File.join TEMPLATES_DIR, 'deployment.yaml.erb'
 INGRESS_TEMPLATE = File.join TEMPLATES_DIR, 'ingress.yaml.erb'
 
-# TODO: add config steps
-ROOT_HOST = 'hack.gt'
-CLUSTER_IP = '54.164.227.147'
-MONGO_HOSTNAME = 'altered-pug-mongodb'
+CONFIG = YAML.safe_load(File.read(CONFIG_YAML))
 
 def basename_no_ext(file)
   File.basename(file, File.extname(file))
@@ -50,11 +48,11 @@ def load_app_data(data, app_config, dome_name, app_name)
                 app_name
               end
   host = if app_name == :main
-           ROOT_HOST
+           CONFIG['domain']['host']
          elsif dome_name == 'default'
-           "#{app_name}.#{ROOT_HOST}"
+           "#{app_name}.#{CONFIG['domain']['host']}"
          else
-           "#{app_name}.#{dome_name}.#{ROOT_HOST}"
+           "#{app_name}.#{dome_name}.#{CONFIG['domain']['host']}"
          end
   data[dome_name] = {} unless data.key? dome_name
   data[dome_name]['name'] = dome_name
@@ -114,7 +112,7 @@ biodomes = load_config
 
 # Create all the app's service and deployment conf files.
 biodomes.each do |dome_name, biodome|
-  biodome['mongo'] = MONGO_HOSTNAME
+  biodome['mongo'] = CONFIG['mongo']['host']
 
   biodome['apps'].each do |app_name, app|
     path = File.join KUBE_OUT_DIR, "#{app_name}-#{dome_name}-deployment.yaml"
@@ -157,7 +155,7 @@ dns = biodomes.each_with_object({}) do |(_, biodome), data|
   biodome['apps'].each_with_object(data) do |(_, app), inner_data|
     inner_data[app['host']] = {
       'type' => 'A',
-      'content' => CLUSTER_IP,
+      'content' => CONFIG['cluster']['ip'],
       'proxied' => true
     }
     inner_data

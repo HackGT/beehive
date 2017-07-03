@@ -3,13 +3,13 @@ require 'cloudflare'
 require 'base64'
 require 'yaml'
 
-# TODO: configuration options
-ROOT_HOST = 'hack.gt'
-CLUSTER_IP = '54.164.227.147'
-
 SOURCE_DIR = File.expand_path(File.dirname(__FILE__))
 KUBE_GLOB = File.join SOURCE_DIR, '../.output/kubernetes/*.yaml'
 CF_DNS_CONFIG = File.join SOURCE_DIR, '../.output/cloudflare/dns.yaml'
+KUBE_CONFIG = File.join Dir.home, '.kube/config'
+CONFIG_YAML = File.join SOURCE_DIR, 'config.yaml'
+
+CONFIG = YAML.safe_load(File.read(CONFIG_YAML))
 
 def set_cloudflare_dns
   connection = Cloudflare.connect(
@@ -38,8 +38,7 @@ end
 
 def deploy_kubernetes
   # configure the client
-  kube_config = YAML.safe_load(Base64.decode64(ENV['KUBE_CONFIG']))
-  config = Kubeclient::Config.new(kube_config, nil)
+  config = Kubeclient::Config.read(KUBE_CONFIG)
   client = Kubeclient::Client.new(
     config.context.api_endpoint,
     config.context.api_version,

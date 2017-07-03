@@ -2,5 +2,6 @@ sudo: false
 language: ruby
 dist: trusty
 script:
+- mkdir -p ~/.kube && echo "${KUBE_CONFIG}" | base64 -d > ~/.kube/config
 - cd .travis.d && bundle install --path vendor/bundle
 - bundle exec ruby gen.rb

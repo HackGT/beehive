@@ -1,0 +1,9 @@
+domain:
+  host: hack.gt
+
+cluster:
+  ip: 54.164.227.147
+
+mongo:
+  host: 'altered-pug-mongodb'
+
