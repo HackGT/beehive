@@ -2,5 +2,5 @@ sudo: false
 language: ruby
 dist: trusty
 script:
-- ruby .travis.d/gen.rb
-- .travis.d/deploy.sh
+- cd .travis.d && bundle install --path vendor/bundle
+- bundle exec ruby gen.rb

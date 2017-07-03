@@ -6,13 +6,7 @@ spec:
   rules:
   <% biodomes.each do |_, biodome| %>
   <% biodome['apps'].each do |app_name, app| %>
-  <% if app_name == :main %>
-  - host: hack.gt
-  <% elsif biodome['name'] == "default" %>
-  - host: <%= app['shortname'] %>.hack.gt
-  <% else %>
-  - host: <%= app['shortname'] %>.<%= biodome['name'] %>.hack.gt
-  <% end %>
+  - host: <%= app['host'] %>
     http:
       paths:
       - backend:
