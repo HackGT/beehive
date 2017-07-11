@@ -1,1 +1,10 @@
 git: https://github.com/HackGT/fall2017.git
+
+wants:
+    mongo: true
+
+env:
+    GOOGLE_ANALYTICS: UA-64687964-4
+
+deployment:
+  replicas: 1
