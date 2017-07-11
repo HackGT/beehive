@@ -17,7 +17,7 @@ def set_cloudflare_dns
     key: ENV['CLOUDFLARE_AUTH']
   )
   zone = connection.zones.find_by_id(ENV['CLOUDFLARE_ZONE'])
-  target = YAML.safe_load(CF_DNS_CONFIG)
+  target = YAML.safe_load(File.read(CF_DNS_CONFIG))
 
   # update existing records
   zone.dns_records.all.each do |dns|
@@ -25,7 +25,7 @@ def set_cloudflare_dns
     record = target[dns.record[:name]]
     record['name'] = dns.record[:name]
     dns.put(record.to_json, content_type: 'application/json')
-    puts 'Changing Cloudflare DNS: #{record.to_json}'
+    puts "Changing Cloudflare DNS: #{record.to_json}"
     target.delete(dns.record[:name])
   end
 
@@ -38,29 +38,22 @@ end
 
 def deploy_kubernetes
   # configure the client
-  config = Kubeclient::Config.read(KUBE_CONFIG)
-  client = Kubeclient::Client.new(
-    config.context.api_endpoint,
-    config.context.api_version,
-    ssl_options: config.context.ssl_options,
-    auth_options: config.context.auth_options
-  )
+  # config = Kubeclient::Config.read(KUBE_CONFIG)
+  # client = Kubeclient::Client.new(
+  #   config.context.api_endpoint,
+  #   config.context.api_version,
+  #   ssl_options: config.context.ssl_options,
+  #   auth_options: config.context.auth_options
+  # )
 
   Dir[KUBE_GLOB]
-    .map { |f| [YAML.safe_load(f), f] }
-    .each do |(app, f)|
+    .map { |f| [YAML.safe_load(File.read(f)), f] }
+    .each do |(_, f)|
 
     # create based on the kind of file
     puts "Deploying #{f}."
-
-    case app['kind'].downcase
-    when 'deployment'
-      client.create_deployment(app)
-    when 'service'
-      client.create_service(app)
-    when 'ingress'
-      client.create_ingress(app)
-    end
+    # TODO: use ruby API?
+    puts `kubectl apply -f '#{f}'`
   end
 end
 

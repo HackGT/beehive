@@ -11,28 +11,29 @@ spec:
         name: <%= app['uid'] %>
     spec:
         containers:
-          - image: <%= app['git']['user'] %>/<%= app['git']['shortname'] %>:<%= app['git']['rev'] %>
+          - image: <%= app['git']['user'] %>/<%= app['git']['shortname'] %>:latest
+            imagePullPolicy: Always
             name: <%= app['uid'] %>
             env:
               - name: PORT
-                value: <%= app['target_port'] or 3000 %>
+                value: !!str <%= app['target_port'] or 3000 %>
               - name: SOURCE_REV
-                value: <%= app['git']['rev'] %>
+                value: !!str <%= app['git']['rev'] %>
               <% if app['wants'] && app['wants']['mongo'] %>
               - name: MONGO_URL
-                value: mongodb://<%= biodome['mongo'] %>/<%= app['uid'] %>
+                value: !!str mongodb://<%= biodome['mongo'] %>/<%= app['uid'] %>
               <% end %>
               <% app['env']&.each do |name, value| %>
               - name: <%= name %>
               <% if value.is_a? Hash %>
-                value: <%= JSON.generate(value).to_s.inspect %>
+                value: !!str <%= JSON.generate(value).to_s.inspect %>
               <% else %>
-                value: <%= value.to_s.inspect %>
+                value: !!str <%= value.to_s.inspect %>
               <% end %>
               <% end %>
               <% app['secrets']&.each do |name| %>
               - name: <%= name %>
-                value: <%= ENV["#{biodome['name'].upcase}_#{app['shortname'].upcase}_#{name}"].to_s.inspect %>
+                value: !!str <%= ENV["#{biodome['name'].upcase}_#{app['shortname'].upcase}_#{name}"].to_s.inspect %>
               <% end %>
             ports:
               - containerPort: <%= app['target_port'] or 3000 %>
