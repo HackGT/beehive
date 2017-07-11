@@ -3,7 +3,7 @@ language: ruby
 dist: trusty
 script:
 - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
-- chmod +x kubectl && mv kubectl /usr/bin/ && hash -r
+- chmod +x kubectl && export PATH="${PATH}:$(pwd)" && hash -r
 - mkdir -p ~/.kube && echo "${KUBE_CONFIG}" | base64 -d > ~/.kube/config
 - cd .travis.d && bundle install --path vendor/bundle
 - bundle exec ruby gen.rb
