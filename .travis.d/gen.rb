@@ -48,6 +48,8 @@ def load_app_data(data, app_config, dome_name, app_name)
               else
                 app_name
               end
+  shortname.downcase!
+
   host = if app_name == :main
            CONFIG['domain']['host']
          elsif dome_name == 'default'
@@ -55,16 +57,17 @@ def load_app_data(data, app_config, dome_name, app_name)
          else
            "#{app_name}.#{dome_name}.#{CONFIG['domain']['host']}"
          end
+
   data[dome_name] = {} unless data.key? dome_name
   data[dome_name]['name'] = dome_name
   data[dome_name]['apps'] = {} unless data[dome_name].key? 'apps'
   data[dome_name]['apps'][app_name] = app_config
-  data[dome_name]['apps'][app_name]['git']['user'] = org_name
-  data[dome_name]['apps'][app_name]['git']['shortname'] = repo_name
-  data[dome_name]['apps'][app_name]['git']['rev'] = git_rev
+  data[dome_name]['apps'][app_name]['git']['user'] = org_name.downcase
+  data[dome_name]['apps'][app_name]['git']['shortname'] = repo_name.downcase
+  data[dome_name]['apps'][app_name]['git']['rev'] = git_rev.downcase
   data[dome_name]['apps'][app_name]['shortname'] = shortname
   data[dome_name]['apps'][app_name]['uid'] = "#{shortname}-#{dome_name}"
-  data[dome_name]['apps'][app_name]['host'] = host
+  data[dome_name]['apps'][app_name]['host'] = host.downcase
   data
 end
 
@@ -92,7 +95,7 @@ def load_config
       app_name = basename_no_ext app_name
     end
 
-    load_app_data(data, app_config, dome_name, app_name)
+    load_app_data(data, app_config, dome_name.downcase, app_name.downcase)
   end
 end
 

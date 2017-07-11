@@ -54,6 +54,7 @@ def deploy_kubernetes
     puts "Deploying #{f}."
     # TODO: use ruby API?
     puts `kubectl apply -f '#{f}'`
+    raise 'kubectl exited with non-zero status.' if $?.exitstatus != 0
   end
 end
 
