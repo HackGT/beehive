@@ -1,0 +1,4 @@
+.nvimlog
+.output
+.travis.d/vendor
+

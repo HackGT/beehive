@@ -2,7 +2,7 @@ domain:
   host: hack.gt
 
 cluster:
-  ip: 54.164.227.147
+  host: aff0f982065e311e78cb40e07e81baa1-1580660332.us-east-1.elb.amazonaws.com
 
 mongo:
   host: 'altered-pug-mongodb'

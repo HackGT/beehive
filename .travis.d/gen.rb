@@ -5,6 +5,7 @@ require 'fileutils'
 
 SOURCE_DIR = File.expand_path(File.dirname(__FILE__))
 TEMPLATES_DIR = File.join SOURCE_DIR, '/templates/'
+OUT_ROOT = File.join SOURCE_DIR, '../.output/'
 KUBE_OUT_DIR = File.join SOURCE_DIR, '../.output/kubernetes/'
 CF_OUT_DIR = File.join SOURCE_DIR, '../.output/cloudflare/'
 CONFIG_ROOT = File.join SOURCE_DIR, '..'
@@ -97,12 +98,14 @@ end
 
 # Clear all our previous configuration
 FileUtils.rm_rf [
+  OUT_ROOT,
   KUBE_OUT_DIR,
   CF_OUT_DIR
 ]
 
 # Make clean dirs
 FileUtils.mkdir [
+  OUT_ROOT,
   KUBE_OUT_DIR,
   CF_OUT_DIR
 ]
@@ -154,8 +157,8 @@ end
 dns = biodomes.each_with_object({}) do |(_, biodome), data|
   biodome['apps'].each_with_object(data) do |(_, app), inner_data|
     inner_data[app['host']] = {
-      'type' => 'A',
-      'content' => CONFIG['cluster']['ip'],
+      'type' => 'CNAME',
+      'content' => CONFIG['cluster']['host'],
       'proxied' => true
     }
     inner_data
