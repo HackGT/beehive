@@ -162,7 +162,7 @@ dns = biodomes.each_with_object({}) do |(_, biodome), data|
     inner_data[app['host']] = {
       'type' => 'CNAME',
       'content' => CONFIG['cluster']['host'],
-      'proxied' => true
+      'proxied' => biodome['name'] == 'default'
     }
     inner_data
   end
