@@ -13,8 +13,9 @@ spec:
         containers:
           - image: <%= app['git']['user'] %>/<%= app['git']['shortname'] %>:latest
             imagePullPolicy: Always
-            requests:
-              cpu: 10m
+            resources:
+              requests:
+                cpu: 10m
             name: <%= app['uid'] %>
             env:
               - name: PORT
