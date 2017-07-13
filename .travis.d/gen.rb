@@ -91,6 +91,9 @@ def load_config
       app_name = :main
     elsif components.length > 2
       raise "YAML configs cannot go more than 1 directory deep! #{file}"
+    elsif app_name.nil?
+      app_name = basename_no_ext dome_name
+      dome_name = 'default'
     else
       app_name = basename_no_ext app_name
     end
