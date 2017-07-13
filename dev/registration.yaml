@@ -17,11 +17,12 @@ secrets:
   - FACEBOOK_CLIENT_SECRET
 
 env:
+  COOKIE_SECURE_ONLY: true
   EMAIL_FROM: "HackGT Team <hello@hackgt.com>"
   EMAIL_HOST: smtp.sendgrid.net
   EMAIL_PORT: 465
   PRODUCTION: true
-  EVENT_NAME: HackGT Catalyst
+  EVENT_NAME: "HackGT 4: New Heights"
   ADMIN_EMAILS:
     - petschekr@gmail.com
     - a@andrewdai.co
