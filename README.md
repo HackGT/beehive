@@ -99,6 +99,8 @@ You have to go to the [Travis secrets page](https://travis-ci.org/HackGT/biodome
 and add an env var by the name of `DEV_HACKS_MY_SECRET`.
 If the file is just in `/hacks.yaml` you must name it `DEFAULT_HACKS_MY_SECRET`.
 
+**WARNING: your secret must be bash-escaped or Travis will do weird shit**
+
 ## Parting words
 
 Hopefully this design will become more unified in the future.
