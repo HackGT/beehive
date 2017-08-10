@@ -2,6 +2,7 @@ require 'yaml'
 require 'json'
 require 'erb'
 require 'fileutils'
+require 'open-uri'
 
 SOURCE_DIR = File.expand_path(File.dirname(__FILE__))
 TEMPLATES_DIR = File.join SOURCE_DIR, '/templates/'
@@ -23,6 +24,50 @@ def basename_no_ext(file)
   File.basename(file, File.extname(file))
 end
 
+def make_shortname(config_name, app_name)
+  (
+    if config_name && app_name == :main
+      config_name
+    else
+      app_name
+    end
+  ).downcase
+end
+
+def make_host(app_name, dome_name)
+  if app_name == :main
+    CONFIG['domain']['host']
+  elsif dome_name == 'default'
+    "#{app_name}.#{CONFIG['domain']['host']}"
+  else
+    "#{app_name}.#{dome_name}.#{CONFIG['domain']['host']}"
+  end
+end
+
+def make_dockertag(branch: 'master', rev: nil)
+  if !rev.nil?
+    rev
+  elsif branch != 'master'
+    "latest-#{branch}"
+  else
+    'latest'
+  end
+end
+
+def github_file(file, slog, branch: 'master', rev: nil)
+  selector = rev.nil? ? branch : rev
+  url = "https://raw.githubusercontent.com/#{slog}/#{selector}/#{file}"
+  open(url).read
+end
+
+def fetch_deployment(slog, branch: 'master', rev: nil)
+  text = github_file('deployment.yaml', slog, branch: branch, rev: rev)
+  YAML.safe_load(text)
+rescue
+  puts "  - No deployment.yaml found in #{slog}."
+  {}
+end
+
 def load_app_data(data, app_config, dome_name, app_name)
   # generate more configs part
   if app_config['git'].is_a? String
@@ -32,31 +77,23 @@ def load_app_data(data, app_config, dome_name, app_name)
   end
   git = app_config['git']['remote']
   branch = app_config['git']['branch'] || 'master'
+  git_rev = app_config['git']['rev']
+  git_rev = git_rev.downcase unless git_rev.nil?
+
   git_parts = git.split(File::SEPARATOR)
   repo_name = basename_no_ext(git_parts[-1])
   org_name = git_parts[-2]
+  slog = "#{org_name}/#{repo_name}"
 
-  # get git rev
-  git_rev = app_config['git']['rev']
-  if git_rev.nil?
-    git_rev = `git ls-remote #{git} #{branch}`
-    git_rev = git_rev.strip.split[0]
-  end
+  base_config = fetch_deployment(slog, branch: branch, rev: git_rev)
 
-  shortname = if app_config['name'] && app_name == :main
-                app_config['name']
-              else
-                app_name
-              end
-  shortname.downcase!
+  app_config = base_config.merge(app_config)
 
-  host = if app_name == :main
-           CONFIG['domain']['host']
-         elsif dome_name == 'default'
-           "#{app_name}.#{CONFIG['domain']['host']}"
-         else
-           "#{app_name}.#{dome_name}.#{CONFIG['domain']['host']}"
-         end
+  docker_tag = make_dockertag branch: branch, rev: git_rev
+
+  shortname = make_shortname app_config['name'], app_name
+
+  host = make_host app_name, dome_name
 
   data[dome_name] = {} unless data.key? dome_name
   data[dome_name]['name'] = dome_name
@@ -64,8 +101,9 @@ def load_app_data(data, app_config, dome_name, app_name)
   data[dome_name]['apps'][app_name] = app_config
   data[dome_name]['apps'][app_name]['git']['user'] = org_name.downcase
   data[dome_name]['apps'][app_name]['git']['shortname'] = repo_name.downcase
-  data[dome_name]['apps'][app_name]['git']['rev'] = git_rev.downcase
+  data[dome_name]['apps'][app_name]['git']['rev'] = git_rev
   data[dome_name]['apps'][app_name]['shortname'] = shortname
+  data[dome_name]['apps'][app_name]['docker-tag'] = docker_tag
   data[dome_name]['apps'][app_name]['uid'] = "#{shortname}-#{dome_name}"
   data[dome_name]['apps'][app_name]['host'] = host.downcase
   data

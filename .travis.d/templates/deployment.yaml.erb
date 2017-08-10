@@ -11,7 +11,7 @@ spec:
         name: <%= app['uid'] %>
     spec:
         containers:
-          - image: <%= app['git']['user'] %>/<%= app['git']['shortname'] %>:latest
+          - image: <%= app['git']['user'] %>/<%= app['git']['shortname'] %>:<%= app['docker-tag'] %>
             imagePullPolicy: Always
             resources:
               requests:
@@ -20,8 +20,6 @@ spec:
             env:
               - name: PORT
                 value: !!str <%= app['target_port'] or 3000 %>
-              - name: SOURCE_REV
-                value: !!str <%= app['git']['rev'] %>
               <% if app['wants'] && app['wants']['mongo'] %>
               - name: MONGO_URL
                 value: !!str mongodb://<%= biodome['mongo'] %>/<%= app['uid'] %>
