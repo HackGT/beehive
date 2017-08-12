@@ -37,6 +37,7 @@ def set_cloudflare_dns
 end
 
 def deploy_kubernetes
+  # TODO: use ruby API?
   # configure the client
   # config = Kubeclient::Config.read(KUBE_CONFIG)
   # client = Kubeclient::Client.new(
@@ -48,13 +49,22 @@ def deploy_kubernetes
 
   Dir[KUBE_GLOB]
     .map { |f| [YAML.safe_load(File.read(f)), f] }
-    .each do |(_, f)|
+    .each do |(config, path)|
 
     # create based on the kind of file
-    puts "Deploying #{f}."
-    # TODO: use ruby API?
-    puts `kubectl apply -f '#{f}'`
-    raise 'kubectl exited with non-zero status.' if $?.exitstatus != 0
+    puts "Deploying #{path}."
+
+    # We don't want to overwrite over secrets since they are stateful.
+    if config['kind'].casecmp('secret').zero?
+      `kubectl describe secret #{config['metadata']['name']}`
+      puts `kubectl apply -f '#{path}'` unless $CHILD_STATUS.exitstatus.zero?
+    else
+      puts `kubectl apply -f '#{path}'`
+    end
+
+    if $CHILD_STATUS.exitstatus != 0
+      raise 'kubectl exited with non-zero status.'
+    end
   end
 end
 
