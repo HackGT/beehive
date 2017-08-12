@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-    name: <%= app['uid'] %>
+  name: <%= app['uid'] %>
 spec:
   replicas: <%= (app['deployment'] and app['deployment']['replicas']) or 1 %>
   template:
@@ -36,7 +36,7 @@ spec:
               - name: <%= name %>
                 valueFrom:
                   secretKeyRef:
-                    name: <%= app['uid'] %>-secrets
+                    name: <%= app['secrets-source'] or "#{app['uid']}-secrets" %>
                     key: <%= name %>
               <% end %>
             ports:

@@ -20,6 +20,7 @@ SERVICE_TEMPLATE = File.join TEMPLATES_DIR, 'service.yaml.erb'
 DEPLOYMENT_TEMPLATE = File.join TEMPLATES_DIR, 'deployment.yaml.erb'
 INGRESS_TEMPLATE = File.join TEMPLATES_DIR, 'ingress.yaml.erb'
 SECRETS_TEMPLATE = File.join TEMPLATES_DIR, 'secrets.yaml.erb'
+FALLBACK_SECRETS_TEMPLATE = File.join TEMPLATES_DIR, 'fallback-secrets.yaml.erb'
 
 CONFIG = YAML.safe_load(File.read(CONFIG_YAML))
 
@@ -102,6 +103,7 @@ def load_app_data(data, app_config, dome_name, app_name)
   data[dome_name]['name'] = dome_name
   data[dome_name]['apps'] = {} unless data[dome_name].key? 'apps'
   data[dome_name]['apps'][app_name] = app_config
+  data[dome_name]['apps'][app_name]['git']['slog'] = slog.downcase
   data[dome_name]['apps'][app_name]['git']['user'] = org_name.downcase
   data[dome_name]['apps'][app_name]['git']['shortname'] = repo_name.downcase
   data[dome_name]['apps'][app_name]['git']['rev'] = git_rev
@@ -190,12 +192,13 @@ biodomes.each do |dome_name, biodome|
     puts "Writing #{path}."
     write_config(path, SECRETS_TEMPLATE, binding)
 
-    # path = File.join KUBE_OUT_DIR, "#{app_name}-fallback_secrets.yaml"
+    path = File.join KUBE_OUT_DIR, "#{app['git']['slog'].tr '/', '-'}"\
+                                   '-fallback-secrets.yaml'
 
-    # next unless File.exist? path
+    next if File.exist? path
 
-    # puts "Writing #{path}."
-    # write_config(path, FALLBACK_SECRETS_TEMPLATE, binding)
+    puts "Writing #{path}."
+    write_config(path, FALLBACK_SECRETS_TEMPLATE, binding)
   end
 end
 
