@@ -4,6 +4,8 @@ require 'erb'
 require 'fileutils'
 require 'open-uri'
 
+SECRETS_URL = 'http://localhost:8001/api/v1/namespaces/kube-system'\
+              '/services/kubernetes-dashboard/proxy/#!/secret'.freeze
 SOURCE_DIR = File.expand_path(File.dirname(__FILE__))
 TEMPLATES_DIR = File.join SOURCE_DIR, '/templates/'
 OUT_ROOT = File.join SOURCE_DIR, '../.output/'
@@ -17,6 +19,7 @@ YAML_GLOB = ['*.yaml', '*.yml'].map { |f| File.join CONFIG_ROOT, '**', f }
 SERVICE_TEMPLATE = File.join TEMPLATES_DIR, 'service.yaml.erb'
 DEPLOYMENT_TEMPLATE = File.join TEMPLATES_DIR, 'deployment.yaml.erb'
 INGRESS_TEMPLATE = File.join TEMPLATES_DIR, 'ingress.yaml.erb'
+SECRETS_TEMPLATE = File.join TEMPLATES_DIR, 'secrets.yaml.erb'
 
 CONFIG = YAML.safe_load(File.read(CONFIG_YAML))
 
@@ -140,6 +143,17 @@ def load_config
   end
 end
 
+def write_config(path, template, bind)
+  raise "File #{path} already exists! Not overwriting!" if File.exist? path
+  File.open path, 'w' do |file|
+    # generate the config
+    data = ERB.new(File.read(template)).result(bind)
+    # verify it's real YAML
+    yaml = YAML.safe_load(data)
+    file.write(YAML.dump(yaml))
+  end
+end
+
 # Clear all our previous configuration
 FileUtils.rm_rf [
   OUT_ROOT,
@@ -164,38 +178,31 @@ biodomes.each do |dome_name, biodome|
   biodome['apps'].each do |app_name, app|
     path = File.join KUBE_OUT_DIR, "#{app_name}-#{dome_name}-deployment.yaml"
     puts "Writing #{path}."
-
-    File.open path, 'w' do |file|
-      # generate the config
-      data = ERB.new(File.read(DEPLOYMENT_TEMPLATE)).result(binding)
-      # verify it's real YAML
-      yaml = YAML.safe_load(data)
-      file.write(YAML.dump(yaml))
-    end
+    write_config(path, DEPLOYMENT_TEMPLATE, binding)
 
     path = File.join KUBE_OUT_DIR, "#{app_name}-#{dome_name}-service.yaml"
     puts "Writing #{path}."
+    write_config(path, SERVICE_TEMPLATE, binding)
 
-    File.open path, 'w' do |file|
-      # generate the config
-      data = ERB.new(File.read(SERVICE_TEMPLATE)).result(binding)
-      # verify it's real YAML
-      yaml = YAML.safe_load(data)
-      file.write(YAML.dump(yaml))
-    end
+    next if app['secrets'].nil?
+
+    path = File.join KUBE_OUT_DIR, "#{app_name}-#{dome_name}-secrets.yaml"
+    puts "Writing #{path}."
+    write_config(path, SECRETS_TEMPLATE, binding)
+
+    # path = File.join KUBE_OUT_DIR, "#{app_name}-fallback_secrets.yaml"
+
+    # next unless File.exist? path
+
+    # puts "Writing #{path}."
+    # write_config(path, FALLBACK_SECRETS_TEMPLATE, binding)
   end
 end
 
 # Create the ingress.yaml file
 path = File.join KUBE_OUT_DIR, 'ingress.yaml'
 puts "Writing #{path}."
-
-File.open path, 'w' do |file|
-  data = ERB.new(File.read(INGRESS_TEMPLATE)).result(binding)
-  # verify it's real YAML
-  yaml = YAML.safe_load(data)
-  file.write(YAML.dump(yaml))
-end
+write_config(path, INGRESS_TEMPLATE, binding)
 
 # Create the cloudflare DNS settings
 dns = biodomes.each_with_object({}) do |(_, biodome), data|

@@ -34,7 +34,10 @@ spec:
               <% end %>
               <% app['secrets']&.each do |name| %>
               - name: <%= name %>
-                value: !!str <%= ENV["#{biodome['name'].upcase}_#{app['shortname'].upcase}_#{name}"].to_s.inspect %>
+                valueFrom:
+                  secretKeyRef:
+                    name: <%= app['uid'] %>-secrets
+                    key: <%= name %>
               <% end %>
             ports:
               - containerPort: <%= app['target_port'] or 3000 %>
