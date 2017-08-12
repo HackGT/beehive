@@ -192,8 +192,8 @@ biodomes.each do |dome_name, biodome|
     puts "Writing #{path}."
     write_config(path, SECRETS_TEMPLATE, binding)
 
-    path = File.join KUBE_OUT_DIR, "#{app['git']['slog'].tr '/', '-'}"\
-                                   '-fallback-secrets.yaml'
+    path = File.join KUBE_OUT_DIR, "git-#{app['git']['slog'].tr '/', '-'}" \
+                                   '-secrets.yaml'
 
     next if File.exist? path
 

@@ -57,7 +57,7 @@ def deploy_kubernetes
 
     # We don't want to overwrite over secrets since they are stateful.
     if config['kind'].casecmp('secret').zero?
-      `kubectl describe secret #{config['metadata']['name']}`
+      `kubectl describe secret '#{config['metadata']['name']}' &>/dev/null`
       puts `kubectl apply -f '#{path}'` unless $CHILD_STATUS.success?
     else
       puts `kubectl apply -f '#{path}'`
