@@ -1,3 +1,6 @@
+branches:
+  except:
+  - add_configmap
 sudo: false
 language: ruby
 dist: trusty

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: <%= "#{key}-#{file['owner']}" %>
+  labels:
+    name: <%= "#{key}-#{file['owner']}" %>
+data:
+  path: <%= file['path'] %>
+  contents: '<%= file['contents'].gsub("\n", Regexp.escape("\\n")) %>'
+  
