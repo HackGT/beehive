@@ -1,10 +1,11 @@
 branches:
-  except:
-  - add_configmap
+  only:
+  - master
 sudo: false
 language: ruby
 dist: trusty
 script:
+- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then exit; fi
 - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 - chmod +x kubectl && export PATH="${PATH}:$(pwd)" && hash -r
 - mkdir -p ~/.kube && echo "${KUBE_CONFIG}" | base64 -d > ~/.kube/config

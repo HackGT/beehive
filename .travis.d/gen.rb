@@ -29,6 +29,8 @@ CONFIG_MAP_TEMPLATE = File.join TEMPLATES_DIR, 'configmap.yaml.erb'
 POD_FILE_DIR = '/etc/files/'
 MOUNT_NAME = 'files'
 
+class IncorrectFileConfigurationError < StandardError; end
+
 def basename_no_ext(file)
   File.basename(file, File.extname(file))
 end
@@ -83,6 +85,33 @@ rescue
   {}
 end
 
+def parse_file_info(app_config, app_name, slog)
+  files = {}
+  if app_config['files'].is_a? Hash
+    app_config['files'].each do |name, path|
+
+      local_path = File.join  CONFIG_ROOT, path
+      contents = if File.file?(local_path)
+        File.read(local_path)
+      else
+        safe_github_file(path, slog)
+      end
+      if contents
+        files[name] = {
+          'contents' => contents,
+          'path' => path,
+          'full_path' => File.join(POD_FILE_DIR, path),
+          'owner' => app_name,
+        }
+      else
+        puts "  - File not found in biodomes or on GH with path: #{path}."
+        raise IncorrectFileConfigurationError
+      end
+    end
+  end
+  files
+end
+
 def load_app_data(data, app_config, dome_name, app_name)
   # generate more configs part
   if app_config['git'].is_a? String
@@ -100,28 +129,7 @@ def load_app_data(data, app_config, dome_name, app_name)
   org_name = git_parts[-2]
   slog = "#{org_name}/#{repo_name}"
 
-  # filestuff
-  files = {}
-  if app_config['files'].is_a? Hash
-    app_config['files'].each do |name, path|
-
-      local_path = File.join  CONFIG_ROOT, path
-      if File.file?(local_path)
-        contents = File.read(local_path)
-      end
-      contents ||= safe_github_file(path, slog)
-      if contents
-        file = {}
-        file['contents'] = contents
-        file['path'] = path
-        file['full_path'] = File.join(POD_FILE_DIR, path)
-        file['owner'] = app_name
-        files[name] = file
-      else
-        puts "  - File not found in biodomes or on GH with path: #{path}."
-      end
-    end
-  end
+  files = parse_file_info(app_config, app_name, slog)
 
   base_config = fetch_deployment(slog, branch: branch, rev: git_rev)
 
@@ -213,8 +221,8 @@ biodomes.each do |dome_name, biodome|
   biodome['mongo'] = CONFIG['mongo']['host']
 
   biodome['apps'].each do |app_name, app|
-    app['files']&.each do |key, file|
-      path = File.join KUBE_OUT_DIR, "#{app_name}-#{dome_name}-#{key}-configmap.yaml"
+    unless app['files'].empty?
+      path = File.join KUBE_OUT_DIR, "#{app_name}-#{dome_name}-configmap.yaml"
       puts "Writing #{path}."
       write_config(path, CONFIG_MAP_TEMPLATE, binding)
     end
