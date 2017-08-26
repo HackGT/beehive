@@ -1,0 +1,5 @@
+git:
+    remote: "https://github.com/HackGT/registration.git"
+    branch: "metrics-integration"
+
+secrets-source: git-hackgt-registration-secrets
