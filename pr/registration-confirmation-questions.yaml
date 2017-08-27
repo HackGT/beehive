@@ -1,0 +1,5 @@
+git:
+    remote: "https://github.com/HackGT/registration.git"
+    branch: "confirmation-questions"
+
+secrets-source: git-hackgt-registration-secrets
