@@ -43,7 +43,7 @@ spec:
               - name: <%= key %>
                 value: <%= file['full_path'] %>
               <% end %>
-            <% unless app['files'].empty?%>
+            <% unless app['files'].empty? %>
             volumeMounts:
                 - mountPath: <%= POD_FILE_DIR %>
                   name: <%= MOUNT_NAME %>
@@ -52,10 +52,10 @@ spec:
                 configMap:
                   name: <%= "#{app_name}" %>
                   items:
-                    <% app['files']&.each do |key, file| %>
+                  <% app['files']&.each do |key, file| %>
                     - key: <%= file['path'] %>
                       path: <%= file['path'] %>
-                    <% end %>
+                  <% end %>
             <% end %>
             ports:
               - containerPort: <%= app['target_port'] or 3000 %>

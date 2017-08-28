@@ -7,5 +7,5 @@ metadata:
 data:
   <% app['files']&.each do |key, file| %>
   <%= file['path'] %>: |-
-    <%= file['contents'].gsub("\n", "\n    ") %>
+    <%= file['contents'].gsub(/^/\t/) %>
   <% end %>
