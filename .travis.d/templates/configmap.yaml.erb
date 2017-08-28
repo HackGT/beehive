@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: <%= "#{app_name}" %>
+  labels:
+    name: <%= "#{app_name}" %>
+data:
+  <% app['files']&.each do |key, file| %>
+  <%= file['path'] %>: |-
+    <%= file['contents'].gsub(/^/\t/) %>
+  <% end %>

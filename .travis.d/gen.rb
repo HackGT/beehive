@@ -24,6 +24,13 @@ FALLBACK_SECRETS_TEMPLATE = File.join TEMPLATES_DIR, 'fallback-secrets.yaml.erb'
 
 CONFIG = YAML.safe_load(File.read(CONFIG_YAML))
 
+CONFIG_MAP_TEMPLATE = File.join TEMPLATES_DIR, 'configmap.yaml.erb'
+
+POD_FILE_DIR = '/etc/files/'
+MOUNT_NAME = 'files'
+
+class IncorrectFileConfigurationError < StandardError; end
+
 def basename_no_ext(file)
   File.basename(file, File.extname(file))
 end
@@ -64,12 +71,45 @@ def github_file(file, slog, branch: 'master', rev: nil)
   open(url).read
 end
 
+def safe_github_file(file, slog)
+  github_file(file, slog)
+rescue
+  nil
+end
+
 def fetch_deployment(slog, branch: 'master', rev: nil)
   text = github_file('deployment.yaml', slog, branch: branch, rev: rev)
   YAML.safe_load(text)
 rescue
   puts "  - No deployment.yaml found in #{slog}."
   {}
+end
+
+def parse_file_info(app_config, app_name, slog)
+  files = {}
+  if app_config['files'].is_a? Hash
+    app_config['files'].each do |name, path|
+
+      local_path = File.join  CONFIG_ROOT, path
+      contents = if File.file?(local_path)
+        File.read(local_path)
+      else
+        safe_github_file(path, slog)
+      end
+      if contents
+        files[name] = {
+          'contents' => contents,
+          'path' => path,
+          'full_path' => File.join(POD_FILE_DIR, path),
+          'owner' => app_name,
+        }
+      else
+        puts "  - File not found in biodomes or on GH with path: #{path}."
+        raise IncorrectFileConfigurationError
+      end
+    end
+  end
+  files
 end
 
 def load_app_data(data, app_config, dome_name, app_name)
@@ -88,6 +128,8 @@ def load_app_data(data, app_config, dome_name, app_name)
   repo_name = basename_no_ext(git_parts[-1])
   org_name = git_parts[-2]
   slog = "#{org_name}/#{repo_name}"
+
+  files = parse_file_info(app_config, app_name, slog)
 
   base_config = fetch_deployment(slog, branch: branch, rev: git_rev)
 
@@ -111,6 +153,7 @@ def load_app_data(data, app_config, dome_name, app_name)
   data[dome_name]['apps'][app_name]['docker-tag'] = docker_tag
   data[dome_name]['apps'][app_name]['uid'] = "#{shortname}-#{dome_name}"
   data[dome_name]['apps'][app_name]['host'] = host.downcase
+  data[dome_name]['apps'][app_name]['files'] = files
   data
 end
 
@@ -178,6 +221,12 @@ biodomes.each do |dome_name, biodome|
   biodome['mongo'] = CONFIG['mongo']['host']
 
   biodome['apps'].each do |app_name, app|
+    unless app['files'].empty?
+      path = File.join KUBE_OUT_DIR, "#{app_name}-#{dome_name}-configmap.yaml"
+      puts "Writing #{path}."
+      write_config(path, CONFIG_MAP_TEMPLATE, binding)
+    end
+
     path = File.join KUBE_OUT_DIR, "#{app_name}-#{dome_name}-deployment.yaml"
     puts "Writing #{path}."
     write_config(path, DEPLOYMENT_TEMPLATE, binding)

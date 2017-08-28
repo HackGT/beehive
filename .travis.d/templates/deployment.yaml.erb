@@ -39,6 +39,24 @@ spec:
                     name: <%= app['secrets-source'] or "#{app['uid']}-secrets" %>
                     key: <%= name %>
               <% end %>
+              <% app['files']&.each do |key, file| %>
+              - name: <%= key %>
+                value: <%= file['full_path'] %>
+              <% end %>
+            <% unless app['files'].empty? %>
+            volumeMounts:
+                - mountPath: <%= POD_FILE_DIR %>
+                  name: <%= MOUNT_NAME %>
+            volumes:
+              - name: <%= "#{app_name}" %>
+                configMap:
+                  name: <%= "#{app_name}" %>
+                  items:
+                  <% app['files']&.each do |key, file| %>
+                    - key: <%= file['path'] %>
+                      path: <%= file['path'] %>
+                  <% end %>
+            <% end %>
             ports:
               - containerPort: <%= app['target_port'] or 3000 %>
                 name: node
