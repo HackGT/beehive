@@ -12,3 +12,4 @@ script:
 - cd .travis.d && bundle install --path vendor/bundle
 - bundle exec ruby gen.rb
 - bundle exec ruby deploy.rb
+- DRYRUN=0 bundle exec ruby cleanup.rb

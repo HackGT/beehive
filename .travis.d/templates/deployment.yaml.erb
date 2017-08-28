@@ -2,6 +2,9 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: <%= app['uid'] %>
+  labels:
+    name: <%= app['uid'] %>
+    heritage: Biodomes
 spec:
   replicas: <%= (app['deployment'] and app['deployment']['replicas']) or 1 %>
   template:
