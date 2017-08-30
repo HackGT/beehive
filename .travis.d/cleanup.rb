@@ -78,9 +78,9 @@ def cleanup(dryrun: true)
   )
 
   deployments_to_remove.each do |deployment|
-    puts "Deleting service #{deployment}."
+    puts "Deleting deployment #{deployment}."
     client[:beta].delete_deployment deployment unless dryrun
   end
 end
 
-cleanup dryrun: ENV['DRYRUN'] == '0'
+cleanup dryrun: ENV['DRYRUN'] != '0'
