@@ -1,5 +1,0 @@
-git:
-    remote: "https://github.com/HackGT/registration.git"
-    branch: "pr-demo"
-
-secrets-source: git-hackgt-registration-secrets

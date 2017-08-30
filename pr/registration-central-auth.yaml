@@ -1,5 +1,5 @@
 git:
-    remote: "https://github.com/HackGT/registration.git"
+    remote: "https://github.com/hackgt/registration.git"
     branch: "central-auth"
 
 secrets-source: git-hackgt-registration-secrets

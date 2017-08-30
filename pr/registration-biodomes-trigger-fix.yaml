@@ -1,5 +1,0 @@
-git:
-    remote: "https://github.com/HackGT/registration.git"
-    branch: "biodomes-trigger-fix"
-
-secrets-source: git-hackgt-registration-secrets
