@@ -62,6 +62,14 @@ spec:
                       path: <%= file['path'] %>
                   <% end %>
             <% end %>
+            <% if app['health'].nil? %>
+            livenessProbe:
+              httpGet:
+                path: <%= app['health']['path'] or '/' %>
+                port: <%= app['target_port'] or 3000 %>
+              initialDelaySeconds: 3
+              periodSeconds: 10
+            <% end %>
             ports:
               - containerPort: <%= app['target_port'] or 3000 %>
                 name: node
