@@ -28,7 +28,6 @@ CONFIG = YAML.safe_load(File.read(CONFIG_YAML))
 CONFIG_MAP_TEMPLATE = File.join TEMPLATES_DIR, 'configmap.yaml.erb'
 
 POD_FILE_DIR = '/etc/files/'
-MOUNT_NAME = 'files'
 
 class IncorrectFileConfigurationError < StandardError; end
 

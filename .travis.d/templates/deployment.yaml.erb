@@ -50,8 +50,8 @@ spec:
               <% end %>
             <% unless app['files'].empty? %>
             volumeMounts:
-                - mountPath: <%= POD_FILE_DIR %>
-                  name: <%= "#{app_name}" %>
+              - mountPath: <%= POD_FILE_DIR %>
+                name: <%= app['uid'] %>
             <% end %>
             <% unless app['health'].nil? %>
             livenessProbe:
@@ -66,9 +66,9 @@ spec:
                 name: node
         <% unless app['files'].empty? %>
         volumes:
-          - name: <%= "#{app_name}" %>
+          - name: <%= app['uid'] %>
             configMap:
-              name: <%= "#{app_name}" %>
+              name: <%= app['uid'] %>
               items:
               <% app['files']&.each do |key, file| %>
               - key: <%= file['key'] %>
