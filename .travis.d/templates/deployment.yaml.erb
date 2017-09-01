@@ -58,7 +58,7 @@ spec:
                   name: <%= "#{app_name}" %>
                   items:
                   <% app['files']&.each do |key, file| %>
-                    - key: <%= file['path'] %>
+                    - key: <%= file['key'] %>
                       path: <%= file['path'] %>
                   <% end %>
             <% end %>

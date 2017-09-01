@@ -105,6 +105,7 @@ def parse_file_info(app_config, app_name, slog, config_path)
         files[name] = {
           'contents' => contents,
           'path' => path,
+          'key' => path.gsub(/[^-._a-zA-Z0-9]+/, '--'),
           'full_path' => File.join(POD_FILE_DIR, path),
           'owner' => app_name
         }

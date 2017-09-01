@@ -5,6 +5,6 @@ git:
 secrets-source: git-hackgt-registration-secrets
 
 files:
-  THEME_FILE: ./resources/registration-demo-config/normalize.css
-  QUESTIONS_FILE: ./resources/registration-demo-config/questions.json
+  THEME_FILE: resources/registration-demo-config/normalize.css
+  QUESTIONS_FILE: resources/registration-demo-config/questions.json
 

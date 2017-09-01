@@ -4,7 +4,8 @@ metadata:
   name: <%= "#{app_name}" %>
   labels:
     name: <%= "#{app_name}" %>
+    heritage: Biodomes
 data:
   <% app['files']&.each do |key, file| %>
-  <%= file['path'] %>: !!str <%= file['contents'].inspect %>
+  <%= file['key'] %>: !!str <%= file['contents'].inspect %>
   <% end %>
