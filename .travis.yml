@@ -16,14 +16,14 @@ addons:
 script: |
   (
   set -exuo pipefail
-  [[ ${TRAVIS_PULL_REQUEST} != false ]]
+  [[ ${TRAVIS_PULL_REQUEST} == false ]]
   VERSION=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
   curl -LO https://storage.googleapis.com/kubernetes-release/release/$VERSION/bin/linux/amd64/kubectl
   chmod +x kubectl
-  export PATH="${PATH}:$(pwd)"
+  export PATH=${PATH}:$(pwd)
   hash -r
   mkdir -p ~/.kube
-  echo "${KUBE_CONFIG}" | base64 -d > ~/.kube/config
+  echo ${KUBE_CONFIG} | base64 -d > ~/.kube/config
   cd .travis.d
   bundle install --path vendor/bundle
   bundle exec ruby gen.rb
