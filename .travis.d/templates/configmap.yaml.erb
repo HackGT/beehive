@@ -6,6 +6,5 @@ metadata:
     name: <%= "#{app_name}" %>
 data:
   <% app['files']&.each do |key, file| %>
-  <%= file['path'] %>: |-
-    <%= file['contents'].gsub(/^/\t/) %>
+  <%= file['path'] %>: !!str <%= file['contents'].inspect %>
   <% end %>

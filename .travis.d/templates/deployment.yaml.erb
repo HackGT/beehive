@@ -62,7 +62,7 @@ spec:
                       path: <%= file['path'] %>
                   <% end %>
             <% end %>
-            <% if app['health'].nil? %>
+            <% unless app['health'].nil? %>
             livenessProbe:
               httpGet:
                 path: <%= app['health']['path'] or '/' %>

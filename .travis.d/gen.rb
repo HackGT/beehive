@@ -86,23 +86,27 @@ rescue
   {}
 end
 
-def parse_file_info(app_config, app_name, slog)
+def parse_file_info(app_config, app_name, slog, config_path)
   files = {}
   if app_config['files'].is_a? Hash
     app_config['files'].each do |name, path|
-
-      local_path = File.join  CONFIG_ROOT, path
+      root = if path[0] == '/'
+               CONFIG_ROOT
+             else
+               File.dirname config_path
+             end
+      local_path = File.join root, path
       contents = if File.file?(local_path)
-        File.read(local_path)
-      else
-        safe_github_file(path, slog)
-      end
+                   File.read(local_path)
+                 else
+                   safe_github_file(path, slog)
+                 end
       if contents
         files[name] = {
           'contents' => contents,
           'path' => path,
           'full_path' => File.join(POD_FILE_DIR, path),
-          'owner' => app_name,
+          'owner' => app_name
         }
       else
         puts "  - File not found in biodomes or on GH with path: #{path}."
@@ -113,7 +117,7 @@ def parse_file_info(app_config, app_name, slog)
   files
 end
 
-def load_app_data(data, app_config, dome_name, app_name)
+def load_app_data(data, app_config, dome_name, app_name, path)
   # generate more configs part
   if app_config['git'].is_a? String
     remote = app_config['git']
@@ -130,7 +134,7 @@ def load_app_data(data, app_config, dome_name, app_name)
   org_name = git_parts[-2]
   slog = "#{org_name}/#{repo_name}"
 
-  files = parse_file_info(app_config, app_name, slog)
+  files = parse_file_info(app_config, app_name, slog, path)
 
   base_config = fetch_deployment(slog, branch: branch, rev: git_rev)
 
@@ -185,7 +189,11 @@ def load_config
       app_name = basename_no_ext app_name
     end
 
-    load_app_data(data, app_config, dome_name.downcase, app_name.downcase)
+    load_app_data(data,
+                  app_config,
+                  dome_name.downcase,
+                  app_name.downcase,
+                  file)
   end
 end
 
