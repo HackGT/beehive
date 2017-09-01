@@ -1,15 +1,32 @@
 branches:
   only:
   - master
+
 sudo: false
+
 language: ruby
+
 dist: trusty
-script:
-- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then exit; fi
-- curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-- chmod +x kubectl && export PATH="${PATH}:$(pwd)" && hash -r
-- mkdir -p ~/.kube && echo "${KUBE_CONFIG}" | base64 -d > ~/.kube/config
-- cd .travis.d && bundle install --path vendor/bundle
-- bundle exec ruby gen.rb
-- bundle exec ruby deploy.rb
-- DRYRUN=0 bundle exec ruby cleanup.rb
+
+addons:
+  apt:
+    packages:
+    - libmagic-dev
+
+script: |
+  (
+  set -exuo pipefail
+  [[ "$TRAVIS_PULL_REQUEST" != "false" ]]
+  VERSION=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
+  curl -LO https://storage.googleapis.com/kubernetes-release/release/$VERSION/bin/linux/amd64/kubectl
+  chmod +x kubectl
+  export PATH="${PATH}:$(pwd)"
+  hash -r
+  mkdir -p ~/.kube
+  echo "${KUBE_CONFIG}" | base64 -d > ~/.kube/config
+  cd .travis.d
+  bundle install --path vendor/bundle
+  bundle exec ruby gen.rb
+  bundle exec ruby deploy.rb
+  DRYRUN=0 bundle exec ruby cleanup.rb
+  )
