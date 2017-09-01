@@ -6,6 +6,5 @@ secrets-source: git-hackgt-registration-secrets
 
 files:
   THEME_FILE: ./resources/registration-demo-config/normalize.css
-  FAVICON_FILE: ./resources/registration-demo-config/favicon.ico
   QUESTIONS_FILE: ./resources/registration-demo-config/questions.json
 
