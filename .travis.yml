@@ -16,7 +16,7 @@ addons:
 script: |
   (
   set -exuo pipefail
-  [[ "$TRAVIS_PULL_REQUEST" != "false" ]]
+  [[ ${TRAVIS_PULL_REQUEST} != false ]]
   VERSION=$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)
   curl -LO https://storage.googleapis.com/kubernetes-release/release/$VERSION/bin/linux/amd64/kubectl
   chmod +x kubectl
