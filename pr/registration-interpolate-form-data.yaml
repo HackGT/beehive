@@ -1,0 +1,5 @@
+git:
+    remote: "https://github.com/hackgt/registration.git"
+    branch: "interpolate-form-data"
+
+secrets-source: git-hackgt-registration-secrets
