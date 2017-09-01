@@ -4,6 +4,8 @@ require 'erb'
 require 'fileutils'
 require 'open-uri'
 require 'securerandom'
+require 'filemagic'
+require 'base64'
 
 SECRETS_URL = 'http://localhost:8001/api/v1/namespaces/kube-system'\
               '/services/kubernetes-dashboard/proxy/#!/secret'.freeze
@@ -30,6 +32,13 @@ CONFIG_MAP_TEMPLATE = File.join TEMPLATES_DIR, 'configmap.yaml.erb'
 POD_FILE_DIR = '/etc/files/'
 
 class IncorrectFileConfigurationError < StandardError; end
+
+def text?(text)
+  fm = FileMagic.new(FileMagic::MAGIC_MIME)
+  fm.buffer(text) =~ %r{^text/}
+ensure
+  fm.close
+end
 
 def basename_no_ext(file)
   File.basename(file, File.extname(file))
@@ -100,18 +109,20 @@ def parse_file_info(app_config, app_name, slog, config_path)
                  else
                    safe_github_file(path, slog)
                  end
-      if contents
-        files[name] = {
-          'contents' => contents,
-          'path' => path,
-          'key' => path.gsub(/[^-._a-zA-Z0-9]+/, '--'),
-          'full_path' => File.join(POD_FILE_DIR, path),
-          'owner' => app_name
-        }
-      else
+      unless contents
         puts "  - File not found in biodomes or on GH with path: #{path}."
         raise IncorrectFileConfigurationError
       end
+
+      contents = Base64.encode64(contents) unless text?(contents)
+
+      files[name] = {
+        'contents' => contents,
+        'path' => path,
+        'key' => path.gsub(/[^-._a-zA-Z0-9]+/, '--'),
+        'full_path' => File.join(POD_FILE_DIR, path),
+        'owner' => app_name
+      }
     end
   end
   files
