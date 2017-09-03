@@ -13,12 +13,6 @@ spec:
       labels:
         name: <%= app['uid'] %>
     spec:
-        strategy:
-            <% if app['deployment'] and app['deployment']['strategy'] and app['deployment']['strategy']['type'] %>
-            type: <%= app['deployment']['strategy']['type'] %>
-            <% else %>
-            type: RollingUpdate
-            <% end %>
         containers:
           - image: <%= app['git']['user'] %>/<%= app['git']['shortname'] %>:<%= app['docker-tag'] %>
             imagePullPolicy: Always
