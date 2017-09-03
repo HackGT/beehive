@@ -27,8 +27,6 @@ spec:
                 cpu: 10m
             name: <%= app['uid'] %>
             env:
-              - name: INVALIDATE_K8S_CACHE
-                value: !!str <%= SecureRandom.hex %>
               - name: PORT
                 value: !!str <%= app['target_port'] or 3000 %>
               <% if app['wants'] && app['wants']['mongo'] %>
