@@ -3,8 +3,3 @@ git:
     branch: "config-paths"
 
 secrets-source: git-hackgt-registration-secrets
-
-files:
-  THEME_FILE: resources/registration-demo-config/hackg2ny-theme.css
-  QUESTIONS_FILE: resources/registration-demo-config/questions.json
-  FAVICON_FILE_BASE64: resources/registration-demo-config/favicon.ico
