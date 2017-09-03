@@ -69,6 +69,7 @@ def cleanup(dryrun: true)
 
   servicies_to_remove.each do |service|
     puts "Deleting service #{service}."
+    puts '  - Not deleting due to dryrun.' if dryrun
     client[:classic].delete_service service, 'default' unless dryrun
   end
 
@@ -79,6 +80,7 @@ def cleanup(dryrun: true)
 
   deployments_to_remove.each do |deployment|
     puts "Deleting deployment #{deployment}."
+    puts '  - Not deleting due to dryrun.' if dryrun
     client[:beta].delete_deployment deployment, 'default' unless dryrun
   end
 end
