@@ -1,0 +1,8 @@
+git: https://github.com/HackGT/cas-services-management-overlay.git
+
+files:
+  /etc/cas/config:
+    secret: true
+    contents:
+      management.properties: yes
+      users.properties: yes
