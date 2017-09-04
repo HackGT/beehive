@@ -3,3 +3,7 @@ git:
     branch: "central-auth"
 
 secrets-source: git-hackgt-registration-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate

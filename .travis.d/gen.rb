@@ -64,14 +64,11 @@ def make_host(app_name, dome_name)
   end
 end
 
-def make_dockertag(branch: 'master', rev: nil)
-  if !rev.nil?
-    rev
-  elsif branch != 'master'
-    "latest-#{branch}"
-  else
-    'latest'
-  end
+def make_dockertag(remote, branch: 'master', rev: nil)
+  return rev unless rev.nil?
+  `git ls-remote '#{remote}' '#{branch}'`
+    .lines[0]
+    .split[0]
 end
 
 def github_file(file, slog, branch: 'master', rev: nil)
@@ -151,7 +148,7 @@ def load_app_data(data, app_config, dome_name, app_name, path)
 
   app_config = base_config.merge(app_config)
 
-  docker_tag = make_dockertag branch: branch, rev: git_rev
+  docker_tag = make_dockertag git, branch: branch, rev: git_rev
 
   shortname = make_shortname app_config['name'], app_name
 
