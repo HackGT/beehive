@@ -69,6 +69,12 @@ spec:
                 port: <%= app['target_port'] or 3000 %>
               initialDelaySeconds: 3
               periodSeconds: 10
+            readinessProbe:
+              httpGet:
+                path: <%= app['health']['path'] or '/' %>
+                port: <%= app['target_port'] or 3000 %>
+              initialDelaySeconds: 3
+              periodSeconds: 10
             <% end %>
 
             ports:
