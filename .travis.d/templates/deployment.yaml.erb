@@ -42,15 +42,26 @@ spec:
                     name: <%= app['secrets-source'] or "#{app['uid']}-secrets" %>
                     key: <%= name %>
               <% end %>
-              <% app['files']&.each do |key, file| %>
-              - name: <%= key %>
-                value: <%= file['full_path'] %>
+              <% app['files'].each do |root, opts| %>
+              <% opts[:contents].each do |_, file_opts| %>
+              <% if file_opts[:env] %>
+              - key: <%= file_opts[:env] %>
+                path: <%= file_opts[:full_path] %>
               <% end %>
-            <% unless app['files'].empty? %>
+              <% end %>
+              <% end %>
+
+            <% if app['files'] %>
             volumeMounts:
-              - mountPath: <%= POD_FILE_DIR %>
-                name: <%= app['uid'] %>
+            <% app['files'].each do |root, opts| %>
+              - mountPath: <%= root %>
+                name: <%= opts[:key] %>
+                <% if opts[:secret] %>
+                readOnly: true
+                <% end %>
             <% end %>
+            <% end %>
+
             <% unless app['health'].nil? %>
             livenessProbe:
               httpGet:
@@ -59,18 +70,27 @@ spec:
               initialDelaySeconds: 3
               periodSeconds: 10
             <% end %>
+
             ports:
               - containerPort: <%= app['target_port'] or 3000 %>
                 name: node
+
         <% unless app['files'].empty? %>
         volumes:
-          - name: <%= app['uid'] %>
+          <% app['files'].each do |root, vol_opts| %>
+          - name: <%= vol_opts[:key] %>
+            <% if vol_opts[:secret] %>
+            secret:
+                secretName: <%= vol_opts[:key] %>
+            <% else %>
             configMap:
-              name: <%= app['uid'] %>
+              name: <%= vol_opts[:key] %>
               items:
-              <% app['files']&.each do |key, file| %>
-              - key: <%= file['key'] %>
-                path: <%= file['path'] %>
+              <% vol_opts[:contents].each do |_, file_opts| %>
+              - key: <%= file_opts[:key] %>
+                path: <%= file_opts[:path] %>
               <% end %>
+            <% end %>
+          <% end %>
         <% end %>
 

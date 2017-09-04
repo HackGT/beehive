@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: <%= app['uid'] %>
+  name: <%= volume[:key] %>
   labels:
-    name: <%= app['uid'] %>
+    name: <%= volume[:key] %>
     heritage: Biodomes
 data:
-  <% app['files']&.each do |key, file| %>
-  <%= file['key'] %>: !!str <%= file['contents'].inspect %>
+  <% files.each do |_, file| %>
+  <%= file[:key] %>: !!str <%= file[:contents].inspect %>
   <% end %>

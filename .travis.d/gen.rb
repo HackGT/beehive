@@ -23,13 +23,14 @@ SERVICE_TEMPLATE = File.join TEMPLATES_DIR, 'service.yaml.erb'
 DEPLOYMENT_TEMPLATE = File.join TEMPLATES_DIR, 'deployment.yaml.erb'
 INGRESS_TEMPLATE = File.join TEMPLATES_DIR, 'ingress.yaml.erb'
 SECRETS_TEMPLATE = File.join TEMPLATES_DIR, 'secrets.yaml.erb'
+SECRET_FILES_TEMPLATE = File.join TEMPLATES_DIR, 'secret-files.yaml.erb'
+CONFIG_MAP_TEMPLATE = File.join TEMPLATES_DIR, 'configmap.yaml.erb'
 FALLBACK_SECRETS_TEMPLATE = File.join TEMPLATES_DIR, 'fallback-secrets.yaml.erb'
 
 CONFIG = YAML.safe_load(File.read(CONFIG_YAML))
 
-CONFIG_MAP_TEMPLATE = File.join TEMPLATES_DIR, 'configmap.yaml.erb'
-
 POD_FILE_DIR = '/etc/files/'
+INVALID_YAML_KEY = /[^-._a-zA-Z0-9]+/
 
 class IncorrectFileConfigurationError < StandardError; end
 
@@ -91,38 +92,103 @@ rescue
   {}
 end
 
-def parse_file_info(app_config, app_name, slog, config_path)
-  files = {}
-  if app_config['files'].is_a? Hash
-    app_config['files'].each do |name, path|
-      root = if path[0] == '/'
-               CONFIG_ROOT
-             else
-               File.dirname config_path
-             end
-      local_path = File.join root, path
-      contents = if File.file?(local_path)
-                   File.read(local_path)
-                 else
-                   safe_github_file(path, slog)
-                 end
-      unless contents
-        puts "  - File not found in biodomes or on GH with path: #{path}."
-        raise IncorrectFileConfigurationError
-      end
-
-      contents = Base64.encode64(contents) unless text?(contents)
-
-      files[name] = {
-        'contents' => contents,
-        'path' => path,
-        'key' => path.gsub(/[^-._a-zA-Z0-9]+/, '--'),
-        'full_path' => File.join(POD_FILE_DIR, path),
-        'owner' => app_name
-      }
-    end
+def make_file_opts(opts)
+  if opts.is_a?(Hash) && opts.include?('path') && opts['path'].is_a?(String)
+    raise "Should be string: #{opts['env']}." unless opts['env'].is_a?(String)
+    {
+      path: opts['path'],
+      env: opts['env']
+    }
+  elsif opts.is_a?(String)
+    {
+      path: opts['path']
+    }
+  else
+    raise "Could not find path for file #{mount_root}/#{name}"
   end
-  files
+end
+
+def safe_yaml_key(string)
+  string.gsub(INVALID_YAML_KEY, '--')
+end
+
+def make_file_config(file_opts, target, mount_root, slog, config_path)
+  root = if file_opts[:path][0] == '/'
+           CONFIG_ROOT
+         else
+           File.dirname config_path
+         end
+
+  local_path = File.join root, file_opts[:path]
+  contents = if File.file?(local_path)
+               File.read(local_path)
+             else
+               safe_github_file(file_opts[:path], slog)
+             end
+  if contents.nil?
+    raise "File not found in biodomes or on GH with path: #{file_opts[:path]}."
+  end
+
+  contents = Base64.encode64(contents) unless text?(contents)
+
+  {
+    contents: contents,
+    env: file_opts[:env],
+    path: target,
+    key: safe_yaml_key(target),
+    full_path: File.join(mount_root, target)
+  }
+end
+
+def verify_mount_root(mount_root)
+  if mount_root == 'anywhere'
+    mount_root = POD_FILE_DIR
+  elsif mount_root[0] != '/'
+    raise "Mount root must specify absolute path: #{mount_root}."
+  end
+  mount_root
+end
+
+def parse_file_info(app_config, uid, slog, config_path)
+  return {} if app_config['files'].nil?
+  raise '`files` key must be a Hash.' unless app_config['files'].is_a? Hash
+
+  app_config['files'].each_with_object({}) \
+  do |(mount_root, mount_config), files|
+    contents = {}
+    root = verify_mount_root(mount_root)
+
+    if mount_config['secret']
+      contents = mount_config['contents'].each_with_object({}) \
+      do |(name, opts), files_config|
+
+        files_config[name] = {}
+        next unless opts.is_a? Hash
+
+        files_config[name] = {
+          env: opts['env'],
+          path: name,
+          full_path: File.join(root, name)
+        }
+      end
+    else
+      contents = mount_config['contents'].each_with_object({}) \
+      do |(name, opts), files_config|
+        files_config[name] = make_file_config(make_file_opts(opts),
+                                              name,
+                                              root,
+                                              slog,
+                                              config_path)
+      end
+    end
+
+    files[root] = {
+      contents: contents,
+      secret: mount_config['secret'],
+      key: uid + '--' + safe_yaml_key(root.gsub(%r{(^/+|/+$)}, ''))
+    }
+    files
+  end
 end
 
 def load_app_data(data, app_config, dome_name, app_name, path)
@@ -142,7 +208,9 @@ def load_app_data(data, app_config, dome_name, app_name, path)
   org_name = git_parts[-2]
   slog = "#{org_name}/#{repo_name}"
 
-  files = parse_file_info(app_config, app_name, slog, path)
+  shortname = make_shortname app_config['name'], app_name
+
+  uid = "#{shortname}-#{dome_name}"
 
   base_config = fetch_deployment(slog, branch: branch, rev: git_rev)
 
@@ -150,9 +218,9 @@ def load_app_data(data, app_config, dome_name, app_name, path)
 
   docker_tag = make_dockertag git, branch: branch, rev: git_rev
 
-  shortname = make_shortname app_config['name'], app_name
-
   host = make_host app_name, dome_name
+
+  files = parse_file_info(app_config, uid, slog, path)
 
   data[dome_name] = {} unless data.key? dome_name
   data[dome_name]['name'] = dome_name
@@ -164,7 +232,7 @@ def load_app_data(data, app_config, dome_name, app_name, path)
   data[dome_name]['apps'][app_name]['git']['rev'] = git_rev
   data[dome_name]['apps'][app_name]['shortname'] = shortname
   data[dome_name]['apps'][app_name]['docker-tag'] = docker_tag
-  data[dome_name]['apps'][app_name]['uid'] = "#{shortname}-#{dome_name}"
+  data[dome_name]['apps'][app_name]['uid'] = uid
   data[dome_name]['apps'][app_name]['host'] = host.downcase
   data[dome_name]['apps'][app_name]['files'] = files
   data
@@ -238,10 +306,18 @@ biodomes.each do |dome_name, biodome|
   biodome['mongo'] = CONFIG['mongo']['host']
 
   biodome['apps'].each do |app_name, app|
-    unless app['files'].empty?
-      path = File.join KUBE_OUT_DIR, "#{app_name}-#{dome_name}-configmap.yaml"
-      puts "Writing #{path}."
-      write_config(path, CONFIG_MAP_TEMPLATE, binding)
+    app['files'].each do |mount, volume|
+      files = volume[:contents]
+
+      if volume[:secret]
+        path = File.join KUBE_OUT_DIR, "#{volume[:key]}-secret-files.yaml"
+        puts "Writing #{path}."
+        write_config(path, SECRET_FILES_TEMPLATE, binding)
+      else
+        path = File.join KUBE_OUT_DIR, "#{volume[:key]}-configmap.yaml"
+        puts "Writing #{path}."
+        write_config(path, CONFIG_MAP_TEMPLATE, binding)
+      end
     end
 
     path = File.join KUBE_OUT_DIR, "#{app_name}-#{dome_name}-deployment.yaml"
