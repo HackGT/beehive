@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+/* Colors */
+html, body, #sidebar-nav {
+    background-color: #87CEF7;
+    color: #FFFFFE;
+}
+#sidebar a, #sidebar, .editor-toolbar > a {
+    color: #FFFFFE;
+    border: none;
+    text-decoration: initial;
+}
+.editor-toolbar > a {
+    color: #FFFFFE !important;
+}
+
+.editor-toolbar a.active, .editor-toolbar a:hover {
+    border-color: #4C5D67;
+    background-color: rgba(196, 251, 245, 0.2);
+    outline: none;
+}
+#sidebar-nav > span.divider, .main, table thead {
+    border-color: #FFFFFE;
+}
+a {
+    color: #FFFFFE;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    cursor: pointer;
+}
+a:hover {
+    border-bottom-style: solid;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: white;
+}
+
+#email-rendered {
+    background-color: #4C5D67;
+    border: 1px solid #FFFFFE;
+}
+
+/* Buttons */
+.btn, [type=submit], button, .accepted-btn-false {
+    background-color: #FFFFFE;
+     /* border: 2px solid #03565c;  */
+    color: #4C5D67;
+}
+
+fieldset > div > label {
+    font-size: 90%;
+}
+h1, h2, h3 {
+    font-family: 'Oswald', cursive;
+}
+
+#sidebar > h1 {
+    text-decoration: underline;
+}
+
+code {
+    color: #4C5D67;
+}
+
+/* Form elements */
+input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]), select, fieldset, textarea {
+    background-color: #4C5D67;
+    color: white;
+    border-color: #FFFFFE;
+}
+input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]):focus, textarea:focus, textarea[type=text]:focus {
+    border-color: white;
+}
+input:disabled, textarea:disabled {
+    background: repeating-linear-gradient(45deg, #4C5D67, #4C5D67 10px, #192729 10px, #192729 20px )
+}
