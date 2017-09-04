@@ -1,1 +1,9 @@
 git: https://github.com/HackGT/cas-gradle-overlay-template.git
+
+files:
+  /etc/cas/config:
+    secret: true
+    contents:
+      adminusers.properties: yes
+      cas.properties: yes
+
