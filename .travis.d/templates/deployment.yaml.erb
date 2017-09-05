@@ -45,8 +45,8 @@ spec:
               <% app['files'].each do |root, opts| %>
               <% opts[:contents].each do |_, file_opts| %>
               <% if file_opts[:env] %>
-              - key: <%= file_opts[:env] %>
-                path: <%= file_opts[:full_path] %>
+              - name: <%= file_opts[:env] %>
+                value: <%= file_opts[:full_path] %>
               <% end %>
               <% end %>
               <% end %>
