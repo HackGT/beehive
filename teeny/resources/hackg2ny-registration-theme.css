@@ -62,9 +62,9 @@ fieldset > div > label {
 /*h1, h2, h3, h4, h5, h6, code, #sidebar a, #sidebar, label {
     font-family: 'Libre Barcode 39 Text', cursive;
 }*/
-h1, h2, h3 {
-    font-family: 'Libre Barcode 39 Text', cursive;
-}
+/* h1, h2, h3 { */
+/*     font-family: 'Libre Barcode 39 Text', cursive; */
+/* } */
 
 h4, h5, h6, code, #sidebar a, #sidebar, label, #sidebar > h1 {
     font-family: 'PT Sans Narrow', sans-serif;

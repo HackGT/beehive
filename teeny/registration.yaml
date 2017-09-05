@@ -36,7 +36,7 @@ env:
   EMAIL_HOST: smtp.sendgrid.net
   EMAIL_PORT: 465
   PRODUCTION: true
-  EVENT_NAME: "HackGT 4: New Heights"
+  EVENT_NAME: "HackGTeeny Fall 2017"
   ADMIN_EMAILS:
     - petschekr@gmail.com
     - a@andrewdai.co
