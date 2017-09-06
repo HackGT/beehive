@@ -104,7 +104,7 @@
             },
             {
                 "name": "registered",
-                "label": "Hack you registered for [HackGT 4](https://hack.gt) yet?",
+                "label": "Have you registered for [HackGT 4](https://hack.gt) yet?",
                 "type": "radio",
                 "options": [
                     "No",
