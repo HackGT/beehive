@@ -91,14 +91,14 @@
             },
             {
                 "name": "classes",
-                "label": "Which of these classes have you taken so far?",
+                "label": "Which of these classes are you currently taking or have you already completed?",
                 "type": "checkbox",
                 "options": [
-                    "CS1301",
-                    "CS1331",
-                    "CS1332",
-                    "CS1371",
-                    "CS2110"
+                    "CS 1301",
+                    "CS 1331",
+                    "CS 1332",
+                    "CS 1371",
+                    "CS 2110"
                 ],
                 "required": false
             },
