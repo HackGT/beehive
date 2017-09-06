@@ -2,7 +2,7 @@
 
 /* Colors */
 html, body, #sidebar-nav {
-    background-color: #421c9c;
+    background-color: #673AB7;
     color: #ffffff;
 }
 #sidebar a, #sidebar, .editor-toolbar > a {
@@ -19,7 +19,7 @@ b {
 }
 
 .editor-toolbar a.active, .editor-toolbar a:hover {
-    border-color: #824DFF;
+    border-color: #4527A0;
     background-color: rgba(196, 251, 245, 0.2);
     outline: none;
 }
@@ -41,7 +41,7 @@ a:hover {
 }
 
 #email-rendered {
-    background-color: #824DFF;
+    background-color: #4527A0;
     border: 1px solid #ffffff;
 }
 
@@ -49,7 +49,7 @@ a:hover {
 .btn, [type=submit], button, .accepted-btn-false {
     background-color: #ffffff;
      /* border: 2px solid #03565c;  */
-    color: #824DFF;
+    color: #4527A0;
 }
 
 /* Fonts */
@@ -75,12 +75,12 @@ h4, h5, h6, code, #sidebar a, #sidebar, label, #sidebar > h1 {
 }
 
 code {
-    color: #824DFF;
+    color: #4527A0;
 }
 
 /* Form elements */
 input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]), select, fieldset, textarea {
-    background-color: #824DFF;
+    background-color: #4527A0;
     color: white;
     border-color: #ffffff;
     font-family: "Droid Sans Mono";
@@ -89,5 +89,5 @@ input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]
     border-color: white;
 }
 input:disabled, textarea:disabled {
-    background: repeating-linear-gradient(45deg, #824DFF, #824DFF 10px, #192729 10px, #192729 20px )
+    background: repeating-linear-gradient(45deg, #4527A0, #4527A0 10px, #192729 10px, #192729 20px )
 }
