@@ -97,7 +97,8 @@
                     "CS1301",
                     "CS1331",
                     "CS1332",
-                    "CS2110"
+                    "CS2110",
+                    "None of these"
                 ],
                 "required": true
             },
