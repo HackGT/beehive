@@ -48,7 +48,7 @@ a:hover {
 /* Buttons */
 .btn, [type=submit], button, .accepted-btn-false {
     background-color: #ffffff;
-     /* border: 2px solid #03565c;  */
+    border: 2px solid #fff; 
     color: #4527A0;
 }
 
