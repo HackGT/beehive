@@ -97,10 +97,9 @@
                     "CS1301",
                     "CS1331",
                     "CS1332",
-                    "CS2110",
-                    "None of these"
+                    "CS2110"
                 ],
-                "required": true
+                "required": false
             },
             {
                 "name": "registered",
