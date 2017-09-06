@@ -103,7 +103,7 @@
             },
             {
                 "name": "registered",
-                "label": "Hack you registered for HackGT 4 Yet?",
+                "label": "Hack you registered for [HackGT 4](https://hack.gt) yet?",
                 "type": "radio",
                 "options": [
                     "No",
@@ -121,7 +121,7 @@
                     "I'm preparing myself for the career fair",
                     "I'm preparing myself to get an internship this next summer"
                 ],
-                "required": true,
+                "required": false,
                 "hasOther": true
             },
             {
