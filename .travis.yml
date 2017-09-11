@@ -1,18 +1,13 @@
 branches:
   only:
   - master
-
 sudo: false
-
 language: ruby
-
 dist: trusty
-
 addons:
   apt:
     packages:
     - libmagic-dev
-
 script: |
   (
   set -exuo pipefail
@@ -30,3 +25,6 @@ script: |
   bundle exec ruby deploy.rb
   DRYRUN=0 bundle exec ruby cleanup.rb
   )
+notifications:
+  slack:
+    secure: a693o33YyLv0Bs07oe1iHo4azBKQcUCO/B241dSXiDP02avUjwCV4/wgNC1j7GKmkgNJtDtgSk8JGwFCmRKo45qcAv+3WzPtiGYOENLoHulGpXyEjobidqxn2ZkeCdFZ4zsPl2XVxwzhudZ5YAE3wHeJlcwebM+LRTYNZkfMJIrRo8I+TxnH0z18N8O8nozcM0Rm0XOENKWNoL6x75RKF/nt9Ug2w8hVdntYW7llGJ/xbowx8oMxKgWl+KbJMKf706t1Flg2c3cme8hL0HANlJHkfJvuPzMM6e5bZrq+Kw5u37V5K8myd4ivxX+N/ISnyTv2U3dRmD3hcjhh3GLGoyI6r+sVkLIC/GyHhRnucsNYhbavQVihPsfGxk78mv8RjRD3PqXdZX6Pr4zwpvw7Wh0zMjHr86WcJjBPuFJaLb9eYTOLrK0wSnWzubQko5hdRW02ikNhFhZq3gd1lI651fmf9sM+lKAkn9r8CtMk4ImT6Pix2oxVVkghv8BQ4BOe2g9Ii1r38cvfyMfRqWI1S7LYiw1rkpSzqWyPo7hNYbDm4DxKTNsrXQ1LaBhWJ99HErseNOUxgmQo1+Q0URKiIHNHvWyoxq48r7Yu9HH1Ym+vw+enHpW1CJj+amHjt7AnsqsUP22C+5J/d7TOqX9LsCH402HQwM6kGLEUJ0Dosew=
