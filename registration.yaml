@@ -1,6 +1,6 @@
 git:
     remote: https://github.com/HackGT/registration.git
-    branch: master
+    ref: 1.7.6
 
 wants:
     mongo: true
