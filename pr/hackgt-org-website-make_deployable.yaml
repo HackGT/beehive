@@ -1,5 +1,0 @@
-git:
-    remote: "https://github.com/HackGT/hackgt-org-website.git"
-    branch: "make_deployable"
-
-secrets-source: git-hackgt-hackgt-org-website-secrets
