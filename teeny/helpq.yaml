@@ -1,4 +1,6 @@
-git: https://github.com/hackgt/helpq
+git:
+  remote: https://github.com/hackgt/helpq
+  branch: dev
 
 wants:
   mongo: true
