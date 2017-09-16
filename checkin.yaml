@@ -1,0 +1,4 @@
+git: https://github.com/HackGT/checkin2.git
+
+wants:
+    mongo: true
