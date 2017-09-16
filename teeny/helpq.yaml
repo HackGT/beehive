@@ -1,0 +1,5 @@
+git: https://github.com/hackgt/helpq
+
+wants:
+  mongo: true
+
