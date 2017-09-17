@@ -1,7 +1,1 @@
-git:
-  remote: https://github.com/hackgt/helpq
-  branch: dev
-
-wants:
-  mongo: true
-
+ignore: true
