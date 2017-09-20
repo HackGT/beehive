@@ -5,6 +5,7 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     cloudflare (3.0.0)
       rest-client
+    deep_merge (1.1.1)
     domain_name (0.5.20170404)
       unf (>= 0.0.5, < 1.0.0)
     http (0.9.8)
@@ -40,8 +41,9 @@ PLATFORMS
 
 DEPENDENCIES
   cloudflare
+  deep_merge
   kubeclient
   ruby-filemagic (~> 0.7)
 
 BUNDLED WITH
-   1.15.1
+   1.15.4
