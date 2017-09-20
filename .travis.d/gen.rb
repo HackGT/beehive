@@ -31,6 +31,7 @@ CONFIG = YAML.safe_load(File.read(CONFIG_YAML))
 
 POD_FILE_DIR = '/etc/files/'
 INVALID_YAML_KEY = /[^-._a-zA-Z0-9]+/
+INVALID_HOSTNAME = /[^a-zA-Z0-9-]+/
 
 class IncorrectFileConfigurationError < StandardError; end
 
@@ -264,6 +265,12 @@ def load_config
     else
       app_name = basename_no_ext app_name
     end
+
+    raise "Dome name #{dome_name} invalid because it cannot be a domain name." \
+      if INVALID_HOSTNAME.match?(dome_name)
+
+    raise "App name #{app_name} invalid because it cannot be a domain name." \
+      if INVALID_HOSTNAME.match?(app_name)
 
     load_app_data(data,
                   app_config,
