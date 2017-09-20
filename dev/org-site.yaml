@@ -1,5 +1,2 @@
-git:
-    remote: https://github.com/HackGT/hackgt-org-website.git
-    branch: master
+git: https://github.com/HackGT/hackgt-org-website.git
 
-target_port: 8080
