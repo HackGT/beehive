@@ -1,38 +1,22 @@
 git:
     remote: https://github.com/HackGT/registration.git
     rev: 2c6212cbf4b5d7bc76de464c5170d8c4bb5ba652
-wants:
-    mongo: true
 
 deployment:
   replicas: 3
 
-secrets:
-  - SESSION_SECRET
-  - EMAIL_USERNAME
-  - EMAIL_PASSWORD
-  - GOOGLE_CLIENT_ID
-  - GOOGLE_CLIENT_SECRET
-  - GITHUB_CLIENT_ID
-  - GITHUB_CLIENT_SECRET
-  - FACEBOOK_CLIENT_ID
-  - FACEBOOK_CLIENT_SECRET
-  - STORAGE_ENGINE_OPTIONS
-
 env:
-  STORAGE_ENGINE: s3
-  COOKIE_SECURE_ONLY: true
-  EMAIL_FROM: "HackGT Team <hello@hackgt.com>"
-  EMAIL_HOST: smtp.sendgrid.net
-  EMAIL_PORT: 465
-  PRODUCTION: true
   EVENT_NAME: "HackGT 4: New Heights"
-  ADMIN_EMAILS:
-    - petschekr@gmail.com
-    - a@andrewdai.co
-    - faizan.virani.44@gmail.com
-    - lesurasani@gmail.com
-    - arshiya.singh16@gmail.com
-    - ajoshi97@gatech.edu
-    - ehsanmasdar@gmail.com
-    - themichaeleden@gmail.com
+
+files:
+  /etc/registration:
+    contents:
+      theme.css:
+        path: 'resources/hackgt4-registration-theme.css'
+        env: THEME_FILE
+      questions.json:
+        path: 'resources/hackgt4-registration-questions.json'
+        env: QUESTIONS_FILE
+      favicon.ico:
+        path: '/resources/favicon.ico'
+        env: FAVICON_FILE_BASE64
