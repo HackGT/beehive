@@ -1621,318 +1621,47 @@
         ]
     },
     {
-        "name": "UF Bus",
-        "text": [
-            {
-                "for": "confirmation",
-                "type": "h5",
-                "content": "Note that opening ceremonies will begin at approximately 7pm on Friday and closing ceremonies will end at approximately 2pm on Sunday. Information about bus logistics will be released shortly. In the meantime, join the [Facebook event](https://www.facebook.com/events/680399305489636)!"
-            },
-            {
-                "for": "required-items",
-                "type": "h5",
-                "content": "Please confirm some things"
-            }
-        ],
-        "questions": [
-            {
-                "name": "confirmation",
-                "label": "Will you be attending HackGT this year on October 13th to 15th?",
-                "type": "radio",
-                "options": [
-                    "Yes, I'll be there!",
-                    "Sorry, I can't make it"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "required-items",
-                "label": "Please confirm the following:",
-                "type": "checkbox",
-                "options": [
-                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
-                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
-                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)",
-                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "optional-items",
-                "label": "Please confirm the following (optional):",
-                "type": "checkbox",
-                "options": [
-                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": false
-            }
-        ]
-    },
-    {
-        "name": "UIUC Bus",
-        "text": [
-            {
-                "for": "confirmation",
-                "type": "h5",
-                "content": "Note that opening ceremonies will begin at approximately 7pm on Friday and closing ceremonies will end at approximately 2pm on Sunday. Information about bus logistics will be released shortly. In the meantime, join the [Facebook event](https://www.facebook.com/events/144787056112670)!"
-            },
-            {
-                "for": "required-items",
-                "type": "h5",
-                "content": "Please confirm some things"
-            }
-        ],
-        "questions": [
-            {
-                "name": "confirmation",
-                "label": "Will you be attending HackGT this year on October 13th to 15th?",
-                "type": "radio",
-                "options": [
-                    "Yes, I'll be there!",
-                    "Sorry, I can't make it"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "required-items",
-                "label": "Please confirm the following:",
-                "type": "checkbox",
-                "options": [
-                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
-                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
-                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)",
-                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "optional-items",
-                "label": "Please confirm the following (optional):",
-                "type": "checkbox",
-                "options": [
-                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": false
-            }
-        ]
-    },
-    {
-        "name": "UCF/FIU Bus",
-        "text": [
-            {
-                "for": "confirmation",
-                "type": "h5",
-                "content": "Note that opening ceremonies will begin at approximately 7pm on Friday and closing ceremonies will end at approximately 2pm on Sunday. Information about bus logistics will be released shortly. In the meantime, join the [Facebook event](https://www.facebook.com/events/1986575941356390)!"
-            },
-            {
-                "for": "required-items",
-                "type": "h5",
-                "content": "Please confirm some things"
-            }
-        ],
-        "questions": [
-            {
-                "name": "confirmation",
-                "label": "Will you be attending HackGT this year on October 13th to 15th?",
-                "type": "radio",
-                "options": [
-                    "Yes, I'll be there!",
-                    "Sorry, I can't make it"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "required-items",
-                "label": "Please confirm the following:",
-                "type": "checkbox",
-                "options": [
-                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
-                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
-                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)",
-                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "optional-items",
-                "label": "Please confirm the following (optional):",
-                "type": "checkbox",
-                "options": [
-                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": false
-            }
-        ]
-    },
-    {
-        "name": "WUStL/Vanderbilt University Bus",
-        "text": [
-            {
-                "for": "confirmation",
-                "type": "h5",
-                "content": "Note that opening ceremonies will begin at approximately 7pm on Friday and closing ceremonies will end at approximately 2pm on Sunday. Information about bus logistics will be released shortly. In the meantime, join the [Facebook event](https://www.facebook.com/events/877088149116702)!"
-            },
-            {
-                "for": "required-items",
-                "type": "h5",
-                "content": "Please confirm some things"
-            }
-        ],
-        "questions": [
-            {
-                "name": "confirmation",
-                "label": "Will you be attending HackGT this year on October 13th to 15th?",
-                "type": "radio",
-                "options": [
-                    "Yes, I'll be there!",
-                    "Sorry, I can't make it"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "required-items",
-                "label": "Please confirm the following:",
-                "type": "checkbox",
-                "options": [
-                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
-                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
-                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)",
-                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "optional-items",
-                "label": "Please confirm the following (optional):",
-                "type": "checkbox",
-                "options": [
-                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": false
-            }
-        ]
-    },
-    {
-        "name": "Michigan (Ann Arbor) Bus",
-        "text": [
-            {
-                "for": "confirmation",
-                "type": "h5",
-                "content": "Note that opening ceremonies will begin at approximately 7pm on Friday and closing ceremonies will end at approximately 2pm on Sunday. Information about bus logistics will be released shortly. In the meantime, join the [Facebook event](https://www.facebook.com/events/1926672534329321)"
-            },
-            {
-                "for": "required-items",
-                "type": "h5",
-                "content": "Please confirm some things"
-            }
-        ],
-        "questions": [
-            {
-                "name": "confirmation",
-                "label": "Will you be attending HackGT this year on October 13th to 15th?",
-                "type": "radio",
-                "options": [
-                    "Yes, I'll be there!",
-                    "Sorry, I can't make it"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "required-items",
-                "label": "Please confirm the following:",
-                "type": "checkbox",
-                "options": [
-                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
-                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
-                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)",
-                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "optional-items",
-                "label": "Please confirm the following (optional):",
-                "type": "checkbox",
-                "options": [
-                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": false
-            }
-        ]
-    },
-    {
-        "name": "Duke/UNC Chapel Hill Bus",
-        "text": [
-            {
-                "for": "confirmation",
-                "type": "h5",
-                "content": "Note that opening ceremonies will begin at approximately 7pm on Friday and closing ceremonies will end at approximately 2pm on Sunday. Information about bus logistics will be released shortly. In the meantime, join the [Facebook event](https://www.facebook.com/events/1247848358660200)!"
-            },
-            {
-                "for": "required-items",
-                "type": "h5",
-                "content": "Please confirm some things"
-            }
-        ],
-        "questions": [
-            {
-                "name": "confirmation",
-                "label": "Will you be attending HackGT this year on October 13th to 15th?",
-                "type": "radio",
-                "options": [
-                    "Yes, I'll be there!",
-                    "Sorry, I can't make it"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "required-items",
-                "label": "Please confirm the following:",
-                "type": "checkbox",
-                "options": [
-                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
-                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
-                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)",
-                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": true
-            },
-            {
-                "name": "optional-items",
-                "label": "Please confirm the following (optional):",
-                "type": "checkbox",
-                "options": [
-                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
-                ],
-                "hasOther": false,
-                "required": false
-            }
-        ]
-    },
-    {
         "name": "General Confirmation",
         "text": [
             {
-                "for": "confirmation",
+                "for": "required-items",
                 "type": "h5",
-                "content": "Note that opening ceremonies will begin at approximately 7pm on Friday and closing ceremonies will end at approximately 2pm on Sunday"
+                "content": "Note that opening ceremonies will begin at approximately 7pm on Friday and closing ceremonies will end at approximately 2pm on Sunday. Please confirm the following."
+            }
+        ],
+        "questions": [
+            {
+                "name": "required-items",
+                "label": "Please confirm the following:",
+                "type": "checkbox",
+                "options": [
+                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                    "I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
+                    "I agree to the terms of the [MLH Privacy Policy](https://mlh.io/privacy)",
+                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)"
+                ],
+                "hasOther": false,
+                "required": true
+            },
+            {
+                "name": "optional-items",
+                "label": "Please confirm the following (optional):",
+                "type": "checkbox",
+                "options": [
+                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
+                ],
+                "hasOther": false,
+                "required": false
+            }
+        ]
+    },
+    {
+        "name": "Bus",
+        "text": [
+            {
+                "for": "bus-selection",
+                "type": "h5",
+                "content": "View the [bus itineraries](https://go.hack.gt/busroutes2017) and join the [Facebook event](https://www.facebook.com/pg/HackGT/events/)!"
             },
             {
                 "for": "required-items",
@@ -1942,15 +1671,17 @@
         ],
         "questions": [
             {
-                "name": "confirmation",
-                "label": "Will you be attending HackGT this year on October 13th to 15th?",
+                "name": "bus-selection",
+                "label": "All aboard! Which bus (first come first serve)?",
                 "type": "radio",
                 "options": [
-                    "Yes, I'll be there!",
-                    "Sorry, I can't make it"
-                ],
-                "hasOther": false,
-                "required": true
+                    "University of Florida",
+                    "University of Illinois at Urbana Champaign",
+                    "University of Michigan",
+                    "Duke University → University of North Carolina at Chapel Hill",
+                    "Florida International University → University of Central Florida",
+                    "Washington University in St. Louis → Vanderbilt University"
+                ]
             },
             {
                 "name": "required-items",
@@ -1971,6 +1702,30 @@
                 "type": "checkbox",
                 "options": [
                     "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view?usp=sharing)"
+                ],
+                "hasOther": false,
+                "required": false
+            }
+        ]
+    },
+    {
+        "name": "Not Attending",
+        "text": [
+            {
+                "for": "not-attending-checkbox",
+                "type": "h5",
+                "content": "We are sorry to hear it! Thanks for letting us know and we hope to see you next year!"
+            }
+        ],
+        "questions": [
+            {
+                "name": "not-attending-checkbox",
+                "label": "",
+                "type": "checkbox",
+                "options": [
+                    "Weeeeeeeeeeeeeee I needed to put something here.",
+                    "[TODO: Add support for no-op RSVP](https://github.com/hackgt/registration)",
+                    "[CLICK ME FOR A PRIZE](https://kenshiro.memes.hack.gt)"
                 ],
                 "hasOther": false,
                 "required": false
