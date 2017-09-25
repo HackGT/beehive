@@ -1795,24 +1795,11 @@
         "name": "Not Attending",
         "text": [
             {
-                "for": "not-attending-checkbox",
+                "for": "end",
                 "type": "h5",
                 "content": "We are sorry to hear it! Thanks for letting us know and we hope to see you next year!"
             }
         ],
-        "questions": [
-            {
-                "name": "not-attending-checkbox",
-                "label": "",
-                "type": "checkbox",
-                "options": [
-                    "Weeeeeeeeeeeeeee I needed to put something here.",
-                    "[TODO: Add support for no-op RSVP](https://github.com/hackgt/registration)",
-                    "[CLICK ME FOR A PRIZE](https://kenshiro.memes.hack.gt)"
-                ],
-                "hasOther": false,
-                "required": false
-            }
-        ]
+        "questions": []
     }
 ]
