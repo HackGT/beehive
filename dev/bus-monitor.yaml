@@ -1,1 +1,13 @@
-ignore: true
+git: https://github.com/HackGT/bus-monitor.git
+
+files:
+  /etc/bus-monitor/config:
+    contents:
+      config.ini:
+        path: 'resources/bus-monitor-config.ini'
+        env: BUS_MONITOR_CONFIG
+  /etc/bus-monitor/secrets:
+    secret: true
+    contents:
+      secrets.ini:
+        env: BUS_MONITOR_SECRETS
