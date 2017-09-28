@@ -1,0 +1,347 @@
+[
+    {
+        "name": "Participant",
+        "text": [
+            {
+                "for": "end",
+                "type": "p",
+                "content": "By submitting your application, you agree to allow HackGT to share your registration information with our sponsors."
+            }
+        ],
+        "questions": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "What is your full name?",
+                "required": true
+            },
+            {
+                "name": "school",
+                "type": "select",
+                "label": "What college or university do you currently attend?",
+                "options": [
+                    "Georgia Institute of Technology",
+                    "Emory University",
+                    "Georgia State University",
+                    "Clark Atlanta University",
+                    "Spelman College",
+                    "Morehouse College"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "school-year",
+                "type": "select",
+                "label": "What year of studies are you currently in?",
+                "options": [
+                    "First year",
+                    "Second year",
+                    "Third year",
+                    "Fourth year",
+                    "Fifth year+"
+                ],
+                "required": true
+            },
+            {
+                "name": "gender",
+                "label": "I identify as…",
+                "type": "radio",
+                "options": ["Male", "Female", "Prefer not to answer"],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "race",
+                "label": "What is your race/ethnicity?",
+                "type": "checkbox",
+                "options": [
+                    "Non-Hispanic White",
+                    "Black or African American",
+                    "Latino, Latina, or Hispanic American",
+                    "South Asian or Indian American",
+                    "East Asian or Asian American",
+                    "Middle Eastern or Arab American",
+                    "Native American or Alaskan Native",
+                    "Hawaiian or Pacific Islander"
+                ],
+                "hasOther": true,
+                "required": false
+            },
+            {
+                "name": "resume",
+                "label": "Please upload your resume or a skill sheet",
+                "type": "file",
+                "required": true
+            },
+            {
+                "name": "major",
+                "label": "What is your major?",
+                "type": "select",
+                "options": [
+                    "",
+                    "Accounting",
+                    "Aerospace Engineering",
+                    "Applied Physics",
+                    "Architecture",
+                    "Astronomy or Astrophysics",
+                    "Biochemistry",
+                    "Biology",
+                    "Biomedical Engineering",
+                    "Business",
+                    "Chemical Engineering",
+                    "Chemistry",
+                    "Civil Engineering",
+                    "Computational Media",
+                    "Computer Engineering",
+                    "Computer Science",
+                    "Discrete Mathematics",
+                    "Drama or Theater",
+                    "Earth and Atmospheric Sciences",
+                    "Economics",
+                    "Electrical Engineering",
+                    "English or Literature, Media, and Communication",
+                    "Environmental Engineering",
+                    "Film and Media Studies",
+                    "Finance",
+                    "Global Studies and Languages",
+                    "History",
+                    "Humanities",
+                    "Industrial Design",
+                    "Industrial Engineering",
+                    "International Affairs or International Relations",
+                    "Linguistics",
+                    "Materials Science and Engineering",
+                    "Mathematics",
+                    "Mechanical Engineering",
+                    "Music",
+                    "Music Technology",
+                    "Neuroscience",
+                    "Nuclear and Radiological Engineering",
+                    "Philosophy",
+                    "Physics",
+                    "Political Science",
+                    "Psychology",
+                    "Public Policy",
+                    "Urban Planning"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "first-hackathon",
+                "label": "Will this be your first hackathon?",
+                "type": "radio",
+                "options": [
+                    "Yes",
+                    "No, I've attended other hackathons before"
+                ],
+                "required": true
+            },
+            {
+                "name": "interested-in",
+                "label": "What track are you most interested in?",
+                "type": "select",
+                "options": [
+                    "Women’s Health",
+                    "Inpatient Care",
+                    "Fitness Technology",
+                    "Global Health"
+                ],
+                "required": true
+            },
+            {
+                "name": "words",
+                "label": "What are the first three words that come to mind when you think about the future of healthcare?",
+                "type": "text",
+                "required": true
+            },
+            {
+                "name": "learn-create",
+                "label": "What do you hope to learn or create at this hackathon?",
+                "type": "textarea",
+                "required": true
+            },
+            {
+                "name": "resources",
+                "label": "Help us help you -- what resources, software and/or hardware, would you like to see at this hackathon?",
+                "type": "textarea",
+                "required": true
+            },
+            {
+                "name": "tshirt-size",
+                "label": "What is your T-shirt size?",
+                "type": "radio",
+                "options": [
+                    "Extra small",
+                    "Small",
+                    "Medium",
+                    "Large",
+                    "Extra large",
+                    "2XL",
+                    "3XL"
+                ],
+                "required": true
+            },
+            {
+                "name": "dietary-restrictions",
+                "label": "Do you have any dietary restrictions?",
+                "type": "checkbox",
+                "options": [
+                    "None",
+                    "Vegetarian",
+                    "Vegan",
+                    "Kosher",
+                    "Gluten-free"
+                ],
+                "hasOther": true,
+                "required": false
+            },
+            {
+                "name": "other",
+                "label": "Anything else you want us to know?",
+                "type": "textarea",
+                "required": false
+            }
+        ]
+    },
+    {
+        "name": "Mentor",
+        "text": [
+            {
+                "for": "end",
+                "type": "p",
+                "content": "By submitting your application, you agree to allow HackGT to share your registration information with our sponsors."
+            }
+        ],
+        "questions": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "What is your full name?",
+                "required": true
+            },
+            {
+                "name": "gender",
+                "label": "I identify as…",
+                "type": "radio",
+                "options": ["Male", "Female", "Prefer not to answer"],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "race",
+                "label": "What is your race/ethnicity?",
+                "type": "checkbox",
+                "options": [
+                    "Non-Hispanic White",
+                    "Black or African American",
+                    "Latino, Latina, or Hispanic American",
+                    "South Asian or Indian American",
+                    "East Asian or Asian American",
+                    "Middle Eastern or Arab American",
+                    "Native American or Alaskan Native",
+                    "Hawaiian or Pacific Islander"
+                ],
+                "hasOther": true,
+                "required": false
+            },
+            {
+                "name": "resume",
+                "label": "Please upload your resume or a skill sheet",
+                "type": "file",
+                "required": true
+            },
+            {
+                "name": "work",
+                "label": "Where do you work?",
+                "type": "text",
+                "required": true
+            },
+            {
+                "name": "fields-mentor",
+                "label": "Which of these fields are you able to mentor?",
+                "type": "checkbox",
+                "options": [
+                    "Software oriented projects", 
+                    "Hardware oriented projects",
+                    "Women’s Health",
+                    "Inpatient Care",
+                    "Fitness Technology",
+                    "Global Health"
+                ],
+                "required": true,
+                "hasOther": true
+            },
+            {
+                "name": "first-hackathon",
+                "label": "Will this be your first hackathon?",
+                "type": "radio",
+                "options": [
+                    "Yes",
+                    "No, I've attended other hackathons before"
+                ],
+                "required": true
+            },
+            {
+                "name": "interested-in",
+                "label": "What track are you most interested in?",
+                "type": "select",
+                "options": [
+                    "Women’s Health",
+                    "Inpatient Care",
+                    "Fitness Technology",
+                    "Global Health"
+                ],
+                "required": true
+            },
+            {
+                "name": "elaborate",
+                "label": "Please elaborate.",
+                "type": "textarea",
+                "required": true
+            },
+            {
+                "name": "linkedin",
+                "label": "What's your LinkedIn profile?",
+                "type": "text",
+                "required": true
+            },
+            {
+                "name": "tshirt-size",
+                "label": "What is your T-shirt size?",
+                "type": "radio",
+                "options": [
+                    "Extra small",
+                    "Small",
+                    "Medium",
+                    "Large",
+                    "Extra large",
+                    "2XL",
+                    "3XL"
+                ],
+                "required": true
+            },
+            {
+                "name": "dietary-restrictions",
+                "label": "Do you have any dietary restrictions?",
+                "type": "checkbox",
+                "options": [
+                    "None",
+                    "Vegetarian",
+                    "Vegan",
+                    "Kosher",
+                    "Gluten-free"
+                ],
+                "hasOther": true,
+                "required": false
+            },
+            {
+                "name": "other",
+                "label": "Anything else you want us to know?",
+                "type": "textarea",
+                "required": false
+            }
+        ]
+    }
+]
