@@ -247,12 +247,6 @@
                 "required": false
             },
             {
-                "name": "resume",
-                "label": "Please upload your resume or a skill sheet",
-                "type": "file",
-                "required": true
-            },
-            {
                 "name": "work",
                 "label": "Where do you work?",
                 "type": "text",
@@ -274,28 +268,6 @@
                 "hasOther": true
             },
             {
-                "name": "first-hackathon",
-                "label": "Will this be your first hackathon?",
-                "type": "radio",
-                "options": [
-                    "Yes",
-                    "No, I've attended other hackathons before"
-                ],
-                "required": true
-            },
-            {
-                "name": "interested-in",
-                "label": "What track are you most interested in?",
-                "type": "select",
-                "options": [
-                    "Women’s Health",
-                    "Inpatient Care",
-                    "Fitness Technology",
-                    "Global Health"
-                ],
-                "required": true
-            },
-            {
                 "name": "elaborate",
                 "label": "Please elaborate.",
                 "type": "textarea",
@@ -306,6 +278,26 @@
                 "label": "What's your LinkedIn profile?",
                 "type": "text",
                 "required": true
+            },
+            {
+                "name": "host",
+                "label": "Would you be willing to hold a workshop or TechTalk? If so, about what?",
+                "type": "textarea",
+                "required": false
+            },
+            {
+                "name": "dietary-restrictions",
+                "label": "Do you have any dietary restrictions?",
+                "type": "checkbox",
+                "options": [
+                    "None",
+                    "Vegetarian",
+                    "Vegan",
+                    "Kosher",
+                    "Gluten-free"
+                ],
+                "hasOther": true,
+                "required": false
             },
             {
                 "name": "tshirt-size",
@@ -321,20 +313,6 @@
                     "3XL"
                 ],
                 "required": true
-            },
-            {
-                "name": "dietary-restrictions",
-                "label": "Do you have any dietary restrictions?",
-                "type": "checkbox",
-                "options": [
-                    "None",
-                    "Vegetarian",
-                    "Vegan",
-                    "Kosher",
-                    "Gluten-free"
-                ],
-                "hasOther": true,
-                "required": false
             },
             {
                 "name": "other",
