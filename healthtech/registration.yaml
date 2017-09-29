@@ -5,7 +5,7 @@ deployment:
   replicas: 3
 
 env:
-  EVENT_NAME: "HackGT 4: New Heights"
+  EVENT_NAME: "HackGT's Healthtech Hackathon"
   PRODUCTION: true
 
 files:
