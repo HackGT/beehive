@@ -3,6 +3,7 @@ git:
     branch: 1.10.8
 deployment:
   replicas: 3
+  memory: '256Mi' 
 
 env:
   EVENT_NAME: "HackGT 4: New Heights"
