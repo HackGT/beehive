@@ -1,5 +1,5 @@
 git:
     remote: "https://github.com/hackgt/checkin2.git"
-    branch: "connect-registration"
+    branch: "graphql"
 
 secrets-source: git-hackgt-checkin2-secrets
