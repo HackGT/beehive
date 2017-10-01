@@ -1,8 +1,7 @@
 git:
     remote: "https://github.com/hackgt/helpq.git"
     branch: "custom-expiration"
-env:
-    ROOT_URL: https://helpq-custom-expiration.pr.hack.gt
+
 secrets-source: git-hackgt-helpq-secrets
 deployment:
     replicas: 1
