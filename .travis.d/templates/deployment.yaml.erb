@@ -23,9 +23,10 @@ spec:
             imagePullPolicy: Always
             resources:
               limits:
-                memory: <%= (app['deployment'] and app['deployment']['memory']) or "128Mi" %>
+                memory: <%= (app['deployment'] and app['deployment']['memory']) or "256Mi" %>
               requests:
                 cpu: 10m
+                memory: <%= (app['deployment'] and app['deployment']['memory_request']) or "128Mi" %>
             name: <%= app['uid'] %>
             env:
               - name: PORT
