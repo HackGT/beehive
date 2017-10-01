@@ -1,5 +1,6 @@
 git: https://github.com/HackGT/cas-services-management-overlay.git
-
+deployment:
+  memory: '512Mi' 
 files:
   /etc/cas/config:
     secret: true
