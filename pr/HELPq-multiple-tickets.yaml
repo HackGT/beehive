@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/helpq.git"
+    branch: "multiple-tickets"
+
+secrets-source: git-hackgt-helpq-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
