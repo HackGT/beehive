@@ -281,7 +281,7 @@
             },
             {
                 "name": "host",
-                "label": "Would you be willing to hold a workshop or TechTalk? If so, about what?",
+                "label": "Would you be willing to hold a workshop or tech talk? If so, about what?",
                 "type": "textarea",
                 "required": false
             },
