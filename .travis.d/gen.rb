@@ -216,7 +216,7 @@ def load_app_data(data, app_config, dome_name, app_name, path)
 
   base_config = fetch_deployment(slog, branch: branch, rev: git_rev)
 
-  app_config = base_config.deep_merge(app_config)
+  app_config = app_config.deep_merge(base_config)
 
   docker_tag = make_dockertag git, branch: branch, rev: git_rev
 
