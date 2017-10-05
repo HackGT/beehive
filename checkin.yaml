@@ -1,4 +1,7 @@
 git: https://github.com/HackGT/checkin2.git
 
+env:
+  REGISTRATION_GRAPHQL: "https://registration.hack.gt/graphql"
+
 wants:
     mongo: true
