@@ -1,6 +1,6 @@
 git:
     remote: https://github.com/HackGT/registration.git
-    branch: 1.11.3
+    rev: d02cdbecf60d1a31f0ea7a57d9ed6dd29bbd80bf
 deployment:
   replicas: 3
   memory: '256Mi' 
