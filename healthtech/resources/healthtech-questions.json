@@ -264,7 +264,7 @@
                     "Fitness Technology",
                     "Global Health"
                 ],
-                "required": true,
+                "required": false,
                 "hasOther": true
             },
             {
