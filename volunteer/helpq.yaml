@@ -11,7 +11,3 @@ files:
     contents:
       settings.json:
         env: SETTINGS_FILE
-
-env:
-  ROOT_URL: https://helpq.teeny.hack.gt
-
