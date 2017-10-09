@@ -3,5 +3,5 @@ files:
   /usr/src/pipes:
     secret: true
     contents:
-      config.json:
+      secrets.json:
         env: SETTINGS_FILE
