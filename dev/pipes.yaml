@@ -1,6 +1,6 @@
 git: https://github.com/HackGT/Pipes.git
 files:
-  /usr/src/pipes:
+  /etc/pipes:
     secret: true
     contents:
       secrets.json:
