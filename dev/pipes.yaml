@@ -1,1 +1,7 @@
 git: https://github.com/HackGT/Pipes.git
+files:
+  /usr/src/pipes:
+    secret: true
+    contents:
+      config.json:
+        env: SETTINGS_FILE
