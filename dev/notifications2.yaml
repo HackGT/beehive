@@ -1,2 +1,6 @@
 git: https://github.com/HackGT/Notifications2.git
-ignore: true
+secrets:
+  - api_secret
+  - api_id
+  - user
+  - password
