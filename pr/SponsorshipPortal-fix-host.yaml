@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/sponsorshipportal.git"
+    branch: "fix/host"
+
+secrets-source: git-hackgt-sponsorshipportal-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
