@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/notifications2.git"
+    branch: "dev/metrics-config"
+
+secrets-source: git-hackgt-notifications2-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
