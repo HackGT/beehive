@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/pipes.git"
-    branch: "facebook-plugin"
-
-secrets-source: git-hackgt-pipes-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: recreate
