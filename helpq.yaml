@@ -1,0 +1,13 @@
+git:
+  remote: https://github.com/hackgt/helpq
+  branch: dev
+
+wants:
+  mongo: true
+
+files:
+  /etc/helpq:
+    secret: true
+    contents:
+      settings.json:
+        env: SETTINGS_FILE
