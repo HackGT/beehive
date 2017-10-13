@@ -25,8 +25,11 @@ def set_cloudflare_dns
     next if target[dns.record[:name]].nil?
     record = target[dns.record[:name]]
     record['name'] = dns.record[:name]
-    dns.put(record.to_json, content_type: 'application/json')
     puts "Changing Cloudflare DNS: #{record.to_json}"
+    begin
+      dns.put(record.to_json, content_type: 'application/json')
+    rescue Exception
+      puts "Error changing record #{record.to_json}"
     target.delete(dns.record[:name])
   end
 
