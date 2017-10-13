@@ -30,6 +30,7 @@ def set_cloudflare_dns
       dns.put(record.to_json, content_type: 'application/json')
     rescue Exception
       puts "Error changing record #{record.to_json}"
+    end
     target.delete(dns.record[:name])
   end
 
