@@ -5,3 +5,5 @@ env:
 
 wants:
     mongo: true
+deployment:
+  memory: 1024Mi
