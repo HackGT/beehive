@@ -1,3 +1,0 @@
-git: https://github.com/HackGT/redirect-app.git
-env:
-  REDIRECT_URL: "https://live.hack.gt/#scavenger"
