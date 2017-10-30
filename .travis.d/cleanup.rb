@@ -79,7 +79,7 @@ def cleanup(dryrun: true)
 
   deployments_to_remove.each do |deployment|
     puts "Deleting deployment #{deployment}."
-    client[:beta].delete_deployment deployment, 'default' unless dryrun
+    puts `kubectl delete deployment #{deployment}`
   end
 end
 
