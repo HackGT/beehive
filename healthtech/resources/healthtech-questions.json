@@ -1,5 +1,31 @@
 [
     {
+        "name": "Walk-in",
+        "questions": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "What is your full name?",
+                "required": true
+            },
+            {
+                "name": "school",
+                "type": "select",
+                "label": "What college or university do you currently attend?",
+                "options": [
+                    "Georgia Institute of Technology",
+                    "Emory University",
+                    "Georgia State University",
+                    "Clark Atlanta University",
+                    "Spelman College",
+                    "Morehouse College"
+                ],
+                "hasOther": true,
+                "required": true
+            }
+        ]
+    },
+    {
         "name": "Participant",
         "text": [
             {
