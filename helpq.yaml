@@ -1,0 +1,3 @@
+git: https://github.com/HackGT/redirect-app.git
+env:
+  REDIRECT_URL: "https://helpq.healthtech.hack.gt"
