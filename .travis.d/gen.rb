@@ -361,7 +361,7 @@ write_config(path, INGRESS_TEMPLATE, binding)
 dns = biodomes.each_with_object({}) do |(_, biodome), data|
   biodome['apps'].each_with_object(data) do |(_, app), inner_data|
     inner_data[app['host']] = {
-      'type' => 'CNAME',
+      'type' => 'A',
       'content' => CONFIG['cluster']['host'],
       'proxied' => biodome['name'] == 'default'
     }
