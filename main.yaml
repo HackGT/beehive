@@ -3,4 +3,4 @@ env:
   REDIRECT_URL: "https://fall2017.hack.gt"
 deployment:
   replicas: 2
-  memory: '64Mi' 
+  memory_request: '64Mi' 

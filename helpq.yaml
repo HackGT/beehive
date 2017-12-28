@@ -3,4 +3,4 @@ env:
   REDIRECT_URL: "https://helpq.healthtech.hack.gt"
 deployment:
   replicas: 1
-  memory: '64Mi' 
+  memory_request: '64Mi' 
