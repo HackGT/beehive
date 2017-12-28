@@ -1,2 +1,4 @@
 git: https://github.com/HackGT/expo2016.git
-
+deployment:
+  replicas: 1
+  memory: '64Mi'
