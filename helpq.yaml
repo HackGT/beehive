@@ -1,6 +1,3 @@
-git: https://github.com/HackGT/redirect-app.git
+git: https://github.com/HackGT/redirector.git
 env:
   REDIRECT_URL: "https://helpq.healthtech.hack.gt"
-deployment:
-  replicas: 1
-  memory_request: '64Mi' 

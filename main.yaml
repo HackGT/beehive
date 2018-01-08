@@ -1,6 +1,5 @@
-git: https://github.com/HackGT/redirect-app.git
+git: https://github.com/HackGT/redirector.git
 env:
   REDIRECT_URL: "https://fall2017.hack.gt"
 deployment:
   replicas: 2
-  memory_request: '64Mi' 
