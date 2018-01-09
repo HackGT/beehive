@@ -1,4 +1,4 @@
-git: https://github.com/HackGT/redirector.git
+git: https://github.com/HackGT/redirect-app.git
 branch: master
 env:
     REDIRECT_URL: "https://docs.google.com/forms/d/e/1FAIpQLSd2pw4u-gfB9NxwJBUd23khz9dGMH8TdEcJU9YE8-ygsqMpdg/viewform"
