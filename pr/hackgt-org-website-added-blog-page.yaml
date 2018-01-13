@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/hackgt-org-website.git"
-    branch: "added-blog-page"
-
-secrets-source: git-hackgt-hackgt-org-website-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: recreate
