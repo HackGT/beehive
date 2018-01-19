@@ -1,0 +1,4 @@
+git: https://github.com/HackGT/hack-the-industry.git
+deployment:
+  memory_request: '20Mi'
+# thanks ehsan
