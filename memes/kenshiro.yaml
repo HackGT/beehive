@@ -1,4 +1,6 @@
 git: https://github.com/HackGT/kenshiro_kills
 
 target_port: 80
-
+deployment:
+  replicas: 1
+  memory_request: '5Mi'

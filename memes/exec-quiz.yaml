@@ -1,1 +1,4 @@
 git: https://github.com/HackGT/exec-quiz.git
+deployment:
+  replicas: 1
+  memory_request: '5Mi'

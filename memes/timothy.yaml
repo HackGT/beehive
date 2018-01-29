@@ -1,3 +1,6 @@
 git:
     remote: https://github.com/HackGT/memes.git
     branch: timothy
+deployment:
+  replicas: 1
+  memory_request: '5Mi'
