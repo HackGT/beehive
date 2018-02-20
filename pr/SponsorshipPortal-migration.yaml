@@ -9,4 +9,5 @@ deployment:
         type: recreate
 
 env:
-    DB_CONNECTIONSTRING: "postgres://sponsorshipportal:LfwA8vQR38Fw@postgres-postgresql/sponsorshipportal-dev"
+    DB_CONNECTIONSTRING: "postgres://sponsorshipportal:LfwA8vQR38Fw@postgres-postgresql/sponsorshipportal-dev?sslmode=disable"
+
