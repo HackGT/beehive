@@ -38,6 +38,10 @@ spec:
               - name: MONGO_URL
                 value: !!str mongodb://<%= biodome['mongo'] %>/<%= app['uid'] %>
               <% end %>
+              <% if app['wants'] && app['wants']['postgres'] %>
+              - name: PG_URL
+                value: !!str postgres://<%= app['uid'] %>@<%= biodome['postgres']['host'] %>/<%= app['uid'] %>?sslmode=disable
+              <% end %>
               <% app['env']&.each do |name, value| %>
               - name: <%= name %>
               <% if value.is_a? Hash %>
