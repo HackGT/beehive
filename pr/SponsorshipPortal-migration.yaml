@@ -7,3 +7,6 @@ deployment:
     replicas: 1
     strategy:
         type: recreate
+
+env:
+    DB_CONNECTIONSTRING: "postgres://sponsorshipportal:LfwA8vQR38Fw@postgres-postgresql/sponsorshipportal-dev"
