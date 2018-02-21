@@ -9,3 +9,5 @@ mongo:
 
 postgres:
   host: 'postgres-postgresql'
+  admin_user: 'postgres'
+  admin_password: 'qlLiDLk5L6'
