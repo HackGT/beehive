@@ -51,10 +51,11 @@ target_port: 3000
 # (optional) defaults to port 80 if nothing is given.
 port: 80
 
-# a list of dependent services, currently only supports `mongo`
+# a list of dependent services, currently supports `mongo` and `postgres`
 # this is optional
 wants:
-    mongo: true
+    mongo: "CUSTOM_ENVVAR" # any string or boolean true
+    postgres: true         # if `true`, defaults to `POSTGRES_URL`
 
 # a list of secrets to be given through environment variables.
 # (optional) more on this in the secrets section...
