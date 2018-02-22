@@ -48,7 +48,7 @@ spec:
                 value: <%= "https://#{app['host']}" %>
               <% if app['wants']%>
               <% if app['wants']['mongo'] %>
-              - name: MONGO_URL
+              - name: <%= app['wants']['mongo'].is_a?(String) ? app['wants']['mongo'] : 'MONGO_URL' %>
                 value: !!str mongodb://<%= biodome['mongo'] %>/<%= app['uid'] %>
               <% end %>
               <% if app['wants']['postgres'] %>
