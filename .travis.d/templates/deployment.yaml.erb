@@ -19,7 +19,7 @@ spec:
       labels:
         name: <%= app['uid'] %>
     spec:
-        initContainer:
+        initContainers:
           <% if app['wants'] && app['wants']['postgres'] %>
           - image: "hackgt/pg_initialaser:latest"
             name: "init-pg"
