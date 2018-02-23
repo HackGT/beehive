@@ -27,9 +27,9 @@ spec:
               - name: POSTGRES_URL
                 value: postgres://<%= biodome['postgres']['admin_user'] %>@<%= biodome['postgres']['host'] %>/?sslmode=disable
               - name: USERNAME
-                value: app['uid']
+                value: <%= app['uid'] %>
               - name: DBNAME
-                value: app['uid']
+                value: <%= app['uid'] %>
           <% end %>
         containers:
           - image: <%= app['git']['user'] %>/<%= app['git']['shortname'] %>:<%= app['docker-tag'] %>
