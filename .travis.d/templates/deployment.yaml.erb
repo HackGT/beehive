@@ -25,7 +25,7 @@ spec:
             name: "init-pg"
             env:
               - name: POSTGRES_URL
-                value: postgres://<%= biodome['postgres']['admin_user'] %>:<%= biodome['postgres']['admin_password'] %>@<%= biodome['postgres']['host'] %>/
+                value: postgres://<%= biodome['postgres']['admin_user'] %>@<%= biodome['postgres']['host'] %>/?sslmode=disable
               - name: USERNAME
                 value: app['uid']
               - name: DBNAME
@@ -48,11 +48,11 @@ spec:
                 value: <%= "https://#{app['host']}" %>
               <% if app['wants']%>
               <% if app['wants']['mongo'] %>
-              - name: <%= app['wants']['mongo'].is_a?(String) ? app['wants']['mongo'] : 'MONGO_URL' %>
+              - name: <%= app['wants']['mongo']['env'] ? app['wants']['mongo']['env'] : 'MONGO_URL' %>
                 value: !!str mongodb://<%= biodome['mongo'] %>/<%= app['uid'] %>
               <% end %>
               <% if app['wants']['postgres'] %>
-              - name: <%= app['wants']['postgres'].is_a?(String) ? app['wants']['postgres'] : 'POSTGRES_URL' %>
+              - name: <%= app['wants']['postgres']['env'] ? app['wants']['postgres']['env'] : 'POSTGRES_URL' %>
                 value: !!str postgres://<%= app['uid'] %>@<%= biodome['postgres']['host'] %>/<%= app['uid'] %>?sslmode=disable
               <% end %>
               <% end %>
