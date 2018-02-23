@@ -1,9 +1,9 @@
 git:
     remote: "https://github.com/hackgt/buzzer.git"
-    branch: "slackPlugin"
+    branch: "slackplugin"
 
 secrets-source: git-hackgt-buzzer-secrets
 deployment:
     replicas: 1
     strategy:
-        type: Recreate
+        type: recreate

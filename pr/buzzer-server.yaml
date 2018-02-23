@@ -6,4 +6,4 @@ secrets-source: git-hackgt-buzzer-secrets
 deployment:
     replicas: 1
     strategy:
-        type: Recreate
+        type: recreate
