@@ -47,14 +47,22 @@ spec:
               - name: ROOT_URL
                 value: <%= "https://#{app['host']}" %>
               <% if app['wants']%>
-              <% if app['wants']['mongo'] %>
-              - name: <%= app['wants']['mongo']['env'] ? app['wants']['mongo']['env'] : 'MONGO_URL' %>
+                <% if app['wants']['mongo'] %>
+                  <% if app['wants']['mongo'].is_a? Hash and app['wants']['mongo']['env'] %>
+              - name: !!str <%= app['wants']['mongo']['env'] %>
+                  <% else %>
+              - name: MONGO_URL
+                  <% end %>
                 value: !!str mongodb://<%= biodome['mongo'] %>/<%= app['uid'] %>
-              <% end %>
-              <% if app['wants']['postgres'] %>
-              - name: <%= app['wants']['postgres']['env'] ? app['wants']['postgres']['env'] : 'POSTGRES_URL' %>
+                <% end %>
+                <% if app['wants']['postgres'] %>
+                  <% if app['wants']['postgres'].is_a? Hash and app['wants']['postgres']['env'] %>
+              - name: !!str <%= app['wants']['postgres']['env'] %>
+                  <% else %>
+              - name: POSTGRES_URL
+                  <% end %>
                 value: !!str postgres://<%= app['uid'] %>@<%= biodome['postgres']['host'] %>/<%= app['uid'] %>?sslmode=disable
-              <% end %>
+                <% end %>
               <% end %>
               <% app['env']&.each do |name, value| %>
               - name: <%= name %>
