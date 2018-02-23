@@ -19,6 +19,18 @@ spec:
       labels:
         name: <%= app['uid'] %>
     spec:
+        initContainer:
+          <% if app['wants'] && app['wants']['postgres'] %>
+          - image: "hackgt/pg_initialaser:latest"
+            name: "init-pg"
+            env:
+              - name: POSTGRES_URL
+                value: postgres://<%= biodome['postgres']['admin_user'] %>@<%= biodome['postgres']['host'] %>/?sslmode=disable
+              - name: USERNAME
+                value: app['uid']
+              - name: DBNAME
+                value: app['uid']
+          <% end %>
         containers:
           - image: <%= app['git']['user'] %>/<%= app['git']['shortname'] %>:<%= app['docker-tag'] %>
             imagePullPolicy: Always
@@ -34,9 +46,15 @@ spec:
                 value: !!str <%= app['target_port'] or 3000 %>
               - name: ROOT_URL
                 value: <%= "https://#{app['host']}" %>
-              <% if app['wants'] && app['wants']['mongo'] %>
-              - name: MONGO_URL
+              <% if app['wants']%>
+              <% if app['wants']['mongo'] %>
+              - name: <%= app['wants']['mongo']['env'] ? app['wants']['mongo']['env'] : 'MONGO_URL' %>
                 value: !!str mongodb://<%= biodome['mongo'] %>/<%= app['uid'] %>
+              <% end %>
+              <% if app['wants']['postgres'] %>
+              - name: <%= app['wants']['postgres']['env'] ? app['wants']['postgres']['env'] : 'POSTGRES_URL' %>
+                value: !!str postgres://<%= app['uid'] %>@<%= biodome['postgres']['host'] %>/<%= app['uid'] %>?sslmode=disable
+              <% end %>
               <% end %>
               <% app['env']&.each do |name, value| %>
               - name: <%= name %>
@@ -110,4 +128,3 @@ spec:
             <% end %>
           <% end %>
         <% end %>
-

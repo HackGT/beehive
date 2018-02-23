@@ -6,3 +6,7 @@ cluster:
 
 mongo:
   host: 'altered-pug-mongodb'
+
+postgres:
+  host: 'postgres-postgresql'
+  admin_user: 'postgres'
