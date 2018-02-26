@@ -1,0 +1,5 @@
+git:
+    remote: https://github.com/HackGT/catalyst2018-website
+    branch: master
+deployment:
+  memory_request: '20Mi'
