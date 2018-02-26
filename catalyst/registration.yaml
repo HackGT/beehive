@@ -16,5 +16,5 @@ files:
         path: 'resources/hackgt4-registration-theme.css'
         env: THEME_FILE
       questions.json:
-        path: 'resources/hackgt4-registration-questions.json'
+        path: 'resources/catalyst-registration-questions.json'
         env: QUESTIONS_FILE
