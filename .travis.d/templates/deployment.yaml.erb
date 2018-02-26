@@ -19,6 +19,25 @@ spec:
       labels:
         name: <%= app['uid'] %>
     spec:
+        initContainers:
+          <% if app['wants'] && app['wants']['postgres'] %>
+          - image: "hackgt/pg_initialaser:latest"
+            imagePullPolicy: Always
+            resources:
+              limits:
+                memory: 128Mi
+              requests:
+                cpu: 10m
+                memory: 64Mi
+            name: "init-pg"
+            env:
+              - name: POSTGRES_URL
+                value: postgres://<%= biodome['postgres']['admin_user'] %>@<%= biodome['postgres']['host'] %>/?sslmode=disable
+              - name: USERNAME
+                value: <%= app['uid'] %>
+              - name: DBNAME
+                value: <%= app['uid'] %>
+          <% end %>
         containers:
           - image: <%= app['git']['user'] %>/<%= app['git']['shortname'] %>:<%= app['docker-tag'] %>
             imagePullPolicy: Always
@@ -34,9 +53,23 @@ spec:
                 value: !!str <%= app['target_port'] or 3000 %>
               - name: ROOT_URL
                 value: <%= "https://#{app['host']}" %>
-              <% if app['wants'] && app['wants']['mongo'] %>
+              <% if app['wants']%>
+                <% if app['wants']['mongo'] %>
+                  <% if app['wants']['mongo'].is_a? Hash and app['wants']['mongo']['env'] %>
+              - name: !!str <%= app['wants']['mongo']['env'] %>
+                  <% else %>
               - name: MONGO_URL
+                  <% end %>
                 value: !!str mongodb://<%= biodome['mongo'] %>/<%= app['uid'] %>
+                <% end %>
+                <% if app['wants']['postgres'] %>
+                  <% if app['wants']['postgres'].is_a? Hash and app['wants']['postgres']['env'] %>
+              - name: !!str <%= app['wants']['postgres']['env'] %>
+                  <% else %>
+              - name: POSTGRES_URL
+                  <% end %>
+                value: !!str postgres://<%= app['uid'] %>@<%= biodome['postgres']['host'] %>/<%= app['uid'] %>?sslmode=disable
+                <% end %>
               <% end %>
               <% app['env']&.each do |name, value| %>
               - name: <%= name %>
@@ -110,4 +143,3 @@ spec:
             <% end %>
           <% end %>
         <% end %>
-

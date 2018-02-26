@@ -42,7 +42,7 @@ git:
     remote: https://github.com/HackGT/phonehome.git
     branch: master # optional
     rev: faceb00c  # optional, takes precedence over branch
-    
+
 # port the service will bind to, will be exposed through the `PORT` env var
 # if none is given a port will be decided for you
 target_port: 3000
@@ -51,10 +51,12 @@ target_port: 3000
 # (optional) defaults to port 80 if nothing is given.
 port: 80
 
-# a list of dependent services, currently only supports `mongo`
+# a list of dependent services, currently supports `mongo` and `postgres`
 # this is optional
 wants:
-    mongo: true
+    mongo:
+        env: CUSTOM_ENV_VAR
+    postgres: true # the env var will default to `POSTGRES_URL`
 
 # a list of secrets to be given through environment variables.
 # (optional) more on this in the secrets section...

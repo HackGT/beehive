@@ -312,6 +312,7 @@ biodomes = load_config
 # Create all the app's service and deployment conf files.
 biodomes.each do |dome_name, biodome|
   biodome['mongo'] = CONFIG['mongo']['host']
+  biodome['postgres'] = CONFIG['postgres']
 
   biodome['apps'].each do |app_name, app|
     app['files'].each do |mount, volume|
