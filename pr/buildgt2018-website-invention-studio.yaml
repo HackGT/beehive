@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/buildgt2018-website.git"
+    branch: "invention-studio"
+
+secrets-source: git-hackgt-buildgt2018-website-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
