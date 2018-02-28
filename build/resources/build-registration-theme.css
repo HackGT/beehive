@@ -25,7 +25,7 @@
 
 /* Colors */
 html, body, #sidebar-nav {
-    background-color: #FFFFFE;
+    background-color: #dcf7e4;
     color: #6c72ab;
     font-family: 'FuturaPT', sans-serif;
 }
@@ -45,6 +45,9 @@ html, body, #sidebar-nav {
 }
 #sidebar-nav > span.divider, .main, table thead {
     border-color: #6c72ab;
+}
+.main {
+    background-color: white;
 }
 a {
     color: #6c72ab;
@@ -98,4 +101,7 @@ input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]
 }
 input:disabled, textarea:disabled {
     background: repeating-linear-gradient(45deg, #4C5D67, #4C5D67 10px, #192729 10px, #192729 20px );
+}
+input:disabled::placeholder {
+    color: white;
 }
