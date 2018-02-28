@@ -1,1 +1,81 @@
+@font-face {
+    font-family: "OneDay";
+    src:  url("https://storage.googleapis.com/hackgt/fonts/ONEDAY.ttf");
+}
 
+/* Colors */
+html, body, #sidebar-nav {
+    background-color: #F7FFFC;
+    color: #2c3e50;
+    font-family: 'Open Sans', sans-serif;
+}
+#sidebar a, #sidebar, .editor-toolbar > a {
+    color: #2c3e50;
+    border: none;
+    text-decoration: initial;
+}
+.editor-toolbar > a {
+    color: #2c3e50 !important;
+}
+
+.editor-toolbar a.active, .editor-toolbar a:hover {
+    border-color: #4C5D67;
+    background-color: rgba(196, 251, 245, 0.2);
+    outline: none;
+}
+#sidebar-nav > span.divider, .main, table thead {
+    border-color: #000;
+}
+a {
+    color: #2c3e50;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    cursor: pointer;
+}
+a:hover {
+    border-bottom-style: solid;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #2c3e50;
+}
+
+#email-rendered {
+    background-color: #FFFFFE;
+    border: 1px solid #FFFFFE;
+}
+
+/* Buttons */
+.btn, [type=submit], button, .accepted-btn-false {
+    background-color: #2c3e50;
+     /* border: 2px solid #03565c;  */
+    color: #FFFFFE;
+}
+
+fieldset > div > label {
+    font-size: 90%;
+}
+h1, h2, h3 {
+    font-family: 'OneDay', sans-serif;
+}
+
+#sidebar > h1 {
+    text-decoration: underline;
+}
+
+code {
+    color: #2c3e50;
+}
+
+/* Form elements */
+input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]), select, fieldset, textarea {
+    background-color: #FFFFFE;
+    color: #000;
+    border-color: #000;
+}
+input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]):focus, textarea:focus, textarea[type=text]:focus {
+    border-color: #000;
+}
+input:disabled, textarea:disabled {
+    background: repeating-linear-gradient(45deg, #4C5D67, #4C5D67 10px, #192729 10px, #192729 20px )
+}

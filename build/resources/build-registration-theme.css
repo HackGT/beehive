@@ -1,24 +1,24 @@
 @font-face {
     font-family: 'FuturaPT';
-    src: url('./FuturaPTMedium.otf') format('opentype');
+    src: url('https://storage.googleapis.com/hackgt/fonts/FuturaPTMedium.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'ProximaNova';
-    src: url('./ProximaNova.otf') format('opentype');
+    src: url('https://storage.googleapis.com/hackgt/fonts/ProximaNova.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'ProximaNova';
-    src: url('./ProximaNovaBold.otf') format('opentype');
+    src: url('https://storage.googleapis.com/hackgt/fonts/ProximaNovaBold.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
     font-family: 'ProximaNova';
-    src: url('./ProximaNovaExtrabold.otf') format('opentype');
+    src: url('https://storage.googleapis.com/hackgt/fonts/ProximaNovaExtrabold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
 }
