@@ -1,23 +1,3 @@
-git:
-  remote: https://github.com/HackGT/registration.git
-  branch: master
-
-deployment:
-  replicas: 1
-
+git: https://github.com/HackGT/redirector.git
 env:
-  EVENT_NAME: "HackGT 4: New Heights"
-  PRODUCTION: true
-
-files:
-  /etc/registration:
-    contents:
-      theme.css:
-        path: 'resources/hackgt4-registration-theme.css'
-        env: THEME_FILE
-      questions.json:
-        path: 'resources/hackgt4-registration-questions.json'
-        env: QUESTIONS_FILE
-      favicon.ico:
-        path: '/resources/favicon.ico'
-        env: FAVICON_FILE_BASE64
+  REDIRECT_URL: "https://registration.build.hack.gt"
