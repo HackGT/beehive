@@ -13,7 +13,7 @@ files:
   /etc/registration:
     contents:
       theme.css:
-        path: 'resources/hackgt4-registration-theme.css'
+        path: 'resources/catalyst-registration-theme.css'
         env: THEME_FILE
       questions.json:
         path: 'resources/catalyst-registration-questions.json'
