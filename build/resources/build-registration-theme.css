@@ -25,7 +25,7 @@
 
 /* Colors */
 html, body, #sidebar-nav {
-    background-color: #dcf7e4;
+    background-color: #FFFFFE;
     color: #6c72ab;
     font-family: 'FuturaPT', sans-serif;
 }
@@ -67,9 +67,9 @@ a:hover {
 
 /* Buttons */
 .btn, [type=submit], button, .accepted-btn-false {
-    background-color: #FFFFFE;
+    background-color: #6c72ab;
      /* border: 2px solid #03565c;  */
-    color: #6c72ab;
+    color: #FFFFFE;
 }
 
 fieldset > div > label {
@@ -97,5 +97,5 @@ input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]
     border-color: #6c72ab;
 }
 input:disabled, textarea:disabled {
-    background: repeating-linear-gradient(45deg, #4C5D67, #4C5D67 10px, #192729 10px, #192729 20px )
+    background: repeating-linear-gradient(45deg, #4C5D67, #4C5D67 10px, #192729 10px, #192729 20px );
 }
