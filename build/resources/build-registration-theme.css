@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'FuturaPT';
+    src: url('./FuturaPTMedium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('./ProximaNova.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('./ProximaNovaBold.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('./ProximaNovaExtrabold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Colors */
+html, body, #sidebar-nav {
+    background-color: #dcf7e4;
+    color: #6c72ab;
+    font-family: 'FuturaPT', sans-serif;
+}
+#sidebar a, #sidebar, .editor-toolbar > a {
+    color: #6c72ab;
+    border: none;
+    text-decoration: initial;
+}
+.editor-toolbar > a {
+    color: #6c72ab !important;
+}
+
+.editor-toolbar a.active, .editor-toolbar a:hover {
+    border-color: #4C5D67;
+    background-color: rgba(196, 251, 245, 0.2);
+    outline: none;
+}
+#sidebar-nav > span.divider, .main, table thead {
+    border-color: #6c72ab;
+}
+a {
+    color: #6c72ab;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    cursor: pointer;
+}
+a:hover {
+    border-bottom-style: solid;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #6c72ab;
+}
+
+#email-rendered {
+    background-color: #FFFFFE;
+    border: 1px solid #FFFFFE;
+}
+
+/* Buttons */
+.btn, [type=submit], button, .accepted-btn-false {
+    background-color: #FFFFFE;
+     /* border: 2px solid #03565c;  */
+    color: #6c72ab;
+}
+
+fieldset > div > label {
+    font-size: 90%;
+}
+h1, h2, h3 {
+    font-family: 'ProximaNova', sans-serif;
+}
+
+#sidebar > h1 {
+    text-decoration: underline;
+}
+
+code {
+    color: #6c72ab;
+}
+
+/* Form elements */
+input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]), select, fieldset, textarea {
+    background-color: #FFFFFE;
+    color: #6c72ab;
+    border-color: #6c72ab;
+}
+input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]):focus, textarea:focus, textarea[type=text]:focus {
+    border-color: #6c72ab;
+}
+input:disabled, textarea:disabled {
+    background: repeating-linear-gradient(45deg, #4C5D67, #4C5D67 10px, #192729 10px, #192729 20px )
+}
