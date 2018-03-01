@@ -6,7 +6,7 @@ deployment:
   replicas: 1
 
 env:
-  EVENT_NAME: "Catalyst 2018"
+  EVENT_NAME: "HackGT: Catalyst"
   PRODUCTION: true
 
 files:
