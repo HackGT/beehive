@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/ballot.git"
+    branch: "auth-container"
+
+secrets-source: git-hackgt-ballot-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: Recreate
