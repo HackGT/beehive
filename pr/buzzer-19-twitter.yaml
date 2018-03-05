@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/buzzer.git"
-    branch: "19/twitter"
-
-secrets-source: git-hackgt-buzzer-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: Recreate

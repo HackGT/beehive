@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/botgt.git"
+    branch: "notifications"
+
+secrets-source: git-hackgt-botgt-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate

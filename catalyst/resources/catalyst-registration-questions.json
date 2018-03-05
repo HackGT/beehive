@@ -29,6 +29,7 @@
                 "label": "School",
                 "type": "select",
                 "options": [
+                    "Please select",
                     "Allatoona High School",
                     "Alpharetta High School",
                     "Arabia Mountain High School - Academy of Engineering, Medicine and Environment",
@@ -148,10 +149,124 @@
                 "type": "checkbox",
                 "options": [
                     "White",
-                    "Hispanic or Latino",
                     "Black or African American",
-                    "Native American or American Indian",
-                    "Asian"
+                    "Hispanic / Latino / Latina",
+                    "Asian",
+                    "Native American / American Indian / Alaskan Native",
+                    "Hawaiian or Pacific Islander"
+                ],
+                "hasOther": true
+            },
+            {
+                "name": "gender",
+                "label": "Gender",
+                "type": "radio",
+                "options": ["Male", "Female"],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "dietary-restrictions",
+                "label": "Do you have any dietary restrictions?",
+                "type": "checkbox",
+                "options": [
+                    "Vegetarian",
+                    "Vegan",
+                    "No beef",
+                    "No pork",
+                    "Gluten-free"
+                ],
+                "hasOther": true,
+                "required": false
+            },
+            {
+                "name": "tshirt-size",
+                "label": "What is your T-shirt size?",
+                "type": "radio",
+                "options": [
+                    "Extra small",
+                    "Small",
+                    "Medium",
+                    "Large",
+                    "Extra large",
+                    "2XL",
+                    "3XL"
+                ],
+                "required": true
+            },
+            {
+                "name": "other",
+                "label": "Anything else you'd like us to know?",
+                "type": "textarea",
+                "required": false
+            }
+        ]
+    },
+    {
+        "name": "Mentor",
+        "text": [
+            {
+                "for": "confirmation",
+                "type": "h5",
+                "content": "A note about background checks:"
+            },
+            {
+                "for": "confirmation",
+                "type": "p",
+                "content": "Due to [Georgia Tech Youth Programs policy](http://www.policylibrary.gatech.edu/youth-programs-policy), all volunteers who will have direct contact with minors at this event must have a completed criminal background check on file with OHR. To do this, please print out and complete a [Background Screening Authorization Form](https://ohr.gatech.edu/sites/default/files/documents/gt_background_disclosure_and_authorization.pdf) and [Background Screening Packet](https://ohr.gatech.edu/sites/default/files/documents/hr-screening-background_screening_packet_final_11_19_14.pdf). HackGT will reach out to you shortly on how to submit your forms. For more information on how the background check process works, please [visit OHR's website](https://ohr.gatech.edu/screening)."
+            },
+            {
+                "for": "confirmation",
+                "type": "p",
+                "content": "Note that if you are a Georgia Tech employee, you already have a background check on file and won't need to submit a background check form again."
+            }
+        ],
+        "questions": [
+            {
+                "name": "name",
+                "type": "text",
+                "label": "Full name",
+                "required": true
+            },
+            {
+                "name": "phone",
+                "type": "tel",
+                "label": "Phone number",
+                "required": true
+            },
+            {
+                "name": "occupation",
+                "type": "radio",
+                "label": "I am a...",
+                "options": [
+                    "Georgia Tech student",
+                    "Georgia Tech faculty",
+                    "Teacher",
+                    "School Administrator",
+                    "School Counselor",
+                    "School Librarian",
+                    "Someone in industry"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "essay",
+                "type": "textarea",
+                "label": "Why do you want to be a mentor?",
+                "required": true
+            },
+            {
+                "name": "race",
+                "label": "Race / ethnicity",
+                "type": "checkbox",
+                "options": [
+                    "White",
+                    "Black or African American",
+                    "Hispanic / Latino / Latina",
+                    "Asian",
+                    "Native American / American Indian / Alaskan Native",
+                    "Hawaiian or Pacific Islander"
                 ],
                 "hasOther": true
             },
@@ -172,69 +287,25 @@
                     "Small",
                     "Medium",
                     "Large",
-                    "Extra large"
+                    "Extra large",
+                    "2XL",
+                    "3XL"
                 ],
                 "required": true
-            }
-        ]
-    },
-    {
-        "name": "Mentor",
-        "questions": [
-            {
-                "name": "name",
-                "type": "text",
-                "label": "Full name",
-                "required": true
             },
             {
-                "name": "phone",
-                "type": "tel",
-                "label": "Phone number",
-                "required": true
-            },
-            {
-                "name": "occupation",
-                "type": "radio",
-                "label": "I am a...",
-                "options": [
-                    "Teacher",
-                    "School Administrator",
-                    "School Counselor",
-                    "School Librarian",
-                    "Georgia Tech student",
-                    "Georgia Tech faculty",
-                    "Someone in industry"
-                ],
-                "hasOther": true,
-                "required": true
-            },
-            {
-                "name": "essay",
-                "type": "textarea",
-                "label": "Why do you want to be a mentor?",
-                "required": true
-            },
-            {
-                "name": "race",
-                "label": "Race / ethnicity",
+                "name": "dietary-restrictions",
+                "label": "Do you have any dietary restrictions?",
                 "type": "checkbox",
                 "options": [
-                    "White",
-                    "Hispanic or Latino",
-                    "Black or African American",
-                    "Native American or American Indian",
-                    "Asian"
+                    "Vegetarian",
+                    "Vegan",
+                    "No beef",
+                    "No pork",
+                    "Gluten-free"
                 ],
-                "hasOther": true
-            },
-            {
-                "name": "gender",
-                "label": "Gender",
-                "type": "radio",
-                "options": ["Male", "Female"],
                 "hasOther": true,
-                "required": true
+                "required": false
             },
             {
                 "name": "confirmation",
@@ -246,6 +317,12 @@
                     "I can stay for all / most of the event and work closely with students to help and inspire"
                 ],
                 "required": true
+            },
+            {
+                "name": "other",
+                "label": "Anything else you'd like us to know?",
+                "type": "textarea",
+                "required": false
             }
         ]
     },
@@ -283,6 +360,7 @@
                 "label": "What school are you chaperoning?",
                 "type": "select",
                 "options": [
+                    "Please select",
                     "Allatoona High School",
                     "Alpharetta High School",
                     "Arabia Mountain High School - Academy of Engineering, Medicine and Environment",

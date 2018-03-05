@@ -1,6 +1,6 @@
 git:
     remote: "https://github.com/hackgt/ballot.git"
-    branch: "admin_navigation"
+    branch: "auth-container"
 
 secrets-source: git-hackgt-ballot-secrets
 deployment:

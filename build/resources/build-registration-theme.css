@@ -100,7 +100,7 @@ input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]
     border-color: #6c72ab;
 }
 input:disabled, textarea:disabled {
-    background: repeating-linear-gradient(45deg, #4C5D67, #4C5D67 10px, #192729 10px, #192729 20px );
+    background: repeating-linear-gradient(45deg, #6c72ab, #6c72ab 10px, #aaaed8 10px, #aaaed8 20px );
 }
 input:disabled::placeholder {
     color: white;
