@@ -6,4 +6,4 @@ secrets-source: git-hackgt-live-site-secrets
 deployment:
     replicas: 1
     strategy:
-        type: recreate
+        type: Recreate
