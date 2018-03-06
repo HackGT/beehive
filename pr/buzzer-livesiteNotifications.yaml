@@ -7,3 +7,12 @@ deployment:
     replicas: 1
     strategy:
         type: Recreate
+
+files:
+  /etc/buzzer/static:
+    contents:
+      icon.png:
+        path: resources/live_site_icon_2.png
+
+env:
+  ONESIGNAL_DEFAULT_ICON: https://buzzer-livesitenotifications.pr.hack.gt/static/icon.png
