@@ -13,6 +13,7 @@ files:
     contents:
       icon.png:
         path: resources/live_site_icon_2.png
+        env: DEFAULT_ICON
 
 env:
   ONESIGNAL_DEFAULT_ICON: https://buzzer-livesitenotifications.pr.hack.gt/static/icon.png
