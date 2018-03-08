@@ -214,11 +214,6 @@
                 "for": "confirmation",
                 "type": "p",
                 "content": "Due to [Georgia Tech Youth Programs policy](http://www.policylibrary.gatech.edu/youth-programs-policy), all volunteers who will have direct contact with minors at this event must have a completed criminal background check on file with OHR. To do this, please print out and complete a [Background Screening Authorization Form](https://ohr.gatech.edu/sites/default/files/documents/gt_background_disclosure_and_authorization.pdf) and [Background Screening Packet](https://ohr.gatech.edu/sites/default/files/documents/hr-screening-background_screening_packet_final_11_19_14.pdf). HackGT will reach out to you shortly on how to submit your forms. For more information on how the background check process works, please [visit OHR's website](https://ohr.gatech.edu/screening)."
-            },
-            {
-                "for": "confirmation",
-                "type": "p",
-                "content": "Note that if you are a Georgia Tech employee, you already have a background check on file and won't need to submit a background check form again."
             }
         ],
         "questions": [
