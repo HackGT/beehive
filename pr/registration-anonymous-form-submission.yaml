@@ -1,6 +1,6 @@
 git:
     remote: "https://github.com/hackgt/registration.git"
-    branch: "fix-log-colors"
+    branch: "anonymous-form-submission"
 
 secrets-source: git-hackgt-registration-secrets
 deployment:
