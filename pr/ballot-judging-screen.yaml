@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/ballot.git"
-    branch: "judging-screen"
-
-secrets-source: git-hackgt-ballot-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: Recreate
