@@ -345,8 +345,8 @@
                 "label": "Workshop choice for session 1",
                 "type": "radio",
                 "options": [
-                    "Raspberry Pi",
-                    "Arduino",
+                    "Raspberry Pi (WORKSHOP IS FULL)",
+                    "Arduino (WORKSHOP IS FULL)",
                     "Oculus Rift (not limited in capacity)",
                     "Pebble"
                 ],
@@ -358,10 +358,10 @@
                 "label": "Workshop choice for session 2",
                 "type": "radio",
                 "options": [
-                    "Raspberry Pi",
-                    "Arduino",
+                    "Raspberry Pi (WORKSHOP IS FULL)",
+                    "Arduino (WORKSHOP IS FULL)",
                     "Oculus Rift (not limited in capacity)",
-                    "Pebble"
+                    "Pebble (WORKSHOP IS FULL)"
                 ],
                 "required": false,
                 "hasOther": false
