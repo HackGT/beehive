@@ -138,7 +138,8 @@
                 "options": [
                     "Teacher / Counselor",
                     "Friend",
-                    "Family"
+                    "Family",
+                    "I attended last year"
                 ],
                 "hasOther": true,
                 "required": true
