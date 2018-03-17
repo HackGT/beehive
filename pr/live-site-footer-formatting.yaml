@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/live-site.git"
-    branch: "footer-formatting"
-
-secrets-source: git-hackgt-live-site-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: Recreate
