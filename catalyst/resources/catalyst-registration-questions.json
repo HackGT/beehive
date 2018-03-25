@@ -154,7 +154,9 @@
                     "Teacher / Counselor",
                     "Friend",
                     "Family",
-                    "I attended last year"
+                    "I attended last year",
+                    "Snapchat",
+                    "Facebook"
                 ],
                 "hasOther": true,
                 "required": true
