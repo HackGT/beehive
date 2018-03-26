@@ -329,5 +329,43 @@
                 "required": false
             }
         ]
+    }, 
+    {
+        "name": "Participant Confirmation",
+        "text": [
+            {
+                "for": "workshop-1",
+                "type": "p",
+                "content": "Thank you for confirming your spot to BuildGT! We have partnered with the Invention Studio to offer two sessions for each workshop! Each participant will be able to attend a maximum of 2 workshops. Because there are a limited number of spots for each workshop, registration will be on a first-come, first-serve basis. There are 15 spots available for the Raspberry Pi, Pebble, and Arduino workshops. On Friday at 5pm, we will notify all participants which workshops they are confirmed to attend."
+            }
+        ],
+        "questions": [
+            {
+                "name": "workshop-1",
+                "label": "Workshop choice for session 1",
+                "type": "radio",
+                "options": [
+                    "Raspberry Pi (WORKSHOP IS FULL)",
+                    "Arduino (WORKSHOP IS FULL)",
+                    "Oculus Rift (not limited in capacity)",
+                    "Pebble"
+                ],
+                "required": false,
+                "hasOther": false
+            },
+            {
+                "name": "workshop-2",
+                "label": "Workshop choice for session 2",
+                "type": "radio",
+                "options": [
+                    "Raspberry Pi (WORKSHOP IS FULL)",
+                    "Arduino (WORKSHOP IS FULL)",
+                    "Oculus Rift (not limited in capacity)",
+                    "Pebble (WORKSHOP IS FULL)"
+                ],
+                "required": false,
+                "hasOther": false
+            }
+        ]
     }
 ]

@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/registration.git"
-    branch: "anonymous-form-submission"
-
-secrets-source: git-hackgt-registration-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: recreate

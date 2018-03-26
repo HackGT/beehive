@@ -1,6 +1,6 @@
 git:
     remote: "https://github.com/hackgt/buzzer.git"
-    branch: "slack-check-speedup"
+    branch: "resolver-types"
 
 secrets-source: git-hackgt-buzzer-secrets
 deployment:
