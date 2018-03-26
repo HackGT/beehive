@@ -1,6 +1,6 @@
 git: https://github.com/HackGT/checkin2.git
 branch: master
 env:
-  REGISTRATION_GRAPHQL: "https://registration.build.hack.gt/graphql"
+  REGISTRATION_GRAPHQL: "https://registration.catalyst.hack.gt/graphql"
 wants:
     mongo: true
