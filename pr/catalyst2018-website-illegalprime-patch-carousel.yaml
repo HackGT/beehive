@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/catalyst2018-website.git"
+    branch: "illegalprime-patch-carousel"
+
+secrets-source: git-hackgt-catalyst2018-website-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
