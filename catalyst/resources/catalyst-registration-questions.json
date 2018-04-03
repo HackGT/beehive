@@ -479,5 +479,27 @@
                 "required": true
             }
         ]
+    },
+    {
+      "name": "Participant Confirmation",
+      "text": [
+            {
+                "for": "parking",
+                "type": "p",
+                "content": "Thank your confirming your attendance to Catalyst 2018!"
+            }
+        ],
+        "questions": [
+            {
+                "name": "parking",
+                "type": "radio",
+                "label": "Will you be driving yourself to the event and leaving your car in the garage all day? We will validate parking for participants parking at the event.",
+                "options": [
+                    "Yes",
+                    "No"
+                ],
+                "required": true
+            }
+        ]
     }
 ]
