@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/registration.git"
-    branch: "email-193"
-
-secrets-source: git-hackgt-registration-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: recreate
