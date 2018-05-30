@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: <%= app['uid'] %>
   labels:
-    name: <%= app['uid'] %>
+    name: <%= app['suid'] or app['uid'] %>
     heritage: Biodomes
 spec:
   revisionHistoryLimit: 0

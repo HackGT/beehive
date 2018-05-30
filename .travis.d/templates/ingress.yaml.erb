@@ -21,7 +21,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: <%= app['uid'] %>
+          serviceName: <%= app['suid'] or app['uid'] %>
           servicePort: <%= app['port'] or 80 %>
   <% end %>
   <% end %>

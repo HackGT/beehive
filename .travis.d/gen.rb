@@ -213,7 +213,7 @@ def load_app_data(data, app_config, dome_name, app_name, path)
   shortname = make_shortname app_config['name'], app_name
 
   uid = "#{shortname}-#{dome_name}"
-  if /\d/.match(a[0])
+  if /\d/.match(uid[0])
     suid = "s#{uid}"
   else
     suid = nil
