@@ -4,7 +4,7 @@ metadata:
   labels:
     name: <%= app['uid'] %>
     heritage: Biodomes
-  name: <%= app['uid'] %>
+  name: <%= app['suid'] or app['uid'] %>
 spec:
   type: NodePort
   ports:

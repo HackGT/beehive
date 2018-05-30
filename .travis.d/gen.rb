@@ -213,7 +213,11 @@ def load_app_data(data, app_config, dome_name, app_name, path)
   shortname = make_shortname app_config['name'], app_name
 
   uid = "#{shortname}-#{dome_name}"
-
+  if /\d/.match(a[0])
+    suid = "s#{uid}"
+  else
+    suid = nil
+  end
   base_config = fetch_deployment(slog, branch: branch, rev: git_rev)
 
   app_config = app_config.deep_merge(base_config)
@@ -235,6 +239,7 @@ def load_app_data(data, app_config, dome_name, app_name, path)
   data[dome_name]['apps'][app_name]['shortname'] = shortname
   data[dome_name]['apps'][app_name]['docker-tag'] = docker_tag
   data[dome_name]['apps'][app_name]['uid'] = uid
+  data[dome_name]['apps'][app_name]['suid'] = suid
   data[dome_name]['apps'][app_name]['host'] = host.downcase
   data[dome_name]['apps'][app_name]['files'] = files
   data
