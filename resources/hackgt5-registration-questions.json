@@ -1730,11 +1730,11 @@
             "required": true
         }, {
             "name": "free-response-choice",
-            "label": "Please choose and answer one of the following questions. Answering both will not increase your chances of getting accepted to the event. (1) What do you hope to leaern at HackGT? (2) Describe a past project that you are proud of. It can be one that you worked on in any setting (hackathon, class, personal project).",
+            "label": "Please choose and answer one of the following questions. Answering both will not increase your chances of getting accepted to the event.",
             "type": "radio",
             "options": [
-                "Prompt 1",
-                "Prompt 2"
+                "What do you hope to learn at HackGT?",
+                "Describe a past project that you are proud of. It can be one that you worked on in any setting (hackathon, class, personal project)."
             ], 
             "required": true
         }, {
@@ -1823,7 +1823,7 @@
             "label": "Please confirm the following",
             "type": "checkbox",
             "options": [
-                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further I agree to the terms of both the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions) and the [MLH Privacy Policy](https://mlh.io/privacy)"
+                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further I agree to the terms of the MLH Contest Terms and Conditions."
             ],
             "required": true
         },  
@@ -3584,7 +3584,7 @@
             "label": "Please confirm the following",
             "type": "checkbox",
             "options": [
-                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further I agree to the terms of both the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions) and the [MLH Privacy Policy](https://mlh.io/privacy)"
+                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further I agree to the terms of the MLH Contest Terms and Conditions."
             ],
             "required": true
         },  {
@@ -3843,7 +3843,7 @@
             "label": "Please confirm the following",
             "type": "checkbox",
             "options": [
-                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further I agree to the terms of both the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions) and the [MLH Privacy Policy](https://mlh.io/privacy)"
+                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further I agree to the terms of the MLH Contest Terms and Conditions."
             ],
             "required": true
         },  
