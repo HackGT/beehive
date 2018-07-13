@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+@font-face {
+    font-family: "Chicago";
+    src:  url("https://storage.googleapis.com/hackgt/fonts/Chicago.ttf");
+}
+
+/* Colors */
+html, body, #sidebar-nav {
+    background-color: #fff;
+    color: #0c0c51;
+    font-family: 'Source Code Pro', sans-serif;
+}
+#sidebar a, #sidebar, .editor-toolbar > a {
+    color: #0c0c51;
+    border: none;
+    text-decoration: initial;
+}
+.editor-toolbar > a {
+    color: #0c0c51 !important;
+}
+
+.editor-toolbar a.active, .editor-toolbar a:hover {
+    border-color: #4C5D67;
+    background-color: rgba(196, 251, 245, 0.2);
+    outline: none;
+}
+#sidebar-nav > span.divider, .main, table thead {
+    border-color: #000;
+}
+a {
+    color: #0c0c51;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    cursor: pointer;
+}
+a:hover {
+    border-bottom-style: solid;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #0c0c51;
+}
+
+#email-rendered {
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+/* Buttons */
+.btn, [type=submit], button, .accepted-btn-false {
+    background-color: #ac4c8f;
+     /* border: 2px solid #03565c;  */
+    color: #fff;
+}
+
+fieldset > div > label {
+    font-size: 90%;
+}
+h1, h2, h3 {
+    font-family: 'Chicago', sans-serif;
+}
+
+#sidebar > h1 {
+    text-decoration: underline;
+}
+
+code {
+    color: #0c0c51;
+}
+
+/* Form elements */
+input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]), select, fieldset, textarea {
+    background-color: #fff;
+    color: #0c0c51;
+    border-color: #0c0c51;
+}
+input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]):focus, textarea:focus, textarea[type=text]:focus {
+    border-color: #000;
+}
+input:disabled, textarea:disabled {
+    background: repeating-linear-gradient(45deg, #4C5D67, #4C5D67 10px, #192729 10px, #192729 20px )
+}
+
+input:disabled::placeholder {
+    color: white;
+}
