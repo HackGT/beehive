@@ -17,3 +17,6 @@ files:
       questions.json:
         path: 'resources/hackgt5-registration-questions.json'
         env: QUESTIONS_FILE
+      theme.css:
+          path: 'resources/hackgt5-registration-theme.css'
+          env: THEME_FILE
