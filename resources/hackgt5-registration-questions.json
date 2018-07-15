@@ -5,7 +5,12 @@
             {
                 "for": "18-and-gt-student",
                 "type": "p",
-                "content": "Please see the [Travel Reimbursement Policy](https://docs.google.com/document/d/16uJuzuqMogFSOeEGRqUYLwGUmsy6NpeNMEQ7DzCtJ2g/edit?usp=sharing) for details on reimbursement amounts. \r\n\r\n Due to institute policy, minors (under 18) that are not students at Georgia Tech may not attend HackGT."
+                "content": "Due to institute policy, minors (under 18) that are not students at Georgia Tech may not attend HackGT."
+            },
+            {
+                "for": "type",
+                "type": "p",
+                "content": "Please see the [Travel Reimbursement Policy](https://docs.google.com/document/d/16uJuzuqMogFSOeEGRqUYLwGUmsy6NpeNMEQ7DzCtJ2g/edit?usp=sharing) for details on reimbursement amounts. Busses will be sent to schools that have large volumes of applicants, but please select your preferred reimbursement assuming a bus is not sent to your school."
             }
         ],
         "questions": [
