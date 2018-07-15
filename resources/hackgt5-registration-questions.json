@@ -5,7 +5,7 @@
             {
                 "for": "18-and-gt-student",
                 "type": "p",
-                "content": "Please see the <a href='https://docs.google.com/document/d/16uJuzuqMogFSOeEGRqUYLwGUmsy6NpeNMEQ7DzCtJ2g/edit?usp=sharing'>Travel Reimbursement Policy</a> for details on reimbursement amounts. <br> Due to institute policy, minors (under 18) that are not students at Georgia Tech may not attend HackGT."
+                "content": "Please see the [Travel Reimbursement Policy](https://docs.google.com/document/d/16uJuzuqMogFSOeEGRqUYLwGUmsy6NpeNMEQ7DzCtJ2g/edit?usp=sharing) for details on reimbursement amounts. <br> Due to institute policy, minors (under 18) that are not students at Georgia Tech may not attend HackGT."
             }
         ],
         "questions": [
