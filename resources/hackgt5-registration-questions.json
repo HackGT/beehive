@@ -1343,7 +1343,7 @@
                 "Artificial Intelligence",
                 "Web Development"
             ],
-            "required": true
+            "required": false
         }, 
         {
             "name": "why-mentor",
