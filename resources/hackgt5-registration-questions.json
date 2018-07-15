@@ -416,7 +416,7 @@
                 "type": "radio",
                 "options": [
                     "What do you hope to learn at HackGT?",
-                    "Describe a past project that you are proud of. It can be one that you worked on in any setting (hackathon, class, personal project)."
+                    "Describe a past project that you are proud of. It can be one that you worked on in any setting (hackathon, class, personal project, etc.)"
                 ], 
                 "required": true
             }, {
@@ -475,8 +475,8 @@
                 "label": "Are you interested in:",
                 "type": "checkbox",
                 "options": [
-                    "Internship / co-op spring 2019",
-                    "Internship / co-op summer 2019",
+                    "Internship / Co-op Spring 2019",
+                    "Internship / Co-op Summer 2019",
                     "Full time 2019"
                 ],
                 "required": false
@@ -490,7 +490,7 @@
                 "label": "Please confirm the following",
                 "type": "checkbox",
                 "options": [
-                    "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)"
+                    "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
                 ],
                 "required": true
             }, {
@@ -498,7 +498,7 @@
                 "label": "Please confirm the following",
                 "type": "checkbox",
                 "options": [
-                    "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further I agree to the terms of the MLH Contest Terms and Conditions."
+                    "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
                 ],
                 "required": true
             },  
@@ -917,7 +917,7 @@
             "type": "radio",
             "options": [
                 "What do you hope to learn at HackGT?",
-                "Describe a past project that you are proud of. It can be one that you worked on in any setting (hackathon, class, personal project)."
+                "Describe a past project that you are proud of. It can be one that you worked on in any setting (hackathon, class, personal project, etc.)"
             ], 
             "required": true
         }, {
@@ -974,8 +974,8 @@
             "label": "Are you interested in:",
             "type": "checkbox",
             "options": [
-                "Internship / co-op spring 2019",
-                "Internship / co-op summer 2019",
+                "Internship / Co-op Spring 2019",
+                "Internship / Co-op Summer 2019",
                 "Full time 2019"
             ],
             "required": false
@@ -989,7 +989,7 @@
             "label": "Please confirm the following",
             "type": "checkbox",
             "options": [
-                "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)"
+                "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
             ],
             "required": true
         }, {
@@ -997,7 +997,7 @@
             "label": "Please confirm the following",
             "type": "checkbox",
             "options": [
-                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further I agree to the terms of the MLH Contest Terms and Conditions."
+                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
             ],
             "required": true
         },  
@@ -1011,7 +1011,20 @@
     },
     {
       "name": "Mentor",
+      "text": [
+        {
+            "for": "phone-number",
+            "type": "p",
+            "content": "Please be advised that travel reimbursement is not available for volunteers or mentors."
+        }
+      ],
       "questions": [
+        {
+            "name": "phone-number",
+            "label": "What’s a cell phone number we can contact you at during the event? (We will only use this for informational and emergency announcements)",
+            "type": "tel",
+            "required": true
+        }, 
         {
             "name": "gender",
             "label": "I identify as...",
@@ -1321,6 +1334,17 @@
             "type": "textarea",
             "required": true
         }, {
+            "name": "path",
+            "label": "Which of our four paths do you feel comfortable mentoring? This can include hosting workshops and leading campsites (please refer to the FAQ for more details).",
+            "options": [
+                "Mobile Development",
+                "Security",
+                "Artificial Intelligence",
+                "Web Development"
+            ],
+            "required": true
+        }, 
+        {
             "name": "why-mentor",
             "label": "Why would you rather mentor than participate? (Elaborate on past experiences and what you hope to see at HackGT)",
             "type": "textarea",
@@ -1335,7 +1359,16 @@
             "label": "Would you be willing to hold a workshop? If so, about what?",
             "type": "textarea",
             "required": true
-        }, 
+        }, {
+            "name": "judging",
+            "label": "Are interested in being a judge at HackGT?",
+            "type": "radio",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "required": true
+        },
         {
             "name": "tshirt-size",
             "label": "What is your T-shirt size?",
@@ -1369,7 +1402,7 @@
             "label": "Please confirm the following",
             "type": "checkbox",
             "options": [
-                "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)"
+                "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
             ],
             "required": true
         }, {
@@ -1377,21 +1410,12 @@
             "label": "Please confirm the following",
             "type": "checkbox",
             "options": [
-                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further I agree to the terms of the MLH Contest Terms and Conditions."
+                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
             ],
             "required": true
         },  {
             "name": "future-opportunities",
             "label": "Would you be interested in future mentorship / volunteering opportunities?",
-            "type": "radio",
-            "options": [
-                "Yes",
-                "No"
-            ],
-            "required": true
-        }, {
-            "name": "judging",
-            "label": "Are interested in being a judge at HackGT?",
             "type": "radio",
             "options": [
                 "Yes",
@@ -1410,6 +1434,11 @@
       "name": "Volunteer",
       "text": [
         {
+            "for": "phone-number",
+            "type": "p",
+            "content": "Please be advised that travel reimbursement is not available for volunteers or mentors."
+        },
+        {
             "for": "volunteer-role",
             "type": "h3",
             "content": "Volunteer Type"
@@ -1427,7 +1456,7 @@
         {
             "for": "volunteer-role",
             "type": "p",
-            "content": "Core Volunteer responsibilities include being assigned to a major role during the event, leading other volunteers, and liaisoning between general volunteers and volunteer coordinators. Becoming a Core Volunteer requires a greater time commitment: you'll be expected to attend two training sessions prior to the event and be present for the majority of the event."
+            "content": "Responsibilities may include being assigned to a major role during the event, leading other volunteers, providing communication between teams of volunteers, other volunteer leaders, and organizers, and will require more time commitment- including attending a training session prior to the event and being present at the event for an extended period of time."
         },
         {
             "for": "volunteer-role",
@@ -1437,14 +1466,15 @@
         {
             "for": "volunteer-role",
             "type": "p",
-            "content": "General Volunteer responsibilities might include setting up and tearing down the venue, managing registration, setting up and cleaning up meals, and working a help desk. Becoming a General Volunteer requires less of a time commitment: you'll be expected to attend one training session prior to the event and work at least 2 4-hour shifts during the event."
+            "content": "Responsibilities may include venue setup/teardown, working the Registration desk, food setup/clean up, working the Help and Hardware desk. The time commitment includes attending a training session prior to event and being present during peak hours."
         }
        ],
        "questions": [
         {
             "name": "phone-number",
             "label": "What’s a cell phone number we can contact you at during the event? (We will only use this for informational and emergency announcements)",
-            "type": "tel"
+            "type": "tel",
+            "required": true
         }, {
             "name": "gender",
             "label": "I identify as...",
@@ -1563,7 +1593,7 @@
             "required": true
         },             {
             "name": "volunteer-role",
-            "label": "What role do you want to be as a volunteer?",
+            "label": "What role do you want as a volunteer?",
             "type": "radio",
             "options": [
                 "Core",
@@ -1628,7 +1658,7 @@
             "label": "Please confirm the following",
             "type": "checkbox",
             "options": [
-                "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)"
+                "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
             ],
             "required": true
         }, {
@@ -1636,7 +1666,7 @@
             "label": "Please confirm the following",
             "type": "checkbox",
             "options": [
-                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the MLH Privacy Policy. I further I agree to the terms of the MLH Contest Terms and Conditions."
+                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
             ],
             "required": true
         },  
