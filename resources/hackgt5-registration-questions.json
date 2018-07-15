@@ -1336,6 +1336,7 @@
         }, {
             "name": "path",
             "label": "Which of our four paths do you feel comfortable mentoring? This can include hosting workshops and leading campsites (please refer to the FAQ for more details).",
+            "type": "checkbox",
             "options": [
                 "Mobile Development",
                 "Security",
