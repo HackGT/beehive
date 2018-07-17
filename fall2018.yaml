@@ -1,0 +1,4 @@
+git: https://github.com/HackGT/hackgt2018-website.git
+deployment:
+  replicas: 3
+  memory_request: '15Mi'
