@@ -10,7 +10,7 @@
             {
                 "for": "type",
                 "type": "p",
-                "content": "Please see the [Travel Reimbursement Policy](https://docs.google.com/document/d/16uJuzuqMogFSOeEGRqUYLwGUmsy6NpeNMEQ7DzCtJ2g/edit?usp=sharing) for details on reimbursement amounts. Busses will be sent to schools that have large volumes of applicants, but please select your preferred reimbursement assuming a bus is not sent to your school."
+                "content": "For more information on the application process, please click [here](https://docs.google.com/document/d/1fhBZNRLnbBucnAyHCJhgcvhsyrkx4QMd9WRfBqYT6Qs/edit?usp=drive_web&ouid=113711619683399493560). \n\n Please see the [Travel Reimbursement Policy](https://docs.google.com/document/d/16uJuzuqMogFSOeEGRqUYLwGUmsy6NpeNMEQ7DzCtJ2g/edit?usp=sharing) for details on reimbursement amounts. Busses will be sent to schools that have large volumes of applicants, but please select your preferred reimbursement assuming a bus is not sent to your school."
             }
         ],
         "questions": [
@@ -521,7 +521,7 @@
         {
             "for": "18-and-gt-student",
             "type": "p",
-            "content": "Due to institute policy, minors (under 18) that are not students at Georgia Tech may not attend HackGT."
+            "content": "For more information on the application process, please click [here](https://docs.google.com/document/d/1fhBZNRLnbBucnAyHCJhgcvhsyrkx4QMd9WRfBqYT6Qs/edit?usp=drive_web&ouid=113711619683399493560). \n\n Due to institute policy, minors (under 18) that are not students at Georgia Tech may not attend HackGT."
         }
       ],
       "questions": [
