@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/registration.git
-  branch: 2.2.1
+  branch: master
 wants:
     mongo: false
 deployment:
