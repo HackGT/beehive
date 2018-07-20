@@ -488,9 +488,9 @@
                 "required": false
             }, {
                 "name": "employment-free-response",
-                "label": "If you responded to the above question, what kinds of opportunities are you looking for?",
+                "label": "If you responded to the above question, what kinds of opportunities are you looking for? Respond with N/A if not applicable.",
                 "type": "textarea",
-                "required": false
+                "required": true
             }, {
                 "name": "code-of-conduct",
                 "label": "Please confirm the following",
@@ -988,9 +988,9 @@
             "required": false
         }, {
             "name": "employment-free-response",
-            "label": "If you responded to the above question, what kinds of opportunities are you looking for?",
+            "label": "If you responded to the above question, what kinds of opportunities are you looking for? Respond with N/A if not applicable.",
             "type": "textarea",
-            "required": false
+            "required": true
         }, {
             "name": "code-of-conduct",
             "label": "Please confirm the following",
