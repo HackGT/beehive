@@ -408,10 +408,11 @@
                 "required": false
             }, {
                 "name": "first-hackathon",
-                "label": "Will HackGT be your first hackathon?",
+                "label": "Have you attended a hackathon before?",
                 "type": "radio",
                 "options": [
-                    "Yes",
+                    "Yes, HackGT",
+                    "Yes, Other",
                     "No"
                 ],
                 "required": true
@@ -909,10 +910,11 @@
             "required": false
         }, {
             "name": "first-hackathon",
-            "label": "Will HackGT be your first hackathon?",
+            "label": "Have you attended a hackathon before?",
             "type": "radio",
             "options": [
-                "Yes",
+                "Yes, HackGT",
+                "Yes, Other",
                 "No"
             ],
             "required": true
