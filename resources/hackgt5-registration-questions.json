@@ -469,9 +469,11 @@
                 "type": "select",
                 "options": [
                     "",
+                    "MLH",
+                    "Friend",
                     "Facebook",
                     "Twitter",
-                    "Email"
+                    "HackGT Website"
                 ],
                 "hasOther": true,
                 "required": true
@@ -970,9 +972,12 @@
             "type": "select",
             "options": [
                 "",
+                "MLH",
+                "Friend",
                 "Facebook",
                 "Twitter",
-                "Email"
+                "HackGT Website",
+                "FASET"
             ],
             "hasOther": true,
             "required": true
@@ -1388,9 +1393,11 @@
             "type": "select",
             "options": [
                 "",
+                "MLH",
+                "Friend",
                 "Facebook",
                 "Twitter",
-                "Email"
+                "HackGT Website"
             ],
             "hasOther": true,
             "required": true
