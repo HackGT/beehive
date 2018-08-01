@@ -20,6 +20,7 @@
                 "type": "radio",
                 "options": [
                     "Flight Reimbursement",
+                    "Rail (Amtrak) Reimbursement",
                     "Driving - Gas Reimbursement"
                 ],
                 "required": true
