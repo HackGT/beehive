@@ -1,1497 +1,1717 @@
 [
-    {
-        "name": "Participant - Travel Reimbursement",
-        "text": [
-            {
-                "for": "18-and-gt-student",
-                "type": "p",
-                "content": "Due to institute policy, minors (under 18) that are not students at Georgia Tech may not attend HackGT."
-            },
-            {
-                "for": "type",
-                "type": "p",
-                "content": "For more information on the application process, please click [here](https://docs.google.com/document/d/1fhBZNRLnbBucnAyHCJhgcvhsyrkx4QMd9WRfBqYT6Qs/edit?usp=drive_web&ouid=113711619683399493560). \n\n Please see the [Travel Reimbursement Policy](https://docs.google.com/document/d/16uJuzuqMogFSOeEGRqUYLwGUmsy6NpeNMEQ7DzCtJ2g/edit?usp=sharing) for details on reimbursement amounts. Busses will be sent to schools that have a large volume of applicants, but please select your preferred reimbursement in the case that no bus is sent to your school."
-            }
-        ],
-        "questions": [
-            {
-                "name": "type",
-                "label": "What type of travel reimbursement would you like?",
-                "type": "radio",
-                "options": [
-                    "Flight Reimbursement",
-                    "Rail (Amtrak) Reimbursement",
-                    "Driving - Gas Reimbursement"
-                ],
-                "required": true
-            },
-            {
-            "name": "18-and-gt-student",
-            "label": "Are you over 18 or a student at Georgia Tech?",
-            "type": "radio",
-            "options": [
-                "I am 18 or older.",
-                "I am under 18 and a Georgia Tech student."
-            ],
-            "required": true
-            },
-            {
-            "name": "phone-number",
-            "label": "What’s a cell phone number we can contact you at during the event? (We will only use this for informational and emergency announcements)",
-            "type": "tel",
-            "required": true
-            },
-            {
-            "name": "school",
-            "label": "What college or university do you currently attend?",
-            "type": "select",
-            "options": [
-                "",
-                "Georgia Institute of Technology",
-                "Abraham Baldwin Agricultural College",
-                "Albany Medical College",
-                "Albany State University",
-                "Arizona State University",
-                "Armstrong State University",
-                "Atlanta Metropolitan State College",
-                "Auburn University",
-                "Augusta University",
-                "Bainbridge State College",
-                "Baylor College of Medicine",
-                "Baylor University",
-                "Binghamton University",
-                "Boston College",
-                "Boston University",
-                "Bowling Green State University",
-                "Brandeis University",
-                "Brigham Young University",
-                "Brown University",
-                "California Institute of Technology",
-                "Carnegie Mellon University",
-                "Case Western Reserve University",
-                "City College of New York",
-                "Clark Atlanta University",
-                "Clarkson University",
-                "Clayton State University",
-                "Clemson University",
-                "College of Coastal Georgia",
-                "College of William and Mary",
-                "Colorado School of Mines",
-                "Colorado State University",
-                "Columbia University",
-                "Columbus State University",
-                "Cornell University",
-                "Creighton University",
-                "Dalton State College",
-                "Dartmouth College",
-                "Darton State College",
-                "Drexel University",
-                "Duke University",
-                "East Carolina University",
-                "East Georgia State College",
-                "Emory University",
-                "Florida Atlantic University",
-                "Florida Institute of Technology",
-                "Florida International University",
-                "Florida State University",
-                "Fort Valley State University",
-                "George Mason University",
-                "George Washington University",
-                "Georgetown University",
-                "Georgia College & State University",
-                "Georgia Gwinnett College",
-                "Georgia Highlands College",
-                "Georgia Southern University",
-                "Georgia Southwestern State University",
-                "Georgia State University",
-                "Gordon State College",
-                "Harvard University",
-                "Howard University",
-                "Hunter College",
-                "Icahn School of Medicine at Mount Sinai",
-                "Illinois Institute of Technology",
-                "Indiana University - Bloomington",
-                "Indiana University-Purdue University Indianapolis",
-                "Iowa State University",
-                "Johns Hopkins University",
-                "Kansas State University",
-                "Kennesaw State University",
-                "Kent State University",
-                "Lehigh University",
-                "Loma Linda University",
-                "Louisiana State University",
-                "Louisiana Tech University",
-                "Loyola University Chicago",
-                "Marquette University",
-                "Massachusetts Institute of Technology",
-                "Medical College of Wisconsin",
-                "Medical University of South Carolina",
-                "Miami University",
-                "Michigan State University",
-                "Michigan Technological University",
-                "Middle Georgia State University",
-                "Mississippi State University",
-                "Missouri University of Science and Technology",
-                "Montana State University",
-                "Morehouse College",
-                "New Jersey Institute of Technology",
-                "New Mexico State University",
-                "New York Medical College",
-                "New York University",
-                "North Carolina State University",
-                "North Dakota State University",
-                "Northeastern University",
-                "Northern Arizona University",
-                "Northern Illinois University",
-                "Northwestern University",
-                "Oakland University",
-                "Ohio State University",
-                "Ohio University",
-                "Oklahoma State University",
-                "Old Dominion University",
-                "Oregon Health & Science University",
-                "Oregon State University",
-                "Pennsylvania State University",
-                "Portland State University",
-                "Princeton University",
-                "Purdue University",
-                "Queens College, City University of New York",
-                "Rensselaer Polytechnic Institute",
-                "Rice University",
-                "Rochester Institute of Technology",
-                "Rockefeller University",
-                "Rush University",
-                "Rutgers University",
-                "Saint Louis University",
-                "San Diego State University",
-                "San Francisco State University",
-                "Savannah State University",
-                "South Georgia State College",
-                "Southern Illinois University Carbondale",
-                "Southern Methodist University",
-                "Spelman College",
-                "Stanford University",
-                "Stony Brook University",
-                "Syracuse University",
-                "Temple University",
-                "Texas A&M University",
-                "Texas Tech University",
-                "The Catholic University of America",
-                "Thomas Jefferson University",
-                "Tufts University",
-                "Tulane University",
-                "Uniformed Services University of the Health Sciences",
-                "University at Albany, SUNY",
-                "University at Buffalo",
-                "University of Akron",
-                "University of Alabama - Tuscaloosa",
-                "University of Alabama at Birmingham",
-                "University of Alabama in Huntsville",
-                "University of Alaska Fairbanks",
-                "University of Arizona",
-                "University of Arkansas - Fayetteville",
-                "University of California, Berkeley",
-                "University of California, Davis",
-                "University of California, Irvine",
-                "University of California, Los Angeles",
-                "University of California, Merced",
-                "University of California, Riverside",
-                "University of California, San Diego",
-                "University of California, San Francisco",
-                "University of California, Santa Barbara",
-                "University of California, Santa Cruz",
-                "University of Central Florida",
-                "University of Chicago",
-                "University of Cincinnati",
-                "University of Colorado Boulder",
-                "University of Connecticut",
-                "University of Dayton",
-                "University of Delaware",
-                "University of Denver",
-                "University of Florida",
-                "University of Georgia",
-                "University of Hawaii at Manoa",
-                "University of Houston",
-                "University of Idaho",
-                "University of Illinois at Chicago",
-                "University of Illinois at Urbana–Champaign",
-                "University of Iowa",
-                "University of Kansas",
-                "University of Kentucky",
-                "University of Louisville",
-                "University of Maine",
-                "University of Maryland, Baltimore",
-                "University of Maryland, Baltimore County",
-                "University of Maryland, College Park",
-                "University of Massachusetts Amherst",
-                "University of Massachusetts Boston",
-                "University of Massachusetts Lowell",
-                "University of Memphis",
-                "University of Miami",
-                "University of Michigan",
-                "University of Minnesota",
-                "University of Mississippi",
-                "University of Missouri–Columbia",
-                "University of Missouri–Kansas City",
-                "University of Missouri–St. Louis",
-                "University of Montana",
-                "University of Nebraska–Lincoln",
-                "University of Nevada, Las Vegas",
-                "University of Nevada, Reno",
-                "University of New Hampshire",
-                "University of New Mexico",
-                "University of New Orleans",
-                "University of North Carolina at Chapel Hill",
-                "University of North Carolina at Charlotte",
-                "University of North Carolina at Greensboro",
-                "University of North Dakota",
-                "University of North Georgia",
-                "University of North Texas",
-                "University of Notre Dame",
-                "University of Oklahoma",
-                "University of Oregon",
-                "University of Pennsylvania",
-                "University of Pittsburgh",
-                "University of Rhode Island",
-                "University of Rochester",
-                "University of South Alabama",
-                "University of South Carolina",
-                "University of South Florida",
-                "University of Southern California",
-                "University of Southern Mississippi",
-                "University of Tennessee, Knoxville",
-                "University of Texas MD Anderson Cancer Center",
-                "University of Texas at Arlington",
-                "University of Texas at Austin",
-                "University of Texas at Dallas",
-                "University of Texas at El Paso",
-                "University of Texas at San Antonio",
-                "University of Toledo",
-                "University of Toronto",
-                "University of Utah",
-                "University of Vermont",
-                "University of Virginia",
-                "University of Washington",
-                "University of Waterloo",
-                "University of West Georgia",
-                "University of Wisconsin–Madison",
-                "University of Wisconsin–Milwaukee",
-                "University of Wyoming",
-                "Utah State University",
-                "Valdosta State University",
-                "Vanderbilt University",
-                "Virginia Commonwealth University",
-                "Virginia Polytechnic Institute and State University",
-                "Wake Forest University",
-                "Washington State University",
-                "Washington University in St. Louis",
-                "Wayne State University",
-                "Wesleyan University",
-                "West Virginia University",
-                "Wright State University",
-                "Yale University",
-                "Yeshiva University"
-            ],
-            "hasOther": true,
-            "required": true
-            },
-            {
-                "name": "school-year",
-                "label": "What is your year in school?",
-                "type": "select",
-                "options": [
-                    "First year",
-                    "Second year",
-                    "Third year",
-                    "Fourth year",
-                    "Fifth year+",
-                    "Master's",
-                    "PhD"
-                ],
-                "required": true
-            },
-            {
-            "name": "major",
-            "label": "What is your major?",
-            "type": "select",
-            "options": [
-                "",
-                "Accounting",
-                "Aerospace Engineering",
-                "Applied Physics",
-                "Architecture",
-                "Astronomy or Astrophysics",
-                "Biochemistry",
-                "Biology",
-                "Biomedical Engineering",
-                "Business",
-                "Chemical Engineering",
-                "Chemistry",
-                "Civil Engineering",
-                "Computational Media",
-                "Computer Engineering",
-                "Computer Science",
-                "Discrete Mathematics",
-                "Drama or Theater",
-                "Earth and Atmospheric Sciences",
-                "Economics",
-                "Electrical Engineering",
-                "English or Literature, Media, and Communication",
-                "Environmental Engineering",
-                "Film and Media Studies",
-                "Finance",
-                "Global Studies and Languages",
-                "History",
-                "Humanities",
-                "Industrial Design",
-                "Industrial Engineering",
-                "International Affairs or International Relations",
-                "Linguistics",
-                "Materials Science and Engineering",
-                "Mathematics",
-                "Mechanical Engineering",
-                "Music",
-                "Music Technology",
-                "Neuroscience",
-                "Nuclear and Radiological Engineering",
-                "Philosophy",
-                "Physics",
-                "Political Science",
-                "Psychology",
-                "Public Policy",
-                "Urban Planning"
-            ],
-            "hasOther": true,
-            "required": true
-            },
-            {
-                "name": "gender",
-                "label": "I identify as...",
-                "type": "radio",
-                "options": [
-                "Male",
-                "Female",
-                "Non-binary/third gender"
-                ],
-                "hasOther": true,
-                "required": true
-            },  {
-                "name": "race",
-                "label": "What is your race / ethnicity?",
-                "type": "checkbox",
-                "options": [
-                    "Non-Hispanic White",
-                    "Black or African American",
-                    "Latino, Latina, or Hispanic American",
-                    "South Asian or Indian American",
-                    "East Asian or Asian American",
-                    "Middle Eastern or Arab American",
-                    "Native American or Alaskan Native",
-                    "Hawaiian or Pacific Islander"
-                ],
-                "hasOther": true,
-                "required": false
-            },  {
-                "name": "resume",
-                "label": "Please upload your resume.",
-                "type": "file",
-                "required": true
-            },  {
-                "name": "github",
-                "label": "GitHub profile",
-                "type": "url",
-                "required": false
-            },
-            {
-                "name": "website",
-                "label": "Personal website",
-                "type": "url",
-                "required": false
-            }, {
-                "name": "first-hackathon",
-                "label": "Have you attended a hackathon before?",
-                "type": "radio",
-                "options": [
-                    "Yes, HackGT",
-                    "Yes, Other",
-                    "No"
-                ],
-                "required": true
-            }, {
-                "name": "free-response-choice",
-                "label": "Please choose and answer one of the following questions. Answering both will not increase your chances of getting accepted to the event.",
-                "type": "radio",
-                "options": [
-                    "What do you hope to learn at HackGT?",
-                    "Describe a past project that you are proud of. It can be one that you worked on in any setting (hackathon, class, personal project, etc.)"
-                ],
-                "required": true
-            }, {
-                "name": "free-response-answer",
-                "label": "Response to chosen prompt.",
-                "type": "textarea",
-                "required": true
-            }, {
-                "name": "resources",
-                "label": "Help us help you, what resources would you like to see at HackGT?",
-                "type": "textarea",
-                "required": false
-            }, {
-                "name": "tshirt-size",
-                "label": "What is your T-shirt size?",
-                "type": "radio",
-                "options": [
-                    "Extra small",
-                    "Small",
-                    "Medium",
-                    "Large",
-                    "Extra large",
-                    "2XL",
-                    "3XL"
-                ],
-                "required": true
-            },  {
-                "name": "dietary-restrictions",
-                "label": "Do you have any dietary restrictions?",
-                "type": "checkbox",
-                "options": [
-                    "Vegetarian",
-                    "Vegan",
-                    "Gluten-free",
-                    "No pork",
-                    "No beef"
-                ],
-                "hasOther": true,
-                "required": false
-            },
-            {
-                "name": "referrer",
-                "label": "How did you hear about HackGT 5?",
-                "type": "select",
-                "options": [
-                    "",
-                    "MLH",
-                    "Friend",
-                    "Facebook",
-                    "Twitter",
-                    "HackGT Website"
-                ],
-                "hasOther": true,
-                "required": true
-            },
-            {
-                "name": "employment",
-                "label": "Are you interested in:",
-                "type": "checkbox",
-                "options": [
-                    "Internship / Co-op Spring 2019",
-                    "Internship / Co-op Summer 2019",
-                    "Full time 2019"
-                ],
-                "required": false
-            }, {
-                "name": "employment-free-response",
-                "label": "If you responded to the above question, what kinds of opportunities are you looking for? Respond with N/A if not applicable.",
-                "type": "textarea",
-                "required": true
-            }, {
-                "name": "code-of-conduct",
-                "label": "Please confirm the following",
-                "type": "checkbox",
-                "options": [
-                    "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
-                ],
-                "required": true
-            }, {
-                "name": "privacy",
-                "label": "Please confirm the following",
-                "type": "checkbox",
-                "options": [
-                    "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
-                ],
-                "required": true
-            },
-            {
-                "name": "other",
-                "label": "Anything else you want us to know?",
-                "type": "textarea",
-                "required": false
-            }
-        ]
-    },
-    {
-      "name": "Participant - No Travel Reimbursement",
-      "text": [
-        {
-            "for": "18-and-gt-student",
-            "type": "p",
-            "content": "For more information on the application process, please click [here](https://docs.google.com/document/d/1fhBZNRLnbBucnAyHCJhgcvhsyrkx4QMd9WRfBqYT6Qs/edit?usp=drive_web&ouid=113711619683399493560). \n\n Due to institute policy, minors (under 18) that are not students at Georgia Tech may not attend HackGT."
-        }
-      ],
-      "questions": [
-        {
-          "name": "18-and-gt-student",
-          "label": "Are you over 18 or a student at Georgia Tech?",
-          "type": "radio",
-          "options": [
-            "I am 18 or older.",
-            "I am under 18 and a Georgia Tech student."
-          ],
-          "required": true
-        },
-        {
-          "name": "phone-number",
-          "label": "What’s a cell phone number we can contact you at during the event? (We will only use this for informational and emergency announcements)",
-          "type": "tel",
-          "required": true
-        },
-        {
-          "name": "school",
-          "label": "What college or university do you currently attend?",
-          "type": "select",
-          "options": [
-            "",
-            "Georgia Institute of Technology",
-            "Abraham Baldwin Agricultural College",
-            "Albany Medical College",
-            "Albany State University",
-            "Arizona State University",
-            "Armstrong State University",
-            "Atlanta Metropolitan State College",
-            "Auburn University",
-            "Augusta University",
-            "Bainbridge State College",
-            "Baylor College of Medicine",
-            "Baylor University",
-            "Binghamton University",
-            "Boston College",
-            "Boston University",
-            "Bowling Green State University",
-            "Brandeis University",
-            "Brigham Young University",
-            "Brown University",
-            "California Institute of Technology",
-            "Carnegie Mellon University",
-            "Case Western Reserve University",
-            "City College of New York",
-            "Clark Atlanta University",
-            "Clarkson University",
-            "Clayton State University",
-            "Clemson University",
-            "College of Coastal Georgia",
-            "College of William and Mary",
-            "Colorado School of Mines",
-            "Colorado State University",
-            "Columbia University",
-            "Columbus State University",
-            "Cornell University",
-            "Creighton University",
-            "Dalton State College",
-            "Dartmouth College",
-            "Darton State College",
-            "Drexel University",
-            "Duke University",
-            "East Carolina University",
-            "East Georgia State College",
-            "Emory University",
-            "Florida Atlantic University",
-            "Florida Institute of Technology",
-            "Florida International University",
-            "Florida State University",
-            "Fort Valley State University",
-            "George Mason University",
-            "George Washington University",
-            "Georgetown University",
-            "Georgia College & State University",
-            "Georgia Gwinnett College",
-            "Georgia Highlands College",
-            "Georgia Southern University",
-            "Georgia Southwestern State University",
-            "Georgia State University",
-            "Gordon State College",
-            "Harvard University",
-            "Howard University",
-            "Hunter College",
-            "Icahn School of Medicine at Mount Sinai",
-            "Illinois Institute of Technology",
-            "Indiana University - Bloomington",
-            "Indiana University-Purdue University Indianapolis",
-            "Iowa State University",
-            "Johns Hopkins University",
-            "Kansas State University",
-            "Kennesaw State University",
-            "Kent State University",
-            "Lehigh University",
-            "Loma Linda University",
-            "Louisiana State University",
-            "Louisiana Tech University",
-            "Loyola University Chicago",
-            "Marquette University",
-            "Massachusetts Institute of Technology",
-            "Medical College of Wisconsin",
-            "Medical University of South Carolina",
-            "Miami University",
-            "Michigan State University",
-            "Michigan Technological University",
-            "Middle Georgia State University",
-            "Mississippi State University",
-            "Missouri University of Science and Technology",
-            "Montana State University",
-            "Morehouse College",
-            "New Jersey Institute of Technology",
-            "New Mexico State University",
-            "New York Medical College",
-            "New York University",
-            "North Carolina State University",
-            "North Dakota State University",
-            "Northeastern University",
-            "Northern Arizona University",
-            "Northern Illinois University",
-            "Northwestern University",
-            "Oakland University",
-            "Ohio State University",
-            "Ohio University",
-            "Oklahoma State University",
-            "Old Dominion University",
-            "Oregon Health & Science University",
-            "Oregon State University",
-            "Pennsylvania State University",
-            "Portland State University",
-            "Princeton University",
-            "Purdue University",
-            "Queens College, City University of New York",
-            "Rensselaer Polytechnic Institute",
-            "Rice University",
-            "Rochester Institute of Technology",
-            "Rockefeller University",
-            "Rush University",
-            "Rutgers University",
-            "Saint Louis University",
-            "San Diego State University",
-            "San Francisco State University",
-            "Savannah State University",
-            "South Georgia State College",
-            "Southern Illinois University Carbondale",
-            "Southern Methodist University",
-            "Spelman College",
-            "Stanford University",
-            "Stony Brook University",
-            "Syracuse University",
-            "Temple University",
-            "Texas A&M University",
-            "Texas Tech University",
-            "The Catholic University of America",
-            "Thomas Jefferson University",
-            "Tufts University",
-            "Tulane University",
-            "Uniformed Services University of the Health Sciences",
-            "University at Albany, SUNY",
-            "University at Buffalo",
-            "University of Akron",
-            "University of Alabama - Tuscaloosa",
-            "University of Alabama at Birmingham",
-            "University of Alabama in Huntsville",
-            "University of Alaska Fairbanks",
-            "University of Arizona",
-            "University of Arkansas - Fayetteville",
-            "University of California, Berkeley",
-            "University of California, Davis",
-            "University of California, Irvine",
-            "University of California, Los Angeles",
-            "University of California, Merced",
-            "University of California, Riverside",
-            "University of California, San Diego",
-            "University of California, San Francisco",
-            "University of California, Santa Barbara",
-            "University of California, Santa Cruz",
-            "University of Central Florida",
-            "University of Chicago",
-            "University of Cincinnati",
-            "University of Colorado Boulder",
-            "University of Connecticut",
-            "University of Dayton",
-            "University of Delaware",
-            "University of Denver",
-            "University of Florida",
-            "University of Georgia",
-            "University of Hawaii at Manoa",
-            "University of Houston",
-            "University of Idaho",
-            "University of Illinois at Chicago",
-            "University of Illinois at Urbana–Champaign",
-            "University of Iowa",
-            "University of Kansas",
-            "University of Kentucky",
-            "University of Louisville",
-            "University of Maine",
-            "University of Maryland, Baltimore",
-            "University of Maryland, Baltimore County",
-            "University of Maryland, College Park",
-            "University of Massachusetts Amherst",
-            "University of Massachusetts Boston",
-            "University of Massachusetts Lowell",
-            "University of Memphis",
-            "University of Miami",
-            "University of Michigan",
-            "University of Minnesota",
-            "University of Mississippi",
-            "University of Missouri–Columbia",
-            "University of Missouri–Kansas City",
-            "University of Missouri–St. Louis",
-            "University of Montana",
-            "University of Nebraska–Lincoln",
-            "University of Nevada, Las Vegas",
-            "University of Nevada, Reno",
-            "University of New Hampshire",
-            "University of New Mexico",
-            "University of New Orleans",
-            "University of North Carolina at Chapel Hill",
-            "University of North Carolina at Charlotte",
-            "University of North Carolina at Greensboro",
-            "University of North Dakota",
-            "University of North Georgia",
-            "University of North Texas",
-            "University of Notre Dame",
-            "University of Oklahoma",
-            "University of Oregon",
-            "University of Pennsylvania",
-            "University of Pittsburgh",
-            "University of Rhode Island",
-            "University of Rochester",
-            "University of South Alabama",
-            "University of South Carolina",
-            "University of South Florida",
-            "University of Southern California",
-            "University of Southern Mississippi",
-            "University of Tennessee, Knoxville",
-            "University of Texas MD Anderson Cancer Center",
-            "University of Texas at Arlington",
-            "University of Texas at Austin",
-            "University of Texas at Dallas",
-            "University of Texas at El Paso",
-            "University of Texas at San Antonio",
-            "University of Toledo",
-            "University of Toronto",
-            "University of Utah",
-            "University of Vermont",
-            "University of Virginia",
-            "University of Washington",
-            "University of Waterloo",
-            "University of West Georgia",
-            "University of Wisconsin–Madison",
-            "University of Wisconsin–Milwaukee",
-            "University of Wyoming",
-            "Utah State University",
-            "Valdosta State University",
-            "Vanderbilt University",
-            "Virginia Commonwealth University",
-            "Virginia Polytechnic Institute and State University",
-            "Wake Forest University",
-            "Washington State University",
-            "Washington University in St. Louis",
-            "Wayne State University",
-            "Wesleyan University",
-            "West Virginia University",
-            "Wright State University",
-            "Yale University",
-            "Yeshiva University"
-        ],
-          "hasOther": true,
-          "required": true
-        },
-        {
-            "name": "school-year",
-            "label": "What is your year in school?",
-            "type": "select",
-            "options": [
-                "First year",
-                "Second year",
-                "Third year",
-                "Fourth year",
-                "Fifth year+",
-                "Master's",
-                "PhD"
-            ],
-            "required": true
-        },
-        {
-          "name": "major",
-          "label": "What is your major?",
-          "type": "select",
-          "options": [
-            "",
-            "Accounting",
-            "Aerospace Engineering",
-            "Applied Physics",
-            "Architecture",
-            "Astronomy or Astrophysics",
-            "Biochemistry",
-            "Biology",
-            "Biomedical Engineering",
-            "Business",
-            "Chemical Engineering",
-            "Chemistry",
-            "Civil Engineering",
-            "Computational Media",
-            "Computer Engineering",
-            "Computer Science",
-            "Discrete Mathematics",
-            "Drama or Theater",
-            "Earth and Atmospheric Sciences",
-            "Economics",
-            "Electrical Engineering",
-            "English or Literature, Media, and Communication",
-            "Environmental Engineering",
-            "Film and Media Studies",
-            "Finance",
-            "Global Studies and Languages",
-            "History",
-            "Humanities",
-            "Industrial Design",
-            "Industrial Engineering",
-            "International Affairs or International Relations",
-            "Linguistics",
-            "Materials Science and Engineering",
-            "Mathematics",
-            "Mechanical Engineering",
-            "Music",
-            "Music Technology",
-            "Neuroscience",
-            "Nuclear and Radiological Engineering",
-            "Philosophy",
-            "Physics",
-            "Political Science",
-            "Psychology",
-            "Public Policy",
-            "Urban Planning"
-          ],
-          "hasOther": true,
-          "required": true
-        },
-        {
-            "name": "gender",
-            "label": "I identify as...",
-            "type": "radio",
-            "options": [
-              "Male",
-              "Female",
-              "Non-binary/third gender"
-            ],
-            "hasOther": true,
-            "required": true
-        },  {
-            "name": "race",
-            "label": "What is your race / ethnicity?",
-            "type": "checkbox",
-            "options": [
-                "Non-Hispanic White",
-                "Black or African American",
-                "Latino, Latina, or Hispanic American",
-                "South Asian or Indian American",
-                "East Asian or Asian American",
-                "Middle Eastern or Arab American",
-                "Native American or Alaskan Native",
-                "Hawaiian or Pacific Islander"
-            ],
-            "hasOther": true,
-            "required": false
-        },  {
-            "name": "resume",
-            "label": "Please upload your resume.",
-            "type": "file",
-            "required": true
-        },  {
-            "name": "github",
-            "label": "GitHub profile",
-            "type": "url",
-            "required": false
-        },
-        {
-            "name": "website",
-            "label": "Personal website",
-            "type": "url",
-            "required": false
-        }, {
-            "name": "first-hackathon",
-            "label": "Have you attended a hackathon before?",
-            "type": "radio",
-            "options": [
-                "Yes, HackGT",
-                "Yes, Other",
-                "No"
-            ],
-            "required": true
-        }, {
-            "name": "free-response-choice",
-            "label": "Please choose and answer one of the following questions. Answering both will not increase your chances of getting accepted to the event.",
-            "type": "radio",
-            "options": [
-                "What do you hope to learn at HackGT?",
-                "Describe a past project that you are proud of. It can be one that you worked on in any setting (hackathon, class, personal project, etc.)"
-            ],
-            "required": true
-        }, {
-            "name": "free-response-answer",
-            "label": "Response to chosen prompt.",
-            "type": "textarea",
-            "required": true
-        }, {
-            "name": "resources",
-            "label": "Help us help you, what resources would you like to see at HackGT?",
-            "type": "textarea",
-            "required": false
-        }, {
-            "name": "tshirt-size",
-            "label": "What is your T-shirt size?",
-            "type": "radio",
-            "options": [
-                "Extra small",
-                "Small",
-                "Medium",
-                "Large",
-                "Extra large",
-                "2XL",
-                "3XL"
-            ],
-            "required": true
-        },  {
-            "name": "dietary-restrictions",
-            "label": "Do you have any dietary restrictions?",
-            "type": "checkbox",
-            "options": [
-                "Vegetarian",
-                "Vegan",
-                "Gluten-free",
-                "No pork",
-                "No beef"
-            ],
-            "hasOther": true,
-            "required": false
-        }, {
-            "name": "referrer",
-            "label": "How did you hear about HackGT 5?",
-            "type": "select",
-            "options": [
-                "",
-                "MLH",
-                "Friend",
-                "Facebook",
-                "Twitter",
-                "HackGT Website",
-                "FASET"
-            ],
-            "hasOther": true,
-            "required": true
-        }, {
-            "name": "employment",
-            "label": "Are you interested in:",
-            "type": "checkbox",
-            "options": [
-                "Internship / Co-op Spring 2019",
-                "Internship / Co-op Summer 2019",
-                "Full time 2019"
-            ],
-            "required": false
-        }, {
-            "name": "employment-free-response",
-            "label": "If you responded to the above question, what kinds of opportunities are you looking for? Respond with N/A if not applicable.",
-            "type": "textarea",
-            "required": true
-        }, {
-            "name": "code-of-conduct",
-            "label": "Please confirm the following",
-            "type": "checkbox",
-            "options": [
-                "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
-            ],
-            "required": true
-        }, {
-            "name": "privacy",
-            "label": "Please confirm the following",
-            "type": "checkbox",
-            "options": [
-                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
-            ],
-            "required": true
-        },
-        {
-            "name": "other",
-            "label": "Anything else you want us to know?",
-            "type": "textarea",
-            "required": false
-        }
-      ]
-    },
-    {
-      "name": "Mentor",
-      "text": [
-        {
-            "for": "phone-number",
-            "type": "p",
-            "content": "Please be advised that travel reimbursement is not available for volunteers or mentors."
-        }
-      ],
-      "questions": [
-        {
-            "name": "phone-number",
-            "label": "What’s a cell phone number we can contact you at during the event? (We will only use this for informational and emergency announcements)",
-            "type": "tel",
-            "required": true
-        },
-        {
-            "name": "gender",
-            "label": "I identify as...",
-            "type": "radio",
-            "options": [
-              "Male",
-              "Female",
-              "Non-binary/third gender"
-            ],
-            "hasOther": true,
-            "required": true
-        },  {
-            "name": "race",
-            "label": "What is your race / ethnicity?",
-            "type": "checkbox",
-            "options": [
-                "Non-Hispanic White",
-                "Black or African American",
-                "Latino, Latina, or Hispanic American",
-                "South Asian or Indian American",
-                "East Asian or Asian American",
-                "Middle Eastern or Arab American",
-                "Native American or Alaskan Native",
-                "Hawaiian or Pacific Islander"
-            ],
-            "hasOther": true,
-            "required": false
-        }, {
-            "name": "major",
-            "label": "What is your major?",
-            "type": "select",
-            "options": [
-                "",
-                "Accounting",
-                "Aerospace Engineering",
-                "Applied Physics",
-                "Architecture",
-                "Astronomy or Astrophysics",
-                "Biochemistry",
-                "Biology",
-                "Biomedical Engineering",
-                "Business",
-                "Chemical Engineering",
-                "Chemistry",
-                "Civil Engineering",
-                "Computational Media",
-                "Computer Engineering",
-                "Computer Science",
-                "Discrete Mathematics",
-                "Drama or Theater",
-                "Earth and Atmospheric Sciences",
-                "Economics",
-                "Electrical Engineering",
-                "English or Literature, Media, and Communication",
-                "Environmental Engineering",
-                "Film and Media Studies",
-                "Finance",
-                "Global Studies and Languages",
-                "History",
-                "Humanities",
-                "Industrial Design",
-                "Industrial Engineering",
-                "International Affairs or International Relations",
-                "Linguistics",
-                "Materials Science and Engineering",
-                "Mathematics",
-                "Mechanical Engineering",
-                "Music",
-                "Music Technology",
-                "Neuroscience",
-                "Nuclear and Radiological Engineering",
-                "Philosophy",
-                "Physics",
-                "Political Science",
-                "Psychology",
-                "Public Policy",
-                "Urban Planning"
-            ],
-            "hasOther": true,
-            "required": true
-        }, {
-            "name": "is-student",
-            "label": "Are you currently a student?",
-            "type": "radio",
-            "options": [
-                "Yes",
-                "No (resume contains details)"
-            ],
-            "required": true
-        }, {
-            "name": "resume",
-            "label": "Please upload your resume.",
-            "type": "file",
-            "required": true
-        }, {
-            "name": "mentored-hackgt-before",
-            "label": "Have you mentored HackGT before?",
-            "type": "radio",
-            "options": [
-                "Yes",
-                "No"
-            ],
-            "required": true
-        }, {
-            "name": "topics",
-            "label": "What topics are you comfortable mentoring in? Please list most proficient first.",
-            "type": "textarea",
-            "required": true
-        }, {
-            "name": "path",
-            "label": "Which of our four paths do you feel comfortable mentoring? This can include hosting workshops and leading campsites (please refer to the FAQ for more details).",
-            "type": "checkbox",
-            "options": [
-                "Mobile Development",
-                "Security",
-                "Artificial Intelligence",
-                "Web Development"
-            ],
-            "required": false
-        },
-        {
-            "name": "why-mentor",
-            "label": "Why would you rather mentor than participate? (Elaborate on past experiences and what you hope to see at HackGT)",
-            "type": "textarea",
-            "required": true
-        }, {
-            "name": "links",
-            "label": "Links (Github, LinkedIn, etc..)",
-            "type": "textarea",
-            "required": true
-        }, {
-            "name": "workshop",
-            "label": "Would you be willing to hold a workshop? If so, about what?",
-            "type": "textarea",
-            "required": true
-        }, {
-            "name": "judging",
-            "label": "Are interested in being a judge at HackGT?",
-            "type": "radio",
-            "options": [
-                "Yes",
-                "No"
-            ],
-            "required": true
-        },
-        {
-            "name": "tshirt-size",
-            "label": "What is your T-shirt size?",
-            "type": "radio",
-            "options": [
-                "Extra small",
-                "Small",
-                "Medium",
-                "Large",
-                "Extra large",
-                "2XL",
-                "3XL"
-            ],
-            "required": true
-        },  {
-            "name": "dietary-restrictions",
-            "label": "Do you have any dietary restrictions?",
-            "type": "checkbox",
-            "options": [
-                "Vegetarian",
-                "Vegan",
-                "Gluten-free",
-                "No pork",
-                "No beef"
-            ],
-            "hasOther": true,
-            "required": false
-        },
-        {
-            "name": "code-of-conduct",
-            "label": "Please confirm the following",
-            "type": "checkbox",
-            "options": [
-                "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
-            ],
-            "required": true
-        }, {
-            "name": "privacy",
-            "label": "Please confirm the following",
-            "type": "checkbox",
-            "options": [
-                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
-            ],
-            "required": true
-        },  {
-            "name": "future-opportunities",
-            "label": "Would you be interested in future mentorship / volunteering opportunities?",
-            "type": "radio",
-            "options": [
-                "Yes",
-                "No"
-            ],
-            "required": true
-        }, {
-            "name": "other",
-            "label": "Anything else you want us to know?",
-            "type": "textarea",
-            "required": false
-        }
-      ]
-    },
-    {
-      "name": "Volunteer",
-      "text": [
-        {
-            "for": "phone-number",
-            "type": "p",
-            "content": "Please be advised that travel reimbursement is not available for volunteers or mentors."
-        },
-        {
-            "for": "volunteer-role",
-            "type": "h3",
-            "content": "Volunteer Type"
-        },
-        {
-            "for": "volunteer-role",
-            "type": "p",
-            "content": "We have two types of volunteering positions you may apply for: Core Volunteers and General Volunteers."
-        },
-        {
-            "for": "volunteer-role",
-            "type": "h5",
-            "content": "Core Volunteer"
-        },
-        {
-            "for": "volunteer-role",
-            "type": "p",
-            "content": "Responsibilities may include being assigned to a major role during the event, leading other volunteers, providing communication between teams of volunteers, other volunteer leaders, and organizers, and will require more time commitment- including attending a training session prior to the event and being present at the event for an extended period of time."
-        },
-        {
-            "for": "volunteer-role",
-            "type": "h5",
-            "content": "General Volunteer"
-        },
-        {
-            "for": "volunteer-role",
-            "type": "p",
-            "content": "Responsibilities may include venue setup/teardown, working the Registration desk, food setup/clean up, working the Help and Hardware desk. The time commitment includes attending a training session prior to event and being present during peak hours."
-        }
-       ],
-       "questions": [
-        {
-            "name": "phone-number",
-            "label": "What’s a cell phone number we can contact you at during the event? (We will only use this for informational and emergency announcements)",
-            "type": "tel",
-            "required": true
-        }, {
-            "name": "gender",
-            "label": "I identify as...",
-            "type": "radio",
-            "options": [
-              "Male",
-              "Female",
-              "Non-binary/third gender"
-            ],
-            "hasOther": true,
-            "required": true
-        },  {
-            "name": "race",
-            "label": "What is your race / ethnicity?",
-            "type": "checkbox",
-            "options": [
-                "Non-Hispanic White",
-                "Black or African American",
-                "Latino, Latina, or Hispanic American",
-                "South Asian or Indian American",
-                "East Asian or Asian American",
-                "Middle Eastern or Arab American",
-                "Native American or Alaskan Native",
-                "Hawaiian or Pacific Islander"
-            ],
-            "hasOther": true,
-            "required": false
-        }, {
-            "name": "major",
-            "label": "What is your major?",
-            "type": "select",
-            "options": [
-              "",
-              "Accounting",
-              "Aerospace Engineering",
-              "Applied Physics",
-              "Architecture",
-              "Astronomy or Astrophysics",
-              "Biochemistry",
-              "Biology",
-              "Biomedical Engineering",
-              "Business",
-              "Chemical Engineering",
-              "Chemistry",
-              "Civil Engineering",
-              "Computational Media",
-              "Computer Engineering",
-              "Computer Science",
-              "Discrete Mathematics",
-              "Drama or Theater",
-              "Earth and Atmospheric Sciences",
-              "Economics",
-              "Electrical Engineering",
-              "English or Literature, Media, and Communication",
-              "Environmental Engineering",
-              "Film and Media Studies",
-              "Finance",
-              "Global Studies and Languages",
-              "History",
-              "Humanities",
-              "Industrial Design",
-              "Industrial Engineering",
-              "International Affairs or International Relations",
-              "Linguistics",
-              "Materials Science and Engineering",
-              "Mathematics",
-              "Mechanical Engineering",
-              "Music",
-              "Music Technology",
-              "Neuroscience",
-              "Nuclear and Radiological Engineering",
-              "Philosophy",
-              "Physics",
-              "Political Science",
-              "Psychology",
-              "Public Policy",
-              "Urban Planning"
-            ],
-            "hasOther": true,
-            "required": true
-        }, {
-            "name": "career",
-            "label": "What are your career aspirations within that field? (it’s okay to leave this part blank if you haven’t decided on that yet)",
-            "type": "text",
-            "required": false
-        }, {
-            "name": "school-year",
-            "label": "What is your year in school?",
-            "type": "select",
-            "options": [
-                "First year",
-                "Second year",
-                "Third year",
-                "Fourth year",
-                "Fifth year+",
-                "Master's",
-                "PhD"
-            ],
-            "required": true
-        }, {
-            "name": "referrer",
-            "label": "How did you hear about HackGT 5?",
-            "type": "select",
-            "options": [
-                "",
-                "MLH",
-                "Friend",
-                "Facebook",
-                "Twitter",
-                "HackGT Website"
-            ],
-            "hasOther": true,
-            "required": true
-        }, {
-            "name": "hackathon-experience",
-            "label": "Have you attended HackGT or any other hackathons in the past? If so, tell us about your experience.",
-            "type": "textarea",
-            "required": true
-        },             {
-            "name": "volunteer-role",
-            "label": "What role do you want as a volunteer?",
-            "type": "radio",
-            "options": [
-                "Core",
-                "General"
-            ],
-            "required": true
-        },
-        {
-            "name": "why-you",
-            "label": "Why do you think you’ll be a good volunteer?",
-            "type": "textarea",
-            "required": true
-        },
-        {
-            "name": "example-experience",
-            "label": "Describe a time when you have worked with someone different than yourself and what you learned during that experience",
-            "type": "textarea",
-            "required": true
-        },
-        {
-            "name": "example-disagreement",
-            "label": "Describe a situation when you did not agree with a decision being made by someone leading you and how you handled or responded to that situation",
-            "type": "textarea",
-            "required": true
-        },
-        {
-            "name": "hope-to-gain",
-            "label": "What do you hope to gain by volunteering at HackGT?",
-            "type": "textarea",
-            "required": true
-        },
-        {
-            "name": "tshirt-size",
-            "label": "What is your T-shirt size?",
-            "type": "radio",
-            "options": [
-                "Extra small",
-                "Small",
-                "Medium",
-                "Large",
-                "Extra large",
-                "2XL",
-                "3XL"
-            ],
-            "required": true
-        },  {
-            "name": "dietary-restrictions",
-            "label": "Do you have any dietary restrictions?",
-            "type": "checkbox",
-            "options": [
-                "Vegetarian",
-                "Vegan",
-                "Gluten-free",
-                "No pork",
-                "No beef"
-            ],
-            "hasOther": true,
-            "required": false
-        },
-        {
-            "name": "code-of-conduct",
-            "label": "Please confirm the following",
-            "type": "checkbox",
-            "options": [
-                "I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
-            ],
-            "required": true
-        }, {
-            "name": "privacy",
-            "label": "Please confirm the following",
-            "type": "checkbox",
-            "options": [
-                "I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
-            ],
-            "required": true
-        },
-        {
-            "name": "other",
-            "label": "Anything else you want us to know?",
-            "type": "textarea",
-            "required": false
-        }
-      ]
-    }
-  ]
+	{
+		"name": "Participant - Travel Reimbursement",
+		"text": [
+			{
+				"for": "18-and-gt-student",
+				"type": "p",
+				"content": "Due to institute policy, minors (under 18) that are not students at Georgia Tech may not attend HackGT."
+			},
+			{
+				"for": "type",
+				"type": "p",
+				"content": "For more information on the application process, please click [here](https://docs.google.com/document/d/1fhBZNRLnbBucnAyHCJhgcvhsyrkx4QMd9WRfBqYT6Qs/edit?usp=drive_web&ouid=113711619683399493560). \n\n Please see the [Travel Reimbursement Policy](https://docs.google.com/document/d/16uJuzuqMogFSOeEGRqUYLwGUmsy6NpeNMEQ7DzCtJ2g/edit?usp=sharing) for details on reimbursement amounts. Busses will be sent to schools that have a large volume of applicants, but please select your preferred reimbursement in the case that no bus is sent to your school."
+			}
+		],
+		"questions": [
+			{
+				"name": "type",
+				"label": "What type of travel reimbursement would you like?",
+				"type": "radio",
+				"options": [
+					"Flight Reimbursement",
+					"Rail (Amtrak) Reimbursement",
+					"Driving - Gas Reimbursement"
+				],
+				"required": true
+			},
+			{
+				"name": "18-and-gt-student",
+				"label": "Are you over 18 or a student at Georgia Tech?",
+				"type": "radio",
+				"options": [
+					"I am 18 or older.",
+					"I am under 18 and a Georgia Tech student."
+				],
+				"required": true
+			},
+			{
+				"name": "phone-number",
+				"label": "What’s a cell phone number we can contact you at during the event? (We will only use this for informational and emergency announcements)",
+				"type": "tel",
+				"required": true
+			},
+			{
+				"name": "school",
+				"label": "What college or university do you currently attend?",
+				"type": "select",
+				"options": [
+					"",
+					"Georgia Institute of Technology",
+					"Abraham Baldwin Agricultural College",
+					"Albany Medical College",
+					"Albany State University",
+					"Arizona State University",
+					"Armstrong State University",
+					"Atlanta Metropolitan State College",
+					"Auburn University",
+					"Augusta University",
+					"Bainbridge State College",
+					"Baylor College of Medicine",
+					"Baylor University",
+					"Binghamton University",
+					"Boston College",
+					"Boston University",
+					"Bowling Green State University",
+					"Brandeis University",
+					"Brigham Young University",
+					"Brown University",
+					"California Institute of Technology",
+					"Carnegie Mellon University",
+					"Case Western Reserve University",
+					"City College of New York",
+					"Clark Atlanta University",
+					"Clarkson University",
+					"Clayton State University",
+					"Clemson University",
+					"College of Coastal Georgia",
+					"College of William and Mary",
+					"Colorado School of Mines",
+					"Colorado State University",
+					"Columbia University",
+					"Columbus State University",
+					"Cornell University",
+					"Creighton University",
+					"Dalton State College",
+					"Dartmouth College",
+					"Darton State College",
+					"Drexel University",
+					"Duke University",
+					"East Carolina University",
+					"East Georgia State College",
+					"Emory University",
+					"Florida Atlantic University",
+					"Florida Institute of Technology",
+					"Florida International University",
+					"Florida State University",
+					"Fort Valley State University",
+					"George Mason University",
+					"George Washington University",
+					"Georgetown University",
+					"Georgia College & State University",
+					"Georgia Gwinnett College",
+					"Georgia Highlands College",
+					"Georgia Southern University",
+					"Georgia Southwestern State University",
+					"Georgia State University",
+					"Gordon State College",
+					"Harvard University",
+					"Howard University",
+					"Hunter College",
+					"Icahn School of Medicine at Mount Sinai",
+					"Illinois Institute of Technology",
+					"Indiana University - Bloomington",
+					"Indiana University-Purdue University Indianapolis",
+					"Iowa State University",
+					"Johns Hopkins University",
+					"Kansas State University",
+					"Kennesaw State University",
+					"Kent State University",
+					"Lehigh University",
+					"Loma Linda University",
+					"Louisiana State University",
+					"Louisiana Tech University",
+					"Loyola University Chicago",
+					"Marquette University",
+					"Massachusetts Institute of Technology",
+					"Medical College of Wisconsin",
+					"Medical University of South Carolina",
+					"Miami University",
+					"Michigan State University",
+					"Michigan Technological University",
+					"Middle Georgia State University",
+					"Mississippi State University",
+					"Missouri University of Science and Technology",
+					"Montana State University",
+					"Morehouse College",
+					"New Jersey Institute of Technology",
+					"New Mexico State University",
+					"New York Medical College",
+					"New York University",
+					"North Carolina State University",
+					"North Dakota State University",
+					"Northeastern University",
+					"Northern Arizona University",
+					"Northern Illinois University",
+					"Northwestern University",
+					"Oakland University",
+					"Ohio State University",
+					"Ohio University",
+					"Oklahoma State University",
+					"Old Dominion University",
+					"Oregon Health & Science University",
+					"Oregon State University",
+					"Pennsylvania State University",
+					"Portland State University",
+					"Princeton University",
+					"Purdue University",
+					"Queens College, City University of New York",
+					"Rensselaer Polytechnic Institute",
+					"Rice University",
+					"Rochester Institute of Technology",
+					"Rockefeller University",
+					"Rush University",
+					"Rutgers University",
+					"Saint Louis University",
+					"San Diego State University",
+					"San Francisco State University",
+					"Savannah State University",
+					"South Georgia State College",
+					"Southern Illinois University Carbondale",
+					"Southern Methodist University",
+					"Spelman College",
+					"Stanford University",
+					"Stony Brook University",
+					"Syracuse University",
+					"Temple University",
+					"Texas A&M University",
+					"Texas Tech University",
+					"The Catholic University of America",
+					"Thomas Jefferson University",
+					"Tufts University",
+					"Tulane University",
+					"Uniformed Services University of the Health Sciences",
+					"University at Albany, SUNY",
+					"University at Buffalo",
+					"University of Akron",
+					"University of Alabama - Tuscaloosa",
+					"University of Alabama at Birmingham",
+					"University of Alabama in Huntsville",
+					"University of Alaska Fairbanks",
+					"University of Arizona",
+					"University of Arkansas - Fayetteville",
+					"University of California, Berkeley",
+					"University of California, Davis",
+					"University of California, Irvine",
+					"University of California, Los Angeles",
+					"University of California, Merced",
+					"University of California, Riverside",
+					"University of California, San Diego",
+					"University of California, San Francisco",
+					"University of California, Santa Barbara",
+					"University of California, Santa Cruz",
+					"University of Central Florida",
+					"University of Chicago",
+					"University of Cincinnati",
+					"University of Colorado Boulder",
+					"University of Connecticut",
+					"University of Dayton",
+					"University of Delaware",
+					"University of Denver",
+					"University of Florida",
+					"University of Georgia",
+					"University of Hawaii at Manoa",
+					"University of Houston",
+					"University of Idaho",
+					"University of Illinois at Chicago",
+					"University of Illinois at Urbana–Champaign",
+					"University of Iowa",
+					"University of Kansas",
+					"University of Kentucky",
+					"University of Louisville",
+					"University of Maine",
+					"University of Maryland, Baltimore",
+					"University of Maryland, Baltimore County",
+					"University of Maryland, College Park",
+					"University of Massachusetts Amherst",
+					"University of Massachusetts Boston",
+					"University of Massachusetts Lowell",
+					"University of Memphis",
+					"University of Miami",
+					"University of Michigan",
+					"University of Minnesota",
+					"University of Mississippi",
+					"University of Missouri–Columbia",
+					"University of Missouri–Kansas City",
+					"University of Missouri–St. Louis",
+					"University of Montana",
+					"University of Nebraska–Lincoln",
+					"University of Nevada, Las Vegas",
+					"University of Nevada, Reno",
+					"University of New Hampshire",
+					"University of New Mexico",
+					"University of New Orleans",
+					"University of North Carolina at Chapel Hill",
+					"University of North Carolina at Charlotte",
+					"University of North Carolina at Greensboro",
+					"University of North Dakota",
+					"University of North Georgia",
+					"University of North Texas",
+					"University of Notre Dame",
+					"University of Oklahoma",
+					"University of Oregon",
+					"University of Pennsylvania",
+					"University of Pittsburgh",
+					"University of Rhode Island",
+					"University of Rochester",
+					"University of South Alabama",
+					"University of South Carolina",
+					"University of South Florida",
+					"University of Southern California",
+					"University of Southern Mississippi",
+					"University of Tennessee, Knoxville",
+					"University of Texas MD Anderson Cancer Center",
+					"University of Texas at Arlington",
+					"University of Texas at Austin",
+					"University of Texas at Dallas",
+					"University of Texas at El Paso",
+					"University of Texas at San Antonio",
+					"University of Toledo",
+					"University of Toronto",
+					"University of Utah",
+					"University of Vermont",
+					"University of Virginia",
+					"University of Washington",
+					"University of Waterloo",
+					"University of West Georgia",
+					"University of Wisconsin–Madison",
+					"University of Wisconsin–Milwaukee",
+					"University of Wyoming",
+					"Utah State University",
+					"Valdosta State University",
+					"Vanderbilt University",
+					"Virginia Commonwealth University",
+					"Virginia Polytechnic Institute and State University",
+					"Wake Forest University",
+					"Washington State University",
+					"Washington University in St. Louis",
+					"Wayne State University",
+					"Wesleyan University",
+					"West Virginia University",
+					"Wright State University",
+					"Yale University",
+					"Yeshiva University"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "school-year",
+				"label": "What is your year in school?",
+				"type": "select",
+				"options": [
+					"First year",
+					"Second year",
+					"Third year",
+					"Fourth year",
+					"Fifth year+",
+					"Master's",
+					"PhD"
+				],
+				"required": true
+			},
+			{
+				"name": "major",
+				"label": "What is your major?",
+				"type": "select",
+				"options": [
+					"",
+					"Accounting",
+					"Aerospace Engineering",
+					"Applied Physics",
+					"Architecture",
+					"Astronomy or Astrophysics",
+					"Biochemistry",
+					"Biology",
+					"Biomedical Engineering",
+					"Business",
+					"Chemical Engineering",
+					"Chemistry",
+					"Civil Engineering",
+					"Computational Media",
+					"Computer Engineering",
+					"Computer Science",
+					"Discrete Mathematics",
+					"Drama or Theater",
+					"Earth and Atmospheric Sciences",
+					"Economics",
+					"Electrical Engineering",
+					"English or Literature, Media, and Communication",
+					"Environmental Engineering",
+					"Film and Media Studies",
+					"Finance",
+					"Global Studies and Languages",
+					"History",
+					"Humanities",
+					"Industrial Design",
+					"Industrial Engineering",
+					"International Affairs or International Relations",
+					"Linguistics",
+					"Materials Science and Engineering",
+					"Mathematics",
+					"Mechanical Engineering",
+					"Music",
+					"Music Technology",
+					"Neuroscience",
+					"Nuclear and Radiological Engineering",
+					"Philosophy",
+					"Physics",
+					"Political Science",
+					"Psychology",
+					"Public Policy",
+					"Urban Planning"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "gender",
+				"label": "I identify as...",
+				"type": "radio",
+				"options": [
+					"Male",
+					"Female",
+					"Non-binary/third gender"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "race",
+				"label": "What is your race / ethnicity?",
+				"type": "checkbox",
+				"options": [
+					"Non-Hispanic White",
+					"Black or African American",
+					"Latino, Latina, or Hispanic American",
+					"South Asian or Indian American",
+					"East Asian or Asian American",
+					"Middle Eastern or Arab American",
+					"Native American or Alaskan Native",
+					"Hawaiian or Pacific Islander"
+				],
+				"hasOther": true,
+				"required": false
+			},
+			{
+				"name": "resume",
+				"label": "Please upload your resume.",
+				"type": "file",
+				"required": true
+			},
+			{
+				"name": "github",
+				"label": "GitHub profile",
+				"type": "url",
+				"required": false
+			},
+			{
+				"name": "website",
+				"label": "Personal website",
+				"type": "url",
+				"required": false
+			},
+			{
+				"name": "first-hackathon",
+				"label": "Have you attended a hackathon before?",
+				"type": "radio",
+				"options": [
+					"Yes, HackGT",
+					"Yes, Other",
+					"No"
+				],
+				"required": true
+			},
+			{
+				"name": "free-response-choice",
+				"label": "Please choose and answer one of the following questions. Answering both will not increase your chances of getting accepted to the event.",
+				"type": "radio",
+				"options": [
+					"What do you hope to learn at HackGT?",
+					"Describe a past project that you are proud of. It can be one that you worked on in any setting (hackathon, class, personal project, etc.)"
+				],
+				"required": true
+			},
+			{
+				"name": "free-response-answer",
+				"label": "Response to chosen prompt.",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "resources",
+				"label": "Help us help you, what resources would you like to see at HackGT?",
+				"type": "textarea",
+				"required": false
+			},
+			{
+				"name": "tshirt-size",
+				"label": "What is your T-shirt size?",
+				"type": "radio",
+				"options": [
+					"Extra small",
+					"Small",
+					"Medium",
+					"Large",
+					"Extra large",
+					"2XL",
+					"3XL"
+				],
+				"required": true
+			},
+			{
+				"name": "dietary-restrictions",
+				"label": "Do you have any dietary restrictions?",
+				"type": "checkbox",
+				"options": [
+					"Vegetarian",
+					"Vegan",
+					"Gluten-free",
+					"No pork",
+					"No beef"
+				],
+				"hasOther": true,
+				"required": false
+			},
+			{
+				"name": "referrer",
+				"label": "How did you hear about HackGT 5?",
+				"type": "select",
+				"options": [
+					"",
+					"MLH",
+					"Friend",
+					"Facebook",
+					"Twitter",
+					"HackGT Website"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "employment",
+				"label": "Are you interested in:",
+				"type": "checkbox",
+				"options": [
+					"Internship / Co-op Spring 2019",
+					"Internship / Co-op Summer 2019",
+					"Full time 2019"
+				],
+				"required": false
+			},
+			{
+				"name": "employment-free-response",
+				"label": "If you responded to the above question, what kinds of opportunities are you looking for? Respond with N/A if not applicable.",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "code-of-conduct",
+				"label": "Please confirm the following",
+				"type": "checkbox",
+				"options": [
+					"I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
+				],
+				"required": true
+			},
+			{
+				"name": "privacy",
+				"label": "Please confirm the following",
+				"type": "checkbox",
+				"options": [
+					"I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
+				],
+				"required": true
+			},
+			{
+				"name": "other",
+				"label": "Anything else you want us to know?",
+				"type": "textarea",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "Participant - No Travel Reimbursement",
+		"text": [
+			{
+				"for": "18-and-gt-student",
+				"type": "p",
+				"content": "For more information on the application process, please click [here](https://docs.google.com/document/d/1fhBZNRLnbBucnAyHCJhgcvhsyrkx4QMd9WRfBqYT6Qs/edit?usp=drive_web&ouid=113711619683399493560). \n\n Due to institute policy, minors (under 18) that are not students at Georgia Tech may not attend HackGT."
+			}
+		],
+		"questions": [
+			{
+				"name": "18-and-gt-student",
+				"label": "Are you over 18 or a student at Georgia Tech?",
+				"type": "radio",
+				"options": [
+					"I am 18 or older.",
+					"I am under 18 and a Georgia Tech student."
+				],
+				"required": true
+			},
+			{
+				"name": "phone-number",
+				"label": "What’s a cell phone number we can contact you at during the event? (We will only use this for informational and emergency announcements)",
+				"type": "tel",
+				"required": true
+			},
+			{
+				"name": "school",
+				"label": "What college or university do you currently attend?",
+				"type": "select",
+				"options": [
+					"",
+					"Georgia Institute of Technology",
+					"Abraham Baldwin Agricultural College",
+					"Albany Medical College",
+					"Albany State University",
+					"Arizona State University",
+					"Armstrong State University",
+					"Atlanta Metropolitan State College",
+					"Auburn University",
+					"Augusta University",
+					"Bainbridge State College",
+					"Baylor College of Medicine",
+					"Baylor University",
+					"Binghamton University",
+					"Boston College",
+					"Boston University",
+					"Bowling Green State University",
+					"Brandeis University",
+					"Brigham Young University",
+					"Brown University",
+					"California Institute of Technology",
+					"Carnegie Mellon University",
+					"Case Western Reserve University",
+					"City College of New York",
+					"Clark Atlanta University",
+					"Clarkson University",
+					"Clayton State University",
+					"Clemson University",
+					"College of Coastal Georgia",
+					"College of William and Mary",
+					"Colorado School of Mines",
+					"Colorado State University",
+					"Columbia University",
+					"Columbus State University",
+					"Cornell University",
+					"Creighton University",
+					"Dalton State College",
+					"Dartmouth College",
+					"Darton State College",
+					"Drexel University",
+					"Duke University",
+					"East Carolina University",
+					"East Georgia State College",
+					"Emory University",
+					"Florida Atlantic University",
+					"Florida Institute of Technology",
+					"Florida International University",
+					"Florida State University",
+					"Fort Valley State University",
+					"George Mason University",
+					"George Washington University",
+					"Georgetown University",
+					"Georgia College & State University",
+					"Georgia Gwinnett College",
+					"Georgia Highlands College",
+					"Georgia Southern University",
+					"Georgia Southwestern State University",
+					"Georgia State University",
+					"Gordon State College",
+					"Harvard University",
+					"Howard University",
+					"Hunter College",
+					"Icahn School of Medicine at Mount Sinai",
+					"Illinois Institute of Technology",
+					"Indiana University - Bloomington",
+					"Indiana University-Purdue University Indianapolis",
+					"Iowa State University",
+					"Johns Hopkins University",
+					"Kansas State University",
+					"Kennesaw State University",
+					"Kent State University",
+					"Lehigh University",
+					"Loma Linda University",
+					"Louisiana State University",
+					"Louisiana Tech University",
+					"Loyola University Chicago",
+					"Marquette University",
+					"Massachusetts Institute of Technology",
+					"Medical College of Wisconsin",
+					"Medical University of South Carolina",
+					"Miami University",
+					"Michigan State University",
+					"Michigan Technological University",
+					"Middle Georgia State University",
+					"Mississippi State University",
+					"Missouri University of Science and Technology",
+					"Montana State University",
+					"Morehouse College",
+					"New Jersey Institute of Technology",
+					"New Mexico State University",
+					"New York Medical College",
+					"New York University",
+					"North Carolina State University",
+					"North Dakota State University",
+					"Northeastern University",
+					"Northern Arizona University",
+					"Northern Illinois University",
+					"Northwestern University",
+					"Oakland University",
+					"Ohio State University",
+					"Ohio University",
+					"Oklahoma State University",
+					"Old Dominion University",
+					"Oregon Health & Science University",
+					"Oregon State University",
+					"Pennsylvania State University",
+					"Portland State University",
+					"Princeton University",
+					"Purdue University",
+					"Queens College, City University of New York",
+					"Rensselaer Polytechnic Institute",
+					"Rice University",
+					"Rochester Institute of Technology",
+					"Rockefeller University",
+					"Rush University",
+					"Rutgers University",
+					"Saint Louis University",
+					"San Diego State University",
+					"San Francisco State University",
+					"Savannah State University",
+					"South Georgia State College",
+					"Southern Illinois University Carbondale",
+					"Southern Methodist University",
+					"Spelman College",
+					"Stanford University",
+					"Stony Brook University",
+					"Syracuse University",
+					"Temple University",
+					"Texas A&M University",
+					"Texas Tech University",
+					"The Catholic University of America",
+					"Thomas Jefferson University",
+					"Tufts University",
+					"Tulane University",
+					"Uniformed Services University of the Health Sciences",
+					"University at Albany, SUNY",
+					"University at Buffalo",
+					"University of Akron",
+					"University of Alabama - Tuscaloosa",
+					"University of Alabama at Birmingham",
+					"University of Alabama in Huntsville",
+					"University of Alaska Fairbanks",
+					"University of Arizona",
+					"University of Arkansas - Fayetteville",
+					"University of California, Berkeley",
+					"University of California, Davis",
+					"University of California, Irvine",
+					"University of California, Los Angeles",
+					"University of California, Merced",
+					"University of California, Riverside",
+					"University of California, San Diego",
+					"University of California, San Francisco",
+					"University of California, Santa Barbara",
+					"University of California, Santa Cruz",
+					"University of Central Florida",
+					"University of Chicago",
+					"University of Cincinnati",
+					"University of Colorado Boulder",
+					"University of Connecticut",
+					"University of Dayton",
+					"University of Delaware",
+					"University of Denver",
+					"University of Florida",
+					"University of Georgia",
+					"University of Hawaii at Manoa",
+					"University of Houston",
+					"University of Idaho",
+					"University of Illinois at Chicago",
+					"University of Illinois at Urbana–Champaign",
+					"University of Iowa",
+					"University of Kansas",
+					"University of Kentucky",
+					"University of Louisville",
+					"University of Maine",
+					"University of Maryland, Baltimore",
+					"University of Maryland, Baltimore County",
+					"University of Maryland, College Park",
+					"University of Massachusetts Amherst",
+					"University of Massachusetts Boston",
+					"University of Massachusetts Lowell",
+					"University of Memphis",
+					"University of Miami",
+					"University of Michigan",
+					"University of Minnesota",
+					"University of Mississippi",
+					"University of Missouri–Columbia",
+					"University of Missouri–Kansas City",
+					"University of Missouri–St. Louis",
+					"University of Montana",
+					"University of Nebraska–Lincoln",
+					"University of Nevada, Las Vegas",
+					"University of Nevada, Reno",
+					"University of New Hampshire",
+					"University of New Mexico",
+					"University of New Orleans",
+					"University of North Carolina at Chapel Hill",
+					"University of North Carolina at Charlotte",
+					"University of North Carolina at Greensboro",
+					"University of North Dakota",
+					"University of North Georgia",
+					"University of North Texas",
+					"University of Notre Dame",
+					"University of Oklahoma",
+					"University of Oregon",
+					"University of Pennsylvania",
+					"University of Pittsburgh",
+					"University of Rhode Island",
+					"University of Rochester",
+					"University of South Alabama",
+					"University of South Carolina",
+					"University of South Florida",
+					"University of Southern California",
+					"University of Southern Mississippi",
+					"University of Tennessee, Knoxville",
+					"University of Texas MD Anderson Cancer Center",
+					"University of Texas at Arlington",
+					"University of Texas at Austin",
+					"University of Texas at Dallas",
+					"University of Texas at El Paso",
+					"University of Texas at San Antonio",
+					"University of Toledo",
+					"University of Toronto",
+					"University of Utah",
+					"University of Vermont",
+					"University of Virginia",
+					"University of Washington",
+					"University of Waterloo",
+					"University of West Georgia",
+					"University of Wisconsin–Madison",
+					"University of Wisconsin–Milwaukee",
+					"University of Wyoming",
+					"Utah State University",
+					"Valdosta State University",
+					"Vanderbilt University",
+					"Virginia Commonwealth University",
+					"Virginia Polytechnic Institute and State University",
+					"Wake Forest University",
+					"Washington State University",
+					"Washington University in St. Louis",
+					"Wayne State University",
+					"Wesleyan University",
+					"West Virginia University",
+					"Wright State University",
+					"Yale University",
+					"Yeshiva University"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "school-year",
+				"label": "What is your year in school?",
+				"type": "select",
+				"options": [
+					"First year",
+					"Second year",
+					"Third year",
+					"Fourth year",
+					"Fifth year+",
+					"Master's",
+					"PhD"
+				],
+				"required": true
+			},
+			{
+				"name": "major",
+				"label": "What is your major?",
+				"type": "select",
+				"options": [
+					"",
+					"Accounting",
+					"Aerospace Engineering",
+					"Applied Physics",
+					"Architecture",
+					"Astronomy or Astrophysics",
+					"Biochemistry",
+					"Biology",
+					"Biomedical Engineering",
+					"Business",
+					"Chemical Engineering",
+					"Chemistry",
+					"Civil Engineering",
+					"Computational Media",
+					"Computer Engineering",
+					"Computer Science",
+					"Discrete Mathematics",
+					"Drama or Theater",
+					"Earth and Atmospheric Sciences",
+					"Economics",
+					"Electrical Engineering",
+					"English or Literature, Media, and Communication",
+					"Environmental Engineering",
+					"Film and Media Studies",
+					"Finance",
+					"Global Studies and Languages",
+					"History",
+					"Humanities",
+					"Industrial Design",
+					"Industrial Engineering",
+					"International Affairs or International Relations",
+					"Linguistics",
+					"Materials Science and Engineering",
+					"Mathematics",
+					"Mechanical Engineering",
+					"Music",
+					"Music Technology",
+					"Neuroscience",
+					"Nuclear and Radiological Engineering",
+					"Philosophy",
+					"Physics",
+					"Political Science",
+					"Psychology",
+					"Public Policy",
+					"Urban Planning"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "gender",
+				"label": "I identify as...",
+				"type": "radio",
+				"options": [
+					"Male",
+					"Female",
+					"Non-binary/third gender"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "race",
+				"label": "What is your race / ethnicity?",
+				"type": "checkbox",
+				"options": [
+					"Non-Hispanic White",
+					"Black or African American",
+					"Latino, Latina, or Hispanic American",
+					"South Asian or Indian American",
+					"East Asian or Asian American",
+					"Middle Eastern or Arab American",
+					"Native American or Alaskan Native",
+					"Hawaiian or Pacific Islander"
+				],
+				"hasOther": true,
+				"required": false
+			},
+			{
+				"name": "resume",
+				"label": "Please upload your resume.",
+				"type": "file",
+				"required": true
+			},
+			{
+				"name": "github",
+				"label": "GitHub profile",
+				"type": "url",
+				"required": false
+			},
+			{
+				"name": "website",
+				"label": "Personal website",
+				"type": "url",
+				"required": false
+			},
+			{
+				"name": "first-hackathon",
+				"label": "Have you attended a hackathon before?",
+				"type": "radio",
+				"options": [
+					"Yes, HackGT",
+					"Yes, Other",
+					"No"
+				],
+				"required": true
+			},
+			{
+				"name": "free-response-choice",
+				"label": "Please choose and answer one of the following questions. Answering both will not increase your chances of getting accepted to the event.",
+				"type": "radio",
+				"options": [
+					"What do you hope to learn at HackGT?",
+					"Describe a past project that you are proud of. It can be one that you worked on in any setting (hackathon, class, personal project, etc.)"
+				],
+				"required": true
+			},
+			{
+				"name": "free-response-answer",
+				"label": "Response to chosen prompt.",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "resources",
+				"label": "Help us help you, what resources would you like to see at HackGT?",
+				"type": "textarea",
+				"required": false
+			},
+			{
+				"name": "tshirt-size",
+				"label": "What is your T-shirt size?",
+				"type": "radio",
+				"options": [
+					"Extra small",
+					"Small",
+					"Medium",
+					"Large",
+					"Extra large",
+					"2XL",
+					"3XL"
+				],
+				"required": true
+			},
+			{
+				"name": "dietary-restrictions",
+				"label": "Do you have any dietary restrictions?",
+				"type": "checkbox",
+				"options": [
+					"Vegetarian",
+					"Vegan",
+					"Gluten-free",
+					"No pork",
+					"No beef"
+				],
+				"hasOther": true,
+				"required": false
+			},
+			{
+				"name": "referrer",
+				"label": "How did you hear about HackGT 5?",
+				"type": "select",
+				"options": [
+					"",
+					"MLH",
+					"Friend",
+					"Facebook",
+					"Twitter",
+					"HackGT Website",
+					"FASET"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "employment",
+				"label": "Are you interested in:",
+				"type": "checkbox",
+				"options": [
+					"Internship / Co-op Spring 2019",
+					"Internship / Co-op Summer 2019",
+					"Full time 2019"
+				],
+				"required": false
+			},
+			{
+				"name": "employment-free-response",
+				"label": "If you responded to the above question, what kinds of opportunities are you looking for? Respond with N/A if not applicable.",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "code-of-conduct",
+				"label": "Please confirm the following",
+				"type": "checkbox",
+				"options": [
+					"I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
+				],
+				"required": true
+			},
+			{
+				"name": "privacy",
+				"label": "Please confirm the following",
+				"type": "checkbox",
+				"options": [
+					"I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
+				],
+				"required": true
+			},
+			{
+				"name": "other",
+				"label": "Anything else you want us to know?",
+				"type": "textarea",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "Mentor",
+		"text": [
+			{
+				"for": "phone-number",
+				"type": "p",
+				"content": "Please be advised that travel reimbursement is not available for volunteers or mentors."
+			}
+		],
+		"questions": [
+			{
+				"name": "phone-number",
+				"label": "What’s a cell phone number we can contact you at during the event? (We will only use this for informational and emergency announcements)",
+				"type": "tel",
+				"required": true
+			},
+			{
+				"name": "gender",
+				"label": "I identify as...",
+				"type": "radio",
+				"options": [
+					"Male",
+					"Female",
+					"Non-binary/third gender"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "race",
+				"label": "What is your race / ethnicity?",
+				"type": "checkbox",
+				"options": [
+					"Non-Hispanic White",
+					"Black or African American",
+					"Latino, Latina, or Hispanic American",
+					"South Asian or Indian American",
+					"East Asian or Asian American",
+					"Middle Eastern or Arab American",
+					"Native American or Alaskan Native",
+					"Hawaiian or Pacific Islander"
+				],
+				"hasOther": true,
+				"required": false
+			},
+			{
+				"name": "major",
+				"label": "What is your major?",
+				"type": "select",
+				"options": [
+					"",
+					"Accounting",
+					"Aerospace Engineering",
+					"Applied Physics",
+					"Architecture",
+					"Astronomy or Astrophysics",
+					"Biochemistry",
+					"Biology",
+					"Biomedical Engineering",
+					"Business",
+					"Chemical Engineering",
+					"Chemistry",
+					"Civil Engineering",
+					"Computational Media",
+					"Computer Engineering",
+					"Computer Science",
+					"Discrete Mathematics",
+					"Drama or Theater",
+					"Earth and Atmospheric Sciences",
+					"Economics",
+					"Electrical Engineering",
+					"English or Literature, Media, and Communication",
+					"Environmental Engineering",
+					"Film and Media Studies",
+					"Finance",
+					"Global Studies and Languages",
+					"History",
+					"Humanities",
+					"Industrial Design",
+					"Industrial Engineering",
+					"International Affairs or International Relations",
+					"Linguistics",
+					"Materials Science and Engineering",
+					"Mathematics",
+					"Mechanical Engineering",
+					"Music",
+					"Music Technology",
+					"Neuroscience",
+					"Nuclear and Radiological Engineering",
+					"Philosophy",
+					"Physics",
+					"Political Science",
+					"Psychology",
+					"Public Policy",
+					"Urban Planning"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "is-student",
+				"label": "Are you currently a student?",
+				"type": "radio",
+				"options": [
+					"Yes",
+					"No (resume contains details)"
+				],
+				"required": true
+			},
+			{
+				"name": "resume",
+				"label": "Please upload your resume.",
+				"type": "file",
+				"required": true
+			},
+			{
+				"name": "mentored-hackgt-before",
+				"label": "Have you mentored HackGT before?",
+				"type": "radio",
+				"options": [
+					"Yes",
+					"No"
+				],
+				"required": true
+			},
+			{
+				"name": "topics",
+				"label": "What topics are you comfortable mentoring in? Please list most proficient first.",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "path",
+				"label": "Which of our four paths do you feel comfortable mentoring? This can include hosting workshops and leading campsites (please refer to the FAQ for more details).",
+				"type": "checkbox",
+				"options": [
+					"Mobile Development",
+					"Security",
+					"Artificial Intelligence",
+					"Web Development"
+				],
+				"required": false
+			},
+			{
+				"name": "why-mentor",
+				"label": "Why would you rather mentor than participate? (Elaborate on past experiences and what you hope to see at HackGT)",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "links",
+				"label": "Links (Github, LinkedIn, etc..)",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "workshop",
+				"label": "Would you be willing to hold a workshop? If so, about what?",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "judging",
+				"label": "Are interested in being a judge at HackGT?",
+				"type": "radio",
+				"options": [
+					"Yes",
+					"No"
+				],
+				"required": true
+			},
+			{
+				"name": "tshirt-size",
+				"label": "What is your T-shirt size?",
+				"type": "radio",
+				"options": [
+					"Extra small",
+					"Small",
+					"Medium",
+					"Large",
+					"Extra large",
+					"2XL",
+					"3XL"
+				],
+				"required": true
+			},
+			{
+				"name": "dietary-restrictions",
+				"label": "Do you have any dietary restrictions?",
+				"type": "checkbox",
+				"options": [
+					"Vegetarian",
+					"Vegan",
+					"Gluten-free",
+					"No pork",
+					"No beef"
+				],
+				"hasOther": true,
+				"required": false
+			},
+			{
+				"name": "code-of-conduct",
+				"label": "Please confirm the following",
+				"type": "checkbox",
+				"options": [
+					"I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
+				],
+				"required": true
+			},
+			{
+				"name": "privacy",
+				"label": "Please confirm the following",
+				"type": "checkbox",
+				"options": [
+					"I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
+				],
+				"required": true
+			},
+			{
+				"name": "future-opportunities",
+				"label": "Would you be interested in future mentorship / volunteering opportunities?",
+				"type": "radio",
+				"options": [
+					"Yes",
+					"No"
+				],
+				"required": true
+			},
+			{
+				"name": "other",
+				"label": "Anything else you want us to know?",
+				"type": "textarea",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "Volunteer",
+		"text": [
+			{
+				"for": "phone-number",
+				"type": "p",
+				"content": "Please be advised that travel reimbursement is not available for volunteers or mentors."
+			},
+			{
+				"for": "volunteer-role",
+				"type": "h3",
+				"content": "Volunteer Type"
+			},
+			{
+				"for": "volunteer-role",
+				"type": "p",
+				"content": "We have two types of volunteering positions you may apply for: Core Volunteers and General Volunteers."
+			},
+			{
+				"for": "volunteer-role",
+				"type": "h5",
+				"content": "Core Volunteer"
+			},
+			{
+				"for": "volunteer-role",
+				"type": "p",
+				"content": "Responsibilities may include being assigned to a major role during the event, leading other volunteers, providing communication between teams of volunteers, other volunteer leaders, and organizers, and will require more time commitment- including attending a training session prior to the event and being present at the event for an extended period of time."
+			},
+			{
+				"for": "volunteer-role",
+				"type": "h5",
+				"content": "General Volunteer"
+			},
+			{
+				"for": "volunteer-role",
+				"type": "p",
+				"content": "Responsibilities may include venue setup/teardown, working the Registration desk, food setup/clean up, working the Help and Hardware desk. The time commitment includes attending a training session prior to event and being present during peak hours."
+			}
+		],
+		"questions": [
+			{
+				"name": "phone-number",
+				"label": "What’s a cell phone number we can contact you at during the event? (We will only use this for informational and emergency announcements)",
+				"type": "tel",
+				"required": true
+			},
+			{
+				"name": "gender",
+				"label": "I identify as...",
+				"type": "radio",
+				"options": [
+					"Male",
+					"Female",
+					"Non-binary/third gender"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "race",
+				"label": "What is your race / ethnicity?",
+				"type": "checkbox",
+				"options": [
+					"Non-Hispanic White",
+					"Black or African American",
+					"Latino, Latina, or Hispanic American",
+					"South Asian or Indian American",
+					"East Asian or Asian American",
+					"Middle Eastern or Arab American",
+					"Native American or Alaskan Native",
+					"Hawaiian or Pacific Islander"
+				],
+				"hasOther": true,
+				"required": false
+			},
+			{
+				"name": "major",
+				"label": "What is your major?",
+				"type": "select",
+				"options": [
+					"",
+					"Accounting",
+					"Aerospace Engineering",
+					"Applied Physics",
+					"Architecture",
+					"Astronomy or Astrophysics",
+					"Biochemistry",
+					"Biology",
+					"Biomedical Engineering",
+					"Business",
+					"Chemical Engineering",
+					"Chemistry",
+					"Civil Engineering",
+					"Computational Media",
+					"Computer Engineering",
+					"Computer Science",
+					"Discrete Mathematics",
+					"Drama or Theater",
+					"Earth and Atmospheric Sciences",
+					"Economics",
+					"Electrical Engineering",
+					"English or Literature, Media, and Communication",
+					"Environmental Engineering",
+					"Film and Media Studies",
+					"Finance",
+					"Global Studies and Languages",
+					"History",
+					"Humanities",
+					"Industrial Design",
+					"Industrial Engineering",
+					"International Affairs or International Relations",
+					"Linguistics",
+					"Materials Science and Engineering",
+					"Mathematics",
+					"Mechanical Engineering",
+					"Music",
+					"Music Technology",
+					"Neuroscience",
+					"Nuclear and Radiological Engineering",
+					"Philosophy",
+					"Physics",
+					"Political Science",
+					"Psychology",
+					"Public Policy",
+					"Urban Planning"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "career",
+				"label": "What are your career aspirations within that field? (it’s okay to leave this part blank if you haven’t decided on that yet)",
+				"type": "text",
+				"required": false
+			},
+			{
+				"name": "school-year",
+				"label": "What is your year in school?",
+				"type": "select",
+				"options": [
+					"First year",
+					"Second year",
+					"Third year",
+					"Fourth year",
+					"Fifth year+",
+					"Master's",
+					"PhD"
+				],
+				"required": true
+			},
+			{
+				"name": "referrer",
+				"label": "How did you hear about HackGT 5?",
+				"type": "select",
+				"options": [
+					"",
+					"MLH",
+					"Friend",
+					"Facebook",
+					"Twitter",
+					"HackGT Website"
+				],
+				"hasOther": true,
+				"required": true
+			},
+			{
+				"name": "hackathon-experience",
+				"label": "Have you attended HackGT or any other hackathons in the past? If so, tell us about your experience.",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "volunteer-role",
+				"label": "What role do you want as a volunteer?",
+				"type": "radio",
+				"options": [
+					"Core",
+					"General"
+				],
+				"required": true
+			},
+			{
+				"name": "why-you",
+				"label": "Why do you think you’ll be a good volunteer?",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "example-experience",
+				"label": "Describe a time when you have worked with someone different than yourself and what you learned during that experience",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "example-disagreement",
+				"label": "Describe a situation when you did not agree with a decision being made by someone leading you and how you handled or responded to that situation",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "hope-to-gain",
+				"label": "What do you hope to gain by volunteering at HackGT?",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "tshirt-size",
+				"label": "What is your T-shirt size?",
+				"type": "radio",
+				"options": [
+					"Extra small",
+					"Small",
+					"Medium",
+					"Large",
+					"Extra large",
+					"2XL",
+					"3XL"
+				],
+				"required": true
+			},
+			{
+				"name": "dietary-restrictions",
+				"label": "Do you have any dietary restrictions?",
+				"type": "checkbox",
+				"options": [
+					"Vegetarian",
+					"Vegan",
+					"Gluten-free",
+					"No pork",
+					"No beef"
+				],
+				"hasOther": true,
+				"required": false
+			},
+			{
+				"name": "code-of-conduct",
+				"label": "Please confirm the following",
+				"type": "checkbox",
+				"options": [
+					"I have read and agree to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)."
+				],
+				"required": true
+			},
+			{
+				"name": "privacy",
+				"label": "Please confirm the following",
+				"type": "checkbox",
+				"options": [
+					"I authorize HackGT to share my application and registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the [MLH Privacy Policy](https://mlh.io/privacy). I further agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions)."
+				],
+				"required": true
+			},
+			{
+				"name": "other",
+				"label": "Anything else you want us to know?",
+				"type": "textarea",
+				"required": false
+			}
+		]
+	},
+	{
+		"name": "Accepted / Flight or Rail Reimbursement",
+		"text": [
+			{
+				"for": "confirmation",
+				"type": "h5",
+				"content": "Note that opening ceremonies will begin at approximately 6:30pm on Friday, October 19th and closing ceremonies will end at approximately 3:30pm on Sunday, October 21st"
+			},
+			{
+				"for": "receipt1",
+				"type": "h5",
+				"content": "Please upload your flight / rail receipt below"
+			},
+			{
+				"for": "receipt1",
+				"type": "p",
+				"content": "(**Note**: We will not accept receipts submitted after **Wednesday, August 29th** at 11:59pm EDT)"
+			},
+			{
+				"for": "receipt-confirmation",
+				"type": "h5",
+				"content": "Please confirm some things for us"
+			}
+		],
+		"questions": [
+			{
+				"name": "confirmation",
+				"label": "Will you be attending HackGT this year on October 19th to 21st?",
+				"type": "radio",
+				"options": [
+					"Yes, I'll be there!",
+					"Sorry, I can't make it"
+				],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "receipt1",
+				"label": "Flight / Rail receipt",
+				"type": "file",
+				"required": true
+			},
+			{
+				"name": "receipt-confirmation",
+				"label": "I understand that my travel reimbursement will only be awarded after HackGT has verified that I submitted and demoed a project at HackGT.",
+				"type": "checkbox",
+				"options": [
+					"Yes, I understand"
+				],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "required-items",
+				"label": "Please confirm the following:",
+				"type": "checkbox",
+				"options": [
+					"I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+					"I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
+					"I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/103KARTtr9Gm59WNaWwiPVjXiYPmy9G70/view)",
+					"I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view)"
+				],
+				"hasOther": false,
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "Accepted / Driving Reimbursement",
+		"text": [
+			{
+				"for": "confirmation",
+				"type": "h5",
+				"content": "Note that opening ceremonies will begin at approximately 6:30pm on Friday, October 19th and closing ceremonies will end at approximately 3:30pm on Sunday, October 21st"
+			},
+			{
+				"for": "driving-route",
+				"type": "h5",
+				"content": "Please upload a PDF print-out of your planned Google Maps route with milage"
+			},
+			{
+				"for": "driving-route",
+				"type": "p",
+				"content": "**Note**: Only the driver should upload a receipt. We are reimbursing at a rate of 12 cents/mile based on your location with incentives for carpooling. See our [Travel Reimbursement Policy](https://docs.google.com/document/d/16uJuzuqMogFSOeEGRqUYLwGUmsy6NpeNMEQ7DzCtJ2g/view) for more details."
+			},
+			{
+				"for": "receipt-confirmation",
+				"type": "h5",
+				"content": "Please confirm some things"
+			}
+		],
+		"questions": [
+			{
+				"name": "confirmation",
+				"label": "Will you be attending HackGT this year on October 19th to 21st?",
+				"type": "radio",
+				"options": [
+					"Yes, I'll be there!",
+					"Sorry, I can't make it"
+				],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "driving-route",
+				"label": "Google Maps route",
+				"type": "file",
+				"required": false
+			},
+			{
+				"name": "carpool-mates",
+				"label": "Fellow hackers you are carpooling with (comma-separated, put N/A if no one):",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "driving-route-confirmation",
+				"label": "I understand that my reimbursement will only be awarded after HackGT has verified that I submitted and demoed a project at HackGT.",
+				"type": "checkbox",
+				"options": [
+					"Yes, I understand"
+				],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "required-items",
+				"label": "Please confirm the following:",
+				"type": "checkbox",
+				"options": [
+					"I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+					"I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
+					"I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/103KARTtr9Gm59WNaWwiPVjXiYPmy9G70/view)",
+					"I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view)"
+				],
+				"hasOther": false,
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "Waitlisted / Travel Reimbursement",
+		"questions": [
+			{
+				"name": "confirmation",
+				"label": "I'd like to be put on the waitlist for HackGT 5. I understand that I might not receive the travel reimbursement that I requested.",
+				"type": "checkbox",
+				"options": [
+					"Yes, please!"
+				],
+				"hasOther": false,
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "Rejected / Travel Reimbursement",
+		"questions": [
+			{
+				"name": "confirmation",
+				"label": "Please reconsider me in the non-travel reimbursement application pool",
+				"type": "checkbox",
+				"options": [
+					"Yes, please!"
+				],
+				"hasOther": false,
+				"required": false
+			}
+		]
+	}
+]
