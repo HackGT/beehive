@@ -1,6 +1,6 @@
 git:
     remote: "https://github.com/hackgt/registration.git"
-    branch: "new_api"
+    branch: "remove-hacky-api"
 
 secrets-source: git-hackgt-registration-secrets
 deployment:
