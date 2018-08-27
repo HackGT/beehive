@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/hackgt2018-website.git"
-    branch: "patch-1"
-
-secrets-source: git-hackgt-hackgt2018-website-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: recreate
