@@ -1625,11 +1625,6 @@
 				"content": "Please upload your flight / rail receipt below"
 			},
 			{
-				"for": "receipt1",
-				"type": "p",
-				"content": "(**Note**: We will not accept receipts submitted after **Wednesday, August 29th** at 11:59pm EDT)"
-			},
-			{
 				"for": "receipt-confirmation",
 				"type": "h5",
 				"content": "Please confirm some things for us"
