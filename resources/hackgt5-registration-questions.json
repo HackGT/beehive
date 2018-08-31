@@ -1612,6 +1612,146 @@
 		]
 	},
 	{
+		"name": "Accepted from Waitlist / Flight or Rail Reimbursement",
+		"text": [
+			{
+				"for": "confirmation",
+				"type": "h5",
+				"content": "Note that opening ceremonies will begin at approximately 6:30pm on Friday, October 19th and closing ceremonies will end at approximately 3:30pm on Sunday, October 21st"
+			},
+			{
+				"for": "receipt1",
+				"type": "h5",
+				"content": "Please upload your flight / rail receipt below"
+			},
+			{
+				"for": "receipt1",
+				"type": "p",
+				"content": "(**Note**: We will not accept receipts submitted after **Wednesday, August 29th** at 11:59pm EDT)"
+			},
+			{
+				"for": "receipt-confirmation",
+				"type": "h5",
+				"content": "Please confirm some things for us"
+			}
+		],
+		"questions": [
+			{
+				"name": "confirmation",
+				"label": "Will you be attending HackGT this year on October 19th to 21st?",
+				"type": "radio",
+				"options": [
+					"Yes, I'll be there!",
+					"Sorry, I can't make it"
+				],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "receipt1",
+				"label": "Flight / Rail receipt",
+				"type": "file",
+				"required": true
+			},
+			{
+				"name": "receipt-confirmation",
+				"label": "I understand that my travel reimbursement will only be awarded after HackGT has verified that I submitted and demoed a project at HackGT.",
+				"type": "checkbox",
+				"options": [
+					"Yes, I understand"
+				],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "required-items",
+				"label": "Please confirm the following:",
+				"type": "checkbox",
+				"options": [
+					"I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+					"I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
+					"I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/103KARTtr9Gm59WNaWwiPVjXiYPmy9G70/view)",
+					"I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view)"
+				],
+				"hasOther": false,
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "Accepted from Waitlist / Driving Reimbursement",
+		"text": [
+			{
+				"for": "confirmation",
+				"type": "h5",
+				"content": "Note that opening ceremonies will begin at approximately 6:30pm on Friday, October 19th and closing ceremonies will end at approximately 3:30pm on Sunday, October 21st"
+			},
+			{
+				"for": "driving-route",
+				"type": "h5",
+				"content": "Please upload a PDF print-out of your planned Google Maps route with milage"
+			},
+			{
+				"for": "driving-route",
+				"type": "p",
+				"content": "**Note**: Only the driver should upload a receipt. We are reimbursing at a rate of 12 cents/mile based on your location with incentives for carpooling. See our [Travel Reimbursement Policy](https://docs.google.com/document/d/16uJuzuqMogFSOeEGRqUYLwGUmsy6NpeNMEQ7DzCtJ2g/view) for more details."
+			},
+			{
+				"for": "receipt-confirmation",
+				"type": "h5",
+				"content": "Please confirm some things"
+			}
+		],
+		"questions": [
+			{
+				"name": "confirmation",
+				"label": "Will you be attending HackGT this year on October 19th to 21st?",
+				"type": "radio",
+				"options": [
+					"Yes, I'll be there!",
+					"Sorry, I can't make it"
+				],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "driving-route",
+				"label": "Google Maps route",
+				"type": "file",
+				"required": false
+			},
+			{
+				"name": "carpool-mates",
+				"label": "Fellow hackers you are carpooling with (comma-separated, put N/A if no one):",
+				"type": "textarea",
+				"required": true
+			},
+			{
+				"name": "driving-route-confirmation",
+				"label": "I understand that my reimbursement will only be awarded after HackGT has verified that I submitted and demoed a project at HackGT.",
+				"type": "checkbox",
+				"options": [
+					"Yes, I understand"
+				],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "required-items",
+				"label": "Please confirm the following:",
+				"type": "checkbox",
+				"options": [
+					"I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+					"I agree to the terms of the [MLH Contest Terms and Conditions](https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md)",
+					"I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/103KARTtr9Gm59WNaWwiPVjXiYPmy9G70/view)",
+					"I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view)"
+				],
+				"hasOther": false,
+				"required": true
+			}
+		]
+	},
+	{
 		"name": "Accepted / Driving Reimbursement",
 		"text": [
 			{
