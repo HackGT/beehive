@@ -1,0 +1,3 @@
+git: https://github.com/HackGT/hackgteeny2018-website.git
+deployment:
+  memory_request: '15Mi'
