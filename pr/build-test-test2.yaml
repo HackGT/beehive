@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/build-test.git"
+    branch: "test2"
+
+secrets-source: git-hackgt-build-test-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
