@@ -238,7 +238,7 @@ def load_app_data(data, app_config, dome_name, app_name, path)
   data[dome_name]['apps'][app_name]['git']['rev'] = git_rev
   data[dome_name]['apps'][app_name]['shortname'] = shortname
   data[dome_name]['apps'][app_name]['docker-tag'] = docker_tag
-  data[dome_name]['apps'][app_name]['default_image_name'] = `#{org_name.downcase}/#{repo_name.downcase}:#{docker_tag}`
+  data[dome_name]['apps'][app_name]['default_image_name'] = "#{org_name.downcase}/#{repo_name.downcase}:#{docker_tag}"
   data[dome_name]['apps'][app_name]['uid'] = uid
   data[dome_name]['apps'][app_name]['suid'] = suid
   data[dome_name]['apps'][app_name]['host'] = host.downcase
