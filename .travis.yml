@@ -8,6 +8,8 @@ addons:
   apt:
     packages:
     - libmagic-dev
+before_install:
+  - echo -e "machine github.com\n  login $GH_TOKEN\n  password $GH_TOKEN" > ~/.netrc
 script: |
   (
   set -exuo pipefail
