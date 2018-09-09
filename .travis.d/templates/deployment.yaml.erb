@@ -39,7 +39,7 @@ spec:
                 value: <%= app['uid'] %>
           <% end %>
         containers:
-          - image: <%= app['image_name'] or app['default_image_name'] %> app['git']['user'] %>/<%= app['git']['shortname'] %>:<%= app['docker-tag'] %>
+          - image: <%= app['image_name'] or app['default_image_name'] %>
             imagePullPolicy: Always
             resources:
               limits:
