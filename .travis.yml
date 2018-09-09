@@ -10,6 +10,7 @@ addons:
     - libmagic-dev
 before_install:
   - echo -e "machine github.com\n  login $GH_TOKEN\n  password $GH_TOKEN" > ~/.netrc
+  - chmod 600 ~/.netrc
 script: |
   (
   set -exuo pipefail
