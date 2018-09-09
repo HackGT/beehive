@@ -1,0 +1,9 @@
+git: https://github.com/HackGT/application-bot.git
+image_name: gcr.io/hackgt-cluster/application-bot
+secrets:
+  - ADMIN_KEY_SECRET
+  - BOT_TOKEN
+  - VERIFICATION_TOKEN
+  - SLACK_CHANNEL_ID
+  - BOT_ID
+  - MONGO_URL
