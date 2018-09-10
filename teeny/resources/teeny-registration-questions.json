@@ -113,7 +113,8 @@
                 "options": [
                     "I want to get started with learning Computer Science skills",
                     "I'm preparing myself for the career fair",
-                    "I'm preparing myself to get an internship this next summer"
+                    "I'm preparing myself to get an internship this next summer",
+                    "I'm preparing for HackGT 5"
                 ],
                 "required": false,
                 "hasOther": true
@@ -123,6 +124,19 @@
                 "label": "What do you hope to get out of this event?",
                 "type": "textarea",
                 "required": true
+            }, 
+            {
+                "name": "referrer",
+                "label": "How did you hear about HackGTeeny?",
+                "type": "radio",
+                "options": [
+                    "Friend",
+                    "Facebook",
+                    "Twitter",
+                    "HackGT Website",
+                    "Email"
+                ],
+                "hasOther": true
             }
         ]
     }
