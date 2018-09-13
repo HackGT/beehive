@@ -3,3 +3,7 @@ git:
     branch: "faster-login"
 
 secrets-source: git-hackgt-checkin2-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
