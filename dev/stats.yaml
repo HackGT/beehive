@@ -1,0 +1,6 @@
+git: https://github.com/HackGT/statgt-api.git
+image_name: gcr.io/hackgt-cluster/statgt-api
+target_port: 5000
+secrets:
+  - ADMIN_KEY_SECRET
+  - REGISTRATION_GRAPHQL
