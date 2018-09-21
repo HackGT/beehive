@@ -7,7 +7,7 @@ deployment:
   replicas: 1
 
 env:
-  EVENT_NAME: "HackGT 5: Dare to Venture"
+  EVENT_NAME: "[TEST] HackGT 5: Dare to Venture"
   PRODUCTION: true
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-2018"
 
