@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/checkin2.git"
-    branch: "update_api"
-
-secrets-source: git-hackgt-checkin2-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: recreate
