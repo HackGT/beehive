@@ -1860,18 +1860,13 @@
 		],
 		"questions": [
 			{
-				"name": "will-attend",
-				"label": "In order to accommodate as many adventurers as possible, you must check in between 5:30 pm and 7:30 pm on October 19th in Georgia Tech’s Student Center Ballroom on the third floor.",
+				"name": "attendance-confirmation",
+				"label": "Congratulations on your acceptance to HackGT 5! Check-in will begin at 5:30 PM on October 19th on the third floor of the [Georgia Tech Student Center](https://goo.gl/maps/mAPzwtaNM2R2). Please confirm a few things for us:",
 				"type": "checkbox",
-				"options": ["I will be attending HackGT 5 from Friday, October 19th to Sunday, October 21st"],
-				"hasOther": false,
-				"required": true
-			},
-			{
-				"name": "will-check-in",
-				"label": "I acknowledge that I **must** check in between 5:30 pm and 7:30 pm on Friday, October 19th. I understand that if I do not check in between these times, I will forfeit my spot as a HackGT 5 participant and my spot will be given to someone else.",
-				"type": "checkbox",
-				"options": ["Yes, I understand"],
+				"options": [
+					"I will be attending HackGT 5 from Friday, October 19th to Sunday, October 21st",
+					"I acknowledge that I **must** check in between 5:30 PM and 7:30 PM on Friday, October 19th. I understand that if I do not check in between these times, I will forfeit my spot as a HackGT 5 participant and my spot will be given to someone else."
+				],
 				"hasOther": false,
 				"required": true
 			},
@@ -1891,7 +1886,7 @@
 			},
 			{
 				"name": "confirm-policies",
-				"label": "Please confirm the following",
+				"label": "Please confirm the following:",
 				"type": "checkbox",
 				"options": [
 					"I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)",
@@ -1899,6 +1894,21 @@
 					"I understand that a limited amount of content from my application for HackGT 5, including my resume, may be shared with HackGT sponsors"
 				],
 				"required": true
+			}
+		]
+	},
+	{
+		"name": "Waitlist / No Travel Reimbursement",
+		"questions": [
+			{
+				"name": "confirm-waitlist",
+				"label": "Would you like to be placed on the waitlist for HackGT 5? We'll let you know if you've been accepted before 9pm on Friday, October 19th.",
+				"type": "checkbox",
+				"options": [
+					"Yes, please!"
+				],
+				"hasOther": false,
+				"required": false
 			}
 		]
 	}
