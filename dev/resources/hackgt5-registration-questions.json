@@ -1848,5 +1848,68 @@
 				"required": false
 			}
 		]
+	},
+	{
+		"name": "Accepted / No Travel Reimbursement",
+		"text": [
+			{
+				"type": "h1",
+				"content": "Calling all adventurers!",
+				"for": "will-attend"
+			},
+			{
+				"type": "p",
+				"content": "In order to accommodate as many adventurers as possible, you must check in between 5:30 pm and 7:30 pm on October 19th in Georgia Tech’s Student Center Ballroom on the third floor.",
+				"for": "will-attend"
+			},
+			{
+				"type": "p",
+				"content": "We are hosting a team formation session at the beginning of the event! Let us know if you’re interested in attending.",
+				"for": "needs-team"
+			}
+		],
+		"questions": [
+			{
+				"name": "will-attend",
+				"label": "Will you be attending HackGT 5 from Friday, October 19th to Sunday, October 21st?",
+				"type": "checkbox",
+				"options": ["Yes, I'll be there!"],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "will-check-in",
+				"label": "I acknowledge that I **must** check in between 5:30 pm and 7:30 pm on Friday, October 19th. I understand that if I do not check in between these times, I will forfeit my spot as a HackGT 5 participant and my spot will be given to someone else.",
+				"type": "checkbox",
+				"options": ["Yes, I understand"],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "needs-team",
+				"label": "Are you looking for a team or want people to join your team?",
+				"type": "radio",
+				"options": ["Yes", "No"],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "previous-hackathon-experiences",
+				"label": "If you’ve attended a hackathon before, what did you like or dislike about your experience(s)?",
+				"type": "textarea",
+				"required": false
+			},
+			{
+				"name": "confirm-policies",
+				"label": "Please confirm the following",
+				"type": "checkbox",
+				"options": [
+					"I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)",
+					"I agree to the [HackGT Photo Release](https://drive.google.com/file/d/1tzw4I6ucBA0J6xvAvxOE2v0KAWM-WiiS/view?usp=drivesdk)",
+					"I understand that a limited amount of content from my application for HackGT 5 including my resume and email address may be shared with HackGT sponsors"
+				],
+				"required": true
+			}
+		]
 	}
 ]
