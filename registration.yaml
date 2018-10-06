@@ -5,8 +5,8 @@ wants:
     mongo: false
 deployment:
   replicas: 2
-  memory: '2000Mi'
-  memory_request: '1500Mi'
+  memory: '512Mi'
+  memory_request: '512Mi'
 
 env:
   EVENT_NAME: "HackGT 5: Dare to Venture"
