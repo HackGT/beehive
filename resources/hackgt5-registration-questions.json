@@ -1869,7 +1869,7 @@
 		"questions": [
 			{
 				"name": "attendance-confirmation",
-				"label": "Congratulations on your acceptance to HackGT 5! Check-in will begin at 5:30 PM on October 19th on the third floor of the [Georgia Tech Student Center](https://goo.gl/maps/mAPzwtaNM2R2). Please confirm a few things for us:",
+				"label": "Congratulations on your acceptance to HackGT 5! Check-in will begin at 5:30 PM on Friday, October 19th on the third floor of the [Georgia Tech Student Center](https://goo.gl/maps/mAPzwtaNM2R2). Please confirm a few things for us:",
 				"type": "checkbox",
 				"options": [
 					"I will be attending HackGT 5 from Friday, October 19th to Sunday, October 21st",
