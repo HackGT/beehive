@@ -4,7 +4,6 @@ git:
 wants:
     postgres: true
 deployment:
-  replicas: 3
   memory: '2048Mi'
   memory_request: '2048Mi'
 env:
