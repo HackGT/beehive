@@ -5,8 +5,8 @@ wants:
     postgres: true
 deployment:
   replicas: 3
-  memory: '1024Mi'
-  memory_request: '1024Mi'
+  memory: '2048Mi'
+  memory_request: '2048Mi'
 env:
   SERVER_ENV: "production"
   SERVER_PORT: "3000"
