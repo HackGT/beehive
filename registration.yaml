@@ -4,7 +4,7 @@ git:
 wants:
     mongo: false
 deployment:
-  replicas: 5
+  replicas: 2
   memory_request: '1500Mi'
 
 env:
