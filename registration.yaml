@@ -4,7 +4,8 @@ git:
 wants:
     mongo: false
 deployment:
-  replicas: 3
+  replicas: 5
+  memory_request: '1500Mi'
 
 env:
   EVENT_NAME: "HackGT 5: Dare to Venture"
