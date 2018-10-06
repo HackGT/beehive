@@ -5,6 +5,7 @@ wants:
     mongo: false
 deployment:
   replicas: 2
+  memory: '2000Mi'
   memory_request: '1500Mi'
 
 env:
