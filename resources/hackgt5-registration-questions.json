@@ -1869,7 +1869,7 @@
 		"questions": [
 			{
 				"name": "attendance-confirmation",
-				"label": "Congratulations on your acceptance to HackGT 5! Check-in will begin at 5:30 PM on October 19th on the third floor of the [Georgia Tech Student Center](https://goo.gl/maps/mAPzwtaNM2R2). Please confirm a few things for us:",
+				"label": "Congratulations on your acceptance to HackGT 5! Check-in will begin at 5:30 PM on Friday, October 19th on the third floor of the [Georgia Tech Student Center](https://goo.gl/maps/mAPzwtaNM2R2). Please confirm a few things for us:",
 				"type": "checkbox",
 				"options": [
 					"I will be attending HackGT 5 from Friday, October 19th to Sunday, October 21st",
@@ -2177,6 +2177,37 @@
 	},
 	{
 		"name": "Rejected / No Travel Reimbursement",
+		"questions": []
+	},
+	{
+		"name": "Accepted / Mentor",
+		"questions": [
+			{
+				"name": "attendance-confirmation",
+				"label": "Thank you for applying to be a mentor at HackGT 5! Check-in will begin at 5:30 PM on Friday, October 19th on the third floor of the [Georgia Tech Student Center](https://goo.gl/maps/mAPzwtaNM2R2). Please confirm a few things for us:",
+				"type": "checkbox",
+				"options": [
+					"I am available to be a mentor for HackGT 5 from Friday, October 19th to Sunday, October 21st",
+					"I acknowledge that I **must** check in between 5:30 PM and 7:30 PM on Friday, October 19th. Please email us at [hello@hack.gt](mailto:hello@hack.gt) if you will be unable to check-in during this window."
+				],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "confirm-policies",
+				"label": "Please confirm the following:",
+				"type": "checkbox",
+				"options": [
+					"I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/0B2pRUVzz8hWeUE9oaGxXNUxRTjg/view?usp=sharing)",
+					"I agree to the [HackGT Photo Release](https://drive.google.com/file/d/1tzw4I6ucBA0J6xvAvxOE2v0KAWM-WiiS/view?usp=drivesdk)",
+					"I understand that a limited amount of content from my application for HackGT 5, including my resume, may be shared with HackGT sponsors"
+				],
+				"required": true
+			}
+		]
+	},
+	{
+		"name": "Rejected / Mentor",
 		"questions": []
 	}
 ]
