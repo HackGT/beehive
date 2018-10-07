@@ -4,15 +4,14 @@ git:
 wants:
     postgres: true
 deployment:
-  replicas: 3
-  memory: '2048Mi'
-  memory_request: '2048Mi'
+  memory: '1024Mi'
+  memory_request: '1024Mi'
 env:
   SERVER_ENV: "production"
   SERVER_PORT: "3000"
   AUTH_EXP: "15m"
   AWS_SIGNED_URL_EXPIRES: "60"
   ZIP_EXPIRES: "600000"
-  ZIP_DIRECTORY: "/build/zips"
+  ZIP_DIRECTORY: "/zips"
   ZIP_DIRECTORY_CLEANUP_INTERVAL: "1800000"
   BULK_DOWNLOAD_LIMIT: "1000"
