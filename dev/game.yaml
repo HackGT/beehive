@@ -1,2 +1,2 @@
-git: https://github.com/HackGT/daretosither.git
-image_name: gcr.io/hackgt-cluster/daretosither
+git: https://github.com/HackGT/daretoslither.git
+image_name: gcr.io/hackgt-cluster/daretoslither
