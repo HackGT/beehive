@@ -3,3 +3,5 @@ image_name: gcr.io/hackgt-cluster/hackgt5-scavengerhunt
 secrets:
     - TWILIO_SID
     - TWILIO_AUTH
+wants:
+    mongo: true
