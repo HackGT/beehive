@@ -1,2 +1,5 @@
 git: https://github.com/HackGT/hackgt5-scavengerhunt.git
 image_name: gcr.io/hackgt-cluster/hackgt5-scavengerhunt
+secrets:
+    - TWILIO_SID
+    - TWILIO_AUTH
