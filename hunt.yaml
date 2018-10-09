@@ -5,3 +5,4 @@ secrets:
     - TWILIO_AUTH
 wants:
     mongo: true
+target_port: 5000
