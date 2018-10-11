@@ -1,1 +1,3 @@
-git: https://github.com/HackGT/ballot.git
+git: 
+    remote: https://github.com/HackGT/ballot.git
+    branch: backup
