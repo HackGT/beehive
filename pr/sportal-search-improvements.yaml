@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/sportal.git"
+    branch: "search-improvements"
+
+secrets-source: git-hackgt-sportal-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
