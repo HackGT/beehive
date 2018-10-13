@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/statgt-api.git"
+    branch: "checkin-graphql"
+
+secrets-source: git-hackgt-statgt-api-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
