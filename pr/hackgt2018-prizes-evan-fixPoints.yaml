@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/hackgt2018-prizes.git"
-    branch: "evan/fixpoints"
-
-secrets-source: git-hackgt-hackgt2018-prizes-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: recreate
