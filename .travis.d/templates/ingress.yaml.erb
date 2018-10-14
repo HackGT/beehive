@@ -20,6 +20,14 @@ spec:
   - host: <%= app['host'] %>
     http:
       paths:
+      <% if app['paths'] %>
+      <% app['paths'].each do |path_name, service| %>
+      - path: <%= path_name %>
+        backend:
+          serviceName: <%= service['name'] %>
+          servicePort: <%= service['port'] or 80 %>
+      <% end %>
+      <% end %>
       - backend:
           serviceName: <%= app['suid'] or app['uid'] %>
           servicePort: <%= app['port'] or 80 %>
