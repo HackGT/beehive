@@ -7,7 +7,9 @@ deployment:
   replicas: 2
   memory: '512Mi'
   memory_request: '512Mi'
-
+paths:
+  /points:
+    name: prizes-dev
 env:
   EVENT_NAME: "HackGT 5: Dare to Venture"
   PRODUCTION: true
