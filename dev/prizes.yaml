@@ -1,0 +1,5 @@
+git: https://github.com/HackGT/hackgt5-prizes.git
+image_name: gcr.io/hackgt-cluster/hackgt5-prizes
+secrets:
+  - ADMIN_KEY_SECRET
+  - CHECKIN_GRAPHQL
