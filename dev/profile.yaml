@@ -1,0 +1,5 @@
+git: https://github.com/HackGT/profile-pic-bot.git
+image_name: gcr.io/hackgt-cluster/profile-pic-bot
+secrets:
+  - TOKEN
+  - SIGNING_SECRET
