@@ -5,4 +5,4 @@ image_name: gcr.io/hackgt-cluster/statgt-api
 target_port: 5000
 secrets:
   - ADMIN_KEY_SECRET
-  - REGISTRATION_GRAPHQL
+  - CHECKIN_GRAPHQL
