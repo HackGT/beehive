@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/daretosither.git"
-    branch: "multigame"
-
-secrets-source: git-hackgt-daretosither-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: recreate
