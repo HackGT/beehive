@@ -2228,7 +2228,7 @@
 				"name": "company",
 				"label": "What company are you representing?",
 				"type": "select",
-				"options": ["AGS", "Accenture", "American Express", "Bitpay", "BlackRock", "Capital One", "Citi", "Coca-Cola", "Comcast - The Farm", "Disney", "Esri", "Express Scripts", "FINRA", "Facebook", "GM", "GitHub", "GlaxoSmithKline", "Goldman Sachs", "Google Cloud Platform", "Jumpstart", "Lyft", "Microsoft", "MLH", "NCR", "NSA", "Qualtrics", "Robinhood", "Southwest", "SunTrust"],
+				"options": ["AGS", "Accenture", "American Express", "BitPay", "BlackRock", "Capital One", "Citi", "Coca-Cola", "Comcast - The Farm", "Disney", "Esri", "Express Scripts", "FINRA", "Facebook", "GM", "GitHub", "GlaxoSmithKline", "Goldman Sachs", "Google Cloud Platform", "Jumpstart", "Lyft", "Microsoft", "MLH", "NCR", "NSA", "Qualtrics", "Robinhood", "Southwest", "SunTrust"],
 				"hasOther": false,
 				"required": true
 			},
