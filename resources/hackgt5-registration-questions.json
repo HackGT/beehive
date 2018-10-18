@@ -2225,12 +2225,6 @@
 		"name": "Sponsor",
 		"questions": [
 			{
-				"name": "name",
-				"label": "Please enter your Full Name",
-				"type": "text",
-				"required": true
-			},
-			{
 				"name": "company",
 				"label": "What company are you representing?",
 				"type": "select",
