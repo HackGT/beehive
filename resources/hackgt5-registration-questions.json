@@ -2209,5 +2209,16 @@
 	{
 		"name": "Rejected / Mentor",
 		"questions": []
+	},
+	{
+		"name": "Organizer",
+		"questions": [
+			{
+				"name": "resume",
+				"label": "Please upload your resume.",
+				"type": "file",
+				"required": true
+			}
+		]
 	}
 ]
