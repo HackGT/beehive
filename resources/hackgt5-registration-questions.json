@@ -2220,5 +2220,36 @@
 				"required": true
 			}
 		]
+	},
+	{
+		"name": "Sponsor",
+		"questions": [
+			{
+				"name": "name",
+				"label": "Please enter your Full Name",
+				"type": "text",
+				"required": true
+			},
+			{
+				"name": "company",
+				"label": "What company are you representing?",
+				"type": "select",
+				"options": ["AGS", "Accenture", "American Express", "Bitpay", "BlackRock", "CapitalOne", "Citi", "CocaCola", "Comcast - The Farm", "Disney", "Esri", "Express Scripts", "FINRA", "Facebook", "GM", "GitHub", "GlaxoSmithKline", "Goldman Sachs", "Google Cloud Platform", "Jumpstart", "Lyft", "Microsoft", "NCR", "NSA", "Qualtrics", "Robinhood", "Southwest", "SunTrust"],
+				"hasOther": false,
+				"required": true
+			},
+			{
+				"name": "required-items",
+				"label": "Please confirm the following:",
+				"type": "checkbox",
+				"options": [
+					"I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+					"I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/103KARTtr9Gm59WNaWwiPVjXiYPmy9G70/view)",
+					"I agree to the [HackGT Photo Release](https://drive.google.com/file/d/0B2pRUVzz8hWebXQ1WllYSmI5TGc/view)"
+				],
+				"hasOther": false,
+				"required": true
+			}
+		]
 	}
 ]
