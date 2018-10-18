@@ -1,9 +1,0 @@
-git:
-    remote: "https://github.com/hackgt/daretoslither.git"
-    branch: "fix-responsiveness"
-
-secrets-source: git-hackgt-daretoslither-secrets
-deployment:
-    replicas: 1
-    strategy:
-        type: recreate
