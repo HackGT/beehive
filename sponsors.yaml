@@ -6,7 +6,7 @@ wants:
 env:
   SERVER_ENV: "production"
   SERVER_PORT: "3000"
-  AUTH_EXP: "15m"
+  AUTH_EXP: "48h"
   AWS_SIGNED_URL_EXPIRES: "60"
   ZIP_EXPIRES: "600000"
   ZIP_DIRECTORY: "/zips"
