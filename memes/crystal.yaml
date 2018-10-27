@@ -1,5 +1,0 @@
-git:
-    remote: https://github.com/HackGT/memes.git
-    branch: crystal
-deployment:
-  memory_request: '5Mi'

@@ -1,6 +1,0 @@
-git:
-    remote: https://github.com/HackGT/memes.git
-    branch: test
-deployment:
-  replicas: 1
-  memory_request: '5Mi'

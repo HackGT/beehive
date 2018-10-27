@@ -1,8 +1,0 @@
-git: 
-    remote: https://github.com/HackGT/statgt-api.git
-    branch: crystal
-image_name: gcr.io/hackgt-cluster/statgt-api
-target_port: 5000
-secrets:
-  - ADMIN_KEY_SECRET
-  - CHECKIN_GRAPHQL
