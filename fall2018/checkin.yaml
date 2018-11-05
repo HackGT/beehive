@@ -1,7 +1,7 @@
 git: https://github.com/HackGT/checkin2.git
 
 env:
-  REGISTRATION_GRAPHQL: "https://registration.hack.gt/graphql"
+  REGISTRATION_GRAPHQL: "https://registration.fall2018.hack.gt/graphql"
   MONGO_URL: "mongodb://altered-pug-mongodb/checkin-2018"
 
 wants:
