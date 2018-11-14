@@ -4,20 +4,29 @@
         "text": [
             {
                 "for": "school",
-                "type": "h1",
+                "type": "h2",
                 "content": "Team Application"
             },
             {
                 "for": "school",
-                "type": "h3",
-                "content": "Please have only *one* member of your team fill out the team application."
+                "type": "h5",
+                "content": "Please have only one member of your team fill out the team application."
             },
             {
                 "for": "school",
                 "type": "p",
                 "content": "* Teams must have at least 2 members and no more than 4 members\n* Each participant must be current students at a Georgia college or university\n* All Team members must attend the same Georgia college or university"
+            },
+            {
+                "for": "school-year",
+                "type": "h2",
+                "content": "Individual Application"
+            },
+            {
+                "for": "school-year",
+                "type": "h5",
+                "content": "Every team member should fill out the team application."
             }
-          
         ],
         "questions": [
             {
