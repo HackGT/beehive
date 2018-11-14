@@ -10,7 +10,7 @@
             {
                 "for": "school",
                 "type": "h5",
-                "content": "Please have only one member of your team fill out the team application."
+                "content": "Only one member of your team should fill out the team application."
             },
             {
                 "for": "school",
@@ -25,7 +25,7 @@
             {
                 "for": "school-year",
                 "type": "h5",
-                "content": "Every team member should fill out the team application."
+                "content": "Every team member should fill out the individual application."
             }
         ],
         "questions": [
