@@ -123,13 +123,13 @@
                     "Young Harris College"
                 ],
                 "hasOther": true,
-                "required": true
+                "required": false
             },
             {
                 "name": "team-name",
                 "label": "What is your team name?",
                 "type": "text",
-                "required": true
+                "required": false
             },
             {
                 "name": "competed",
@@ -139,13 +139,13 @@
                     "Yes",
                     "No"
                 ],
-                "required": true
+                "required": false
             },
             {
                 "name": "competed-list",
                 "label": "If you answered yes, please provide name of hackathon(s) or competition:",
                 "type": "textarea",
-                "required": true
+                "required": false
             },
             {
                 "name": "categories",
@@ -156,7 +156,7 @@
                     "Case Study",
                     "Prototype/Design"
                 ],
-                "required": true
+                "required": false
             },
             {
                 "name": "top",
@@ -167,7 +167,7 @@
                     "Case Study",
                     "Prototype/Design"
                 ],
-                "required": true
+                "required": false
             },
             {
                 "name": "confirm",
@@ -176,7 +176,7 @@
                 "options": [
                     "Yes"
                 ],
-                "required": true
+                "required": false
             },
             {
                 "name": "other",
