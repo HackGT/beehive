@@ -14,13 +14,8 @@
             },
             {
                 "for": "school",
-                "type": "h5",
-                "content": "Please enusre your team is registered on the [team tab](https://collegiatecup.hack.gt/team/)."
-            },
-            {
-                "for": "school",
                 "type": "p",
-                "content": "* Teams must have at least 2 members and no more than 4 members\n* Each participant must be current students at a Georgia college or university\n* All Team members must attend the same Georgia college or university\n\nA comprehensive event FAQ can be found [here](https://thecollegiatecup.com). \n Need technical help with the application? Contact us at hello@hack.gt."
+                "content": "Team Instructions: \n\n* **Please enusre your team is registered on the [team tab](https://collegiatecup.hack.gt/team/).**\n* Teams must have at least 2 members and no more than 4 members\n* Each participant must be current students at a Georgia college or university\n* All Team members must attend the same Georgia college or university\n\n Other Information\n\n* A comprehensive event FAQ can be found [here](https://thecollegiatecup.com).\n* Need technical help with the application? Contact us at hello@hack.gt. "
             },
             {
                 "for": "school-year",
