@@ -1,0 +1,18 @@
+git:
+  remote: https://github.com/HackGT/registration.git
+  branch: master
+wants:
+    mongo: true
+
+deployment:
+  replicas: 1
+env:
+  EVENT_NAME: "Collegiate Cup I"
+  PRODUCTION: true
+
+files:
+  /etc/registration:
+    contents:
+      questions.json:
+        path: 'resources/collegiate-cup-registration-questions.json'
+        env: QUESTIONS_FILE
