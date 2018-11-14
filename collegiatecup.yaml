@@ -7,7 +7,7 @@ wants:
 deployment:
   replicas: 1
 env:
-  EVENT_NAME: "Collegiate Cup I"
+  EVENT_NAME: "The Collegiate Cup"
   PRODUCTION: true
 
 files:
