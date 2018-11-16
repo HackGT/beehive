@@ -3,10 +3,10 @@ git:
   branch: master	
  deployment:	
   replicas: 1	
- env:	
+env:	
   EVENT_NAME: "HackGT: Catalyst"	
   PRODUCTION: true	
- files:	
+files:	
   /etc/registration:	
     contents:	
       theme.css:	
