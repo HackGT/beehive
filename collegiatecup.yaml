@@ -9,6 +9,7 @@ deployment:
 env:
   EVENT_NAME: "The Collegiate Cup"
   PRODUCTION: true
+  EMAIL_FROM: "Collegiate Cup Team <hello@hackgt.com>"
 
 files:
   /etc/registration:
