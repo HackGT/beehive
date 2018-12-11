@@ -34,6 +34,7 @@
                 "label": "What college or university does your team currently attend?",
                 "type": "select",
                 "options": [
+		    "",
                     "Abraham Baldwin Agricultural College",
                     "Agnes Scott College",
                     "Albany State University",
