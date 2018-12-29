@@ -1,8 +1,0 @@
-git: https://github.com/HackGT/checkin2.git
-
-env:
-  REGISTRATION_GRAPHQL: "https://registration.teeny.hack.gt/graphql"
-  MONGO_URL: "mongodb://altered-pug-mongodb/checkin-teeny-2018"
-
-wants:
-    mongo: false

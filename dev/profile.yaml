@@ -1,6 +1,0 @@
-git: https://github.com/HackGT/profile-pic-bot.git
-image_name: gcr.io/hackgt-cluster/profile-pic-bot
-secrets:
-  - CLIENT_SECRET
-  - CLIENT_ID
-  - SIGNING_SECRET
