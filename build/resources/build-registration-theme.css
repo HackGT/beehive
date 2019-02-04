@@ -29,43 +29,54 @@
     --text-color: #4A4A4A;
     --dark-blue: #036BFF;
     --light-blue: #8FBEFF;
+    --blur: rgba(255, 255, 255, 0.6);
 }
 
 /* Set backgrounds */
-html {
+html::before {
     background-image: url("https://build.hack.gt/assets/bg.png");
     background-size: 100% auto;
     background-position: top center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    opacity: 0.5;
+
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
 #sidebar-nav {
     background: none;
 }
-.main {
-    background-color: rgba(255, 255, 255, 0.7);
+section.main {
+    background-color: var(--blur);
 }
 
-html, body, #sidebar-nav, .main {
+html, body, #sidebar-nav, section.main {
     color: var(--text-color);
     font-family: "Space Mono", sans-serif;
 }
 
 /* Hide text and use image instead in the header */
-#sidebar > h1 {
+#sidebar > h1, .container > h1:first-child {
     display: block;
     background-image: url("https://build.hack.gt/assets/logo.svg");
     background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;
     height: 75px;
-    margin-bottom: -10px;
 
     color: rgba(0, 0, 0, 0);
     -ms-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+}
+#sidebar > h1 {
+    margin-bottom: -10px;
 }
 
 #sidebar-nav > a, #sidebar, .editor-toolbar > a {
@@ -84,7 +95,7 @@ html, body, #sidebar-nav, .main {
     background-color: rgba(196, 251, 245, 0.2);
     outline: none;
 }
-#sidebar-nav > span.divider, .main, table thead {
+#sidebar-nav > span.divider, section.main, table thead {
     border-color: var(--light-blue);
 }
 a {
@@ -124,9 +135,18 @@ code {
     color: var(--text-color);
 }
 
+ul {
+    padding-left: 0;
+}
+
+section.main > div > p:first-of-type {
+    font-weight: bold;
+    font-size: 125%;
+}
+
 /* Form elements */
 input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]), select, fieldset, textarea {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--blur);
     color: var(--text-color);
     border-color: var(--light-blue);
 }
@@ -145,7 +165,8 @@ input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]
 }
 input:disabled, textarea:disabled {
     background: repeating-linear-gradient(45deg, var(--dark-blue), var(--dark-blue) 10px, var(--light-blue) 10px, var(--light-blue) 20px );
+    color: var(--bg-color) !important;
 }
 input:disabled::placeholder {
-    color: white;
+    color: var(--bg-color);
 }
