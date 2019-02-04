@@ -5,12 +5,17 @@
             {
                 "for": "name",
                 "type": "h5",
-                "content": "A beginner friendly hardware hackathon with lots of workshops!"
+                "content": "BuildGT is back for its second iteration, and it will be better than ever! More hardware, more workshops, and more time to create!"
             },
             {
-                "for": "resources",
+				"for": "18-and-gt-student",
+				"type": "p",
+				"content": "Due to Institute policy, minors (under 18) that are not students at Georgia Tech may not attend BuildGT."
+			},
+            {
+                "for": "favorite-lego-model",
                 "type": "p",
-                "content": "Check out our [full list of available hardware](https://hardware.hack.gt) that will be available at BuildGT. Let us know if you'd like to see anything else and we'll try our best to get it!"
+                "content": "LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize, or endorse this event."
             }
         ],
         "questions": [
@@ -20,6 +25,16 @@
                 "label": "Full name",
                 "required": true
             },
+            {
+				"name": "18-and-gt-student",
+				"label": "Are you over 18 or a student at Georgia Tech?",
+				"type": "radio",
+				"options": [
+					"I am 18 or older.",
+					"I am under 18 and a Georgia Tech student."
+				],
+				"required": true
+			},
             {
                 "name": "university",
                 "type": "select",
@@ -119,6 +134,12 @@
                 "required": false
             },
             {
+                "name": "favorite-lego-model",
+                "label": "What is your favorite LEGO® model?",
+                "type": "textarea",
+                "required": true
+            },
+            {
                 "name": "hope-to-learn",
                 "label": "What do you want to learn how to build, make, or do at BuildGT?",
                 "type": "textarea",
@@ -160,6 +181,17 @@
                 "required": false
             },
             {
+                "name": "add-to-mailing-list",
+                "label": "Would you like to be added to our newsletter with information about future HackGT events? We promise we won't spam you!",
+                "type": "radio",
+                "options": [
+                    "Yes",
+                    "No"
+                ],
+                "hasOther": false,
+                "required": true
+            },
+            {
                 "name": "other",
                 "label": "Anything else you want us to know?",
                 "type": "textarea",
@@ -169,7 +201,13 @@
     },
     {
         "name": "Mentor",
-        "text": [],
+        "text": [
+            {
+				"for": "18-and-gt-student",
+				"type": "p",
+				"content": "Due to Institute policy, minors (under 18) that are not students at Georgia Tech may not attend BuildGT."
+			}
+        ],
         "questions": [
             {
                 "name": "name",
@@ -177,6 +215,16 @@
                 "label": "Full name",
                 "required": true
             },
+            {
+				"name": "18-and-gt-student",
+				"label": "Are you over 18 or a student at Georgia Tech?",
+				"type": "radio",
+				"options": [
+					"I am 18 or older.",
+					"I am under 18 and a Georgia Tech student."
+				],
+				"required": true
+			},
             {
                  "name": "university",
                  "type": "select",
@@ -289,7 +337,7 @@
             },
             {
                 "name": "why-mentor",
-                "label": "Why do you want to be a mentor at HackGT?",
+                "label": "Why do you want to be a mentor at BuildGT?",
                 "type": "textarea",
                 "required": true
             },
@@ -323,13 +371,24 @@
                 "required": false
             },
             {
+                "name": "add-to-mailing-list",
+                "label": "Would you like to be added to our newsletter with information about future HackGT events? We promise we won't spam you!",
+                "type": "radio",
+                "options": [
+                    "Yes",
+                    "No"
+                ],
+                "hasOther": false,
+                "required": true
+            },
+            {
                 "name": "other",
                 "label": "Anything else you want us to know?",
                 "type": "textarea",
                 "required": false
             }
         ]
-    }, 
+    },
     {
         "name": "Participant Confirmation",
         "text": [
