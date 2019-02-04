@@ -10,6 +10,8 @@ env:
   EVENT_NAME: "BuildGT"
   PRODUCTION: true
   MONGO_URL: "mongodb://altered-pug-mongodb/buildgt-2019"
+  ADMIN_EMAILS:
+      - estrat@gatech.edu
 
 files:
   /etc/registration:
