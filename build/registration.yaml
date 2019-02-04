@@ -7,7 +7,7 @@ deployment:
   replicas: 1
 
 env:
-  EVENT_NAME: "BuildGT"
+  EVENT_NAME: "BuildGT 2"
   PRODUCTION: true
   MONGO_URL: "mongodb://altered-pug-mongodb/buildgt-2019"
   ADMIN_EMAILS:
