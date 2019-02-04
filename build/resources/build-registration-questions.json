@@ -134,6 +134,12 @@
                 "required": false
             },
             {
+                 "name": "resume",
+                 "label": "Please upload your resume.",
+                 "type": "file",
+                 "required": true
+            },
+            {
                 "name": "favorite-lego-model",
                 "label": "What is your favorite LEGO® model?",
                 "type": "textarea",
@@ -322,6 +328,12 @@
                 ],
                 "hasOther": true,
                 "required": false
+            },
+            {
+                 "name": "resume",
+                 "label": "Please upload your resume.",
+                 "type": "file",
+                 "required": true
             },
             {
                 "name": "what-can-mentor",
