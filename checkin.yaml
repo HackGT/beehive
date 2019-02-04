@@ -1,0 +1,8 @@
+git: https://github.com/HackGT/checkin2.git
+
+env:
+  REGISTRATION_GRAPHQL: "https://registration.build.hack.gt/graphql"
+  MONGO_URL: "mongodb://altered-pug-mongodb/checkin-buildgt-2019"
+
+wants:
+    mongo: false
