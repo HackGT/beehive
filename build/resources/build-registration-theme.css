@@ -123,6 +123,9 @@ a:hover {
      /* border: 2px solid #03565c;  */
     color: var(--bg-color);
 }
+.editor-toolbar > button {
+    color: var(--light-blue);
+}
 
 fieldset > div > label {
     font-size: 90%;
