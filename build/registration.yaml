@@ -18,8 +18,8 @@ files:
         path: 'resources/build-registration-questions.json'
         env: QUESTIONS_FILE
       theme.css:
-          path: 'resources/build-registration-theme.css'
-          env: THEME_FILE
+        path: 'resources/build-registration-theme.css'
+        env: THEME_FILE
       favicon.ico:
         path: 'resources/build-registration-favicon.ico'
         env: FAVICON_FILE
