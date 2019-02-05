@@ -1,41 +1,93 @@
 @font-face {
-    font-family: 'FuturaPT';
-    src: url('https://storage.googleapis.com/hackgt/fonts/FuturaPTMedium.otf') format('opentype');
+    font-family: "Gotham";
+    src: url("https://storage.googleapis.com/hackgt/fonts/Gotham-Medium.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'ProximaNova';
-    src: url('https://storage.googleapis.com/hackgt/fonts/ProximaNova.otf') format('opentype');
+    font-family: "Gotham Book";
+    src: url("https://storage.googleapis.com/hackgt/fonts/Gotham-Book.otf") format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'ProximaNova';
-    src: url('https://storage.googleapis.com/hackgt/fonts/ProximaNovaBold.otf') format('opentype');
-    font-weight: 500;
+    font-family: "Space Mono";
+    src: url("https://storage.googleapis.com/hackgt/fonts/SpaceMono-Regular.ttf") format('opentype');
+    font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'ProximaNova';
-    src: url('https://storage.googleapis.com/hackgt/fonts/ProximaNovaExtrabold.otf') format('opentype');
-    font-weight: 700;
+    font-family: "Space Mono";
+    src: url("https://storage.googleapis.com/hackgt/fonts/SpaceMono-Bold.ttf") format('opentype');
+    font-weight: bold;
     font-style: normal;
 }
 
-/* Colors */
-html, body, #sidebar-nav {
-    background-color: #dcf7e4;
-    color: #6c72ab;
-    font-family: 'FuturaPT', sans-serif;
+/* CSS variables for colors */
+:root {
+    --bg-color: #FFFFFE;
+    --text-color: #4A4A4A;
+    --dark-blue: #036BFF;
+    --light-blue: #8FBEFF;
+    --blur: rgba(255, 255, 255, 0.6);
 }
-#sidebar a, #sidebar, .editor-toolbar > a {
-    color: #6c72ab;
+
+/* Set backgrounds */
+html::before {
+    background-image: url("https://build.hack.gt/assets/bg.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#sidebar-nav {
+    background: none;
+}
+section.main {
+    background-color: var(--blur);
+}
+
+html, body, #sidebar-nav, section.main {
+    color: var(--text-color);
+    font-family: "Space Mono", sans-serif;
+}
+
+/* Hide text and use image instead in the header */
+#sidebar > h1, .container > h1:first-child {
+    display: block;
+    background-image: url("https://build.hack.gt/assets/logo.svg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 75px;
+
+    color: rgba(0, 0, 0, 0);
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+#sidebar > h1 {
+    margin-bottom: -10px;
+}
+
+#sidebar-nav > a, #sidebar, .editor-toolbar > a {
+    color: var(--text-color);
     border: none;
     text-decoration: initial;
+    font-family: "Space Mono";
+    font-weight: bold;
 }
 .editor-toolbar > a {
-    color: #6c72ab !important;
+    color: var(--text-color) !important;
 }
 
 .editor-toolbar a.active, .editor-toolbar a:hover {
@@ -43,14 +95,11 @@ html, body, #sidebar-nav {
     background-color: rgba(196, 251, 245, 0.2);
     outline: none;
 }
-#sidebar-nav > span.divider, .main, table thead {
-    border-color: #6c72ab;
-}
-.main {
-    background-color: white;
+#sidebar-nav > span.divider, section.main, table thead {
+    border-color: var(--light-blue);
 }
 a {
-    color: #6c72ab;
+    color: var(--text-color);
     text-decoration: none;
     border-bottom: 1px dotted;
     cursor: pointer;
@@ -60,48 +109,67 @@ a:hover {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: #6c72ab;
+    color: var(--text-color);
 }
 
 #email-rendered {
-    background-color: #FFFFFE;
-    border: 1px solid #FFFFFE;
+    background-color: var(--bg-color);
+    border: 1px solid var(--bg-color);
 }
 
 /* Buttons */
 .btn, [type=submit], button, .accepted-btn-false {
-    background-color: #6c72ab;
+    background-color: var(--light-blue);
      /* border: 2px solid #03565c;  */
-    color: #FFFFFE;
+    color: var(--bg-color);
+}
+.editor-toolbar > button {
+    color: var(--light-blue);
 }
 
 fieldset > div > label {
     font-size: 90%;
 }
-h1, h2, h3 {
-    font-family: 'ProximaNova', sans-serif;
-}
-
-#sidebar > h1 {
-    text-decoration: underline;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Gotham", sans-serif;
 }
 
 code {
-    color: #6c72ab;
+    color: var(--text-color);
+}
+
+ul {
+    padding-left: 0;
+}
+
+section.main > div > p:first-of-type {
+    font-weight: bold;
+    font-size: 125%;
 }
 
 /* Form elements */
 input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]), select, fieldset, textarea {
-    background-color: #FFFFFE;
-    color: #6c72ab;
-    border-color: #6c72ab;
+    background-color: var(--blur);
+    color: var(--text-color);
+    border-color: var(--light-blue);
+}
+input, label {
+    font-variant-ligatures: none;
+    font-family: "Space Mono" !important;
+}
+label {
+    font-weight: bold;
+}
+fieldset > div > label {
+    font-weight: normal;
 }
 input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]):focus, textarea:focus, textarea[type=text]:focus {
-    border-color: #6c72ab;
+    border-color: var(--dark-blue);
 }
 input:disabled, textarea:disabled {
-    background: repeating-linear-gradient(45deg, #6c72ab, #6c72ab 10px, #aaaed8 10px, #aaaed8 20px );
+    background: repeating-linear-gradient(45deg, var(--dark-blue), var(--dark-blue) 10px, var(--light-blue) 10px, var(--light-blue) 20px );
+    color: var(--bg-color) !important;
 }
 input:disabled::placeholder {
-    color: white;
+    color: var(--bg-color);
 }

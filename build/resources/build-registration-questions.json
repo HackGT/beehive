@@ -105,7 +105,7 @@
                     "Psychology",
                     "Public Policy"
                 ],
-                "hasOther": false,
+                "hasOther": true,
                 "required": true
             },
             {
@@ -132,6 +132,12 @@
                 ],
                 "hasOther": true,
                 "required": false
+            },
+            {
+                 "name": "resume",
+                 "label": "Please upload your resume.",
+                 "type": "file",
+                 "required": true
             },
             {
                 "name": "favorite-lego-model",
@@ -295,7 +301,7 @@
                     "Psychology",
                     "Public Policy"
                 ],
-                "hasOther": false,
+                "hasOther": true,
                 "required": true
             },
             {
@@ -322,6 +328,12 @@
                 ],
                 "hasOther": true,
                 "required": false
+            },
+            {
+                 "name": "resume",
+                 "label": "Please upload your resume.",
+                 "type": "file",
+                 "required": true
             },
             {
                 "name": "what-can-mentor",
