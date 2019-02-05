@@ -20,3 +20,6 @@ files:
       theme.css:
           path: 'resources/build-registration-theme.css'
           env: THEME_FILE
+      favicon.ico:
+        path: 'resources/build-registration-favicon.png'
+        env: FAVICON_FILE
