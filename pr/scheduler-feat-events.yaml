@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/scheduler.git"
+    branch: "feat-events"
+
+secrets-source: git-hackgt-scheduler-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
