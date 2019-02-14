@@ -1,5 +1,0 @@
-git:
-    remote: https://github.com/HackGT/memes.git
-    branch: oswinso
-deployment:
-  memory_request: '10Mi'
