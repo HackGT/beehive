@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/scheduler.git
-  branch: feat-events
+  branch: dev-backend
 wants:
   postgres: true
 env:
