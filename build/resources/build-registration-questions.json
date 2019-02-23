@@ -569,38 +569,71 @@
     },
     {
         "name": "Participant Confirmation",
-        "text": [
-            {
-                "for": "workshop-1",
-                "type": "p",
-                "content": "Thank you for confirming your spot to BuildGT! We have partnered with the Invention Studio to offer two sessions for each workshop! Each participant will be able to attend a maximum of 2 workshops. Because there are a limited number of spots for each workshop, registration will be on a first-come, first-serve basis. There are 15 spots available for the Raspberry Pi, Pebble, and Arduino workshops. On Friday at 5pm, we will notify all participants which workshops they are confirmed to attend."
-            }
-        ],
+        "text": [],
         "questions": [
-            {
-                "name": "workshop-1",
-                "label": "Workshop choice for session 1",
-                "type": "radio",
-                "options": [
-                    "Raspberry Pi (WORKSHOP IS FULL)",
-                    "Arduino (WORKSHOP IS FULL)",
-                    "Oculus Rift (not limited in capacity)",
-                    "Pebble"
-                ],
-                "required": false,
-                "hasOther": false
+          {
+              "name": "confirmation",
+              "label": "Will you be attending BuildGT this year on March 2nd?",
+              "type": "radio",
+              "options": [
+                "Yes, I'll be there!",
+                "Sorry, I can't make it"
+              ],
+              "hasOther": false,
+              "required": true
             },
             {
-                "name": "workshop-2",
-                "label": "Workshop choice for session 2",
+                "name": "confirmation",
+                "label": "Is this your first time participating in a hackathon?",
                 "type": "radio",
                 "options": [
-                    "Raspberry Pi (WORKSHOP IS FULL)",
-                    "Arduino (WORKSHOP IS FULL)",
-                    "Oculus Rift (not limited in capacity)",
-                    "Pebble (WORKSHOP IS FULL)"
+                  "Yes",
+                  "No"
                 ],
-                "required": false,
+                "hasOther": false,
+                "required": true
+              },
+            {
+                "name": "required-items",
+                "label": "Please confirm the following:",
+                "type": "checkbox",
+                "options": [
+                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/1Ztx7qIRZJ-g9F1_PFePCgrQrHy_p-nV7/view)",
+                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/1ANKeUvqbv5qlRvxRL9oxmQlVgwlW45Hz/view)",
+                    "I agree to [The Hive Liability and Photo Waiver](https://hive.ece.gatech.edu/docs/HiveWaiver.pdf)"
+                ],
+                "required": true,
+                "hasOther": false
+            }
+        ]
+    },
+    {
+        "name": "Mentor Confirmation",
+        "text": [],
+        "questions": [
+          {
+              "name": "confirmation",
+              "label": "Will you be attending BuildGT this year on March 2nd?",
+              "type": "radio",
+              "options": [
+                "Yes, I'll be there!",
+                "Sorry, I can't make it"
+              ],
+              "hasOther": false,
+              "required": true
+            },
+            {
+                "name": "required-items",
+                "label": "Please confirm the following:",
+                "type": "checkbox",
+                "options": [
+                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/1Ztx7qIRZJ-g9F1_PFePCgrQrHy_p-nV7/view)",
+                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/1ANKeUvqbv5qlRvxRL9oxmQlVgwlW45Hz/view)",
+                    "I agree to [The Hive Liability and Photo Waiver](https://hive.ece.gatech.edu/docs/HiveWaiver.pdf)"
+                ],
+                "required": true,
                 "hasOther": false
             }
         ]
