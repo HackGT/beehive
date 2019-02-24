@@ -583,7 +583,7 @@
               "required": true
             },
             {
-                "name": "confirmation",
+                "name": "first-time-hacker",
                 "label": "Is this your first time participating in a hackathon?",
                 "type": "radio",
                 "options": [
