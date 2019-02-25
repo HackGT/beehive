@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/buildgt2019-teaser.git"
+    branch: "gh-pages"
+
+secrets-source: git-hackgt-buildgt2019-teaser-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
