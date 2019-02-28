@@ -5,5 +5,4 @@ wants:
   postgres: false
 
 env:
-  POSTGRES_URL: postgres://hardware-default@postgres-postgresql/tnc-hardware?sslmode=disable
-  DB_URI: postgres://hardware-default@postgres-postgresql/tnc-hardware?sslmode=disable
+  POSTGRES_URL: postgres://hardware-default@postgres-postgresql/hardware-default?sslmode=disable
