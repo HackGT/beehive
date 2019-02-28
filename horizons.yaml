@@ -1,0 +1,3 @@
+git: https://github.com/HackGT/horizons2019-teaser.git
+deployment:
+  memory_request: '15Mi'
