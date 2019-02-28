@@ -1,0 +1,4 @@
+git: https://github.com/hackgt/cog.git
+secrets-source: hardware-default-secrets
+env:
+  POSTGRES_URL: postgres://hardware-default@postgres-postgresql/tnc-hardware?sslmode=disable
