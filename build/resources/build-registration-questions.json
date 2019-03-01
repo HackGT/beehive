@@ -568,6 +568,385 @@
         ]
     },
     {
+        "name": "Participant (Walk-Up)",
+        "text": [
+            {
+                "for": "name",
+                "type": "h5",
+                "content": "BuildGT is back for its second iteration, and it will be better than ever! More hardware, more workshops, and more time to create!"
+            },
+            {
+      				"for": "18-and-gt-student",
+      				"type": "p",
+      				"content": "Due to Institute policy, minors (under 18) that are not students at Georgia Tech may not attend BuildGT."
+      			}
+        ],
+        "questions": [
+            {
+      				"name": "18-and-gt-student",
+      				"label": "Are you over 18 or a student at Georgia Tech?",
+      				"type": "radio",
+      				"options": [
+      					"I am 18 or older.",
+      					"I am under 18 and a Georgia Tech student."
+      				],
+      				"required": true
+      			},
+            {
+                "name": "university",
+                "type": "select",
+                "label": "What university do you go to?",
+                "options": [
+                    "Georgia Institute of Technology",
+                    "Georgia State University",
+                    "Emory University",
+                    "University of Georgia",
+                    "Clark Atlanta University",
+                    "Kennesaw State University"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "school-year",
+                "type": "select",
+                "label": "What year of studies are you currently in?",
+                "options": [
+                    "First year",
+                    "Second year",
+                    "Third year",
+                    "Fourth year",
+                    "Fifth year+",
+                    "Master's",
+                    "PhD"
+                ],
+                "required": true
+            },
+            {
+                "name": "major",
+                "label": "What's your major?",
+                "type": "select",
+                "options": [
+                    "Aerospace Engineering",
+                    "Applied Physics",
+                    "Architecture",
+                    "Biochemistry",
+                    "Biology",
+                    "Biomedical Engineering",
+                    "Business Administration",
+                    "Chemical Engineering",
+                    "Chemistry",
+                    "Civil Engineering",
+                    "Computational Media",
+                    "Computer Engineering",
+                    "Computer Science",
+                    "Discrete Mathematics",
+                    "Earth and Atmospheric Sciences",
+                    "Economics",
+                    "Electrical Engineering",
+                    "Environmental Engineering",
+                    "Global Studies and Languages",
+                    "History, Technology, and Society",
+                    "Industrial Design",
+                    "Industrial Engineering",
+                    "International Affairs",
+                    "Literature, Media, and Communication",
+                    "Materials Science and Engineering",
+                    "Mathematics",
+                    "Mechanical Engineering",
+                    "Music Technology",
+                    "Neuroscience",
+                    "Nuclear and Radiological Engineering",
+                    "Physics",
+                    "Political Science",
+                    "Psychology",
+                    "Public Policy"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "gender",
+                "label": "Gender",
+                "type": "radio",
+                "options": ["Male", "Female", "Prefer not to answer"],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "race",
+                "label": "Race / ethnicity",
+                "type": "checkbox",
+                "options": [
+                    "Non-Hispanic White",
+                    "Black or African American",
+                    "Latino, Latina, or Hispanic American",
+                    "South Asian or Indian American",
+                    "East Asian or Asian American",
+                    "Middle Eastern or Arab American",
+                    "Native American or Alaskan Native",
+                    "Hawaiian or Pacific Islander"
+                ],
+                "hasOther": true,
+                "required": false
+            },
+            {
+                "name": "tshirt-size",
+                "label": "What is your T-shirt size?",
+                "type": "radio",
+                "options": [
+                    "Extra small",
+                    "Small",
+                    "Medium",
+                    "Large",
+                    "Extra large",
+                    "2XL",
+                    "3XL"
+                ],
+                "required": true
+            },
+            {
+                "name": "dietary-restrictions",
+                "label": "Do you have any dietary restrictions?",
+                "type": "checkbox",
+                "options": [
+                    "Vegetarian",
+                    "Vegan",
+                    "No beef",
+                    "No pork",
+                    "Gluten-free"
+                ],
+                "hasOther": true,
+                "required": false
+            },
+            {
+                "name": "add-to-mailing-list",
+                "label": "Would you like to be added to our newsletter with information about future HackGT events? We promise we won't spam you!",
+                "type": "radio",
+                "options": [
+                    "Yes",
+                    "No"
+                ],
+                "hasOther": false,
+                "required": true
+            },
+            {
+                "name": "first-time-hacker",
+                "label": "Is this your first time participating in a hackathon?",
+                "type": "radio",
+                "options": [
+                  "Yes",
+                  "No"
+                ],
+                "hasOther": false,
+                "required": true
+              },
+              {
+                  "name": "required-items",
+                  "label": "Please confirm the following:",
+                  "type": "checkbox",
+                  "options": [
+                      "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                      "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/1Ztx7qIRZJ-g9F1_PFePCgrQrHy_p-nV7/view)",
+                      "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/1ANKeUvqbv5qlRvxRL9oxmQlVgwlW45Hz/view)",
+                      "I agree to [The Hive Liability and Photo Waiver](https://drive.google.com/open?id=1-24_GifVB8rYZUQNNbVNL4pOa-LIMGMz)"
+                  ],
+                  "required": true,
+                  "hasOther": false
+            },
+            {
+                "name": "other",
+                "label": "Anything else you want us to know?",
+                "type": "textarea",
+                "required": false
+            }
+        ]
+    },
+    {
+        "name": "Mentor (Walk-Up)",
+        "text": [
+            {
+      				"for": "18-and-gt-student",
+      				"type": "p",
+      				"content": "Due to Institute policy, minors (under 18) that are not students at Georgia Tech may not attend BuildGT."
+      			}
+        ],
+        "questions": [
+            {
+      				"name": "18-and-gt-student",
+      				"label": "Are you over 18 or a student at Georgia Tech?",
+      				"type": "radio",
+      				"options": [
+      					"I am 18 or older.",
+      					"I am under 18 and a Georgia Tech student."
+      				],
+      				"required": true
+      			},
+            {
+                 "name": "university",
+                 "type": "select",
+                 "label": "What university do you go to?",
+                 "options": [
+                     "Georgia Institute of Technology",
+                     "Georgia State University",
+                     "Emory University",
+                     "University of Georgia",
+                     "Clark Atlanta University",
+                     "Kennesaw State University"
+                 ],
+                 "hasOther": true,
+                 "required": true
+            },
+            {
+                "name": "school-year",
+                "type": "select",
+                "label": "What year of studies are you currently in?",
+                "options": [
+                    "First year",
+                    "Second year",
+                    "Third year",
+                    "Fourth year",
+                    "Fifth year+",
+                    "Master's",
+                    "PhD"
+                ],
+                "required": true
+            },
+            {
+                "name": "major",
+                "label": "What's your major?",
+                "type": "select",
+                "options": [
+                    "Aerospace Engineering",
+                    "Applied Physics",
+                    "Architecture",
+                    "Biochemistry",
+                    "Biology",
+                    "Biomedical Engineering",
+                    "Business Administration",
+                    "Chemical Engineering",
+                    "Chemistry",
+                    "Civil Engineering",
+                    "Computational Media",
+                    "Computer Engineering",
+                    "Computer Science",
+                    "Discrete Mathematics",
+                    "Earth and Atmospheric Sciences",
+                    "Economics",
+                    "Electrical Engineering",
+                    "Environmental Engineering",
+                    "Global Studies and Languages",
+                    "History, Technology, and Society",
+                    "Industrial Design",
+                    "Industrial Engineering",
+                    "International Affairs",
+                    "Literature, Media, and Communication",
+                    "Materials Science and Engineering",
+                    "Mathematics",
+                    "Mechanical Engineering",
+                    "Music Technology",
+                    "Neuroscience",
+                    "Nuclear and Radiological Engineering",
+                    "Physics",
+                    "Political Science",
+                    "Psychology",
+                    "Public Policy"
+                ],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "gender",
+                "label": "Gender",
+                "type": "radio",
+                "options": ["Male", "Female", "Prefer not to answer"],
+                "hasOther": true,
+                "required": true
+            },
+            {
+                "name": "race",
+                "label": "Race / ethnicity",
+                "type": "checkbox",
+                "options": [
+                    "Non-Hispanic White",
+                    "Black or African American",
+                    "Latino, Latina, or Hispanic American",
+                    "South Asian or Indian American",
+                    "East Asian or Asian American",
+                    "Middle Eastern or Arab American",
+                    "Native American or Alaskan Native",
+                    "Hawaiian or Pacific Islander"
+                ],
+                "hasOther": true,
+                "required": false
+            },
+            {
+                "name": "tshirt-size",
+                "label": "What is your T-shirt size?",
+                "type": "radio",
+                "options": [
+                    "Extra small",
+                    "Small",
+                    "Medium",
+                    "Large",
+                    "Extra large",
+                    "2XL",
+                    "3XL"
+                ],
+                "required": true
+            },
+            {
+                "name": "dietary-restrictions",
+                "label": "Do you have any dietary restrictions?",
+                "type": "checkbox",
+                "options": [
+                    "Vegetarian",
+                    "Vegan",
+                    "No beef",
+                    "No pork",
+                    "Gluten-free"
+                ],
+                "hasOther": true,
+                "required": false
+            },
+            {
+                "name": "add-to-mailing-list",
+                "label": "Would you like to be added to our newsletter with information about future HackGT events? We promise we won't spam you!",
+                "type": "radio",
+                "options": [
+                    "Yes",
+                    "No"
+                ],
+                "hasOther": false,
+                "required": true
+            },
+            {
+                "name": "required-items",
+                "label": "Please confirm the following:",
+                "type": "checkbox",
+                "options": [
+                    "I have read and agree to adhere to the [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)",
+                    "I agree to the [HackGT Liability Waiver](https://drive.google.com/file/d/1Ztx7qIRZJ-g9F1_PFePCgrQrHy_p-nV7/view)",
+                    "I agree to the [HackGT Photo Release](https://drive.google.com/file/d/1ANKeUvqbv5qlRvxRL9oxmQlVgwlW45Hz/view)",
+                    "I agree to [The Hive Liability and Photo Waiver](https://drive.google.com/open?id=1-24_GifVB8rYZUQNNbVNL4pOa-LIMGMz)"
+                ],
+                "required": true,
+                "hasOther": false
+            },
+            {
+                "name": "other",
+                "label": "Anything else you want us to know?",
+                "type": "textarea",
+                "required": false
+            }
+        ]
+    },
+    {
+        "name": "Staff",
+        "text": [],
+        "questions": []
+    },
+    {
         "name": "Participant Confirmation",
         "text": [],
         "questions": [
@@ -607,6 +986,11 @@
                 "hasOther": false
             }
         ]
+    },
+    {
+        "name": "Walk-Up Confirmation",
+        "text": [],
+        "questions": []
     },
     {
         "name": "Mentor Confirmation",
