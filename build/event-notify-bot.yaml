@@ -2,4 +2,4 @@ git:
     remote: https://github.com/HackGT/event-notify-bot.git
     branch: master
 env:
-  CALENDAR_ID: fdm7olmkbd54oqqs0nagb29nfk@group.calendar.google.com,ej5pdplght4s77dvh16orphq4g@group.calendar.google.com,trhrcqmjq8s4nqnbn42d4qh028@group.calendar.google.com,811fduc258qjr0lv4ffgsvikbk@group.calendar.google.com
+  CALENDAR_ID: hack.gt_hpud1u9bsdqvpo3887qfosb6nk@group.calendar.google.com

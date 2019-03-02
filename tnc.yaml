@@ -5,4 +5,4 @@ wants:
   postgres: false
 
 env:
-  POSTGRES_URL: postgres://hardware-default@postgres-postgresql/hardware-default?sslmode=disable
+  POSTGRES_URL: "postgres://hardware-default@postgres-postgresql/hardware-default?sslmode=disable"
