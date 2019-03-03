@@ -1,0 +1,10 @@
+git:
+  remote: https://github.com/HackGT/registration.git
+  branch: horizons-2019
+
+deployment:
+  replicas: 1
+
+env:
+  EVENT_NAME: "Horizons"
+  PRODUCTION: true
