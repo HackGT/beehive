@@ -1,3 +1,1 @@
-git: https://github.com/HackGT/redirector.git
-env:
-  REDIRECT_URL: "https://docs.google.com/spreadsheets/d/1vd15U7JxVduglCZjIfDKIU-sR2TFa-OrKB80Yavvt5Q/edit#gid=1119264129"
+git: https://github.com/hackgt/cog.git
