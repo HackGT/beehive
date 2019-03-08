@@ -1,0 +1,9 @@
+git:
+    remote: "https://github.com/hackgt/horizons2019-teaser.git"
+    branch: "namethatfollows-patch-brainstorm"
+
+secrets-source: git-hackgt-horizons2019-teaser-secrets
+deployment:
+    replicas: 1
+    strategy:
+        type: recreate
