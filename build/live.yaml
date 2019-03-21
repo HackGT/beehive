@@ -1,3 +1,5 @@
 git:
     remote: https://github.com/HackGT/live-site.git
     branch: build-gt-live-site
+deployment:
+  memory_request: '15Mi'

@@ -1,1 +1,3 @@
 git: https://github.com/HackGT/hackgt2017-live.git
+deployment:
+  memory_request: '15Mi'
