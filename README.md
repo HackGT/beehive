@@ -1,8 +1,8 @@
-![](https://i.ytimg.com/vi/MmgKOjBfuBQ/maxresdefault.jpg)
+![](https://hack.gt/assets/projects/biodomes.png)
 
 # Why?
 
-Biodomes is our deployment abstraction layer that lets us:
+Beehive is our deployment abstraction layer that lets us:
 
 1. clearly and declaratively represent the **current** state of our deployment,
 2. roll back to known working states if necessary,
@@ -10,9 +10,8 @@ Biodomes is our deployment abstraction layer that lets us:
 4. separate our deployment implementation details from normal developers,
 5. and most importantly minimize manual changes to the infrastructure (through SSH, etc.).
 
-We bascially get most of this for free with `git`, the rest is filled in with a handy
-[travis job](https://travis-ci.org/HackGT/biodomes) that parses the files here and
-translates them into one deployment configuration.
+We bascially get most of this for free with `git`, the rest is handled by [Beekeeper](https://github.com/hackgt/beekeeper), a system we wrote to parse the files here and
+translate them into one deployment configuration.
 
 The goal here is to let everyone be able to deploy their apps and not have one person's
 app destroy another! It's like each app lives in it's _own world_.
@@ -88,20 +87,6 @@ if the branch is specified it will pull `latest-${branch name}`.
 The deployment also gets these environment variables set by default:
 
 1. `PORT` the port the service should bind to.
-
-### Setting Secrets
-
-Setting secrets is kind of a kludge right now. Say you have a secrets list in `dev/hacks.yaml`:
-```yaml
-secrets:
-  - MY_SECRET
-```
-
-You have to go to the [Travis secrets page](https://travis-ci.org/HackGT/biodomes/settings)
-and add an env var by the name of `DEV_HACKS_MY_SECRET`.
-If the file is just in `/hacks.yaml` you must name it `DEFAULT_HACKS_MY_SECRET`.
-
-**WARNING: your secret must be bash-escaped or Travis will do weird shit**
 
 ## Parting words
 
