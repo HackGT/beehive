@@ -1,5 +1,5 @@
 git: 
   remote: https://github.com/HackGT/horizons2019-teaser.git
-  branch: master
+  branch: event-site
 deployment:
   memory_request: '15Mi'
