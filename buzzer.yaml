@@ -1,3 +1,5 @@
-git: https://github.com/HackGT/buzzer.git
+git: 
+  remote: https://github.com/HackGT/buzzer.git
+  branch: master
 env:
   REGISTRATION_LEGAL_TAGS: "participant,mentor,volunteer"
