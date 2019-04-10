@@ -1,1 +1,3 @@
 git: https://github.com/HackGT/buildgt-trivia.git
+deployment:
+  memory_request: '15Mi'
