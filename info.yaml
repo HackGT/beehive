@@ -1,5 +1,3 @@
-git:
-    remote: https://github.com/HackGT/live-site.git
-    branch: catalyst-2019
-deployment:
-  memory_request: '15Mi'
+git: https://github.com/HackGT/redirector.git
+env:
+  REDIRECT_URL: "https://info.catalyst.hack.gt"
