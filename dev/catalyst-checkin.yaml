@@ -1,0 +1,11 @@
+git:
+  remote: https://github.com/HackGT/checkin2.git
+  branch: evan/catalyst
+
+env:
+  REGISTRATION_GRAPHQL: "https://registration.dev.hack.gt/graphql"
+  MONGO_URL: "mongodb://altered-pug-mongodb/checkin-catalyst-dev-2019"
+  CATALYST_MODE: true
+
+wants:
+    mongo: false
