@@ -1,22 +1,13 @@
 git:
   remote: https://github.com/HackGT/registration.git
-  branch: master
+  branch: catalyst
+
 wants:
-    mongo: false
+  mongo: false
 deployment:
   replicas: 1
 
 env:
-  EVENT_NAME: "[TEST] HackGT 5: Dare to Venture"
+  EVENT_NAME: "[DEV] Catalyst 2019"
   PRODUCTION: true
-  MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-2018"
-
-files:
-  /etc/registration:
-    contents:
-      questions.json:
-        path: 'resources/hackgt5-registration-questions.json'
-        env: QUESTIONS_FILE
-      theme.css:
-          path: 'resources/hackgt5-registration-theme.css'
-          env: THEME_FILE
+  MONGO_URL: "mongodb://altered-pug-mongodb/catalyst-dev-2019"
