@@ -1,0 +1,3 @@
+git: https://github.com/HackGT/redirector.git
+env:
+  REDIRECT_URL: "https://fall2018.hack.gt"
