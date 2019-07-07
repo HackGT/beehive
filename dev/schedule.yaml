@@ -6,3 +6,4 @@ wants:
 env:	
   SERVER_ENV: "devcloud"	
   SERVER_PORT: "3000"	
+  AUTH_EXP: "24h"
