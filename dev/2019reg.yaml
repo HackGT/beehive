@@ -6,4 +6,4 @@ deployment:
 env:
   EVENT_NAME: "HackGT: Into the Rabbit Hole"
   PRODUCTION: true
-  
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt6-public/header.png"
