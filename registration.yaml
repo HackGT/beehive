@@ -2,7 +2,7 @@ git:
   remote: https://github.com/HackGT/registration.git
   branch: "hackgt6"
 deployment:
-  replicas: 31
+  replicas: 3
 env:
   EVENT_NAME: "HackGT: Into the Rabbit Hole"
   PRODUCTION: true
