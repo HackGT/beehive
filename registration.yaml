@@ -8,6 +8,5 @@ env:
   PRODUCTION: true
   EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt6-public/header.png"
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-2019"
-  ADMIN_DOMAINS: "['hack.gt']"
 wants:
   mongo: false
