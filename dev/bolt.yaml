@@ -4,4 +4,4 @@ git:
     
 env:
     BUGSNAG_ENABLED: false
-    
+    GROUND_TRUTH_URL: https://login.hack.gt
