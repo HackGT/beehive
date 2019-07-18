@@ -1,3 +1,7 @@
 git:
     remote: https://github.com/HackGT/bolt.git
-    branch: master
+    branch: evan/requests-db-gql
+    
+env:
+    BUGSNAG_ENABLED: false
+    
