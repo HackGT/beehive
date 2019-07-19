@@ -1,7 +1,4 @@
-git:
-    remote: https://github.com/HackGT/bolt.git
-    branch: evan/requests-db-gql
+git: https://github.com/HackGT/bolt.git
     
 env:
-    BUGSNAG_ENABLED: false
-    GROUND_TRUTH_URL: https://login.hack.gt
+    REACT_APP_BUGSNAG_ENABLED: false
