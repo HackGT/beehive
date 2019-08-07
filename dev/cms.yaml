@@ -1,1 +1,4 @@
 git: https://github.com/HackGT/cms.git
+
+env:
+  NODE_ENV: production
