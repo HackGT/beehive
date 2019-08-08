@@ -1,3 +1,6 @@
 git: 
     remote: https://github.com/HackGT/cms.git
     branch: evan/basics
+
+env:
+    NODE_ENV: production
