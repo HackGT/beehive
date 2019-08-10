@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/application-bot.git
-  branch: autoranker-server
+  branch: callibration
 image_name: gcr.io/hackgt-cluster/application-bot
 secrets:
   - ADMIN_KEY_SECRET
