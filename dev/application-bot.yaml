@@ -6,7 +6,4 @@ secrets:
   - ADMIN_KEY_SECRET
   - BOT_TOKEN
   - VERIFICATION_TOKEN
-  - SLACK_CHANNEL_ID
-  - BOT_ID
-  - MONGO_URL
-  
+ 
