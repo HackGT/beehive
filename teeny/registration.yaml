@@ -1,0 +1,21 @@
+git:
+  remote: https://github.com/HackGT/registration.git
+  branch: "master"
+deployment:
+  replicas: 1
+env:
+  EVENT_NAME: "HackGTeeny 2019"
+  PRODUCTION: true
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt6-public/banner.png"
+  MONGO_URL: "mongodb://altered-pug-mongodb/registration-teeny-2019"
+wants:
+  mongo: false
+files:
+  /etc/registration:
+    contents:
+      questions.json:
+        path: 'resources/teeny-registration-questions.json'
+        env: QUESTIONS_FILE
+      theme.css:
+          path: 'resources/teeny-registration-theme.css'
+          env: THEME_FILE
