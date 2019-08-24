@@ -1,3 +1,4 @@
-git:
-    remote: https://github.com/HackGT/bolt.git
-    branch: master
+git: https://github.com/HackGT/bolt.git
+    
+env:
+    REACT_APP_BUGSNAG_ENABLED: false

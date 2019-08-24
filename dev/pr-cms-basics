@@ -1,0 +1,7 @@
+git: 
+    remote: https://github.com/HackGT/cms.git
+    branch: basics
+
+env:
+    NODE_ENV: production
+
