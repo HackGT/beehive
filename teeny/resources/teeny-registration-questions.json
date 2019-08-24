@@ -97,7 +97,7 @@
             },
             {
                 "name": "registered",
-                "label": "Have you registered for [HackGT 5](https://2018.hack.gt) yet?",
+                "label": "Have you registered for [HackGT 6](https://2019.hack.gt) yet?",
                 "type": "radio",
                 "options": [
                     "No",
@@ -114,7 +114,7 @@
                     "I want to get started with learning Computer Science skills",
                     "I'm preparing myself for the career fair",
                     "I'm preparing myself to get an internship this next summer",
-                    "I'm preparing for HackGT 5"
+                    "I'm preparing for HackGT 6"
                 ],
                 "required": false,
                 "hasOther": true
