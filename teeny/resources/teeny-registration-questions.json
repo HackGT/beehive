@@ -18,6 +18,12 @@
                 "required": true
             },
             {
+                "name": "gatech-id",
+                "type": "text",
+                "label": "What is your Georgia Tech username (ex: gburdell3)?",
+                "required": true
+            },
+            {
                 "name": "major",
                 "label": "What is your major?",
                 "type": "select",
