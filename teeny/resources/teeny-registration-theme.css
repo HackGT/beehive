@@ -43,7 +43,7 @@ a:hover {
 }
 /* Buttons */
 .btn, [type=submit], button, .accepted-btn-false {
-    background-color: #B19FF6;
+    background-color: #634d77;
     border: 2px solid #F2F2F2; 
     color: #F2F2F2;
     font-family: 'Bebas', sans-serif;
