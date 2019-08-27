@@ -6,7 +6,7 @@ deployment:
 env:
   EVENT_NAME: "HackGTeeny 2019"
   PRODUCTION: true
-  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt6-public/banner.png"
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt6-public/teenybanner.png"
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-teeny-2019"
 wants:
   mongo: false
