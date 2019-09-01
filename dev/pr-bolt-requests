@@ -1,6 +1,0 @@
-git:
-  remote: https://github.com/HackGT/bolt.git
-  branch: "feature/requests2"
-    
-env:
-    REACT_APP_BUGSNAG_ENABLED: false
