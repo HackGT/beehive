@@ -10,5 +10,5 @@ deployment:
 env:
   EVENT_NAME: "[DEV] Ground Truth Test"
   PRODUCTION: true
-  MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-3"
+  MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-4"
   
