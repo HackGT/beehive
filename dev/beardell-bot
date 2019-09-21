@@ -1,0 +1,5 @@
+git: https://github.com/HackGT/beardell-bot.git
+image_name: gcr.io/hackgt-cluster/beardell-bot
+secrets:
+  - SLACK_SIGNING_SECRET
+  - SLACK_BOT_TOKEN
