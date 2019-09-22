@@ -1,6 +1,0 @@
-git:
-  remote: https://github.com/HackGT/bolt.git
-  branch: "evan/fix-migrations-deploy"
-  
-env:
-  REACT_APP_BUGSNAG_ENABLED: false
