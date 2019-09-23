@@ -3,8 +3,6 @@ git:
   branch: "hackgt6"
 deployment:
   replicas: 2
-  memory: '512Mi'
-  memory_request: '512Mi'
 env:
   EVENT_NAME: "HackGT 6: Into the Rabbit Hole"
   PRODUCTION: true
