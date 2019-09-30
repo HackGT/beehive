@@ -5,7 +5,7 @@
 }
 /* Colors */
 html, body, #sidebar-nav {
-    background-color: #A08AFB;
+    background-color: #917baf;
     color: #F2F2F2;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
@@ -43,7 +43,7 @@ a:hover {
 }
 /* Buttons */
 .btn, [type=submit], button, .accepted-btn-false {
-    background-color: #B19FF6;
+    background-color: #634d77;
     border: 2px solid #F2F2F2; 
     color: #F2F2F2;
     font-family: 'Bebas', sans-serif;
@@ -62,7 +62,7 @@ code {
 }
 /* Form elements */
 input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]), select, fieldset, textarea {
-    background-color: #A08AFB;
+    background-color: #917baf;
     color: #F2F2F2;
     border-color: #F2F2F2;
 }
@@ -70,7 +70,7 @@ input:not([type=submit]):not([type=radio]):not([type=checkbox]):not([type=reset]
     border-color: #F2F2F2;
 }
 input:disabled, textarea:disabled {
-    background: repeating-linear-gradient(45deg, #E6E6E6, #E6E6E6 10px, #A08AFB 10px, #A08AFB 20px);
+    background: repeating-linear-gradient(45deg, #E6E6E6, #E6E6E6 10px, #917baf 10px, #917baf 20px);
     color: #e7e7e7 !important;
 }
 input:disabled::placeholder {

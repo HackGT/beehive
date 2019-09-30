@@ -1,0 +1,14 @@
+git:
+  remote: https://github.com/HackGT/sportal.git
+  branch: master
+wants:
+    postgres: true
+env:
+  SERVER_ENV: "production"
+  SERVER_PORT: "3000"
+  AUTH_EXP: "48h"
+  AWS_SIGNED_URL_EXPIRES: "60"
+  ZIP_EXPIRES: "600000"
+  ZIP_DIRECTORY: "/zips"
+  ZIP_DIRECTORY_CLEANUP_INTERVAL: "1800000"
+  BULK_DOWNLOAD_LIMIT: "1000"

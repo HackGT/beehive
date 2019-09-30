@@ -143,6 +143,17 @@
                     "Email"
                 ],
                 "hasOther": true
+            },
+            {
+                "name": "add-to-mailing-list",
+                "label": "Would you like to be added to our newsletter with information about future HackGT events? We promise we won't spam you!",
+                "type": "radio",
+                "options": [
+                    "Yes",
+                    "No"
+                ],
+                "hasOther": false,
+                "required": true
             }
         ]
     }, 
