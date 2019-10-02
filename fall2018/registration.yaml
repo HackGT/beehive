@@ -1,5 +1,6 @@
 deployment: 
   replicas: 1
+  memory: '512Mi'
 env: 
   EVENT_NAME: "HackGT 5: Dare to Venture"
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-2018"
