@@ -1,0 +1,5 @@
+git:	
+  remote: https://github.com/HackGT/insight.git	
+  branch: "master"	
+deployment:	
+  replicas: 1
