@@ -1,5 +1,5 @@
 git: https://github.com/HackGT/mentor.git
-image_name: gcr.io/hackgt-cluster/mentor
+image_name: hackgt/mentor
 secrets:
   - ADMIN_TOKEN
   - BOT_TOKEN
