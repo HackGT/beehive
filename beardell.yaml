@@ -1,0 +1,7 @@
+git: https://github.com/HackGT/mentor.git
+image_name: gcr.io/hackgt-cluster/mentor
+secrets:
+  - ADMIN_TOKEN
+  - BOT_TOKEN
+  - CLIENT_SECRET
+  - COOKIE_SECRET
