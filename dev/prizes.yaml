@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/prizes.git
-  branch: abhinav
+  branch: master
 image_name: hackgt/prizes
 secrets:
   - user
