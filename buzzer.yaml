@@ -4,6 +4,5 @@ git:
 env:
   REGISTRATION_LEGAL_TAGS: "participant,mentor,volunteer"
   SLACK_API_URL: https://slack.com/api/chat.postMessage
-  MAPGT_URL: http://map.dev.hack.gt
   REGISTRATION_GRAPHQL: https://registration.hack.gt/graphql
   DEV_MODE: False
