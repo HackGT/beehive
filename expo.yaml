@@ -2,4 +2,4 @@ git:
     remote: https://github.com/HackGT/ballot.git
     branch: v3
 deployment:
-    memory_request: '1Gi'
+  memory_request: '512Mi'
