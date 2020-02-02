@@ -5,6 +5,7 @@ wants:
     mongo: false
 deployment:
   replicas: 1
+  memory_request: '15Mi'
 
 env:
   EVENT_NAME: "Catalyst 2020"
