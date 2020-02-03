@@ -1,0 +1,12 @@
+git:
+  remote: https://github.com/HackGT/registration.git
+  branch: "horizons-2020"
+deployment:
+  replicas: 1
+env:
+  EVENT_NAME: "HackGT Horizons"
+  PRODUCTION: true
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt6-public/header.png"
+  MONGO_URL: "mongodb://altered-pug-mongodb/registration-horizons-2020"
+wants:
+  mongo: false
