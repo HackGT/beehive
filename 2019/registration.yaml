@@ -7,5 +7,6 @@
     EVENT_NAME: "HackGT 6: Into the Rabbit Hole"
     PRODUCTION: true
     EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt6-public/header.png"
+    MONGO_URL: "mongodb://altered-pug-mongodb/registration-2019"
   wants:
     mongo: false
