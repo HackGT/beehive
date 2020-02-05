@@ -1,5 +1,0 @@
-git:
-  remote: https://github.com/HackGT/livesite-map.git
-  branch: master
-deployment:
-  memory_request: '15Mi'
