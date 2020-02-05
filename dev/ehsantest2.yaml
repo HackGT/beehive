@@ -8,6 +8,6 @@ deployment:
   replicas: 1
 
 env:
-  EVENT_NAME: "[DEV] Ground Truth Test"
+  EVENT_NAME: "[DEV] Ground Truth Tes 2"
   PRODUCTION: true
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-5"
