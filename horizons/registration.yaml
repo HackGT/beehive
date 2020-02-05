@@ -8,5 +8,9 @@ env:
   PRODUCTION: true
   EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/Horizons%20header.png"
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-horizons-2020"
+  ADMIN_EMAILS:
+    - evan@hack.gt
+    - claudia@hack.gt
+    - stephanie@hack.gt
 wants:
   mongo: false
