@@ -1,7 +1,5 @@
 git:
   remote: https://github.com/HackGT/cms.git
   branch: master
-deployment:
-  replicas: 2
 env:
   NODE_ENV: production
