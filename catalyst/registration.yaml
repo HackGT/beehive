@@ -12,6 +12,5 @@ env:
     - evan@hack.gt
     - claudia@hack.gt
     - stephanie@hack.gt
-    
 wants:
   mongo: false
