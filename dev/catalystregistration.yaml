@@ -1,12 +1,16 @@
 git:
   remote: https://github.com/HackGT/registration.git
-  branch: catalyst
-wants:
-    mongo: false
+  branch: "catalyst"
 deployment:
   replicas: 1
-
 env:
-  EVENT_NAME: "Catalyst 2020"
+  EVENT_NAME: "HackGT Catalyst"
   PRODUCTION: true
-  MONGO_URL: "mongodb://altered-pug-mongodb/catalyst-2020-dev"
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/Catalyst%20header.png"
+  MONGO_URL: "mongodb://altered-pug-mongodb/registration-catalyst-2020-dev"
+  ADMIN_EMAILS:
+    - evan@hack.gt
+    - claudia@hack.gt
+    - stephanie@hack.gt
+wants:
+  mongo: false
