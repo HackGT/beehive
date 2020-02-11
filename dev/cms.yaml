@@ -2,4 +2,6 @@ git:
   remote: https://github.com/HackGT/cms.git
   branch: master
 env:
-  NODE_ENV: production
+  NODE_ENV: development
+wants:
+  mongo: true
