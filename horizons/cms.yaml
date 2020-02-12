@@ -1,0 +1,8 @@
+
+git:
+  remote: https://github.com/HackGT/cms.git
+  branch: horizons
+env:
+  NODE_ENV: production
+wants:
+  mongo: true
