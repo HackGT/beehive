@@ -6,4 +6,3 @@ env:
 
 wants:
     mongo: false
-
