@@ -1,2 +1,5 @@
 git: https://github.com/HackGT/profile-pic-bot.git
 image_name: gcr.io/hackgt-cluster/profile-pic-bot
+
+deployment:
+  memory_request: '512Mi'
