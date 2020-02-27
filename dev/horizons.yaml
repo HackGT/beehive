@@ -1,5 +1,5 @@
 git: 
   remote: https://github.com/HackGT/horizons2020-event-site.git
-  branch: scheduleandabout
+  branch: dev 
 deployment:
   memory_request: '15Mi'
