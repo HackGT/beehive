@@ -1,5 +1,3 @@
-git:
-    remote: https://github.com/HackGT/live-site.git
-    branch: hackgt6
-deployment:
-  memory_request: '15Mi'
+git: https://github.com/HackGT/redirector.git
+env:
+  REDIRECT_URL: "https://info.horizons.hack.gt"
