@@ -1,6 +1,5 @@
-git:		
-	remote: https://github.com/HackGT/ballot.git		
-  	branch: horizons2020
- 
- wants:
-  	postgres: true
+git:
+	remote: https://github.com/HackGT/ballot.git
+	branch: horizons2020
+wants:
+	postgres: true
