@@ -2,4 +2,4 @@ git:
   remote: https://github.com/HackGT/schedule-bot.git
   branch: master
 env:
-  CMS_URL: https://cms.dev.hack.gt/graphql
+  CMS_URL: https://cms.horizons.hack.gt/graphql
