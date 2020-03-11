@@ -1,7 +1,8 @@
-git: https://github.com/HackGT/mentor.git
-image_name: hackgt/mentor
+git: https://github.com/HackGT/beardell2.git
+image_name: hackgt/beardell2
 secrets:
   - ADMIN_TOKEN
   - BOT_TOKEN
   - CLIENT_SECRET
   - COOKIE_SECRET
+  - SIGNING_SECRET
