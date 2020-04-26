@@ -1,0 +1,5 @@
+git:
+  remote: https://github.com/HackGT/live-site.git
+  branch: buzzer-test
+deployment:
+  memory_request: '15Mi'
