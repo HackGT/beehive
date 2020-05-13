@@ -1,4 +1,9 @@
 git:		
   remote: https://github.com/HackGT/keystone.git		
   branch: master
+
+wants:
+  mongo: false
   
+env:
+  MONGO_DB_URL: "mongodb://altered-pug-mongodb/keystone-dev"
