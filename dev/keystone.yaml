@@ -6,4 +6,4 @@ wants:
   mongo: false
   
 env:
-  MONGO_DB_URL: "mongodb://altered-pug-mongodb/keystone-dev"
+  MONGO_URL: "mongodb://altered-pug-mongodb/keystone-dev"
