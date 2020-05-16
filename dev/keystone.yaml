@@ -1,9 +1,0 @@
-git:		
-  remote: https://github.com/HackGT/keystone.git		
-  branch: master
-
-wants:
-  mongo: true
-
-deployment:
-  memory_request: '250Mi'
