@@ -4,3 +4,6 @@ git:
 
 wants:
   mongo: true
+
+deployment:
+  memory_request: '250Mi'
