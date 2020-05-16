@@ -3,7 +3,4 @@ git:
   branch: master
 
 wants:
-  mongo: false
-  
-env:
-  MONGO_URL: "mongodb://altered-pug-mongodb/keystone-dev"
+  mongo: true
