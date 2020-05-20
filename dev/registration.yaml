@@ -11,4 +11,3 @@ env:
   EVENT_NAME: "[DEV] HealthTech Test"
   PRODUCTION: true
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-4"
-  

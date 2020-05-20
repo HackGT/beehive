@@ -14,4 +14,3 @@
       - stephanie@hack.gt
   wants:
     mongo: false
-  
