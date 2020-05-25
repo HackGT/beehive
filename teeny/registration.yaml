@@ -17,5 +17,5 @@ files:
         path: 'resources/teeny-registration-questions.json'	
         env: QUESTIONS_FILE	
       theme.css:	
-          path: 'resources/teeny-registration-theme.css'	
-          env: THEME_FILE
+        path: 'resources/teeny-registration-theme.css'	
+        env: THEME_FILE
