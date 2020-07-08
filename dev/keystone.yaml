@@ -1,6 +1,6 @@
 git:		
   remote: https://github.com/HackGT/keystone.git		
-  branch: master
+  branch: graphiql
 
 wants:
   mongo: true
