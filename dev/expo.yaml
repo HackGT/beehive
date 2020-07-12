@@ -1,7 +1,6 @@
 git:
   remote: https://github.com/HackGT/ballot.git
-  branch: master
+  branch: cleanup
   
 wants:
   postgres: true
-  
