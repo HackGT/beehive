@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/registration.git
-  branch: hackgt7-dev
+  branch: hackgt7
 
 wants:
   mongo: false
@@ -10,4 +10,4 @@ deployment:
 env:
   EVENT_NAME: "[DEV] HackGT7 Test"
   PRODUCTION: true
-  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7-dev"
+  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7"
