@@ -9,7 +9,7 @@ deployment:
   replicas: 1
 
 env:
-  EVENT_NAME: "[DEV] HackGT7 Test"
+  EVENT_NAME: "HackGT 7"
   PRODUCTION: true
   MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7"
   EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/HackGT%207%20header.png"
