@@ -1,3 +1,16 @@
-git: https://github.com/HackGT/redirector.git
+git:
+  remote: https://github.com/HackGT/registration.git
+  branch: "horizons-2020"
+deployment:
+  replicas: 1
 env:
-  REDIRECT_URL: "https://registration.hack.gt"
+  EVENT_NAME: "HackGT Horizons"
+  PRODUCTION: true
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/Horizons%20header.png"
+  MONGO_URL: "mongodb://altered-pug-mongodb/registration-horizons-2020"
+  ADMIN_EMAILS:
+    - evan@hack.gt
+    - claudia@hack.gt
+    - stephanie@hack.gt
+wants:
+  mongo: false 
