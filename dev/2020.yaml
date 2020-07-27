@@ -1,4 +1,5 @@
-git:
+git: 
   remote: https://github.com/HackGT/hackgt7-website.git
-  branch: master 
-
+  branch: master
+deployment:
+  memory_request: '15Mi'
