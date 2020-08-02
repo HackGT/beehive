@@ -8,3 +8,4 @@ wants:
 env:
   EVENT_NAME: "***DEV*** HackGT 12000"
   PRODUCTION: true
+  HELPSCOUT_ENABLED: true
