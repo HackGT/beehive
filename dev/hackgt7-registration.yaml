@@ -10,4 +10,4 @@ deployment:
 env:
   EVENT_NAME: "[DEV] HackGT7 Test"
   PRODUCTION: true
-  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7"
+  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7-registration-dev"
