@@ -3,11 +3,8 @@ git:
   branch: hackgt7-dev
 
 wants:
-  mongo: false
-deployment:
-  replicas: 1
+  mongo: true
 
 env:
   EVENT_NAME: "[DEV] HackGT7 Test"
   PRODUCTION: true
-  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7-registration-dev"
