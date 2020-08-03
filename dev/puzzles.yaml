@@ -1,6 +1,6 @@
 git: 
-    remote: https://github.com/HackGT/hackgt7-puzzles.git
-    branch: master
-  deployment:
-    memory_request: '15Mi'
+  remote: https://github.com/HackGT/hackgt7-puzzles.git
+  branch: master
+deployment:
+  memory_request: '15Mi'
   
