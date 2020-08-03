@@ -2,7 +2,7 @@ git:
   remote: https://github.com/HackGT/hackgt7-puzzles.git
   branch: master
 
-image_name: gcr.io/hackgt/hackgt7-puzzles
+image_name: gcr.io/hackgt-cluster/hackgt7-puzzles
 
 wants:
   mongo: false
