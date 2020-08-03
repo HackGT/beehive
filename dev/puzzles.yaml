@@ -1,6 +1,7 @@
 git: 
   remote: https://github.com/HackGT/hackgt7-puzzles.git
   branch: master
+image_name: gcr.io/hackgt-cluster/hackgt7-puzzles
 deployment:
   memory_request: '15Mi'
   
