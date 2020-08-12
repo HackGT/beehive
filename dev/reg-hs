@@ -5,10 +5,6 @@ git:
 wants:
   mongo: true
 
-secrets:
-  - HELPSCOUT_INTEGRATION_SECRET_KEY
-  - HELPSCOUT_BEACON_SUPPORT_HISTORY_SECRET_KEY
-
 env:
   EVENT_NAME: "***DEV*** HackGT 12000"
   PRODUCTION: true
