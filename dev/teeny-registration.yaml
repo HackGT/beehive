@@ -1,0 +1,11 @@
+git:
+    remote: https://github.com/HackGT/registration.git
+    branch: teeny-2020
+  
+  wants:
+    mongo: true
+  
+  env:
+    EVENT_NAME: "[DEV] HackGTeeny Test"
+    PRODUCTION: true
+  
