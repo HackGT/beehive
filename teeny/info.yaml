@@ -1,0 +1,4 @@
+remote: https://github.com/HackGT/live-site.git
+  branch: hackgteeny-2020
+deployment:
+  memory_request: '15Mi'
