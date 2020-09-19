@@ -1,0 +1,13 @@
+git:
+  remote: https://github.com/HackGT/registration.git
+  branch: evan/hackgt7-hs-app
+  
+wants:
+  mongo: true
+
+env:
+  EVENT_NAME: "***DEV*** HackGT 12000"
+  PRODUCTION: true
+  HELPSCOUT_INTEGRATION_ENABLED: true
+  HELPSCOUT_BEACON_ENABLED: true
+  HELPSCOUT_BEACON_ID: "e25770bc-77c7-4583-befd-17e37d0b59bc"
