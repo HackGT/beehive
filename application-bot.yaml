@@ -1,4 +1,6 @@
-git: https://github.com/HackGT/application-bot.git
+git: 
+  remote: https://github.com/HackGT/application-bot.git
+  branch: master
 image_name: gcr.io/hackgt-cluster/application-bot
 deployment:
   memory: '512Mi'
