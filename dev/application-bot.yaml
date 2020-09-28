@@ -1,0 +1,11 @@
+git: 
+  remote: https://github.com/HackGT/application-bot.git
+  branch: autoranker
+image_name: gcr.io/hackgt-cluster/application-bot
+deployment:
+  memory: '512Mi'
+  memory_request: '512Mi'
+secrets:
+  - ADMIN_KEY_SECRET
+  - BOT_TOKEN
+  - VERIFICATION_TOKEN
