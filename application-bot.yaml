@@ -1,5 +1,8 @@
 git: https://github.com/HackGT/application-bot.git
 image_name: gcr.io/hackgt-cluster/application-bot
+deployment:
+  memory: '512Mi'
+  memory_request: '512Mi'
 secrets:
   - ADMIN_KEY_SECRET
   - BOT_TOKEN
