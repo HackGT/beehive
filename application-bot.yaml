@@ -1,5 +1,5 @@
 git: https://github.com/HackGT/application-bot.git
-image_name: hackgt/application-bot
+image_name: gcr.io/hackgt-cluster/application-bot
 secrets:
   - ADMIN_KEY_SECRET
   - BOT_TOKEN
