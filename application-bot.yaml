@@ -9,3 +9,4 @@ secrets:
   - ADMIN_KEY_SECRET
   - BOT_TOKEN
   - VERIFICATION_TOKEN
+  - TOKEN
