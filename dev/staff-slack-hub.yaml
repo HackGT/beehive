@@ -1,3 +1,8 @@
 git:
     remote: https://github.com/HackGT/staff-slack-hub.git
     branch: master
+
+deployment:
+  replicas: 1
+  memory: '512Mi'
+  memory_request: '512Mi'
