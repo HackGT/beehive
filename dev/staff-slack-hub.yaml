@@ -4,5 +4,5 @@ git:
 
 deployment:
   replicas: 1
-  memory: '512Mi'
-  memory_request: '512Mi'
+  memory: '350Mi'
+  memory_request: '350Mi'
