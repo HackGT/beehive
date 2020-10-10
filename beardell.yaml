@@ -1,0 +1,23 @@
+git:
+    remote: https://github.com/HackGT/beardell2.git
+    branch: graphql_endpoint
+
+wants:
+    mongo: true
+
+secrets:
+    - ADMIN_TOKEN
+    - BOT_TOKEN
+    - CLIENT_SECRET
+    - COOKIE_SECRET
+    - SIGNING_SECRET
+    - GROUNDTRUTHID
+    - GROUNDTRUTHSECRET
+    - SIGNING_SECRET
+    - SECRET
+
+env:
+    CLIENT_ID: "15533117780.599676767764"
+    TEAM_ID: "T01AUT83XST"
+    HOST_URL: beardell.hack.gt
+image_name: gcr.io/hackgt-cluster/beardell2
