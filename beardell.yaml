@@ -1,6 +1,6 @@
 git:
     remote: https://github.com/HackGT/beardell2.git
-    branch: graphql_endpoint
+    branch: mutation_schema
 
 wants:
     mongo: true
