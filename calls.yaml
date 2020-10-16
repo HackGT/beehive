@@ -4,7 +4,5 @@ git:
 image_name: gcr.io/hackgt-cluster/virtual-checkin
 wants:
   mongo: false
-deployment:
-  memory_request: '15Mi'
 env:
   MONGO_URL: "mongodb://altered-pug-mongodb/virtual-checkin-dev"
