@@ -1,8 +1,8 @@
-git: https://github.com/HackGT/checkin2.git
-
-env:
-  REGISTRATION_GRAPHQL: "https://registration.hack.gt/graphql"
-  MONGO_URL: "mongodb://altered-pug-mongodb/checkin-hackgt6"
-
+git: 
+  remote: https://github.com/HackGT/virtual-checkin.git
+  branch: master
+image_name: gcr.io/hackgt-cluster/virtual-checkin
 wants:
-    mongo: false
+  mongo: false
+env:
+  MONGO_URL: "mongodb://altered-pug-mongodb/virtual-checkin-dev"
