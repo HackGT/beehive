@@ -5,4 +5,4 @@ image_name: gcr.io/hackgt-cluster/virtual-checkin
 wants:
   mongo: false
 env:
-  MONGO_URL: "mongodb://altered-pug-mongodb/virtual-checkin-dev"
+  MONGO_URL: "mongodb://altered-pug-mongodb/virtual-checkin"
