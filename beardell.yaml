@@ -17,6 +17,10 @@ secrets:
     - SECRET
     - GRAPHQLAUTH
 
+deployment:
+  memory: '512Mi'
+  memory_request: '512Mi'
+
 env:
     CLIENT_ID: "15533117780.599676767764"
     TEAM_ID: "T01AUT83XST"
