@@ -6,3 +6,4 @@ wants:
   mongo: false
 env:
   MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7-virtual-checkin"
+  
