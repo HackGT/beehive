@@ -1,10 +1,3 @@
-git: 
-  remote: https://github.com/HackGT/prizes.git
-  branch: swag-shop
-image_name: gcr.io/hackgt-cluster/prizes
-wants:
-  mongo: false
-deployment:
-  memory_request: '15Mi'
+git: https://github.com/HackGT/redirector.git
 env:
-  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7-swag"
+  REDIRECT_URL: "https://prizes.dev.hack.gt"
