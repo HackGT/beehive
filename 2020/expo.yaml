@@ -1,0 +1,7 @@
+git:
+  remote: https://github.com/HackGT/ballot.git
+  branch: hackgt7
+  
+wants:
+  postgres: true
+  
