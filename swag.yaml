@@ -1,6 +1,6 @@
 git: 
   remote: https://github.com/HackGT/prizes.git
-  branch: swag-shop
+  branch: swag-redo
 image_name: gcr.io/hackgt-cluster/prizes
 wants:
   mongo: false
