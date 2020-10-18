@@ -1,0 +1,8 @@
+git: 
+  remote: https://github.com/HackGT/prizes.git
+  branch: swag-redo
+image_name: gcr.io/hackgt-cluster/prizes
+wants:
+  mongo: false
+env:
+  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7-swag-dev"
