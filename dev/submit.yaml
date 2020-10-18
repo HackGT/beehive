@@ -1,3 +1,5 @@
 git:
   remote: https://github.com/HackGT/submit.git
   branch: dev
+env:
+  DEVPOST_URL: https://hackgt2019.devpost.com/
