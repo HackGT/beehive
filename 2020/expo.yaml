@@ -5,3 +5,6 @@ git:
 wants:
   postgres: true
   
+deployment:
+  memory_request: '1024Mi'
+  memory: '1024Mi'
