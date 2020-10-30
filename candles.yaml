@@ -1,3 +1,4 @@
-git:
-  ref: https://github.com/HackGT/candles.git
+git: 
+  remote: https://github.com/HackGT/candles.git
   branch: main
+image_name: gcr.io/hackgt-cluster/candles
