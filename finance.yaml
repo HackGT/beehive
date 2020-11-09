@@ -1,9 +1,3 @@
-wants:
-  postgres: false
-
-env:
-  POSTGRES_URL: postgres://finance-default-2@postgres-postgresql/finance-default-2?sslmode=disable
-
 git:
   remote: https://github.com/HackGT/piranha.git
   branch: ayush/node
