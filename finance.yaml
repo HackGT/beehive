@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/piranha.git
-  branch: ayush/node
+  branch: master
 
 deployment:
   memory_request: '250Mi'
