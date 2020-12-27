@@ -1,0 +1,22 @@
+git:
+  remote: https://github.com/HackGT/registration.git
+  branch: hackgt7
+  
+wants:
+  mongo: false
+  
+deployment:
+  replicas: 1
+
+env:
+  EVENT_NAME: "HackGT 7"
+  PRODUCTION: true
+  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7"
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/HackGT%207%20header.png"
+  HELPSCOUT_INTEGRATION_ENABLED: true
+  HELPSCOUT_BEACON_ENABLED: true
+  HELPSCOUT_BEACON_ID: "e25770bc-77c7-4583-befd-17e37d0b59bc"
+  ADMIN_EMAILS:
+    - evan@hack.gt
+    - claudia@hack.gt
+    - stephanie@hack.gt
