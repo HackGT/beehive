@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/ground-truth.git
-  branch: ayush/security
+  branch: master
   
 env:
   EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt6-public/banner.png"
