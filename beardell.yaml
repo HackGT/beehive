@@ -1,6 +1,6 @@
 git:
     remote: https://github.com/HackGT/beardell2.git
-    branch: mutation_schema
+    branch: master
 
 wants:
     mongo: true
