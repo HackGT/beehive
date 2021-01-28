@@ -1,3 +1,5 @@
 git:		
   remote: https://github.com/HackGT/team-formation.git		
   branch: master
+env:
+  GROUNDTRUTHURL: https://login.dev.hack.gt
