@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/registration.git
-  branch: healthtech-2020
+  branch: catalyst-dev
 
 wants:
   mongo: false
@@ -8,6 +8,6 @@ deployment:
   replicas: 1
 
 env:
-  EVENT_NAME: "[DEV] HealthTech Test"
+  EVENT_NAME: "[DEV] Catalyst Test"
   PRODUCTION: true
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-4"
