@@ -18,8 +18,8 @@ secrets:
     - GRAPHQLAUTH
 
 deployment:
-  memory: '512Mi'
-  memory_request: '512Mi'
+  memory: '350Mi'
+  memory_request: '350Mi'
 
 env:
     CLIENT_ID: "15533117780.599676767764"
