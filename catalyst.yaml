@@ -3,3 +3,4 @@ git:
   branch: master
 deployment:
   memory_request: '15Mi'
+  
