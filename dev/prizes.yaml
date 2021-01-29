@@ -1,6 +1,6 @@
 git: 
   remote: https://github.com/HackGT/prizes.git
-  branch: swag-shop
+  branch: main
   
 image_name: gcr.io/hackgt-cluster/prizes
 
@@ -12,4 +12,4 @@ deployment:
   
 env:
   MONGO_URL: "mongodb://altered-pug-mongodb/prizes-dev"
-  GROUNDTRUTHURL: https://login.dev.hack.gt
+  GROUND_TRUTH_URL: https://login.dev.hack.gt
