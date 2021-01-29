@@ -8,3 +8,6 @@ wants:
 deployment:
   memory_request: '350Mi'
   memory: '350Mi'
+
+env:
+  GROUND_TRUTH_URL: https://login.dev.hack.gt
