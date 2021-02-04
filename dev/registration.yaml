@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/registration.git
-  branch: catalyst-dev
+  branch: healthtech-2020
 
 wants:
   mongo: false
