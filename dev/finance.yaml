@@ -1,0 +1,6 @@
+git:
+    remote: https://github.com/HackGT/piranha.git
+    branch: master
+
+env:
+  GROUND_TRUTH_URL: https://login.dev.hack.gt

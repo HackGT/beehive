@@ -1,4 +1,0 @@
-git: https://github.com/HackGT/redirector.git
-env:
-  REDIRECT_URL: "https://expo.horizons.hack.gt/"
-  

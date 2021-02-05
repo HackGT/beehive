@@ -1,0 +1,7 @@
+git:
+  remote: https://github.com/HackGT/piranha.git
+  branch: master
+
+deployment:
+  memory_request: '250Mi'
+  memory: '350Mi'

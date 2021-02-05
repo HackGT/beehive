@@ -1,0 +1,15 @@
+git: 
+  remote: https://github.com/HackGT/hackgt7-puzzles.git
+  branch: master
+  
+image_name: gcr.io/hackgt-cluster/hackgt7-puzzles
+  
+wants:
+  mongo: false
+  
+deployment:
+  memory_request: '15Mi'
+  
+env:
+  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7-puzzles"
+    

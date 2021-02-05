@@ -1,5 +1,4 @@
+
 git:	
   remote: https://github.com/HackGT/insight.git	
   branch: sponsor-fair
-deployment:	
-  replicas: 1

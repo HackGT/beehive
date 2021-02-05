@@ -7,10 +7,14 @@ env:
   EVENT_NAME: "HackGT Catalyst"
   PRODUCTION: true
   EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/Catalyst%20header.png"
-  MONGO_URL: "mongodb://altered-pug-mongodb/registration-catalyst-2020"
+  MONGO_URL: "mongodb://altered-pug-mongodb/registration-catalyst-2021"
   ADMIN_EMAILS:
-    - evan@hack.gt
-    - claudia@hack.gt
+    - elton.pinto@hack.gt
+    - saachi@hack.gt
     - stephanie@hack.gt
+    - eleanor.boyd@hack.gt
+    - surya.prabhakar@hack.gt
+    - rahul.rajan@hack.gt
+    - mohan.dodda@hack.gt
 wants:
   mongo: false

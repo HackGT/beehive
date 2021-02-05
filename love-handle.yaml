@@ -1,5 +1,6 @@
 git: 
   remote: https://github.com/HackGT/love-handle.git
-  branch: master 
+  branch: master
+image_name: gcr.io/hackgt-cluster/love-handle
 deployment:
   memory_request: '15Mi'

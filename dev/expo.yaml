@@ -4,3 +4,6 @@ git:
   
 wants:
   postgres: true
+
+env:
+  SUBMIT_URL: https://submit.dev.hack.gt

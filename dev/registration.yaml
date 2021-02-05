@@ -8,6 +8,6 @@ deployment:
   replicas: 1
 
 env:
-  EVENT_NAME: "[DEV] HealthTech Test"
+  EVENT_NAME: "[DEV] Health Tech Test"
   PRODUCTION: true
-  MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-4"
+  MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-5"
