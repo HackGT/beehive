@@ -1,0 +1,5 @@
+git: 
+  remote: https://github.com/HackGT/healthtech2021-event-site.git
+  branch: master
+deployment:
+  memory_request: '15Mi'
