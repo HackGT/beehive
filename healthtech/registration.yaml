@@ -1,0 +1,20 @@
+git:
+  remote: https://github.com/HackGT/registration.git
+  branch: "healthtech-2021"
+deployment:
+  replicas: 1
+env:
+  EVENT_NAME: "HackGT Catalyst"
+  PRODUCTION: true
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/Health%20header.png"
+  MONGO_URL: "mongodb://altered-pug-mongodb/registration-healthtech-2021"
+  ADMIN_EMAILS:
+    - elton.pinto@hack.gt
+    - saachi@hack.gt
+    - stephanie@hack.gt
+    - aviva.kern@hack.gt
+    - julia.litrel@hack.gt
+    - rahul.rajan@hack.gt
+    - mohan.dodda@hack.gt
+wants:
+  mongo: false
