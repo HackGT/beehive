@@ -10,7 +10,7 @@ deployment:
 env:
   EVENT_NAME: "[DEV] CatalystTest"
   PRODUCTION: true
-  MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-6"
+  MONGO_URL: "mongodb://altered-pug-mongodb/registration-dev-5"
   
   
   
