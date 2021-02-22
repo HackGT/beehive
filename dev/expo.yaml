@@ -1,0 +1,9 @@
+git:
+  remote: https://github.com/HackGT/ballot.git
+  branch: hackgt7
+
+wants:
+  postgres: true
+
+env:
+  SUBMIT_URL: https://submit.dev.hack.gt
