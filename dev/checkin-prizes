@@ -1,0 +1,10 @@
+git: 
+  remote: https://github.com/HackGT/virtual-checkin.git
+  branch: cms-redo
+image_name: gcr.io/hackgt-cluster/virtual-checkin
+wants:
+  mongo: false
+env:
+  GROUNDTRUTHURL: https://login.dev.hack.gt
+  MONGO_URL: "mongodb://altered-pug-mongodb/virtual-checkin-dev-prizes"
+  GRAPHQL_URL="https://registration.dev.hack.gt/graphql"
