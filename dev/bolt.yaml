@@ -1,6 +1,6 @@
 git:
     remote: https://github.com/HackGT/bolt.git
-    branch: "evan/fix-auth"
+    branch: master
     
 env:
     REACT_APP_BUGSNAG_ENABLED: false
