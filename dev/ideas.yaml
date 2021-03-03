@@ -1,6 +1,6 @@
 git: 
   remote: https://github.com/HackGT/projectideas-onboarding2020.git
-  branch: master
+  branch: dev
   
 wants:
   mongo: true
