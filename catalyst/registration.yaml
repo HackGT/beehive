@@ -6,7 +6,7 @@ deployment:
 env:
   EVENT_NAME: "HackGT Catalyst"
   PRODUCTION: true
-  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/Catalyst%20header.png"
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/Catalyst_header21.png"
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-catalyst-2021"
   ADMIN_EMAILS:
     - elton.pinto@hack.gt
