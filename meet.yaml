@@ -1,4 +1,3 @@
 git:
   remote: https://github.com/HackGT/twilio-meet.git
   branch: master
-image_name: gcr.io/hackgt-cluster/twilio-meet
