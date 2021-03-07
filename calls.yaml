@@ -6,7 +6,7 @@ wants:
   mongo: true
 env:
   MONGO_URL: "mongodb://altered-pug-mongodb/virtual-checkin-dev"
-  GROUND_TRUTH_URL: https://login.dev.hack.gt
+  GROUND_TRUTH_URL: https://login.hack.gt
   GRAPHQL_URL: https://registration.2020.hack.gt/graphql
   PRODUCTION: true
   PORT: 3000
