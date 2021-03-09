@@ -1,6 +1,6 @@
 git:
     remote: https://github.com/HackGT/beardell2.git
-    branch: master
+    branch: healthtech2021
 
 wants:
     mongo: true
