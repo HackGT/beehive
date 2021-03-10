@@ -8,14 +8,19 @@ wants:
 secrets:
     - ADMIN_TOKEN
     - BOT_TOKEN
+    - CLIENT_ID
     - CLIENT_SECRET
     - COOKIE_SECRET
-    - SIGNING_SECRET
+    - GRAPHQLAUTH
     - GROUNDTRUTHID
     - GROUNDTRUTHSECRET
-    - SIGNING_SECRET
+    - HELP_CHANNEL
+    - HOST_URL
+    - LOGIN_URL
+    - MONGO_URL
     - SECRET
-    - GRAPHQLAUTH
+    - SIGNING_SECRET
+    - TEAM_ID
 
 deployment:
   memory: '350Mi'
