@@ -5,24 +5,6 @@ git:
 wants:
     mongo: true
 
-secrets:
-    - ADMIN_TOKEN
-    - BOT_TOKEN
-    - CLIENT_ID
-    - CLIENT_SECRET
-    - COOKIE_SECRET
-    - GRAPHQLAUTH
-    - GROUNDTRUTHID
-    - GROUNDTRUTHSECRET
-    - HELP_CHANNEL
-    - HOST_URL
-    - LOGIN_URL
-    - MONGO_URL
-    - ROOT_URL
-    - SECRET
-    - SIGNING_SECRET
-    - TEAM_ID
-
 deployment:
   memory: '350Mi'
   memory_request: '350Mi'
