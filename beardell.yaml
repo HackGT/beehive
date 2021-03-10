@@ -26,8 +26,4 @@ deployment:
   memory: '350Mi'
   memory_request: '350Mi'
 
-env:
-    CLIENT_ID: "15533117780.599676767764"
-    TEAM_ID: "T01AUT83XST"
-    HOST_URL: beardell.hack.gt
 image_name: gcr.io/hackgt-cluster/beardell2
