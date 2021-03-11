@@ -6,7 +6,7 @@ deployment:
 env:
   EVENT_NAME: "HackGT HealthTech"
   PRODUCTION: true
-  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/regExtendedEmail.png"
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/regOpenEmail.png"
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-healthtech-2021"
   ADMIN_EMAILS:
     - elton.pinto@hack.gt
