@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/submit.git
-  branch: master
+  branch: healthtech
 
 env:
   DEVPOST_URL: https://hackgt2020.devpost.com/
