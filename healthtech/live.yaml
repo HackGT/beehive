@@ -1,3 +1,4 @@
-git: https://github.com/HackGT/healthtech2017-live.git
+git: https://github.com/HackGT/live-site.git
+branch: healthtech-2021
 deployment:
   memory_request: '15Mi'
