@@ -1,0 +1,11 @@
+git: 
+  remote: https://github.com/HackGT/virtual-checkin.git
+  branch: master
+wants:
+  mongo: true
+env:
+  GROUND_TRUTH_URL: https://login.hack.gt
+  GRAPHQL_URL: https://registration.2020.hack.gt/graphql
+  PRODUCTION: true
+  PORT: 3000
+  CMS_URL: https://cms.hack.gt/admin/api
