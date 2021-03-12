@@ -10,4 +10,4 @@ env:
   GRAPHQL_URL: https://registration.2020.hack.gt/graphql
   PRODUCTION: true
   PORT: 3000
-  CMS_URL: https://cms.hack.gt/admin/api
+  CMS_URL: https://keystone.dev.hack.gt/admin/api
