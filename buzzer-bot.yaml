@@ -1,6 +1,0 @@
-git:
-  remote: https://github.com/HackGT/buzzer-bot.git
-  branch: master
-env:
-  CMS_URL: https://cms.dev.hack.gt/graphql
-  BUZZER_URL: https://buzzer.hack.gt/graphql
