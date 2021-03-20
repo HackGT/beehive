@@ -1,8 +1,3 @@
 git: 
   remote: https://github.com/HackGT/buzzer.git
   branch: master
-env:
-  REGISTRATION_LEGAL_TAGS: "participant,mentor,volunteer"
-  SLACK_API_URL: https://slack.com/api/chat.postMessage
-  REGISTRATION_GRAPHQL: https://registration.hack.gt/graphql
-  DEV_MODE: False
