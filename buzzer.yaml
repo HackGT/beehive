@@ -1,3 +1,7 @@
 git: 
   remote: https://github.com/HackGT/buzzer.git
   branch: master
+
+deployment:
+  memory_request: '350Mi'
+  memory: '350Mi'
