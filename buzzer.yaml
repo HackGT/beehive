@@ -3,5 +3,5 @@ git:
   branch: master
 
 deployment:
-  memory_request: '350Mi'
-  memory: '350Mi'
+  memory_request: '256Mi'
+  memory: '256Mi'
