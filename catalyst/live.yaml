@@ -1,0 +1,5 @@
+git:
+  remote: https://github.com/HackGT/live-site.git
+  branch: catalyst-2021
+deployment:
+  memory_request: '15Mi'
