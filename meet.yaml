@@ -1,6 +1,0 @@
-git:
-  remote: https://github.com/HackGT/twilio-meet.git
-  branch: master
-env:
-  SUBMIT_URL: https://submit.healthtech.hack.gt
-  
