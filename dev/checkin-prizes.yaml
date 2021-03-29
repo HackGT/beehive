@@ -10,4 +10,4 @@ wants:
 env:
   GROUNDTRUTHURL: https://login.dev.hack.gt
   MONGO_URL: "mongodb://altered-pug-mongodb/virtual-checkin-dev-prizes"
-  GRAPHQL_URL: https://registration.dev.hack.gt/graphql
+  GRAPHQL_URL: "https://registration.dev.hack.gt/graphql"
