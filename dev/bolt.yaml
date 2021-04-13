@@ -1,6 +1,6 @@
 git:
     remote: https://github.com/HackGT/bolt.git
-    branch: "ayush/updates"
+    branch: "ayush/fix-linting"
     
 env:
     REACT_APP_BUGSNAG_ENABLED: false
