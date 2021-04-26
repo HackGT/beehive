@@ -1,5 +1,5 @@
 git:
   remote: https://github.com/HackGT/hexlabs-website.git
-  branch: main
+  branch: dev
 
 image_name: gcr.io/hackgt-cluster/hexlabs-website
