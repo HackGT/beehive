@@ -1,4 +1,3 @@
-git: https://github.com/HackGT/hackgt-org-website.git
-deployment:
-  replicas: 3
-  memory_request: '15Mi'
+git: https://github.com/HackGT/redirector.git
+env:
+  REDIRECT_URL: "https://hexlabs.org"
