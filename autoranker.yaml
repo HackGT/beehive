@@ -2,9 +2,6 @@ git:
   remote: https://github.com/HackGT/autoranker.git
   branch: master
 image_name: gcr.io/hackgt-cluster/autoranker
-deployment:
-  memory: '512Mi'
-  memory_request: '512Mi'
 secrets:
   - TOKEN
   - MONGO_URL                                             
