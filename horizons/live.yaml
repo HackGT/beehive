@@ -1,5 +1,3 @@
 git:
   remote: https://github.com/HackGT/live-site.git
   branch: horizons-2020
-deployment:
-  memory_request: '15Mi'
