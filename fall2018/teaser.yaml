@@ -1,5 +1,3 @@
 git:
     remote: https://github.com/HackGT/hackgt2018-teaser
     branch: master
-deployment:
-  memory_request: '20Mi'
