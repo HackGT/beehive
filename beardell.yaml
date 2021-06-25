@@ -5,8 +5,4 @@ git:
 wants:
     mongo: true
 
-deployment:
-  memory: '350Mi'
-  memory_request: '350Mi'
-
 image_name: gcr.io/hackgt-cluster/beardell2
