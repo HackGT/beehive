@@ -1,7 +1,0 @@
-
-git:
-  remote: https://github.com/HackGT/submit.git
-  branch: healthtech
-
-env:
-  DEVPOST_URL: https://healthtech-2021.devpost.com
