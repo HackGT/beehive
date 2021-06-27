@@ -1,8 +1,0 @@
-git:
-    remote: https://github.com/HackGT/beardell2.git
-    branch: master
-
-wants:
-    mongo: true
-
-image_name: gcr.io/hackgt-cluster/beardell2
