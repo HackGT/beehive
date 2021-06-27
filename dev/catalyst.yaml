@@ -1,5 +1,0 @@
-git:
-  remote: https://github.com/HackGT/catalyst2020-teaser.git
-  branch: dev
-deployment:
-  memory_request: '15Mi'
