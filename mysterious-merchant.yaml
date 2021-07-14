@@ -1,7 +1,7 @@
 git:
   remote: https://github.com/HackGT/hackgt8-puzzles-cipher.git
   branch: main
-image_name: gcr.io/hackgt-cluster/prizes
+image_name: gcr.io/hackgt-cluster/hackgt8-puzzles-cipher
   
 wants:
   mongo: true
