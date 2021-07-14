@@ -1,0 +1,10 @@
+git:
+  remote: https://github.com/HackGT/hackgt8-puzzles-cipher.git
+  branch: master
+image_name: gcr.io/hackgt-cluster/prizes
+  
+wants:
+  mongo: true
+
+deployment:
+  memory_request: '15Mi'
