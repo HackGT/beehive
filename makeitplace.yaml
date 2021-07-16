@@ -1,6 +1,6 @@
 git:
   remote: https://github.com/HackGT/hackgt8-puzzles-gcode.git
-  branch: main
+  branch: master
 image_name: gcr.io/hackgt-cluster/hackgt8-puzzles-gcode
   
 wants:
