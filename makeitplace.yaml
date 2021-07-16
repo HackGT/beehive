@@ -1,0 +1,10 @@
+git:
+  remote: https://github.com/HackGT/hackgt8-puzzles-gcode.git
+  branch: master
+image_name: gcr.io/hackgt-cluster/hackgt8-puzzles-gcode
+  
+wants:
+  mongo: true
+
+deployment:
+  memory_request: '15Mi'
