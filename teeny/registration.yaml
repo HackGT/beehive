@@ -9,7 +9,7 @@ deployment:
   replicas: 1
 
 env:
-  EVENT_NAME: "HackGT 8"
+  EVENT_NAME: "HackGTeeny 2021"
   PRODUCTION: true
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-teeny2021"
   EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/HackGTeeny_2021_header_new.png"
