@@ -12,7 +12,7 @@ env:
   EVENT_NAME: "HackGT 8"
   PRODUCTION: true
   MONGO_URL: "mongodb://altered-pug-mongodb/registration-teeny2021"
-  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/HackGTeeny_2021_header.png"
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/HackGTeeny_2021_header_new.png"
   HELPSCOUT_INTEGRATION_ENABLED: true
   HELPSCOUT_BEACON_ENABLED: true
   HELPSCOUT_BEACON_ID: "e25770bc-77c7-4583-befd-17e37d0b59bc"
