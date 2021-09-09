@@ -5,6 +5,6 @@ image_name: gcr.io/hackgt-cluster/hackgt8-puzzles-steganography
   
 wants:
   mongo: true
-
+ 
 deployment:
   memory_request: '15Mi'
