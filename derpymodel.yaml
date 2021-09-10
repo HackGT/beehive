@@ -1,8 +1,10 @@
 git:
   remote: https://github.com/HackGT/hackgt8-puzzles-fooling-model.git
   branch: master
-image_name: gcr.io/hackgt-cluster/derpymodel
+image_name: gcr.io/hackgt-cluster/hackgt8-puzzles-fooling-model
 secrets:
   - SECRET
   - DATASET_DIR
   - TARGET_ID
+deployment:
+  memory_request: '15Mi'
