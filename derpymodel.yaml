@@ -4,4 +4,3 @@ git:
 image_name: gcr.io/hackgt-cluster/hackgt8-puzzles-fooling-model
 deployment:
   memory_request: '15Mi'
-
