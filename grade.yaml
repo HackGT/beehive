@@ -1,8 +1,0 @@
-git:
-    remote: https://github.com/HackGT/application-bot.git
-    branch: master
-wants:
-  mongo: true
-
-deployment:
-  memory_request: '15Mi'
