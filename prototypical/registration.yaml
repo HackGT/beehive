@@ -1,0 +1,25 @@
+git:
+  remote: https://github.com/HackGT/registration.git
+  branch: prototypical
+  
+wants:
+  mongo: false
+  
+deployment:
+  replicas: 1
+
+env:
+  EVENT_NAME: "Prototypical"
+  PRODUCTION: true
+  MONGO_URL: "mongodb://altered-pug-mongodb/registration-prototypical"
+  EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt/HackGT%208%20header.png"
+  HELPSCOUT_INTEGRATION_ENABLED: true
+  HELPSCOUT_BEACON_ENABLED: true
+  HELPSCOUT_BEACON_ID: "e25770bc-77c7-4583-befd-17e37d0b59bc"
+  ADMIN_EMAILS:
+    - rahul.rajan@hack.gt
+    - rahul.rajan@hexlabs.org
+    - elton.pinto@hack.gt
+    - elton.pinto@hexlabs.org
+    - saachi@hack.gt
+    - saachi@hexlabs.org
