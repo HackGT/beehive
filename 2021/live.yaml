@@ -1,0 +1,5 @@
+git:
+  remote: https://github.com/HackGT/virtual-checkin.git
+  branch: master
+deployment:
+  memory_request: '15Mi' 
