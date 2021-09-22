@@ -7,5 +7,5 @@ image_name: gcr.io/hackgt-cluster/virtual-checkin
 wants:
   mongo: true
   
-deployment:
-  memory_request: '15Mi' 
+env:
+  GROUND_TRUTH_URL: "https://login.dev.hack.gt"
