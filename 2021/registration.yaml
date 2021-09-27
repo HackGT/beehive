@@ -23,3 +23,6 @@ env:
     - elton.pinto@hexlabs.org
     - saachi@hack.gt
     - saachi@hexlabs.org
+  ADMIN_DOMAINS:
+    - hexlabs.org
+    - hack.gt
