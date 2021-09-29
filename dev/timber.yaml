@@ -1,0 +1,7 @@
+git:
+  remote: https://github.com/HackGT/timber.git
+  branch: main
+
+env:
+  REGISTRATION_GRAPHQL_URL: https://registration.dev.hack.gt/graphql
+  GROUND_TRUTH_URL: https://login.dev.hack.gt
