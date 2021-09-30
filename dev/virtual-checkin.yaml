@@ -11,5 +11,3 @@ env:
   GROUND_TRUTH_URL: "https://login.dev.hack.gt"
   CMS_URL: "https://keystone.dev.hack.gt/admin/api"
   MONGO_URL: "mongodb://altered-pug-mongodb/virtual-checkin-dev-hackgt8"
-  
-
