@@ -1,0 +1,4 @@
+
+git: https://github.com/HackGT/redirector.git
+env:
+  REDIRECT_URL: "https://hackgt.github.io/countdown/"
