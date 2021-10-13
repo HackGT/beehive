@@ -3,11 +3,3 @@ git:
   branch: master
 
 image_name: gcr.io/hackgt-cluster/virtual-checkin
-
-wants:
-  mongo: true
-
-env:
-  GROUND_TRUTH_URL: "https://login.hack.gt"
-  CMS_URL: "https://cms.hack.gt/admin/api"
-  #MONGO_URL: "mongodb://altered-pug-mongodb/virtual-checkin-dev-hackgt8"
