@@ -1,0 +1,4 @@
+
+git: https://github.com/HackGT/redirector.git
+env:
+  REDIRECT_URL: "https://teamformation.2021.hack.gt"
