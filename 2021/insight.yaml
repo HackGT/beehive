@@ -3,3 +3,4 @@ git:
   branch: sponsor-fair
 env:
   HOST_URL: "https://insight.2021.hack.gt"
+  MONGO_URL: "mongodb://altered-pug-mongodb/insight-2021"
