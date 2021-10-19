@@ -1,5 +1,10 @@
+wants:
+  mongo: true
 git:	
   remote: https://github.com/HackGT/insight.git	
-  branch: master
+  branch: sponsor-fair
 deployment:	
   replicas: 1
+env:
+  MONGO_URL: "mongodb://altered-pug-mongodb/insight-2021"
+
