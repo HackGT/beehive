@@ -1,5 +1,3 @@
-wants:
-  mongo: true
 git:	
   remote: https://github.com/HackGT/insight.git	
   branch: sponsor-fair
