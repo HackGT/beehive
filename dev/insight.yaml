@@ -5,4 +5,4 @@ git:
   branch: sponsor-fair
 env:
   HOST_URL: "https://insight.dev.hack.gt"
-MONGO_URL: "mongodb://altered-pug-mongodb/insight-dev"
+  MONGO_URL: "mongodb://altered-pug-mongodb/insight-dev"
