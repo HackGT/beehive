@@ -2,7 +2,7 @@ wants:
   mongo: true
 git:	
   remote: https://github.com/HackGT/insight.git	
-  branch: sponsor-fair
+  branch: sponsor-fair-dev
 env:
   HOST_URL: "https://insight.dev.hack.gt"
   MONGO_URL: "mongodb://altered-pug-mongodb/insight-dev"
