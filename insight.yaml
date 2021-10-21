@@ -1,10 +1,3 @@
-wants:
-  mongo: true
-git:	
-  remote: https://github.com/HackGT/insight.git	
-  branch: sponsor-fair
-deployment:	
-  replicas: 1
+git: https://github.com/HackGT/redirector.git
 env:
-  MONGO_URL: "mongodb://altered-pug-mongodb/insight-2021"
-
+  REDIRECT_URL: "https://insight.2021.hack.gt"
