@@ -1,3 +1,6 @@
 git:		
   remote: https://github.com/HackGT/team-formation.git		
   branch: hackgt8
+
+deployment:
+  replicas: 2
