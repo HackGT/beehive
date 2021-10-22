@@ -1,0 +1,16 @@
+git: 
+  remote: https://github.com/HackGT/prizes.git
+  branch: main
+  
+image_name: gcr.io/hackgt-cluster/prizes
+
+wants:
+  mongo: false
+  
+deployment:
+  memory_request: '15Mi'
+  
+env:
+  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt8-swag-dev"
+  GROUND_TRUTH_URL: https://login.dev.hack.gt
+
