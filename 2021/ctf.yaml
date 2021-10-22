@@ -1,5 +1,5 @@
 git:
   remote: https://github.com/HackGT/rctf.git
-  branch: dev
+  branch: master
 
 image_name: gcr.io/hackgt-cluster/rctf

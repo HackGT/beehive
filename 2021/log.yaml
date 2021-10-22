@@ -1,0 +1,12 @@
+git:
+  remote: https://github.com/HackGT/yac.git
+  branch: master
+
+image_name: gcr.io/hackgt-cluster/yac
+
+wants:
+  mongo: true
+
+env:
+  GROUND_TRUTH_URL: "https://login.hack.gt"
+  CMS_URL: "https://cms.hack.gt/admin/api"

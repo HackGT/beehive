@@ -1,0 +1,8 @@
+wants:
+  mongo: true
+git:	
+  remote: https://github.com/HackGT/insight.git
+  branch: sponsor-fair
+env:
+  MONGO_URL: "mongodb://altered-pug-mongodb/insight-2021"
+  

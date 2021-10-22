@@ -11,5 +11,6 @@ deployment:
   memory_request: '15Mi'
   
 env:
-  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt7-swag-dev"
+  MONGO_URL: "mongodb://altered-pug-mongodb/hackgt8-swag-dev"
   GROUND_TRUTH_URL: https://login.dev.hack.gt
+  VIRTUAL_CHECKIN_URL: https://log.dev.hack.gt
