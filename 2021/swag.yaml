@@ -14,4 +14,4 @@ env:
   MONGO_URL: "mongodb://altered-pug-mongodb/hackgt8-swag"
   GROUND_TRUTH_URL: https://login.hack.gt
   VIRTUAL_CHECKIN_URL: https://log.2021.hack.gt
- 
+  CMS_URL: https://cms.hack.gt/admin/api
