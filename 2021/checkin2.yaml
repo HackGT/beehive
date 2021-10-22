@@ -7,3 +7,6 @@ env:
 
 wants:
     mongo: false
+
+deployment:
+  replicas: 3
