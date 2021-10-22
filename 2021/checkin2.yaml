@@ -3,6 +3,7 @@ git: https://github.com/HackGT/checkin2.git
 env:
   REGISTRATION_GRAPHQL: "https://registration.dev.hack.gt/graphql"
   MONGO_URL: "mongodb://altered-pug-mongodb/checkin2-2021"
+  NODE_TLS_REJECT_UNAUTHORIZED:  0
 
 wants:
     mongo: false
