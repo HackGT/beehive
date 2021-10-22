@@ -8,7 +8,7 @@ wants:
   mongo: false
   
 deployment:
-  memory_request: '15Mi'
+  replicas: 3
   
 env:
   MONGO_URL: "mongodb://altered-pug-mongodb/hackgt8-swag"
