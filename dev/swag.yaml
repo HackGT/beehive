@@ -13,4 +13,3 @@ deployment:
 env:
   MONGO_URL: "mongodb://altered-pug-mongodb/hackgt8-swag-dev"
   GROUND_TRUTH_URL: https://login.dev.hack.gt
-
