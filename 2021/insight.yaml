@@ -8,3 +8,4 @@ env:
   
 deployment:
   replicas: 3
+
