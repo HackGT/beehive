@@ -1,5 +1,6 @@
 git:
   remote: https://github.com/HackGT/hackgt8-website.git
   branch: main
+  
 deployment:
-  memory_request: '15Mi'
+  replicas: 2
