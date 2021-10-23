@@ -3,4 +3,4 @@ env:
   EMAIL_HEADER_IMAGE: "https://storage.googleapis.com/hackgt6-public/banner.png"
 
 deployment:
-  replicas: 3
+  replicas: 4
