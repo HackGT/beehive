@@ -9,3 +9,4 @@ wants:
 
 deployment:
   replicas: 3
+
