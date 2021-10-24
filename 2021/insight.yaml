@@ -7,5 +7,5 @@ env:
   MONGO_URL: "mongodb://altered-pug-mongodb/insight-2021"
   
 deployment:
-  replicas: 3
+  replicas: 1
 
