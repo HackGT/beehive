@@ -3,5 +3,5 @@ git:
   branch: main
 
 env:
-  REGISTRATION_GRAPHQL_URL: https://registration.dev.hack.gt/graphql
+  REGISTRATION_GRAPHQL_URL: https://registration.2021.hack.gt/graphql
   GROUND_TRUTH_URL: https://login.dev.hack.gt
