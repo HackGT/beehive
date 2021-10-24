@@ -1,5 +1,5 @@
 git:
-  remote: https://github.com/HackGT/ballot.git
+  remote: https://github.com/HackGT/timber.git
   branch: main
 wants:
   postgres: true
@@ -8,5 +8,3 @@ env:
   CHECK_IN_URL: https://log.2021.hack.gt/log/interaction
 deployment:
   replicas: 3
-
-  
