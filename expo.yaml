@@ -1,11 +1,3 @@
-git:
-   remote: https://github.com/HackGT/timber.git
-   branch: main
-wants:
-   postgres: true
+git: https://github.com/HackGT/redirector.git
 env:
-   REGISTRATION_GRAPHQL_URL: https://registration.2021.hack.gt/graphql
-   CHECK_IN_URL: https://log.2021.hack.gt/log/interaction
-deployment:
-   replicas: 3
-
+  REDIRECT_URL: "https://expo.2021.hack.gt"
