@@ -9,4 +9,3 @@ env:
    
 deployment:
    replicas: 1
-
