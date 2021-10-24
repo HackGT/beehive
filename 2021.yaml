@@ -3,4 +3,4 @@ git:
   branch: main
   
 deployment:
-  replicas: 2
+  replicas: 1
