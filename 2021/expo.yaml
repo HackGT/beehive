@@ -11,5 +11,5 @@ env:
    
 deployment:
    replicas: 3
-   memory: '512Mi'
-   memory_request: '512Mi'
+   memory: '300Mi'
+   memory_request: '300Mi'
