@@ -8,5 +8,5 @@ env:
    CHECK_IN_URL: https://log.2021.hack.gt/log/interaction
    
 deployment:
-   replicas: 3
+   replicas: 1
 
