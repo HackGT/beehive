@@ -5,5 +5,3 @@ git:
 env:
     REACT_APP_BUGSNAG_ENABLED: true
     REACT_APP_BUGSNAG_API_KEY: d8d89d9a31fcbe3af70caccdf78a5b89
-deployment:
-    replicas: 3
