@@ -4,8 +4,3 @@ git:
 
 wants:
   mongo: true
-
-deployment:
-  memory_request: '350Mi'
-  memory: '350Mi'
-  replicas: 8
