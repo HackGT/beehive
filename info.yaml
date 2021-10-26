@@ -1,8 +1,5 @@
 git:
   remote: https://github.com/HackGT/virtual-checkin.git
   branch: master
-
-deployment:
-  replicas: 6
-
+  
 image_name: gcr.io/hackgt-cluster/virtual-checkin
