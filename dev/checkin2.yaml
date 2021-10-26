@@ -1,8 +1,0 @@
-git: https://github.com/HackGT/checkin2.git
-
-env:
-  REGISTRATION_GRAPHQL: "https://registration.dev.hack.gt/graphql"
-  MONGO_URL: "mongodb://altered-pug-mongodb/checkin2-dev-2021"
-
-wants:
-    mongo: false
