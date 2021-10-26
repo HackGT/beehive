@@ -1,5 +1,0 @@
-git:
-  remote: https://github.com/HackGT/rctf.git
-  branch: dev
-
-image_name: gcr.io/hackgt-cluster/rctf
