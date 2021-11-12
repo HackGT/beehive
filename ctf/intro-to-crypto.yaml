@@ -1,5 +1,0 @@
-git:
-  remote: https://github.com/HackGT/ctf2021-intro-to-crypto.git
-  branch: main
-
-image_name: gcr.io/hackgt-cluster/ctf2021-intro-to-crypto
