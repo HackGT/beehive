@@ -1,8 +1,0 @@
-git:
-  remote: https://github.com/HackGT/scavengerhuntfix
-image_name: gcr.io/hackgt-cluster/scavengerhuntfix  
-wants:
-  mongo: true
-
-deployment:
-  memory_request: '15Mi'
