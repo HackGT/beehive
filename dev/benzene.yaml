@@ -1,7 +1,0 @@
-git:
-  remote: https://github.com/HackGT/benzene.git
-  branch: main
-
-env:
-  GROUND_TRUTH_URL: https://login.dev.hack.gt
-  PORT: 3000
