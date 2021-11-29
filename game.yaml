@@ -1,5 +1,0 @@
-git:
-    remote: https://github.com/HackGT/market-runner.git
-    branch: main
-wants:
-  mongo: true
