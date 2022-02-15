@@ -1,5 +1,3 @@
-git: 
-  remote: https://github.com/HackGT/horizons2020-event-site.git
-  branch: master
-deployment:
-  memory_request: '15Mi'
+git: https://github.com/HackGT/redirector.git
+env:
+  REDIRECT_URL: "https://horizons.hexlabs.org"
