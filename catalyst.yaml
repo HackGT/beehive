@@ -1,5 +1,3 @@
-git:
-  remote: https://github.com/HackGT/catalyst2020-teaser.git
-  branch: master
-deployment:
-  memory_request: '15Mi'
+git: https://github.com/HackGT/redirector.git
+env:
+  REDIRECT_URL: "https://catalyst.hexlabs.org"
