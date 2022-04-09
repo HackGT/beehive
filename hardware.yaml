@@ -1,0 +1,7 @@
+git:
+  remote: https://github.com/HackGT/bolt.git
+  branch: ayush/create-edit-requests
+
+env:
+  REACT_APP_BUGSNAG_ENABLED: true
+  REACT_APP_BUGSNAG_API_KEY: d8d89d9a31fcbe3af70caccdf78a5b89
