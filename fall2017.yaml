@@ -1,3 +1,0 @@
-git: https://github.com/HackGT/hackgt2017-website.git
-deployment:
-  memory_request: '15Mi'

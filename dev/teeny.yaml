@@ -1,5 +1,0 @@
-git:
-  remote: https://github.com/HackGT/hackgteeny2021-website.git
-  branch: main
-deployment:
-  memory_request: '15Mi'

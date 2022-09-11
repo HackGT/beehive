@@ -1,4 +1,0 @@
-git: https://github.com/HackGT/hackgt2019-website.git
-image_name: gcr.io/hackgt-cluster/hackgt2019-website
-deployment:
-  memory_request: '15Mi'
